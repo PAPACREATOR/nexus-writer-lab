@@ -1,4 +1,48 @@
-# Cérebro Independente / Nexus
+# Nexus Writer Lab — bancada isolada
+
+**Sem autoridade de produção. Writer dentro de LPAC/Job ainda não tem solução demonstrada.**
+
+Este repositório é o laboratório de diagnóstico de `book` e `convert_pdf` em
+Windows. Origem imutável: `PAPACREATOR/cerebro-parvo-`, commit
+`b4d50ab8469cf60dfa3228c7c34ef9a1285ac827`. O commit inicial do laboratório
+`3f4e085a12b551ccf99a80f503e08aae03b1b833` acrescenta apenas a proveniência.
+
+- [Proveniência e baseline](SOURCE_BASELINE.md)
+- [Relatório](LAB_REPORT.md)
+- [Matriz de experiências](RESULT_MATRIX.md)
+- [Evidência de rastreio](TRACE_EVIDENCE.md)
+- [Proposta mínima](MINIMAL_PATCH_PROPOSAL.md) — fica vazia enquanto não existir solução reproduzível
+- [Execuções e artefactos](https://github.com/PAPACREATOR/nexus-writer-lab/actions)
+
+Os workflows `Writer isolated sequential matrix` e `Writer isolated ETW trace`
+usam o instalador oficial arquivado **26.2.6.2**, com SHA-256 fixado. O candidato
+já usa UserInstallation dedicado, diretório pré-criado, ACL herdada do SID da
+tarefa e `--norestore`: B–E são repetições equivalentes, identificadas como tal.
+F acrescenta somente `--nolockcheck`; G acrescenta somente `--nologo` a F.
+H exige uma combinação mínima justificada pelos resultados; não é preenchida por antecipação.
+
+O prazo Writer permanece **45 segundos**. Host, Kernel, Store, LPAC, Job,
+Human Gate, Creative/Canonical, recovery e contratos permanecem os do SHA
+original. F/G alteram apenas flags do adapter numa cópia experimental descartável;
+o selo dessa cópia é atualizado explicitamente e os bytes originais são restaurados
+no fim. Nenhuma alteração experimental é aplicada ao repositório principal.
+
+A hipótese externa de Carlos De La Torre / @radelqui está referenciada no
+[comentário técnico](https://github.com/PAPACREATOR/cerebro-parvo-/issues/36#issuecomment-6064316804).
+Os resultados são classificados como PROVEN, LIKELY, NOT PROVEN ou REFUTED.
+Um ACCESS DENIED isolado não prova a causa do timeout.
+
+Para repetir, despachar os workflows neste repositório. Não executar instaladores
+de diagnóstico no PC pessoal: os workflows preparam runners Windows descartáveis.
+Para contribuir, abrir issues/PRs **aqui**, com variante, SHA, build, comandos,
+evidência e resultado. Não editar ou fazer push para `PAPACREATOR/cerebro-parvo-`.
+
+Os documentos Nexus abaixo e nas pastas existentes são contexto histórico do
+candidato, não uma declaração de aprovação do laboratório.
+
+---
+
+# README original do candidato (preservado)
 
 Sistema local-first de criação, conhecimento e execução governada para uma pessoa. A pessoa usa linguagem natural; o sistema compõe processos e ferramentas nos bastidores; a pessoa continua autoridade final.
 

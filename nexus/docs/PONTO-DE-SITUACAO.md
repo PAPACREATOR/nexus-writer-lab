@@ -1,5 +1,30 @@
 # Nexus — ponto de situação atual
 
+## Laboratório Writer isolado — 08-10-2026
+
+Esta entrada aplica-se **apenas a PAPACREATOR/nexus-writer-lab**. O estado Nexus
+abaixo é história congelada do SHA b4d50ab8469cf60dfa3228c7c34ef9a1285ac827.
+Pedido humano: laboratório separado, baseline exato, matriz de uma variável,
+evidência IPC e regressão antes de qualquer proposta; nunca alterar o principal.
+
+Proveniência: commit inicial 3f4e085 (apenas SOURCE_BASELINE.md, parent exato).
+Código Host/Store/Kernel/sandbox original intacto. lab/ e workflows adicionais
+guardam observações externas e variantes de flags em cópias descartáveis.
+Relatórios próprios na raiz foram expressamente pedidos para este laboratório.
+
+Workflow original 37813977363: 2 FAIL/5 PASS, Writer timeout 45 s nas duas rotas,
+legacy pipe WinError 5/LOCAL permitido. O pacote baixou 26.2.6.3; esse resultado
+não substitui o build original. Matriz 37814878330 em aa14ad8 usa instalador
+arquivado 26.2.6.2 e hash oficial. A confirmou o timeout antes de B–G.
+ETW em recolha. Fonte do mesmo tag contradiz a hipótese de UserInstallation
+mudar o prefixo legacy para LOCAL; causa efetiva do timeout permanece NOT PROVEN.
+
+PC local: Windows 11/26200, LO 26.8.0.3; probe IPC PASS, rotas BLOCKED antes de
+Writer por falta de direito para preparar DACL. Não ampliar permissões.
+Próximo passo: concluir matriz, rever rastreio, persistir todos os resultados.
+Sem solução PASS, regressão 100+100 ainda NOT RUN e proposta mínima vazia.
+Ver ../../LAB_REPORT.md, ../../RESULT_MATRIX.md e ../../TRACE_EVIDENCE.md.
+
 ## Convergência técnica Work — 08-10-2026
 
 Pedido corrente: convergir a PR #32 num único produto Windows, seguindo #31, #32, #34 e #33. Work altera código/testes e regista operação; a PR #34 conserva arquitetura/documentação/auditoria. Os relatórios datados abaixo continuam como história; não validam o HEAD corrente.

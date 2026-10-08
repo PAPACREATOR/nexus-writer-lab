@@ -1,0 +1,171 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab
+collecting ... collected 3 items
+
+Timeout (0:01:00)!
+Thread 0x00003730 (most recent call first):
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 157 in acl
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 413 in close
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 426 in __exit__
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\tests\test_native_writer_route_real.py", line 51 in test_writer_ipc_namespace_observation_inside_native_boundary
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 167 in pytest_pyfunc_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 1707 in runtest
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 184 in pytest_runtest_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 250 in <lambda>
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 361 in from_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 249 in call_and_report
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 139 in runtestprotocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 118 in pytest_runtest_protocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 408 in pytest_runtestloop
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 384 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 330 in wrap_session
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 377 in pytest_cmdline_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 229 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 253 in _console_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest\__main__.py", line 9 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+nexus/tests/test_native_writer_route_real.py::test_writer_ipc_namespace_observation_inside_native_boundary Writer IPC namespace observation (LPAC unchanged): {"legacy": {"mutex_created": true, "mutex_error": 0, "pipe_created": false, "pipe_error": 5}, "LOCAL": {"mutex_created": true, "mutex_error": 0, "pipe_created": true, "pipe_error": 0}}
+PASSED
+Timeout (0:01:00)!
+Thread 0x00000438 (most recent call first):
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 157 in acl
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 413 in close
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 265 in __init__
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 430 in launch_confined
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\tests\test_native_writer_route_real.py", line 84 in observed_launch
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\host.py", line 88 in _run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001370 (most recent call first):
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 314 in _select
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 323 in select
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 235 in serve_forever
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003730 (most recent call first):
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\tests\test_native_writer_route_real.py", line 111 in test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 167 in pytest_pyfunc_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 1707 in runtest
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 184 in pytest_runtest_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 250 in <lambda>
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 361 in from_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 249 in call_and_report
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 139 in runtestprotocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 118 in pytest_runtest_protocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 408 in pytest_runtestloop
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 384 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 330 in wrap_session
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 377 in pytest_cmdline_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 229 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 253 in _console_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest\__main__.py", line 9 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+nexus/tests/test_native_writer_route_real.py::test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[book] FAILED
+Timeout (0:01:00)!
+Thread 0x000046e4 (most recent call first):
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 157 in acl
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 413 in close
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 265 in __init__
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\windows_sandbox.py", line 430 in launch_confined
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\tests\test_native_writer_route_real.py", line 84 in observed_launch
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\host.py", line 88 in _run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001cf4 (most recent call first):
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 314 in _select
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 323 in select
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 235 in serve_forever
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003730 (most recent call first):
+  File "C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\nexus\tests\test_native_writer_route_real.py", line 111 in test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 167 in pytest_pyfunc_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 1707 in runtest
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 184 in pytest_runtest_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 250 in <lambda>
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 361 in from_call
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 249 in call_and_report
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 139 in runtestprotocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 118 in pytest_runtest_protocol
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 408 in pytest_runtestloop
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 384 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 330 in wrap_session
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\main.py", line 377 in pytest_cmdline_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 229 in _main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\config\__init__.py", line 253 in _console_main
+  File "C:\Users\Utilizador\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytest\__main__.py", line 9 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+nexus/tests/test_native_writer_route_real.py::test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[convert_pdf] FAILED
+
+================================== FAILURES ===================================
+_ test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[book] _
+nexus\tests\test_native_writer_route_real.py:117: in test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate
+    pytest.fail(json.dumps({"state": state, "diagnostics": diagnostics, "tool": tool_diagnostics}, ensure_ascii=False))
+E   Failed: {"state": {"run_id": "9ca32547febb4f0fa8e558a0dfdc8b9d", "process_id": "book", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:05:14.955557+00:00", "updated_at": "2026-10-08T17:06:43.862131+00:00", "message": "N�o foi poss�vel delimitar os direitos da tarefa (5).", "execution_phase": "EXECUTING", "input_sha256": "e1b66f815d551125f137659ff41bf3fe81ce6966015081f264702abf7cb7243a", "request_sha256": "ce469a25adf4fe8b20322cf054e30abc1e2b58c414f36862ba684f4f00f2b930", "process_sha256": "4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8"}, "diagnostics": {"failure.json": "{\n  \"type\": \"Blocked\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\"\n}", "request.json": "{\n  \"process\": \"book\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAAKeQSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAAp5BIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAACnkEhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAACnkEhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAACnkEhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAACnkEhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"9ca32547febb4f0fa8e558a0dfdc8b9d\",\n  \"process_id\": \"book\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:05:14.955557+00:00\",\n  \"updated_at\": \"2026-10-08T17:06:43.862131+00:00\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"e1b66f815d551125f137659ff41bf3fe81ce6966015081f264702abf7cb7243a\",\n  \"request_sha256\": \"ce469a25adf4fe8b20322cf054e30abc1e2b58c414f36862ba684f4f00f2b930\",\n  \"process_sha256\": \"4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8\"\n}"}, "tool": []}
+_ test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[convert_pdf] _
+nexus\tests\test_native_writer_route_real.py:117: in test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate
+    pytest.fail(json.dumps({"state": state, "diagnostics": diagnostics, "tool": tool_diagnostics}, ensure_ascii=False))
+E   Failed: {"state": {"run_id": "6c6d0fdd46064a719a0aa73679baab9d", "process_id": "convert_pdf", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:06:44.842534+00:00", "updated_at": "2026-10-08T17:08:10.086460+00:00", "message": "N�o foi poss�vel delimitar os direitos da tarefa (5).", "execution_phase": "EXECUTING", "input_sha256": "33714d6137de339ee8445e1153930bed8e5aef855be5565153de2d2ca2b04713", "request_sha256": "54ddfa73a2b2992c5ac719299dd611555113e1baabfc1d99a7de9fc0aea9d15f", "process_sha256": "67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37"}, "diagnostics": {"failure.json": "{\n  \"type\": \"Blocked\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\"\n}", "request.json": "{\n  \"process\": \"convert_pdf\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAANaQSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAA1pBIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAADWkEhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAADWkEhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAADWkEhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAADWkEhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"6c6d0fdd46064a719a0aa73679baab9d\",\n  \"process_id\": \"convert_pdf\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:06:44.842534+00:00\",\n  \"updated_at\": \"2026-10-08T17:08:10.086460+00:00\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"33714d6137de339ee8445e1153930bed8e5aef855be5565153de2d2ca2b04713\",\n  \"request_sha256\": \"54ddfa73a2b2992c5ac719299dd611555113e1baabfc1d99a7de9fc0aea9d15f\",\n  \"process_sha256\": \"67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37\"\n}"}, "tool": []}
+- generated xml file: C:\Users\Utilizador\Documents\Codex\2026-10-08\files-pasted-by-the-user-sim\work\nexus-writer-lab\lab-evidence\native-baseline.xml -
+=========================== short test summary info ===========================
+FAILED nexus/tests/test_native_writer_route_real.py::test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[book] - Failed: {"state": {"run_id": "9ca32547febb4f0fa8e558a0dfdc8b9d", "process_id": "book", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:05:14.955557+00:00", "updated_at": "2026-10-08T17:06:43.862131+00:00", "message": "N�o foi poss�vel delimitar os direitos da tarefa (5).", "execution_phase": "EXECUTING", "input_sha256": "e1b66f815d551125f137659ff41bf3fe81ce6966015081f264702abf7cb7243a", "request_sha256": "ce469a25adf4fe8b20322cf054e30abc1e2b58c414f36862ba684f4f00f2b930", "process_sha256": "4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8"}, "diagnostics": {"failure.json": "{\n  \"type\": \"Blocked\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\"\n}", "request.json": "{\n  \"process\": \"book\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAAKeQSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAAp5BIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAACnkEhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAACnkEhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAACnkEhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAACnkEhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"9ca32547febb4f0fa8e558a0dfdc8b9d\",\n  \"process_id\": \"book\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:05:14.955557+00:00\",\n  \"updated_at\": \"2026-10-08T17:06:43.862131+00:00\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"e1b66f815d551125f137659ff41bf3fe81ce6966015081f264702abf7cb7243a\",\n  \"request_sha256\": \"ce469a25adf4fe8b20322cf054e30abc1e2b58c414f36862ba684f4f00f2b930\",\n  \"process_sha256\": \"4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8\"\n}"}, "tool": []}
+FAILED nexus/tests/test_native_writer_route_real.py::test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[convert_pdf] - Failed: {"state": {"run_id": "6c6d0fdd46064a719a0aa73679baab9d", "process_id": "convert_pdf", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:06:44.842534+00:00", "updated_at": "2026-10-08T17:08:10.086460+00:00", "message": "N�o foi poss�vel delimitar os direitos da tarefa (5).", "execution_phase": "EXECUTING", "input_sha256": "33714d6137de339ee8445e1153930bed8e5aef855be5565153de2d2ca2b04713", "request_sha256": "54ddfa73a2b2992c5ac719299dd611555113e1baabfc1d99a7de9fc0aea9d15f", "process_sha256": "67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37"}, "diagnostics": {"failure.json": "{\n  \"type\": \"Blocked\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\"\n}", "request.json": "{\n  \"process\": \"convert_pdf\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAANaQSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAA1pBIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAADWkEhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAADWkEhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAADWkEhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAADWkEhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"6c6d0fdd46064a719a0aa73679baab9d\",\n  \"process_id\": \"convert_pdf\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:06:44.842534+00:00\",\n  \"updated_at\": \"2026-10-08T17:08:10.086460+00:00\",\n  \"message\": \"N�o foi poss�vel delimitar os direitos da tarefa (5).\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"33714d6137de339ee8445e1153930bed8e5aef855be5565153de2d2ca2b04713\",\n  \"request_sha256\": \"54ddfa73a2b2992c5ac719299dd611555113e1baabfc1d99a7de9fc0aea9d15f\",\n  \"process_sha256\": \"67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37\"\n}"}, "tool": []}
+=================== 2 failed, 1 passed in 258.00s (0:04:18) ===================

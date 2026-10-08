@@ -1,0 +1,516 @@
+﻿2026-10-08T17:06:27.3640678Z Current runner version: '2.337.0'
+2026-10-08T17:06:27.3663953Z ##[group]Runner Image Provisioner
+2026-10-08T17:06:27.3664645Z Hosted Compute Agent
+2026-10-08T17:06:27.3665119Z Version: 20260901.588
+2026-10-08T17:06:27.3665605Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-08T17:06:27.3666164Z Build Date: 2026-09-01T19:56:44Z
+2026-10-08T17:06:27.3666675Z Worker ID: {e7076f99-c839-46e7-81f2-53b181931ad9}
+2026-10-08T17:06:27.3667204Z Azure Region: westus3
+2026-10-08T17:06:27.3667611Z ##[endgroup]
+2026-10-08T17:06:27.3668765Z ##[group]Operating System
+2026-10-08T17:06:27.3669243Z Microsoft Windows Server 2025
+2026-10-08T17:06:27.3669715Z 10.0.26100
+2026-10-08T17:06:27.3670108Z Datacenter
+2026-10-08T17:06:27.3670483Z ##[endgroup]
+2026-10-08T17:06:27.3670900Z ##[group]Runner Image
+2026-10-08T17:06:27.3671341Z Image: windows-2025-vs2026
+2026-10-08T17:06:27.3671788Z Version: 20260925.250.1
+2026-10-08T17:06:27.3673007Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-08T17:06:27.3674420Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-08T17:06:27.3675162Z ##[endgroup]
+2026-10-08T17:06:27.3676652Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T17:06:27.3678539Z Contents: read
+2026-10-08T17:06:27.3679202Z Metadata: read
+2026-10-08T17:06:27.3679842Z ##[endgroup]
+2026-10-08T17:06:27.3682132Z Secret source: Actions
+2026-10-08T17:06:27.3683138Z Cache mode: write
+2026-10-08T17:06:27.3683920Z Prepare workflow directory
+2026-10-08T17:06:27.4081525Z Prepare all required actions
+2026-10-08T17:06:27.4120339Z Getting action download info
+2026-10-08T17:06:27.7011750Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T17:06:27.8035466Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-08T17:06:27.9690677Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T17:06:28.3077326Z Complete job name: Real Writer Windows — fixed template round-trip
+2026-10-08T17:06:28.4429909Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-08T17:06:28.4430977Z with:
+2026-10-08T17:06:28.4431362Z   ref: 3f4e085a12b551ccf99a80f503e08aae03b1b833
+2026-10-08T17:06:28.4431871Z   persist-credentials: false
+2026-10-08T17:06:28.4432347Z   repository: PAPACREATOR/nexus-writer-lab
+2026-10-08T17:06:28.4435961Z   token: ***
+2026-10-08T17:06:28.4436318Z   ssh-strict: true
+2026-10-08T17:06:28.4436676Z   ssh-user: git
+2026-10-08T17:06:28.4437003Z   clean: true
+2026-10-08T17:06:28.4437363Z   sparse-checkout-cone-mode: true
+2026-10-08T17:06:28.4437786Z   fetch-depth: 1
+2026-10-08T17:06:28.4438122Z   fetch-tags: false
+2026-10-08T17:06:28.4438473Z   show-progress: true
+2026-10-08T17:06:28.4438833Z   lfs: false
+2026-10-08T17:06:28.4439558Z   submodules: false
+2026-10-08T17:06:28.4439914Z   set-safe-directory: true
+2026-10-08T17:06:28.4440314Z   allow-unsafe-pr-checkout: false
+2026-10-08T17:06:28.4440955Z env:
+2026-10-08T17:06:28.4441317Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:06:28.4441680Z   PYTHONUTF8: 1
+2026-10-08T17:06:28.4442010Z ##[endgroup]
+2026-10-08T17:06:28.5674526Z Syncing repository: PAPACREATOR/nexus-writer-lab
+2026-10-08T17:06:28.5676037Z ##[group]Getting Git version info
+2026-10-08T17:06:28.5676637Z Working directory is 'D:\a\nexus-writer-lab\nexus-writer-lab'
+2026-10-08T17:06:28.6753465Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-08T17:06:29.0400368Z git version 2.55.0.windows.5
+2026-10-08T17:06:29.0444649Z ##[endgroup]
+2026-10-08T17:06:29.0463616Z Temporarily overriding HOME='D:\a\_temp\7613ade8-a781-40c7-835f-9fda0929d607' before making global git config changes
+2026-10-08T17:06:29.0465251Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T17:06:29.0474341Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\nexus-writer-lab\nexus-writer-lab
+2026-10-08T17:06:29.1127616Z Deleting the contents of 'D:\a\nexus-writer-lab\nexus-writer-lab'
+2026-10-08T17:06:29.1132340Z ##[group]Initializing the repository
+2026-10-08T17:06:29.1140032Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\nexus-writer-lab\nexus-writer-lab
+2026-10-08T17:06:29.1874303Z Initialized empty Git repository in D:/a/nexus-writer-lab/nexus-writer-lab/.git/
+2026-10-08T17:06:29.1913568Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/PAPACREATOR/nexus-writer-lab
+2026-10-08T17:06:29.2519759Z ##[endgroup]
+2026-10-08T17:06:29.2520690Z ##[group]Disabling automatic garbage collection
+2026-10-08T17:06:29.2528276Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-08T17:06:29.2810418Z ##[endgroup]
+2026-10-08T17:06:29.2811770Z ##[group]Setting up auth
+2026-10-08T17:06:29.2820139Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:06:29.3059820Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-08T17:06:30.7294304Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:06:30.7537619Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-08T17:06:31.1788031Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:06:31.2029002Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-08T17:06:31.6207295Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-08T17:06:31.6451218Z ##[endgroup]
+2026-10-08T17:06:31.6451994Z ##[group]Fetching the repository
+2026-10-08T17:06:31.6460318Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 3f4e085a12b551ccf99a80f503e08aae03b1b833
+2026-10-08T17:06:32.9317504Z From https://github.com/PAPACREATOR/nexus-writer-lab
+2026-10-08T17:06:32.9318216Z  * branch            3f4e085a12b551ccf99a80f503e08aae03b1b833 -> FETCH_HEAD
+2026-10-08T17:06:32.9357841Z ##[endgroup]
+2026-10-08T17:06:32.9358286Z ##[group]Determining the checkout info
+2026-10-08T17:06:32.9360597Z ##[endgroup]
+2026-10-08T17:06:32.9368774Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-08T17:06:32.9741406Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-08T17:06:33.0042000Z ##[group]Checking out the ref
+2026-10-08T17:06:33.0049437Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force 3f4e085a12b551ccf99a80f503e08aae03b1b833
+2026-10-08T17:06:33.1249498Z Note: switching to '3f4e085a12b551ccf99a80f503e08aae03b1b833'.
+2026-10-08T17:06:33.1249886Z 
+2026-10-08T17:06:33.1250116Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T17:06:33.1250620Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T17:06:33.1251102Z state without impacting any branches by switching back to a branch.
+2026-10-08T17:06:33.1251426Z 
+2026-10-08T17:06:33.1251603Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T17:06:33.1252178Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T17:06:33.1252469Z 
+2026-10-08T17:06:33.1252612Z   git switch -c <new-branch-name>
+2026-10-08T17:06:33.1253994Z 
+2026-10-08T17:06:33.1254118Z Or undo this operation with:
+2026-10-08T17:06:33.1254361Z 
+2026-10-08T17:06:33.1254485Z   git switch -
+2026-10-08T17:06:33.1254634Z 
+2026-10-08T17:06:33.1254897Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T17:06:33.1255257Z 
+2026-10-08T17:06:33.1255511Z HEAD is now at 3f4e085 lab: establish exact b4d50ab source provenance
+2026-10-08T17:06:33.1369255Z ##[endgroup]
+2026-10-08T17:06:33.1734634Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-08T17:06:33.1947555Z 3f4e085a12b551ccf99a80f503e08aae03b1b833
+2026-10-08T17:06:33.1980582Z ##[group]Removing auth
+2026-10-08T17:06:33.1986892Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:06:33.2210095Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-08T17:06:33.6440536Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:06:33.6638799Z http.https://github.com/.extraheader
+2026-10-08T17:06:33.6672344Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T17:06:33.6910241Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-08T17:06:34.1385333Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:06:34.1626468Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-08T17:06:34.5774934Z ##[endgroup]
+2026-10-08T17:06:34.6183059Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-10-08T17:06:34.6183471Z with:
+2026-10-08T17:06:34.6183631Z   python-version: 3.12
+2026-10-08T17:06:34.6183806Z   check-latest: false
+2026-10-08T17:06:34.6185896Z   token: ***
+2026-10-08T17:06:34.6186063Z   update-environment: true
+2026-10-08T17:06:34.6186243Z   allow-prereleases: false
+2026-10-08T17:06:34.6186407Z   freethreaded: false
+2026-10-08T17:06:34.6186838Z env:
+2026-10-08T17:06:34.6186988Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:06:34.6187144Z   PYTHONUTF8: 1
+2026-10-08T17:06:34.6187285Z ##[endgroup]
+2026-10-08T17:06:34.7467080Z ##[group]Installed versions
+2026-10-08T17:06:34.7643698Z (node:8392) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:06:34.7644250Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:06:34.7645131Z Successfully set up CPython (3.12.10)
+2026-10-08T17:06:34.7645701Z ##[endgroup]
+2026-10-08T17:06:34.7904464Z ##[group]Run choco install libreoffice-fresh --version=26.2.6 --yes --no-progress
+2026-10-08T17:06:34.7905188Z [36;1mchoco install libreoffice-fresh --version=26.2.6 --yes --no-progress[0m
+2026-10-08T17:06:34.7905715Z [36;1m$exe = 'C:\Program Files\LibreOffice\program\soffice.com'[0m
+2026-10-08T17:06:34.7906243Z [36;1mif (-not (Test-Path -LiteralPath $exe)) { throw 'LibreOffice soffice.com not found' }[0m
+2026-10-08T17:06:34.7906574Z [36;1m& $exe --version[0m
+2026-10-08T17:06:34.7906871Z [36;1m"LIBREOFFICE_EXE=$exe" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append[0m
+2026-10-08T17:06:34.8394253Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-08T17:06:34.8394561Z env:
+2026-10-08T17:06:34.8394725Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:06:34.8394888Z   PYTHONUTF8: 1
+2026-10-08T17:06:34.8395110Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:06:34.8395797Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-08T17:06:34.8396144Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:06:34.8396453Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:06:34.8396740Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:06:34.8396974Z ##[endgroup]
+2026-10-08T17:06:37.7667451Z Chocolatey v2.7.4
+2026-10-08T17:06:37.9890859Z Installing the following packages:
+2026-10-08T17:06:37.9894621Z libreoffice-fresh
+2026-10-08T17:06:37.9897377Z By installing, you accept licenses for the packages.
+2026-10-08T17:06:42.0907961Z Downloading package from source 'https://community.chocolatey.org/api/v2/'
+2026-10-08T17:06:43.0420378Z 
+2026-10-08T17:06:43.0420819Z libreoffice-fresh v26.2.6 [Approved]
+2026-10-08T17:06:43.0589968Z libreoffice-fresh package files install completed. Performing other installation steps.
+2026-10-08T17:06:51.4018450Z Downloading libreoffice-fresh 64 bit
+2026-10-08T17:06:51.4019306Z   from 'https://download.documentfoundation.org/libreoffice/stable/26.2.6/win/x86_64/LibreOffice_26.2.6_Win_x86-64.msi'
+2026-10-08T17:06:56.6263961Z 
+2026-10-08T17:06:56.6271115Z Download of LibreOffice_26.2.6_Win_x86-64.msi (355.96 MB) completed.
+2026-10-08T17:07:02.0993554Z Hashes match.
+2026-10-08T17:07:02.1504538Z Installing libreoffice-fresh...
+2026-10-08T17:07:58.0004341Z libreoffice-fresh has been installed.
+2026-10-08T17:07:58.1367437Z   libreoffice-fresh may be able to be automatically uninstalled.
+2026-10-08T17:07:58.2267294Z  The install of libreoffice-fresh was successful.
+2026-10-08T17:07:58.2269046Z   Deployed to 'C:\Program Files\LibreOffice\'
+2026-10-08T17:07:58.2415538Z 
+2026-10-08T17:07:58.2416369Z Chocolatey installed 1/1 packages. 
+2026-10-08T17:07:58.2416841Z  See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+2026-10-08T17:07:58.7144263Z LibreOffice 26.2.6.3 8221e31b3ac356a1623c672912a3d2b492f7e3d1
+2026-10-08T17:07:58.7144658Z 
+2026-10-08T17:07:58.7924453Z ##[group]Run python -m pip install -r nexus/requirements-test.txt
+2026-10-08T17:07:58.7924895Z [36;1mpython -m pip install -r nexus/requirements-test.txt[0m
+2026-10-08T17:07:58.7986280Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-08T17:07:58.7986554Z env:
+2026-10-08T17:07:58.7986705Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:07:58.7986871Z   PYTHONUTF8: 1
+2026-10-08T17:07:58.7987094Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:07:58.7987449Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-08T17:07:58.7987803Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:07:58.7988108Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:07:58.7988401Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:07:58.7988711Z   LIBREOFFICE_EXE: C:\Program Files\LibreOffice\program\soffice.com
+2026-10-08T17:07:58.7989032Z ##[endgroup]
+2026-10-08T17:08:07.9801335Z Collecting open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545 (from -r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:07.9807601Z   Cloning https://github.com/Epochal-dev/open-notebook-mcp.git (to revision a2cddbf65cba8c4c8de7be16566781b7612a9545) to C:\Users\runneradmin\AppData\Local\Temp\pip-install-90q_cj5p\open-notebook-mcp_19efb03115a246d595aa5fdb879fec64
+2026-10-08T17:08:08.0050007Z   Running command git clone --filter=blob:none --quiet https://github.com/Epochal-dev/open-notebook-mcp.git 'C:\Users\runneradmin\AppData\Local\Temp\pip-install-90q_cj5p\open-notebook-mcp_19efb03115a246d595aa5fdb879fec64'
+2026-10-08T17:08:09.1934140Z   Running command git rev-parse -q --verify 'a2cddbf65cba8c4c8de7be16566781b7612a9545^{commit}'
+2026-10-08T17:08:09.2159797Z   a2cddbf65cba8c4c8de7be16566781b7612a9545
+2026-10-08T17:08:09.2412922Z   Resolved https://github.com/Epochal-dev/open-notebook-mcp.git to commit a2cddbf65cba8c4c8de7be16566781b7612a9545
+2026-10-08T17:08:09.2666420Z   Installing build dependencies: started
+2026-10-08T17:08:11.6951631Z   Installing build dependencies: finished with status 'done'
+2026-10-08T17:08:11.6964739Z   Getting requirements to build wheel: started
+2026-10-08T17:08:11.7481146Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-08T17:08:11.7506639Z   Preparing metadata (pyproject.toml): started
+2026-10-08T17:08:12.1577277Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-08T17:08:12.4098355Z Collecting jsonschema==4.26.0 (from -r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements.txt (line 1))
+2026-10-08T17:08:12.5630739Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T17:08:12.6798872Z Collecting mcp==1.23.2 (from -r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:12.6840577Z   Downloading mcp-1.23.2-py3-none-any.whl.metadata (89 kB)
+2026-10-08T17:08:12.8989362Z Collecting trio==0.34.0 (from -r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:12.9026365Z   Downloading trio-0.34.0-py3-none-any.whl.metadata (8.5 kB)
+2026-10-08T17:08:13.0204050Z Collecting pytest==9.1.1 (from -r nexus/requirements-test.txt (line 3))
+2026-10-08T17:08:13.0246107Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T17:08:13.1161098Z Collecting httpx>=0.28.1 (from open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:13.1200561Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-08T17:08:13.2232000Z Collecting attrs>=22.2.0 (from jsonschema==4.26.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements.txt (line 1))
+2026-10-08T17:08:13.2269486Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-08T17:08:13.3574770Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements.txt (line 1))
+2026-10-08T17:08:13.3613107Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-08T17:08:13.4616339Z Collecting referencing>=0.28.4 (from jsonschema==4.26.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements.txt (line 1))
+2026-10-08T17:08:13.4652960Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T17:08:13.7480388Z Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements.txt (line 1))
+2026-10-08T17:08:13.7523849Z   Downloading rpds_py-2026.9.1-cp312-cp312-win_amd64.whl.metadata (4.2 kB)
+2026-10-08T17:08:13.8683993Z Collecting anyio>=4.5 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:13.8723693Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-08T17:08:13.9752420Z Collecting httpx-sse>=0.4 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:13.9792099Z   Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+2026-10-08T17:08:14.0876201Z Collecting pydantic-settings>=2.5.2 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.0914262Z   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+2026-10-08T17:08:14.3051188Z Collecting pydantic<3.0.0,>=2.11.0 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.3095332Z   Downloading pydantic-2.14.0-py3-none-any.whl.metadata (131 kB)
+2026-10-08T17:08:14.4039425Z Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.4078617Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T17:08:14.4811503Z Collecting python-multipart>=0.0.9 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.4858905Z   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-10-08T17:08:14.5740764Z Collecting pywin32>=310 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.5781089Z   Downloading pywin32-312-cp312-cp312-win_amd64.whl.metadata (11 kB)
+2026-10-08T17:08:14.6909038Z Collecting sse-starlette>=1.6.1 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.6951582Z   Downloading sse_starlette-3.5.0-py3-none-any.whl.metadata (15 kB)
+2026-10-08T17:08:14.7768867Z Collecting starlette>=0.27 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.7813588Z   Downloading starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T17:08:14.8846081Z Collecting typing-extensions>=4.9.0 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:14.8885091Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-08T17:08:14.9974449Z Collecting typing-inspection>=0.4.1 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:15.0014017Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T17:08:15.0853331Z Collecting uvicorn>=0.31.1 (from mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:15.0892801Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-08T17:08:15.1555079Z Collecting sortedcontainers (from trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:15.1595575Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-10-08T17:08:15.2269505Z Collecting idna (from trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:15.2307089Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-08T17:08:15.3181032Z Collecting outcome (from trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:15.3220990Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+2026-10-08T17:08:15.4077189Z Collecting sniffio>=1.3.0 (from trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:15.4143946Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-10-08T17:08:15.5506236Z Collecting cffi>=1.14 (from trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:15.5547968Z   Downloading cffi-2.1.1-cp312-cp312-win_amd64.whl.metadata (2.6 kB)
+2026-10-08T17:08:15.6321029Z Requirement already satisfied: colorama>=0.4 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from pytest==9.1.1->-r nexus/requirements-test.txt (line 3)) (0.4.6)
+2026-10-08T17:08:15.6648236Z Collecting iniconfig>=1.0.1 (from pytest==9.1.1->-r nexus/requirements-test.txt (line 3))
+2026-10-08T17:08:15.6685558Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T17:08:15.7104118Z Requirement already satisfied: packaging>=22 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from pytest==9.1.1->-r nexus/requirements-test.txt (line 3)) (26.3)
+2026-10-08T17:08:15.7761742Z Collecting pluggy<2,>=1.5 (from pytest==9.1.1->-r nexus/requirements-test.txt (line 3))
+2026-10-08T17:08:15.7803837Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-08T17:08:15.8905534Z Collecting pygments>=2.7.2 (from pytest==9.1.1->-r nexus/requirements-test.txt (line 3))
+2026-10-08T17:08:15.8943198Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T17:08:16.0096457Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.11.0->mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:16.0133702Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-08T17:08:16.6363792Z Collecting pydantic-core==2.50.0 (from pydantic<3.0.0,>=2.11.0->mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:16.6408391Z   Downloading pydantic_core-2.50.0-cp312-cp312-win_amd64.whl.metadata (6.7 kB)
+2026-10-08T17:08:16.7208512Z Collecting pycparser (from cffi>=1.14->trio==0.34.0->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 2))
+2026-10-08T17:08:16.7246106Z   Downloading pycparser-3.1-py3-none-any.whl.metadata (8.2 kB)
+2026-10-08T17:08:16.8191276Z Collecting certifi (from httpx>=0.28.1->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:16.8229774Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T17:08:16.9323603Z Collecting httpcore==1.* (from httpx>=0.28.1->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:16.9363247Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-08T17:08:17.0154250Z Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.28.1->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.0190869Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-08T17:08:17.1745942Z Collecting python-dotenv>=1.0.0 (from mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.1790245Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-08T17:08:17.2747561Z Collecting typer>=0.16.0 (from mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.2787528Z   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+2026-10-08T17:08:17.5321269Z Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.10.1->mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1))
+2026-10-08T17:08:17.5400742Z   Downloading cryptography-50.0.2-cp311-abi3-win_amd64.whl.metadata (4.4 kB)
+2026-10-08T17:08:17.6413388Z Collecting shellingham>=1.3.0 (from typer>=0.16.0->mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.6454765Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T17:08:17.7436234Z Collecting rich>=13.8.0 (from typer>=0.16.0->mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.7478193Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-08T17:08:17.8145024Z Collecting annotated-doc>=0.0.2 (from typer>=0.16.0->mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:17.8184716Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-08T17:08:18.7038238Z Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer>=0.16.0->mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:18.7079539Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-08T17:08:18.7952577Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer>=0.16.0->mcp[cli]>=1.23.2->open-notebook-mcp @ git+https://github.com/Epochal-dev/open-notebook-mcp.git@a2cddbf65cba8c4c8de7be16566781b7612a9545->-r nexus/requirements-test.txt (line 4))
+2026-10-08T17:08:18.7996230Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-08T17:08:18.8468665Z Requirement already satisfied: click>=7.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from uvicorn>=0.31.1->mcp==1.23.2->-r D:\a\nexus-writer-lab\nexus-writer-lab\nexus\requirements-mcp.txt (line 1)) (8.5.0)
+2026-10-08T17:08:18.8547111Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-08T17:08:18.8963790Z Downloading mcp-1.23.2-py3-none-any.whl (231 kB)
+2026-10-08T17:08:18.9383659Z Downloading trio-0.34.0-py3-none-any.whl (511 kB)
+2026-10-08T17:08:18.9886238Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-08T17:08:19.0529471Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-08T17:08:19.0963514Z Downloading pydantic-2.14.0-py3-none-any.whl (487 kB)
+2026-10-08T17:08:19.1725446Z Downloading pydantic_core-2.50.0-cp312-cp312-win_amd64.whl (2.2 MB)
+2026-10-08T17:08:19.2514530Z    ---------------------------------------- 2.2/2.2 MB 24.5 MB/s  0:00:00
+2026-10-08T17:08:19.2552763Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-08T17:08:19.3145899Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-08T17:08:19.3631851Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-08T17:08:19.4122044Z Downloading cffi-2.1.1-cp312-cp312-win_amd64.whl (185 kB)
+2026-10-08T17:08:19.4622132Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-08T17:08:19.5090391Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-08T17:08:19.5540611Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-08T17:08:19.6166674Z Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+2026-10-08T17:08:19.6761831Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-08T17:08:19.7301119Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-08T17:08:19.8245348Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-08T17:08:19.8830535Z Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+2026-10-08T17:08:19.9229045Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-08T17:08:19.9874773Z    ---------------------------------------- 1.3/1.3 MB 15.9 MB/s  0:00:00
+2026-10-08T17:08:19.9914094Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-10-08T17:08:20.0424522Z Downloading cryptography-50.0.2-cp311-abi3-win_amd64.whl (3.8 MB)
+2026-10-08T17:08:20.1784300Z    ---------------------------------------- 3.8/3.8 MB 28.5 MB/s  0:00:00
+2026-10-08T17:08:20.1822180Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-08T17:08:20.2188686Z Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-10-08T17:08:20.2757897Z Downloading pywin32-312-cp312-cp312-win_amd64.whl (6.9 MB)
+2026-10-08T17:08:20.4165470Z    ---------------------------------------- 6.9/6.9 MB 53.2 MB/s  0:00:00
+2026-10-08T17:08:20.4206306Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-08T17:08:20.4437419Z Downloading rpds_py-2026.9.1-cp312-cp312-win_amd64.whl (222 kB)
+2026-10-08T17:08:20.5008661Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-10-08T17:08:20.5522849Z Downloading sse_starlette-3.5.0-py3-none-any.whl (17 kB)
+2026-10-08T17:08:20.5941643Z Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+2026-10-08T17:08:20.6469321Z Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-08T17:08:20.6899827Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-08T17:08:20.7843329Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-08T17:08:20.8373218Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-08T17:08:20.8709157Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-08T17:08:20.9159122Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-08T17:08:20.9661085Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-08T17:08:21.0054382Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-08T17:08:21.0514043Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-08T17:08:21.1074749Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-08T17:08:21.2619909Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+2026-10-08T17:08:21.2955112Z Downloading pycparser-3.1-py3-none-any.whl (48 kB)
+2026-10-08T17:08:21.3373343Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-10-08T17:08:21.5123775Z Building wheels for collected packages: open-notebook-mcp
+2026-10-08T17:08:21.5636783Z   Building wheel for open-notebook-mcp (pyproject.toml): started
+2026-10-08T17:08:21.6223255Z   Building wheel for open-notebook-mcp (pyproject.toml): finished with status 'done'
+2026-10-08T17:08:21.6289876Z   Created wheel for open-notebook-mcp: filename=open_notebook_mcp-0.2.0-py3-none-any.whl size=11832 sha256=e8bb581d8f2b5185d580a44ca5a863a039a9afe6be93ca674c48c4a2966100dd
+2026-10-08T17:08:21.6291376Z   Stored in directory: c:\users\runneradmin\appdata\local\pip\cache\wheels\93\79\80\1dec712c3d7abd7691fc73435560f995a56aec9388ebf0d643
+2026-10-08T17:08:21.6318479Z Successfully built open-notebook-mcp
+2026-10-08T17:08:21.7110270Z Installing collected packages: sortedcontainers, typing-extensions, sniffio, shellingham, rpds-py, pywin32, python-multipart, python-dotenv, pyjwt, pygments, pycparser, pluggy, mdurl, iniconfig, idna, httpx-sse, h11, certifi, attrs, annotated-types, annotated-doc, uvicorn, typing-inspection, referencing, pytest, pydantic-core, outcome, markdown-it-py, httpcore, cffi, anyio, trio, starlette, rich, pydantic, jsonschema-specifications, httpx, cryptography, typer, sse-starlette, pydantic-settings, jsonschema, mcp, open-notebook-mcp
+2026-10-08T17:08:32.6117603Z 
+2026-10-08T17:08:32.6156639Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 attrs-26.1.0 certifi-2026.7.22 cffi-2.1.1 cryptography-50.0.2 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 httpx-sse-0.4.3 idna-3.20 iniconfig-2.3.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markdown-it-py-4.2.0 mcp-1.23.2 mdurl-0.1.2 open-notebook-mcp-0.2.0 outcome-1.3.0.post0 pluggy-1.6.0 pycparser-3.1 pydantic-2.14.0 pydantic-core-2.50.0 pydantic-settings-2.15.0 pygments-2.21.0 pyjwt-2.15.1 pytest-9.1.1 python-dotenv-1.2.4 python-multipart-0.0.32 pywin32-312 referencing-0.37.0 rich-15.0.0 rpds-py-2026.9.1 shellingham-1.5.4 sniffio-1.3.1 sortedcontainers-2.4.0 sse-starlette-3.5.0 starlette-1.7.0 trio-0.34.0 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+2026-10-08T17:08:32.9069014Z ##[group]Run python -m pytest nexus/tests/test_writer_real_libreoffice.py nexus/tests/test_native_writer_route_real.py -q -rP -p no:cacheprovider -o pythonpath=. --junitxml=writer-evidence/native-writer.xml
+2026-10-08T17:08:32.9070174Z [36;1mpython -m pytest nexus/tests/test_writer_real_libreoffice.py nexus/tests/test_native_writer_route_real.py -q -rP -p no:cacheprovider -o pythonpath=. --junitxml=writer-evidence/native-writer.xml[0m
+2026-10-08T17:08:32.9127763Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-08T17:08:32.9128034Z env:
+2026-10-08T17:08:32.9128182Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:08:32.9128348Z   PYTHONUTF8: 1
+2026-10-08T17:08:32.9128580Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:08:32.9128944Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-08T17:08:32.9129292Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:08:32.9129643Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:08:32.9130599Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:08:32.9130913Z   LIBREOFFICE_EXE: C:\Program Files\LibreOffice\program\soffice.com
+2026-10-08T17:08:32.9131172Z ##[endgroup]
+2026-10-08T17:10:38.2585515Z .....FF                                                                  [100%]
+2026-10-08T17:10:38.2586049Z ================================== FAILURES ===================================
+2026-10-08T17:10:38.2586685Z _ test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[book] _
+2026-10-08T17:10:38.2587095Z 
+2026-10-08T17:10:38.2587491Z tmp_path = WindowsPath('C:/Users/runneradmin/AppData/Local/Temp/pytest-of-runneradmin/pytest-0/test_installed_writer_is_confi0')
+2026-10-08T17:10:38.2588098Z monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015BE0D85BE0>
+2026-10-08T17:10:38.2588447Z process = 'book'
+2026-10-08T17:10:38.2588598Z 
+2026-10-08T17:10:38.2588780Z     @pytest.mark.parametrize("process", ["book", "convert_pdf"])
+2026-10-08T17:10:38.2589309Z     def test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate(tmp_path, monkeypatch, process):
+2026-10-08T17:10:38.2589776Z         from nexus import host as host_module
+2026-10-08T17:10:38.2590099Z         real_launch = host_module.launch_confined
+2026-10-08T17:10:38.2590384Z         tool_diagnostics = []
+2026-10-08T17:10:38.2590643Z         def observed_launch(command, **kwargs):
+2026-10-08T17:10:38.2590948Z             kwargs["env"] = {**kwargs["env"], "SAL_LOG": "+WARN"}
+2026-10-08T17:10:38.2591260Z             worker = real_launch(command, **kwargs)
+2026-10-08T17:10:38.2591550Z             communicate = worker.communicate
+2026-10-08T17:10:38.2591854Z             def observed_communication(*args, **options):
+2026-10-08T17:10:38.2592134Z                 try:
+2026-10-08T17:10:38.2592368Z                     return communicate(*args, **options)
+2026-10-08T17:10:38.2592652Z                 finally:
+2026-10-08T17:10:38.2592850Z                     work = Path(kwargs["cwd"])
+2026-10-08T17:10:38.2593148Z                     for name in ["office/stdout.txt", "office/stderr.txt"]:
+2026-10-08T17:10:38.2593472Z                         path = work / name
+2026-10-08T17:10:38.2593711Z                         if path.is_file():
+2026-10-08T17:10:38.2594081Z                             tool_diagnostics.append({name: path.read_bytes()[:12000].decode("utf-8", errors="replace")})
+2026-10-08T17:10:38.2594495Z             worker.communicate = observed_communication
+2026-10-08T17:10:38.2594772Z             return worker
+2026-10-08T17:10:38.2595071Z         monkeypatch.setattr(host_module, "launch_confined", observed_launch)
+2026-10-08T17:10:38.2595446Z         executable = Path(os.environ["LIBREOFFICE_EXE"])
+2026-10-08T17:10:38.2595727Z         assert executable.is_file()
+2026-10-08T17:10:38.2595979Z         data = tmp_path / "data"
+2026-10-08T17:10:38.2597928Z         data.mkdir()
+2026-10-08T17:10:38.2598395Z         (data / "libreoffice.json").write_text(json.dumps({"executable": str(executable)}), encoding="utf-8")
+2026-10-08T17:10:38.2598790Z         raw = document()
+2026-10-08T17:10:38.2599118Z         host = Host(data)
+2026-10-08T17:10:38.2599382Z         with http(host) as call:
+2026-10-08T17:10:38.2599730Z             run = call("/api/run", {"process": process, "text": "", "filename": "original.odt",
+2026-10-08T17:10:38.2600199Z                                    "attachment": base64.b64encode(raw).decode("ascii")})["run_id"]
+2026-10-08T17:10:38.2600555Z             deadline = time.monotonic() + 90
+2026-10-08T17:10:38.2600814Z             state = call("/api/runs/" + run)
+2026-10-08T17:10:38.2601121Z             while state["status"] == "RUNNING" and time.monotonic() < deadline:
+2026-10-08T17:10:38.2601433Z                 time.sleep(0.1)
+2026-10-08T17:10:38.2601669Z                 state = call("/api/runs/" + run)
+2026-10-08T17:10:38.2601940Z             if state["status"] != "HUMAN_REQUIRED":
+2026-10-08T17:10:38.2602384Z                 folder = data / "runs" / run
+2026-10-08T17:10:38.2602754Z                 diagnostics = {p.name: p.read_text("utf-8", errors="replace")[-12000:]
+2026-10-08T17:10:38.2603195Z                                for p in folder.iterdir() if p.suffix in {".json", ".txt"}}
+2026-10-08T17:10:38.2603754Z >               pytest.fail(json.dumps({"state": state, "diagnostics": diagnostics, "tool": tool_diagnostics}, ensure_ascii=False))
+2026-10-08T17:10:38.2622430Z E               Failed: {"state": {"run_id": "354141b947254627b5d1112db51c5c16", "process_id": "book", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:08:54.268294+00:00", "updated_at": "2026-10-08T17:09:46.766929+00:00", "message": "A execução da ferramenta falhou. O pedido foi conservado.", "execution_phase": "EXECUTING", "input_sha256": "909ec3176cf334ea1093a3cfae1b482653b3bfdb534e0b1ba5998757ac6ad27f", "request_sha256": "3ce1062a14a929eff375c2cc37dfda4cff2a69a494f5cd3648f3765ba10e0bd5", "process_sha256": "4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8"}, "diagnostics": {"execution.stderr.txt": "Traceback (most recent call last):\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 251, in <module>\n    print(json.dumps(execute(process, input_path), ensure_ascii=False))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 243, in execute\n    result = _direct_result(process, input_path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 230, in _direct_result\n    value = _dispatch(process, _input(input_path))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 213, in _dispatch\n    return run(path)\n           ^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py\", line 94, in run\n    raise Blocked(\"Conversão excedeu o tempo permitido.\") from None\nnexus.contracts.Blocked: Conversão excedeu o tempo permitido.\nExecução direta indisponível ou resposta rejeitada.\n", "execution.stdout.json": "", "request.json": "{\n  \"process\": \"book\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAABuJSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAAG4lIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAAAbiUhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAAAbiUhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAAAbiUhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAAAbiUhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"354141b947254627b5d1112db51c5c16\",\n  \"process_id\": \"book\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:08:54.268294+00:00\",\n  \"updated_at\": \"2026-10-08T17:09:46.766929+00:00\",\n  \"message\": \"A execução da ferramenta falhou. O pedido foi conservado.\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"909ec3176cf334ea1093a3cfae1b482653b3bfdb534e0b1ba5998757ac6ad27f\",\n  \"request_sha256\": \"3ce1062a14a929eff375c2cc37dfda4cff2a69a494f5cd3648f3765ba10e0bd5\",\n  \"process_sha256\": \"4f5cfaeb8082092306e332443e497bdb71b4168e17edf531b169fd461edd93e8\"\n}"}, "tool": [{"office/stdout.txt": ""}, {"office/stderr.txt": ""}]}
+2026-10-08T17:10:38.2637968Z 
+2026-10-08T17:10:38.2638131Z nexus\tests\test_native_writer_route_real.py:117: Failed
+2026-10-08T17:10:38.2638554Z _ test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate[convert_pdf] _
+2026-10-08T17:10:38.2638853Z 
+2026-10-08T17:10:38.2639203Z tmp_path = WindowsPath('C:/Users/runneradmin/AppData/Local/Temp/pytest-of-runneradmin/pytest-0/test_installed_writer_is_confi1')
+2026-10-08T17:10:38.2639788Z monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015BE1063DA0>
+2026-10-08T17:10:38.2640146Z process = 'convert_pdf'
+2026-10-08T17:10:38.2640290Z 
+2026-10-08T17:10:38.2640439Z     @pytest.mark.parametrize("process", ["book", "convert_pdf"])
+2026-10-08T17:10:38.2640946Z     def test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate(tmp_path, monkeypatch, process):
+2026-10-08T17:10:38.2641427Z         from nexus import host as host_module
+2026-10-08T17:10:38.2641718Z         real_launch = host_module.launch_confined
+2026-10-08T17:10:38.2641995Z         tool_diagnostics = []
+2026-10-08T17:10:38.2642248Z         def observed_launch(command, **kwargs):
+2026-10-08T17:10:38.2642554Z             kwargs["env"] = {**kwargs["env"], "SAL_LOG": "+WARN"}
+2026-10-08T17:10:38.2642862Z             worker = real_launch(command, **kwargs)
+2026-10-08T17:10:38.2643152Z             communicate = worker.communicate
+2026-10-08T17:10:38.2643420Z             def observed_communication(*args, **options):
+2026-10-08T17:10:38.2643702Z                 try:
+2026-10-08T17:10:38.2643979Z                     return communicate(*args, **options)
+2026-10-08T17:10:38.2644252Z                 finally:
+2026-10-08T17:10:38.2644478Z                     work = Path(kwargs["cwd"])
+2026-10-08T17:10:38.2644779Z                     for name in ["office/stdout.txt", "office/stderr.txt"]:
+2026-10-08T17:10:38.2775610Z                         path = work / name
+2026-10-08T17:10:38.2776010Z                         if path.is_file():
+2026-10-08T17:10:38.2776472Z                             tool_diagnostics.append({name: path.read_bytes()[:12000].decode("utf-8", errors="replace")})
+2026-10-08T17:10:38.2776884Z             worker.communicate = observed_communication
+2026-10-08T17:10:38.2777209Z             return worker
+2026-10-08T17:10:38.2777535Z         monkeypatch.setattr(host_module, "launch_confined", observed_launch)
+2026-10-08T17:10:38.2778155Z         executable = Path(os.environ["LIBREOFFICE_EXE"])
+2026-10-08T17:10:38.2778474Z         assert executable.is_file()
+2026-10-08T17:10:38.2778738Z         data = tmp_path / "data"
+2026-10-08T17:10:38.2778950Z         data.mkdir()
+2026-10-08T17:10:38.2779312Z         (data / "libreoffice.json").write_text(json.dumps({"executable": str(executable)}), encoding="utf-8")
+2026-10-08T17:10:38.2779719Z         raw = document()
+2026-10-08T17:10:38.2779942Z         host = Host(data)
+2026-10-08T17:10:38.2780199Z         with http(host) as call:
+2026-10-08T17:10:38.2780548Z             run = call("/api/run", {"process": process, "text": "", "filename": "original.odt",
+2026-10-08T17:10:38.2780987Z                                    "attachment": base64.b64encode(raw).decode("ascii")})["run_id"]
+2026-10-08T17:10:38.2781332Z             deadline = time.monotonic() + 90
+2026-10-08T17:10:38.2781595Z             state = call("/api/runs/" + run)
+2026-10-08T17:10:38.2781918Z             while state["status"] == "RUNNING" and time.monotonic() < deadline:
+2026-10-08T17:10:38.2782375Z                 time.sleep(0.1)
+2026-10-08T17:10:38.2782626Z                 state = call("/api/runs/" + run)
+2026-10-08T17:10:38.2782857Z             if state["status"] != "HUMAN_REQUIRED":
+2026-10-08T17:10:38.2783104Z                 folder = data / "runs" / run
+2026-10-08T17:10:38.2783670Z                 diagnostics = {p.name: p.read_text("utf-8", errors="replace")[-12000:]
+2026-10-08T17:10:38.2784076Z                                for p in folder.iterdir() if p.suffix in {".json", ".txt"}}
+2026-10-08T17:10:38.2784579Z >               pytest.fail(json.dumps({"state": state, "diagnostics": diagnostics, "tool": tool_diagnostics}, ensure_ascii=False))
+2026-10-08T17:10:38.2802641Z E               Failed: {"state": {"run_id": "c89a4073944c448182e03a8af5a2df06", "process_id": "convert_pdf", "process_version": "1.0.0", "title": "original.odt", "status": "BLOCKED", "created_at": "2026-10-08T17:09:47.414664+00:00", "updated_at": "2026-10-08T17:10:37.621917+00:00", "message": "A execução da ferramenta falhou. O pedido foi conservado.", "execution_phase": "EXECUTING", "input_sha256": "432801d642acc5bc79697a3cb00f40c3e628ee5ac19c8e2b4b977e564ff377e1", "request_sha256": "0f5436e5ecdf0a41f4bbede523f77a378c232eb1f7ce671c4bfa4d8915828ad8", "process_sha256": "67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37"}, "diagnostics": {"execution.stderr.txt": "Traceback (most recent call last):\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 251, in <module>\n    print(json.dumps(execute(process, input_path), ensure_ascii=False))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 243, in execute\n    result = _direct_result(process, input_path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 230, in _direct_result\n    value = _dispatch(process, _input(input_path))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 213, in _dispatch\n    return run(path)\n           ^^^^^^^^^\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py\", line 94, in run\n    raise Blocked(\"Conversão excedeu o tempo permitido.\") from None\nnexus.contracts.Blocked: Conversão excedeu o tempo permitido.\nExecução direta indisponível ou resposta rejeitada.\n", "execution.stdout.json": "", "request.json": "{\n  \"process\": \"convert_pdf\",\n  \"text\": \"\",\n  \"filename\": \"original.odt\",\n  \"attachment\": \"UEsDBBQAAAAAADeJSF1exjIMJwAAACcAAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHRQSwMEFAAAAAAAN4lIXaafOhNKAQAASgEAAAsAAABjb250ZW50LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG9mZmljZTpkb2N1bWVudC1jb250ZW50IHhtbG5zOm9mZmljZT0idXJuOm9hc2lzOm5hbWVzOnRjOm9wZW5kb2N1bWVudDp4bWxuczpvZmZpY2U6MS4wIiB4bWxuczp0ZXh0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOnRleHQ6MS4wIiBvZmZpY2U6dmVyc2lvbj0iMS4zIj48b2ZmaWNlOmJvZHk+PG9mZmljZTp0ZXh0Pjx0ZXh0OnA+TGlzYm9hIHJlY2ViZXUgMTIgY2FpeGFzLjwvdGV4dDpwPjwvb2ZmaWNlOnRleHQ+PC9vZmZpY2U6Ym9keT48L29mZmljZTpkb2N1bWVudC1jb250ZW50PlBLAwQUAAAAAAA3iUhdWZCQhWkBAABpAQAAFQAAAE1FVEEtSU5GL21hbmlmZXN0LnhtbDw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PG1hbmlmZXN0Om1hbmlmZXN0IHhtbG5zOm1hbmlmZXN0PSJ1cm46b2FzaXM6bmFtZXM6dGM6b3BlbmRvY3VtZW50OnhtbG5zOm1hbmlmZXN0OjEuMCIgbWFuaWZlc3Q6dmVyc2lvbj0iMS4zIj48bWFuaWZlc3Q6ZmlsZS1lbnRyeSBtYW5pZmVzdDpmdWxsLXBhdGg9Ii8iIG1hbmlmZXN0Om1lZGlhLXR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQudGV4dCIvPjxtYW5pZmVzdDpmaWxlLWVudHJ5IG1hbmlmZXN0OmZ1bGwtcGF0aD0iY29udGVudC54bWwiIG1hbmlmZXN0Om1lZGlhLXR5cGU9InRleHQveG1sIi8+PC9tYW5pZmVzdDptYW5pZmVzdD5QSwECFAAUAAAAAAA3iUhdXsYyDCcAAAAnAAAACAAAAAAAAAAAAAAAgAEAAAAAbWltZXR5cGVQSwECFAAUAAAAAAA3iUhdpp86E0oBAABKAQAACwAAAAAAAAAAAAAAgAFNAAAAY29udGVudC54bWxQSwECFAAUAAAAAAA3iUhdWZCQhWkBAABpAQAAFQAAAAAAAAAAAAAAgAHAAQAATUVUQS1JTkYvbWFuaWZlc3QueG1sUEsFBgAAAAADAAMAsgAAAFwDAAAAAA==\"\n}", "state.json": "{\n  \"run_id\": \"c89a4073944c448182e03a8af5a2df06\",\n  \"process_id\": \"convert_pdf\",\n  \"process_version\": \"1.0.0\",\n  \"title\": \"original.odt\",\n  \"status\": \"BLOCKED\",\n  \"created_at\": \"2026-10-08T17:09:47.414664+00:00\",\n  \"updated_at\": \"2026-10-08T17:10:37.621917+00:00\",\n  \"message\": \"A execução da ferramenta falhou. O pedido foi conservado.\",\n  \"execution_phase\": \"EXECUTING\",\n  \"input_sha256\": \"432801d642acc5bc79697a3cb00f40c3e628ee5ac19c8e2b4b977e564ff377e1\",\n  \"request_sha256\": \"0f5436e5ecdf0a41f4bbede523f77a378c232eb1f7ce671c4bfa4d8915828ad8\",\n  \"process_sha256\": \"67375c702b57e3bc71ba131e2c963f4070f4a3198d28b0b2ea17417adf626c37\"\n}"}, "tool": [{"office/stdout.txt": ""}, {"office/stderr.txt": ""}]}
+2026-10-08T17:10:38.2818022Z 
+2026-10-08T17:10:38.2818160Z nexus\tests\test_native_writer_route_real.py:117: Failed
+2026-10-08T17:10:38.2818498Z =================================== PASSES ====================================
+2026-10-08T17:10:38.2818965Z ________ test_writer_ipc_namespace_observation_inside_native_boundary _________
+2026-10-08T17:10:38.2819385Z ---------------------------- Captured stdout call -----------------------------
+2026-10-08T17:10:38.2820150Z Writer IPC namespace observation (LPAC unchanged): {"legacy": {"mutex_created": true, "mutex_error": 0, "pipe_created": false, "pipe_error": 5}, "LOCAL": {"mutex_created": true, "mutex_error": 0, "pipe_created": true, "pipe_error": 0}}
+2026-10-08T17:10:38.2820861Z 2 failed, 5 passed in 119.38s (0:01:59)
+2026-10-08T17:10:38.4048541Z ##[error]Process completed with exit code 1.
+2026-10-08T17:10:38.4215857Z ##[group]Run actions/upload-artifact@v4
+2026-10-08T17:10:38.4216142Z with:
+2026-10-08T17:10:38.4216309Z   name: native-writer-evidence
+2026-10-08T17:10:38.4216513Z   path: writer-evidence/
+2026-10-08T17:10:38.4216699Z   if-no-files-found: error
+2026-10-08T17:10:38.4216872Z   compression-level: 6
+2026-10-08T17:10:38.4217040Z   overwrite: false
+2026-10-08T17:10:38.4217214Z   include-hidden-files: false
+2026-10-08T17:10:38.4217389Z env:
+2026-10-08T17:10:38.4217521Z   NEXUS_REAL_WRITER: 1
+2026-10-08T17:10:38.4217676Z   PYTHONUTF8: 1
+2026-10-08T17:10:38.4217896Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:10:38.4218248Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-08T17:10:38.4218589Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:10:38.4218894Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:10:38.4219226Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-08T17:10:38.4219536Z   LIBREOFFICE_EXE: C:\Program Files\LibreOffice\program\soffice.com
+2026-10-08T17:10:38.4219799Z ##[endgroup]
+2026-10-08T17:10:38.5802909Z (node:5124) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:10:38.5803815Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:10:38.5859581Z With the provided path, there will be 1 file uploaded
+2026-10-08T17:10:38.5863716Z Artifact name is valid!
+2026-10-08T17:10:38.5865524Z Root directory input is valid!
+2026-10-08T17:10:38.9366235Z Beginning upload of artifact content to blob storage
+2026-10-08T17:10:38.9524783Z (node:5124) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T17:10:39.1817142Z Uploaded bytes 4255
+2026-10-08T17:10:39.2483503Z Finished uploading artifact content to blob storage!
+2026-10-08T17:10:39.2484178Z SHA256 digest of uploaded artifact zip is ea2527d09a0b9953475a0c819247d2d2c26f5b2d848554bdeb69238716ec4f90
+2026-10-08T17:10:39.2486040Z Finalizing artifact upload
+2026-10-08T17:10:39.5378627Z Artifact native-writer-evidence.zip successfully finalized. Artifact ID 11566307486
+2026-10-08T17:10:39.5380123Z Artifact native-writer-evidence has been successfully uploaded! Final size is 4255 bytes. Artifact ID is 11566307486
+2026-10-08T17:10:39.5388709Z Artifact download URL: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37813977363/artifacts/11566307486
+2026-10-08T17:10:39.5722036Z Post job cleanup.
+2026-10-08T17:10:39.7039354Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-08T17:10:39.7253343Z git version 2.55.0.windows.5
+2026-10-08T17:10:39.7302651Z Temporarily overriding HOME='D:\a\_temp\5578267e-795e-424f-ab41-68ce8405710b' before making global git config changes
+2026-10-08T17:10:39.7303303Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T17:10:39.7310960Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\nexus-writer-lab\nexus-writer-lab
+2026-10-08T17:10:39.7546687Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:10:39.7789540Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-08T17:10:40.1941322Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:10:40.2176029Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-08T17:10:40.6386650Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:10:40.6630188Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-08T17:10:41.0953280Z Cleaning up orphan processes
+2026-10-08T17:10:41.1487946Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
