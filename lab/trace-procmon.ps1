@@ -15,23 +15,39 @@ if (Get-Process -Name Procmon,Procmon64 -ErrorAction SilentlyContinue) { throw '
 $pml=Join-Path $output 'writer.pml'
 $started=[DateTime]::UtcNow.ToString('o')
 $controller=Start-Process -FilePath $exe -ArgumentList @('/AcceptEula','/Quiet','/Minimized','/BackingFile',('"'+$pml+'"'),'/Runtime','600') -WindowStyle Hidden -PassThru
-$null=Start-Process -FilePath $exe -ArgumentList '/WaitForIdle' -WindowStyle Hidden -Wait
+Write-Output ('TRACE_STAGE=recorder_started UTC='+[DateTime]::UtcNow.ToString('o'))
+function Invoke-RecorderBounded {
+    param([string[]]$Arguments,[string]$Name,[int]$Seconds=120)
+    Write-Host ('TRACE_STAGE='+$Name+' UTC='+[DateTime]::UtcNow.ToString('o'))
+    $helper=Start-Process -FilePath $exe -ArgumentList $Arguments -WindowStyle Hidden -PassThru
+    $finished=$helper.WaitForExit($Seconds*1000)
+    if (-not $finished) { $helper.Kill(); $helper.WaitForExit(5000) | Out-Null }
+    @{stage=$Name;finished=$finished;exit_code=$(if ($finished) {$helper.ExitCode} else {$null})} | ConvertTo-Json | Set-Content (Join-Path $output ($Name+'-process.json'))
+    return $finished
+}
+$ready=Invoke-RecorderBounded -Arguments @('/WaitForIdle') -Name 'wait_for_idle' -Seconds 30
+if (-not $ready) {
+    Invoke-RecorderBounded -Arguments @('/Terminate') -Name 'failed_start_stop' -Seconds 15 | Out-Null
+    throw 'Recorder readiness not confirmed; no Writer run or policy bypass'
+}
 $baseline='NOT RUN'
 try {
+    Write-Output ('TRACE_STAGE=standard_user_baseline UTC='+[DateTime]::UtcNow.ToString('o'))
     ./lab/run-standard-user.ps1 -Suite baseline
     $baseline='PASS'
 } catch {
     $baseline='FAIL'
     $_ | Out-String | Set-Content (Join-Path $output 'baseline-error.txt')
 } finally {
-    $null=Start-Process -FilePath $exe -ArgumentList '/Terminate' -WindowStyle Hidden -Wait
+    Invoke-RecorderBounded -Arguments @('/Terminate') -Name 'stop' -Seconds 30 | Out-Null
+    $controller.WaitForExit(30000) | Out-Null
 }
 @{started_utc=$started;stopped_utc=[DateTime]::UtcNow.ToString('o');timezone=(Get-TimeZone).Id;baseline_workflow_result=$baseline;recorder_pid=$controller.Id;writer_timeout_seconds=45;writer_standard_user_required=$true;security_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'trace-context.json')
 if (-not (Test-Path -LiteralPath $pml)) { throw 'Recorder did not produce native trace' }
 $csv=Join-Path $output 'writer.csv'
-$export=Start-Process -FilePath $exe -ArgumentList @('/Quiet','/OpenLog',('"'+$pml+'"'),'/SaveAs',('"'+$csv+'"')) -WindowStyle Hidden -Wait -PassThru
-@{exit_code=$export.ExitCode;csv_exists=(Test-Path -LiteralPath $csv)} | ConvertTo-Json | Set-Content (Join-Path $output 'export.json')
+$finished=Invoke-RecorderBounded -Arguments @('/Quiet','/OpenLog',('"'+$pml+'"'),'/SaveAs',('"'+$csv+'"')) -Name 'csv_export'
+@{finished=$finished;csv_exists=(Test-Path -LiteralPath $csv)} | ConvertTo-Json | Set-Content (Join-Path $output 'export.json')
 $xml=Join-Path $output 'writer.xml'
-$export=Start-Process -FilePath $exe -ArgumentList @('/Quiet','/OpenLog',('"'+$pml+'"'),'/SaveAs1',('"'+$xml+'"')) -WindowStyle Hidden -Wait -PassThru
-@{exit_code=$export.ExitCode;xml_exists=(Test-Path -LiteralPath $xml);stacks_requested=$true;symbols_requested=$false} | ConvertTo-Json | Set-Content (Join-Path $output 'stack-export.json')
+$finished=Invoke-RecorderBounded -Arguments @('/Quiet','/OpenLog',('"'+$pml+'"'),'/SaveAs1',('"'+$xml+'"')) -Name 'xml_export'
+@{finished=$finished;xml_exists=(Test-Path -LiteralPath $xml);stacks_requested=$true;symbols_requested=$false} | ConvertTo-Json | Set-Content (Join-Path $output 'stack-export.json')
 if ($baseline -ne 'PASS') { throw 'Baseline FAIL retained; recorder evidence must be reviewed separately' }

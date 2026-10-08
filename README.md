@@ -19,13 +19,17 @@ usam o instalador oficial arquivado **26.2.6.2**, com SHA-256 fixado. O candidat
 já usa UserInstallation dedicado, diretório pré-criado, ACL herdada do SID da
 tarefa e `--norestore`: B–E são repetições equivalentes, identificadas como tal.
 F acrescenta somente `--nolockcheck`; G acrescenta somente `--nologo` a F.
-H exige uma combinação mínima justificada pelos resultados; não é preenchida por antecipação.
+H exige uma combinação mínima justificada pelos resultados; não foi executada.
+A alternativa I usa LibreOfficeKit oficial e permanece sem PASS reproduzível.
 
 O prazo Writer permanece **45 segundos**. Host, Kernel, Store, LPAC, Job,
 Human Gate, Creative/Canonical, recovery e contratos permanecem os do SHA
 original. F/G alteram apenas flags do adapter numa cópia experimental descartável;
 o selo dessa cópia é atualizado explicitamente e os bytes originais são restaurados
-no fim. Nenhuma alteração experimental é aplicada ao repositório principal.
+no fim. I altera somente o adapter selado numa cópia experimental; as rotas
+reais falharam também numa conta normal. Nenhuma alteração experimental é
+aplicada ao repositório principal. A Folha e a regressão 100+100 de uma solução
+continuam pendentes do gate positivo de Writer.
 
 A hipótese externa de Carlos De La Torre / @radelqui está referenciada no
 [comentário técnico](https://github.com/PAPACREATOR/cerebro-parvo-/issues/36#issuecomment-6064316804).

@@ -2,9 +2,8 @@
 
 ## Estado
 
-Investigação em execução. Nenhuma solução reproduzível nem proposta de patch.
-O Nexus principal não foi alterado. Relatório provisório até ao fecho da matriz
-e revisão do rastreio; não declarar A ou B do pedido concluídos antecipadamente.
+Investigação em execução, aguardando revisão do Procmon. Nenhuma solução
+reproduzível nem proposta de patch. O Nexus principal não foi alterado.
 
 ## Proveniência
 
@@ -67,10 +66,38 @@ publicar no repositório principal. O material de diagnóstico está em lab/.
 
 ## Alternativa oficial em diagnóstico
 
-Após a matriz sem melhoria, o probe LibreOfficeKit usa a API C oficial do mesmo tag, cuja inicialização desativa RequestHandler IPC. É uma hipótese independente, ainda sem PASS das rotas do produto. Mantém launcher original, raízes originais, perfil MacroSecurityLevel=3, Job e 45 s. Workflow: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37817330801.
+Após a matriz sem melhoria, a alternativa I usa a API C LibreOfficeKit oficial
+do mesmo tag, cuja inicialização desativa RequestHandler IPC. Um probe direto
+no runner original produziu PDF, mas tinha TokenElevation=true. As duas rotas
+integradas falharam. Na conta normal, ambos os processos falharam aos 45 s;
+probes baseline, SAL_LOG e caminho longo também falharam. Não há PASS do produto.
+Mantém launcher original, raízes do runtime instalado, MacroSecurityLevel=3,
+Job e 45 s. Não é uma combinação de flags de A–G. Ver RESULT_MATRIX.md.
 
 O pedido adicional de abrir a Folha e fazer testes totais será cumprido após solução reproduzível: abrir uma instância do laboratório, usar o Human Gate original e validar os 200 ensaios e restantes gates. Não declarar conclusão enquanto Writer falhar.
 
 ## Limitação do runner
 
 O observador no runner GitHub regista TokenElevation=true nos processos observados, além de AppContainer=true, capabilities conformes e Job original. Não foi introduzido runas nem alterado o token, mas esta herança do runner impede afirmar execução não elevada comprovada. Qualquer futura solução exige também validação numa sessão Windows não elevada. O ensaio local não elevado falhou antes de Writer na DACL; não substitui esse gate.
+
+Foi criada uma conta normal exclusivamente nos runners descartáveis, com Python
+e LibreOffice copiados pela própria conta para diretórios seus. Os testes
+confirmaram elevated=false; não se adicionou a conta a Administrators e nenhum
+grante geral foi aplicado. A instalação deslocada é uma diferença de ambiente,
+documentada; não atribuir o contraste à elevação isoladamente.
+
+Rotas reais não elevadas: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37821690122.
+Probes não elevados: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37821697393.
+Pós-comunicação das rotas: Job com zero processos ativos. Consulta direta de
+TokenIsLessPrivilegedAppContainer devolveu WinError 87; não afirmar uma medição
+direta desse flag. A opção LPAC original e o canary são mantidos.
+
+O rastreio Procmon do adapter original, sem variante de conversão, está em
+https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37822420842.
+O recorder externo exige direitos de instalação próprios do runner; Writer
+continua na conta normal e na fronteira original. Não se desativa política
+Windows nem se muda o token de Writer. Resultados aguardam revisão.
+
+As suites de 100+100, inputs adversos e regressão geral do candidato foram
+preparadas em writer-lab-full.yml, mas **NOT RUN**: o gate das rotas reais falhou.
+Os testes gerais verdes sobre os bytes originais não validam a variante I.

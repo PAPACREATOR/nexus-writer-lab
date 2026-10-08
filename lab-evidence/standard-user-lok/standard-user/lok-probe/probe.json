@@ -1,0 +1,83 @@
+{
+  "case": "baseline",
+  "lab_sha": "f4cd66a2a6cbc8bf699fdfdcf169a1839855abcb",
+  "source_sha": "b4d50ab8469cf60dfa3228c7c34ef9a1285ac827",
+  "timeout_seconds": 45,
+  "input_sha256": "29d06342332523706c1d95225404a06628b21c2799f75effaeb64e960ec4366d",
+  "read_roots": [
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus",
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python",
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\lok-probe\\.nexus-task-lok",
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office"
+  ],
+  "security_changes": [],
+  "product_routes_validated": false,
+  "human_gate_validated": false,
+  "command": [
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe",
+    "-I",
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\lab\\writer_lok_probe.py",
+    "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program",
+    "61181"
+  ],
+  "process_observation": {
+    "sampling_interval_seconds": 0.1,
+    "complete_process_inventory": false,
+    "events": [
+      {
+        "pid": 7732,
+        "parent_pid": 8928,
+        "name": "python.exe",
+        "seconds": 0.0,
+        "appcontainer": true,
+        "elevated": false,
+        "lpac_query_error": 87,
+        "capabilities_match_existing_boundary": true,
+        "same_job": true,
+        "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe -I C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\lab\\writer_lok_probe.py C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program 61181"
+      },
+      {
+        "pid": 8580,
+        "parent_pid": 7732,
+        "name": "conhost.exe",
+        "seconds": 0.0,
+        "appcontainer": true,
+        "elevated": false,
+        "lpac_query_error": 87,
+        "capabilities_match_existing_boundary": true,
+        "same_job": true,
+        "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+      }
+    ],
+    "errors": []
+  },
+  "error": {
+    "type": "TimeoutExpired",
+    "message": "Command 'confined task' timed out after 45 seconds"
+  },
+  "seconds": 52.34400000000005,
+  "stages": [
+    {
+      "stage": "native_boundary_verified",
+      "seconds": 0.0
+    },
+    {
+      "stage": "network_denied",
+      "seconds": 0.03099999999994907,
+      "winerror": 10013,
+      "errno": 13
+    },
+    {
+      "stage": "loading_library",
+      "seconds": 0.03099999999994907,
+      "library": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll"
+    },
+    {
+      "stage": "initializing_lok",
+      "seconds": 0.10900000000003729,
+      "userinstallation": "file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/lok-probe/.nexus-task-lok/runs/7f4e9d537dd2435090437ca22716c90c/office/profile"
+    }
+  ],
+  "pdf_error": "PDF ausente ou inv\u00e1lido.",
+  "render_pass": false
+}

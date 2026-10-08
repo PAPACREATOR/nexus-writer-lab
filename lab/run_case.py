@@ -18,7 +18,7 @@ DESCRIPTIONS = {
     'E': '--norestore: already present in A; identical repeat',
     'F': 'A + --nolockcheck only',
     'G': 'F + --nologo only',
-    'H': 'Official LibreOfficeKit C ABI in sealed office child; original Host/Gate/boundary and 45 seconds',
+    'I': 'Official LibreOfficeKit C ABI in sealed office child; original Host/Gate/boundary and 45 seconds',
 }
 
 
@@ -43,7 +43,7 @@ def main():
                 'original_office_sha256': hashlib.sha256(original).hexdigest(),
                 'security_changes': []}
     try:
-        if args.variant == 'H':
+        if args.variant == 'I':
             office.write_bytes((ROOT / 'lab/candidate-office.py').read_bytes())
             hashes = json.loads(seal)
             hashes['adapters/office.py'] = hashlib.sha256(office.read_bytes()).hexdigest()

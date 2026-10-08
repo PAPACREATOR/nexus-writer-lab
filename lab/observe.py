@@ -75,6 +75,18 @@ class Observer:
                                     row['lpac'] = bool(lpac.value)
                                 else:
                                     row['lpac_query_error'] = C.get_last_error()
+                                    native = C.WinDLL('ntdll')
+                                    native.NtQueryInformationToken.argtypes = [a.H, C.c_int, a.P, a.D, C.POINTER(a.D)]
+                                    native.NtQueryInformationToken.restype = C.c_long
+                                    size = a.D()
+                                    native.NtQueryInformationToken(token, 46, None, 0, C.byref(size))
+                                    row['lpac_native_required_length'] = size.value
+                                    if size.value in (1, 4):
+                                        data = C.create_string_buffer(size.value)
+                                        status = native.NtQueryInformationToken(token, 46, data, size, C.byref(size))
+                                        row['lpac_native_query_status'] = status
+                                        if status == 0:
+                                            row['lpac'] = bool(int.from_bytes(data.raw, 'little'))
                                 try:
                                     a.check_capabilities(token)
                                     row['capabilities_match_existing_boundary'] = True

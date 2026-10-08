@@ -24,4 +24,24 @@ O gate final do workflow permanece FAIL se qualquer caso falhar; os passos
 continue-on-error servem para completar a recolha, não para converter FAIL em PASS.
 Um PASS intermitente é FAIL e exige a regressão completa solicitada.
 
+## Alternativa I — LibreOfficeKit oficial
+
+H continua reservado à combinação mínima de A–G, não executada porque nenhuma
+dessas variantes melhorou o resultado. I é uma hipótese independente. Os primeiros
+artefactos de I foram etiquetados H pelos scripts; são mantidos sem reescrever a
+história e a etiqueta foi corrigida para futuras execuções.
+
+| Ensaio de I | Resultado | Limite da conclusão |
+|---|---|---|
+| Probe direto 37817330801, runner original | Um PDF, exportação perto de 1 s | TokenElevation=true; não é solução válida nem PASS do produto |
+| Rotas 37818090643 | 2 FAIL, 1 PASS canary | Erro de bootstrap do auxiliar; corrigido sem novos grants |
+| Rotas 37818655960 e 37819386555 | 2 FAIL, 1 PASS por execução | Falha nativa durante inicialização; terceira execução regista 0xC0000409 |
+| Rotas 37821690122, conta normal | 2 FAIL/45 s, 1 PASS canary | AppContainer e Job observados, elevated=false; zero processos ativos no Job após comunicação |
+| Probes 37821697393, conta normal | Baseline, SAL_LOG e caminho longo: 3 FAIL/45 s | Rede recusada com 10013; nenhum PDF |
+
+Execuções 37820186594, 37820479695, 37821029914 e 37821036415 falharam na
+preparação da conta de teste: **NOT RUN**, sem converter essa falha em evidência
+de Writer. Logs e correções estão versionados. A via I não constitui solução
+reproduzível no estado observado. A causa do timeout original continua NOT PROVEN.
+
 Cada caso: 3 testes originais, 2 falhas (book e convert_pdf) e 1 PASS (canary IPC). Total da matriz: 14 FAIL, 7 PASS. Todos os casos restauraram os bytes originais e verificaram a integridade antes de executar. Evidência persistida em lab-evidence/sequential-matrix. H não tem melhoria em A–G que justifique uma combinação.
