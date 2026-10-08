@@ -108,3 +108,6 @@ def record_existing_launch(monkeypatch, request):
     if os.environ.get('LAB_REQUIRE_NO_ORPHANS') == '1':
         assert launches, 'No real Host launch observed'
         assert all(row.get('job_after_communication') == {'query_ok': True, 'active_processes': 0} for row in launches), 'Native Job retained processes or could not be queried'
+        tools=[event for row in launches for event in row['process_observation']['events'] if event['name'].lower() in ('python.exe','soffice.com','soffice.bin')]
+        assert tools, 'No actual tool token observed'
+        assert all(event.get('appcontainer') is True and event.get('lpac') is True and event.get('elevated') is False and event.get('same_job') is True and event.get('capabilities_match_existing_boundary') is True for event in tools), 'Tool token/LPAC/Job/non-elevation gate failed'

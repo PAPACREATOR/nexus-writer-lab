@@ -70,6 +70,11 @@ class Observer:
                                     row['appcontainer'] = bool(contained.value)
                                 if a.a.GetTokenInformation(token, 20, C.byref(elevated), C.sizeof(elevated), C.byref(length)):
                                     row['elevated'] = bool(elevated.value)
+                                lpac = a.D()
+                                if a.a.GetTokenInformation(token, 46, C.byref(lpac), C.sizeof(lpac), C.byref(length)):
+                                    row['lpac'] = bool(lpac.value)
+                                else:
+                                    row['lpac_query_error'] = C.get_last_error()
                                 try:
                                     a.check_capabilities(token)
                                     row['capabilities_match_existing_boundary'] = True

@@ -16,9 +16,9 @@ $null=New-Item -ItemType Directory -Path $output -Force
 $arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard)
 try {
     $process=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -Credential $credential -LoadUserProfile -WindowStyle Hidden -ArgumentList $arguments -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt') -Wait -PassThru
-    $profile=Get-CimInstance Win32_UserProfile | Where-Object {$_.SID -eq (Get-LocalUser -Name $name).SID.Value} | Select-Object -First 1
-    if ($profile) {
-        $evidence=Join-Path $profile.LocalPath 'NexusWriterLab/repo/lab-evidence'
+    $labProfile=Get-CimInstance Win32_UserProfile | Where-Object {$_.SID -eq (Get-LocalUser -Name $name).SID.Value} | Select-Object -First 1
+    if ($labProfile) {
+        $evidence=Join-Path $labProfile.LocalPath 'NexusWriterLab/repo/lab-evidence'
         if (Test-Path -LiteralPath $evidence) { Copy-Item -LiteralPath $evidence -Destination (Join-Path $source 'lab-evidence/standard-user') -Recurse }
     }
     @{suite=$Suite;shard=$Shard;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
