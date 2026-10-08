@@ -13,6 +13,7 @@ jobs:
           - {suite: stress, shard: 1}
           - {suite: stress, shard: 2}
           - {suite: stress, shard: 3}
+          - {suite: adverse, shard: 0}
           - {suite: standard, shard: 0}
           - {suite: standard, shard: 1}
           - {suite: volume, shard: 0}

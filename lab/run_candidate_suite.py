@@ -5,7 +5,7 @@ from lab.run_case import SOURCE_SHA, ROOT
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('suite',choices=['stress','standard','volume'])
+    parser.add_argument('suite',choices=['stress','standard','volume','adverse'])
     parser.add_argument('shard',type=int)
     args=parser.parse_args()
     output=ROOT/f'lab-evidence/candidate-{args.suite}-{args.shard}'
@@ -28,9 +28,14 @@ def main():
         if args.suite=='stress':
             env['LAB_REQUIRE_NO_ORPHANS']='1'
             targets=['lab/test_writer_regression.py','-p','lab.evidence_plugin']
+        elif args.suite=='adverse':
+            targets=['lab/test_writer_adverse.py','-p','lab.evidence_plugin']
         elif args.suite=='volume':
+            env['NEXUS_REAL_WRITER']='0'
             targets=['nexus/tests/'+volume[args.shard]]
         else:
+            env['NEXUS_REAL_WRITER']='0'
+            metadata['optional_real_writer_env']='0, original standard-regression default; actual confined routes run in stress/adverse suites'
             all_modules=sorted(str(p.relative_to(ROOT)).replace('\\','/') for p in (ROOT/'nexus/tests').rglob('*.py') if (p.name.startswith('test_') or p.name.endswith('_test.py')) and p.name not in volume)
             targets=all_modules[args.shard::2]
         command=[sys.executable,'-u','-m','pytest',*targets,'-vv','--tb=short','-p','no:cacheprovider','-o','pythonpath=.','--basetemp='+str(output/'tmp'),'--junitxml='+str(output/'results.xml')]
