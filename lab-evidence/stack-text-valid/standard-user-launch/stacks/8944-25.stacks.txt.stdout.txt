@@ -1,0 +1,113 @@
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   EnableRedirectToV8JsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.000 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 30
+
+Microsoft (R) Windows Debugger Version 10.0.26100.8249 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             D:\a\_temp\nexus-empty-symbols
+Symbol search path is: D:\a\_temp\nexus-empty-symbols
+Executable search path is: 
+WARNING: Process 8944 is not attached as a debuggee
+         The process can be examined but debug events will not be received
+.....................
+(22f0.e38): Wake debugger - code 80000007 (first chance)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+win32u!NtUserMsgWaitForMultipleObjectsEx+0x14:
+00007ffc`9bb5ad04 c3              ret
+0:000> cdb: Reading initial command '~* k; lm; q'
+
+.  0  Id: 22f0.e38 Suspend: 0 Teb: 0000009f`03ce5000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000009f`03b3f718 00007ff6`68283f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+0000009f`03b3f720 00007ff6`68297214     soffice+0x3f94
+0000009f`03b5fcf0 00007ffc`9ce6e987     soffice+0x17214
+0000009f`03b5fd30 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000009f`03b5fd60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   1  Id: 22f0.23a8 Suspend: 0 Teb: 0000009f`03ce7000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000009f`03eff678 00007ffc`9de75f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000009f`03eff680 00007ffc`9ce6e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000009f`03eff9e0 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000009f`03effa10 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   2  Id: 22f0.50c Suspend: 0 Teb: 0000009f`03ce9000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000009f`03fffad8 00007ffc`9de75f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000009f`03fffae0 00007ffc`9ce6e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000009f`03fffe40 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000009f`03fffe70 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   3  Id: 22f0.1e10 Suspend: 0 Teb: 0000009f`03ceb000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000009f`040ff528 00007ffc`9de75f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000009f`040ff530 00007ffc`9ce6e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000009f`040ff890 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000009f`040ff8c0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+start             end                 module name
+00007ff6`68280000 00007ff6`68302000   soffice    (no symbols)           
+00007ffc`8f1f0000 00007ffc`8f1fc000   VCRUNTIME140_1   (deferred)             
+00007ffc`90900000 00007ffc`9092c000   VCRUNTIME140   (deferred)             
+00007ffc`90940000 00007ffc`909dd000   MSVCP140   (deferred)             
+00007ffc`97650000 00007ffc`976ed000   apphelp    (deferred)             
+00007ffc`9af20000 00007ffc`9b06b000   ucrtbase   (deferred)             
+00007ffc`9b070000 00007ffc`9b113000   msvcp_win   (deferred)             
+00007ffc`9b3f0000 00007ffc`9b55a000   wintypes   (deferred)             
+00007ffc`9b560000 00007ffc`9b94e000   KERNELBASE   (deferred)             
+00007ffc`9ba20000 00007ffc`9bb4b000   gdi32full   (deferred)             
+00007ffc`9bb50000 00007ffc`9bb77000   win32u     (export symbols)       C:\Windows\System32\win32u.dll
+00007ffc`9bb90000 00007ffc`9bc37000   sechost    (deferred)             
+00007ffc`9bc40000 00007ffc`9c393000   SHELL32    (deferred)             
+00007ffc`9c3a0000 00007ffc`9c3cb000   GDI32      (deferred)             
+00007ffc`9c4d0000 00007ffc`9c695000   USER32     (deferred)             
+00007ffc`9c960000 00007ffc`9ca78000   RPCRT4     (deferred)             
+00007ffc`9ce40000 00007ffc`9cf09000   KERNEL32   (export symbols)       C:\Windows\System32\KERNEL32.DLL
+00007ffc`9d340000 00007ffc`9d6c6000   combase    (deferred)             
+00007ffc`9d760000 00007ffc`9d854000   shcore     (deferred)             
+00007ffc`9dd80000 00007ffc`9ddb1000   IMM32      (deferred)             
+00007ffc`9de00000 00007ffc`9e064000   ntdll      (export symbols)       C:\Windows\SYSTEM32\ntdll.dll
+quit:
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'

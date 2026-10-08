@@ -3,8 +3,9 @@
 ## Estado
 
 Investigação retomada por instrução humana após o encerramento abaixo. Próximo
-ensaio: corrigir o leitor CDB textual; duas tentativas não produziram pilhas,
-incluindo o helper sintético. Não são evidência causal. Sem suspensão ou dumps.
+ensaio: captions Win32 para identificar o diálogo indicado pelas pilhas.
+Run 37838902004 concluído: oito pilhas reais, 2 FAIL/45 s e 1 PASS IPC.
+Tentativas de ferramenta falhadas não são evidência causal do Writer. Sem suspensão ou dumps.
 ThreadState/WaitReason/WCT já recolhidos: 344 amostras, causa NOT PROVEN.
 Adapter A original, conta normal; nenhuma correção reproduzível.
 
@@ -137,10 +138,13 @@ runtime e seal originais restaurados. Evidência em lab-evidence/thread-waits/.
 WaitReason: UserRequest 172, EventPairLow 129, Unknown 42, Executive 1.
 As labels do .NET e WCT são observações dinâmicas distintas, não uma pilha
 nem prova de que se trate de named pipe. Causa permanece NOT PROVEN.
-Novo ensaio justificado: snapshots mínimos das threads aos 10 e 25 s, ProcDump
-Microsoft externo e análise CDB offline. Sem clones, sem iniciar Writer fora
-da fronteira, sem novo token para Writer nem alteração do limite de 45 s.
-A recolha pode interromper brevemente o processo e afeta timing; é diagnóstico,
-nunca prova de desempenho/solução. Ferramentas instaladas só no runner descartável.
-Fontes: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump e
-https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/opening-a-crash-dump-file-using-cdb.
+A proposta de ProcDump foi rejeitada por auto-review por possível exposição de dados sensíveis e NÃO EXECUTADA. O procedimento ativo usa CDB -pvr, texto de pilhas e módulos, sem suspensão ou dumps. As tentativas do leitor e os respetivos erros estão documentados em TRACE_EVIDENCE.md; só o self-check real com frames permite executar Writer.
+
+## Pilhas reais obtidas — nova hipótese delimitada
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37838902004, SHA 6c7521b: self-check PASS com frames; oito capturas CDB textuais, exit 0, -pvr. Originais 2 FAIL/45 s, 1 PASS IPC; conta normal, runtime/restauro iguais ao source. Evidência integral em lab-evidence/stack-text-valid*.
+
+soffice.bin PIDs 6760/6132 aos 10 e 25 s: thread principal `NtUserGetMessage -> GetMessageW -> vclplug_winlo -> Application::Execute+0x15b -> Dialog::Execute+0x8f`. O launcher soffice.com espera via NtUserMsgWaitForMultipleObjectsEx. Estado consistente nos quatro snapshots das duas rotas. Espera em diálogo/message loop: **LIKELY**; identidade/motivo do diálogo e causa efetiva: **NOT PROVEN**. Sem PDB correspondente, exports+offsets não identificam exatamente todas as funções. Não prova ausência de falha IPC anterior.
+
+Próximo diagnóstico mínimo: EnumWindows/EnumChildWindows, GetWindowTextW/GetClassNameW/IsWindowVisible, apenas PIDs filtrados do Writer original no runner sintético. Sem WM_GETTEXT, mensagens, cliques, fechar janelas, UI Automation, suspensão, escrita de memória ou dumps. GetWindowTextW entre processos lê captions; não garante texto de controlos. Diagnóstico, não correção.
+Fonte: https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextw.

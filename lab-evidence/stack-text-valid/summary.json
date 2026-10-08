@@ -1,0 +1,141 @@
+{
+  "run": 37838902004,
+  "sha": "6c7521b",
+  "tests": "2 FAIL / 1 PASS IPC",
+  "cause": "NOT PROVEN",
+  "interpretation": "Dialog/message-loop wait LIKELY; exact dialog/cause NOT PROVEN; export-only symbols, no matching PDB",
+  "captures": [
+    {
+      "file": "4820-10.stacks.txt",
+      "main_thread_frames": [
+        "00000065`a3cdf348 00007ff6`68283f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14",
+        "00000065`a3cdf350 00007ff6`68297214     soffice+0x3f94",
+        "00000065`a3cff920 00007ffc`9ce6e987     soffice+0x17214",
+        "00000065`a3cff960 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "00000065`a3cff990 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "072f1d664e4d5c991bcf4523077ce4a2ee1a7ca0ef353a46cccffe3a209dbc0f"
+    },
+    {
+      "file": "4820-25.stacks.txt",
+      "main_thread_frames": [
+        "00000065`a3cdf348 00007ff6`68283f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14",
+        "00000065`a3cdf350 00007ff6`68297214     soffice+0x3f94",
+        "00000065`a3cff920 00007ffc`9ce6e987     soffice+0x17214",
+        "00000065`a3cff960 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "00000065`a3cff990 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "183fe1d63042228c696d9c9243ffd6e6d84ec9ab283b726a36342d54dabd0063"
+    },
+    {
+      "file": "6132-10.stacks.txt",
+      "main_thread_frames": [
+        "000000d9`5f98f598 00007ffc`9c50f402     win32u!NtUserGetMessage+0x14",
+        "000000d9`5f98f5a0 00007ffc`5588ebd8     USER32!GetMessageW+0x22",
+        "000000d9`5f98f600 00007ffc`5588ed0d     vclplug_winlo!create_SalInstance+0xa18",
+        "000000d9`5f98f680 00007ffc`4bf4564b     vclplug_winlo!create_SalInstance+0xb4d",
+        "000000d9`5f98f6b0 00007ffc`4bb086df     mergedlo!Application::Execute+0x15b",
+        "000000d9`5f98f6f0 00007ffc`4beeabb6     mergedlo!Dialog::Execute+0x8f",
+        "000000d9`5f98f730 00007ffc`4aafc0d2     mergedlo!SalInstanceWidget::draw+0x2686",
+        "000000d9`5f98f760 00007ffc`4aafc994     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+        "000000d9`5f98f7e0 00007ffc`4aafded4     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+        "000000d9`5f98f8c0 00007ffc`4bf58f52     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+        "000000d9`5f98faf0 00007ffc`4ab2185c     mergedlo!ImplSVMain+0x62",
+        "000000d9`5f98fb20 00007ff6`d90a101b     mergedlo!soffice_main+0x2cc",
+        "000000d9`5f98fc30 00007ff6`d90a12d4     soffice!main+0x1b",
+        "000000d9`5f98fc60 00007ffc`9ce6e987     soffice!main+0x2d4",
+        "000000d9`5f98fca0 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "000000d9`5f98fcd0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "d4c98ca68432f66afbe11a978da16a69d30d777e3a30a0b28df802a3d48f8fba"
+    },
+    {
+      "file": "6132-25.stacks.txt",
+      "main_thread_frames": [
+        "000000d9`5f98f598 00007ffc`9c50f402     win32u!NtUserGetMessage+0x14",
+        "000000d9`5f98f5a0 00007ffc`5588ebd8     USER32!GetMessageW+0x22",
+        "000000d9`5f98f600 00007ffc`5588ed0d     vclplug_winlo!create_SalInstance+0xa18",
+        "000000d9`5f98f680 00007ffc`4bf4564b     vclplug_winlo!create_SalInstance+0xb4d",
+        "000000d9`5f98f6b0 00007ffc`4bb086df     mergedlo!Application::Execute+0x15b",
+        "000000d9`5f98f6f0 00007ffc`4beeabb6     mergedlo!Dialog::Execute+0x8f",
+        "000000d9`5f98f730 00007ffc`4aafc0d2     mergedlo!SalInstanceWidget::draw+0x2686",
+        "000000d9`5f98f760 00007ffc`4aafc994     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+        "000000d9`5f98f7e0 00007ffc`4aafded4     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+        "000000d9`5f98f8c0 00007ffc`4bf58f52     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+        "000000d9`5f98faf0 00007ffc`4ab2185c     mergedlo!ImplSVMain+0x62",
+        "000000d9`5f98fb20 00007ff6`d90a101b     mergedlo!soffice_main+0x2cc",
+        "000000d9`5f98fc30 00007ff6`d90a12d4     soffice!main+0x1b",
+        "000000d9`5f98fc60 00007ffc`9ce6e987     soffice!main+0x2d4",
+        "000000d9`5f98fca0 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "000000d9`5f98fcd0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "b1d4ab809252da22e4dbf2fd75fd59029ec436282fd13143bbf8d0bbc2682cbe"
+    },
+    {
+      "file": "6760-10.stacks.txt",
+      "main_thread_frames": [
+        "00000059`9038f838 00007ffc`9c50f402     win32u!NtUserGetMessage+0x14",
+        "00000059`9038f840 00007ffc`5479ebd8     USER32!GetMessageW+0x22",
+        "00000059`9038f8a0 00007ffc`5479ed0d     vclplug_winlo!create_SalInstance+0xa18",
+        "00000059`9038f920 00007ffc`4bf4564b     vclplug_winlo!create_SalInstance+0xb4d",
+        "00000059`9038f950 00007ffc`4bb086df     mergedlo!Application::Execute+0x15b",
+        "00000059`9038f990 00007ffc`4beeabb6     mergedlo!Dialog::Execute+0x8f",
+        "00000059`9038f9d0 00007ffc`4aafc0d2     mergedlo!SalInstanceWidget::draw+0x2686",
+        "00000059`9038fa00 00007ffc`4aafc994     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+        "00000059`9038fa80 00007ffc`4aafded4     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+        "00000059`9038fb60 00007ffc`4bf58f52     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+        "00000059`9038fd90 00007ffc`4ab2185c     mergedlo!ImplSVMain+0x62",
+        "00000059`9038fdc0 00007ff6`d90a101b     mergedlo!soffice_main+0x2cc",
+        "00000059`9038fed0 00007ff6`d90a12d4     soffice!main+0x1b",
+        "00000059`9038ff00 00007ffc`9ce6e987     soffice!main+0x2d4",
+        "00000059`9038ff40 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "00000059`9038ff70 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "88e585063cd7a46bd12982a98cb6bb665ff319641d4d6ecc4dd5a76219c307d7"
+    },
+    {
+      "file": "6760-25.stacks.txt",
+      "main_thread_frames": [
+        "00000059`9038f838 00007ffc`9c50f402     win32u!NtUserGetMessage+0x14",
+        "00000059`9038f840 00007ffc`5479ebd8     USER32!GetMessageW+0x22",
+        "00000059`9038f8a0 00007ffc`5479ed0d     vclplug_winlo!create_SalInstance+0xa18",
+        "00000059`9038f920 00007ffc`4bf4564b     vclplug_winlo!create_SalInstance+0xb4d",
+        "00000059`9038f950 00007ffc`4bb086df     mergedlo!Application::Execute+0x15b",
+        "00000059`9038f990 00007ffc`4beeabb6     mergedlo!Dialog::Execute+0x8f",
+        "00000059`9038f9d0 00007ffc`4aafc0d2     mergedlo!SalInstanceWidget::draw+0x2686",
+        "00000059`9038fa00 00007ffc`4aafc994     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+        "00000059`9038fa80 00007ffc`4aafded4     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+        "00000059`9038fb60 00007ffc`4bf58f52     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+        "00000059`9038fd90 00007ffc`4ab2185c     mergedlo!ImplSVMain+0x62",
+        "00000059`9038fdc0 00007ff6`d90a101b     mergedlo!soffice_main+0x2cc",
+        "00000059`9038fed0 00007ff6`d90a12d4     soffice!main+0x1b",
+        "00000059`9038ff00 00007ffc`9ce6e987     soffice!main+0x2d4",
+        "00000059`9038ff40 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "00000059`9038ff70 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "3b679bb86f9f9047f4d8c032c94893d1b56355dc2cd83e4946340e6f331b169c"
+    },
+    {
+      "file": "8944-10.stacks.txt",
+      "main_thread_frames": [
+        "0000009f`03b3f718 00007ff6`68283f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14",
+        "0000009f`03b3f720 00007ff6`68297214     soffice+0x3f94",
+        "0000009f`03b5fcf0 00007ffc`9ce6e987     soffice+0x17214",
+        "0000009f`03b5fd30 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "0000009f`03b5fd60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "7ce99c0c1fd20b625d57d2bd72d66a7a516f6cae25a928cf8f026318c10db8d4"
+    },
+    {
+      "file": "8944-25.stacks.txt",
+      "main_thread_frames": [
+        "0000009f`03b3f718 00007ff6`68283f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14",
+        "0000009f`03b3f720 00007ff6`68297214     soffice+0x3f94",
+        "0000009f`03b5fcf0 00007ffc`9ce6e987     soffice+0x17214",
+        "0000009f`03b5fd30 00007ffc`9de8c53c     KERNEL32!BaseThreadInitThunk+0x17",
+        "0000009f`03b5fd60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c"
+      ],
+      "sha256": "dee6109aac25fccfcbb1be6855650d40d8956e0df582c3d7ddb8e12711baba04"
+    }
+  ]
+}

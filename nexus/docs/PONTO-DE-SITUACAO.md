@@ -2,24 +2,17 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
-Run 37835201974: 2 FAIL/45 s e canary PASS; leitor CDB só emitiu cabeçalho,
-sem pilhas. Recolha FAIL preservada. ExitCode null corrigido e teste local exit 7
-PASS. Próxima repetição verifica primeiro o leitor num helper sintético; nenhum
-Writer fora de LPAC, nenhum dump de memória. Causa ainda NOT PROVEN.
-
-Próximo diagnóstico revisto: CDB -pvr só pilhas textuais, sem suspensão, dumps,
-clones ou memória carregada. O dispatch ProcDump foi rejeitado por auto-review
-pela possibilidade de expor dados sensíveis: NOT RUN. Preparação removida do ativo.
-
-Retoma: run 37833226764 concluído, 2 FAIL/45 s e canary PASS. 344 amostras
-WCT sem cadeia causal; evidência persistida em lab-evidence/thread-waits.
-Próximo ensaio: snapshots mínimos e análise offline, diagnóstico separado da
-validação de solução. Principal intacto; Folha e regressão ainda NOT RUN.
-
-Retoma humana confirmada: não houve reposição. Este chat continua exclusivamente
-no laboratório Writer. Novo ensaio desenhado: ThreadState/WaitReason e WCT externo
-nas rotas A originais, sem ajustar privilégios, alterar runtime, LPAC, Job ou 45 s.
-Preparação não é PASS. Causa permanece NOT PROVEN até evidência nova.
+Retoma humana confirmada: não houve reposição. Este chat continua no laboratório Writer.
+Rotas A originais continuam 2 FAIL/45 s e canary PASS. WCT: 344 amostras sem cadeia causal.
+Leitor textual CDB inicialmente falhou: -pd incompatível e validador do formato k incorreto;
+ambos corrigidos com provas preservadas. Self-check exige frames reais antes de Writer.
+Run 37838902004: oito pilhas reais, 2 FAIL/45 s e canary PASS; thread principal
+em espera de mensagens com Dialog::Execute nas duas rotas. Diálogo LIKELY,
+causa NOT PROVEN. Próximo diagnóstico: captions/classes Win32 dos PIDs Writer,
+sem mensagens, interação, suspensão, dumps ou clones.
+Causa permanece NOT PROVEN; principal intacto, Folha/regressão de solução NOT RUN.
+A proposta ProcDump foi rejeitada por auto-review por possível exposição de dados sensíveis:
+NOT RUN. Foi substituída pelo diagnóstico textual; não existe recolha de memória bruta.
 
 Esta entrada aplica-se **apenas a PAPACREATOR/nexus-writer-lab**. O estado Nexus
 abaixo é história congelada do SHA b4d50ab8469cf60dfa3228c7c34ef9a1285ac827.
