@@ -2,6 +2,11 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
+Retoma: run 37833226764 concluído, 2 FAIL/45 s e canary PASS. 344 amostras
+WCT sem cadeia causal; evidência persistida em lab-evidence/thread-waits.
+Próximo ensaio: snapshots mínimos e análise offline, diagnóstico separado da
+validação de solução. Principal intacto; Folha e regressão ainda NOT RUN.
+
 Retoma humana confirmada: não houve reposição. Este chat continua exclusivamente
 no laboratório Writer. Novo ensaio desenhado: ThreadState/WaitReason e WCT externo
 nas rotas A originais, sem ajustar privilégios, alterar runtime, LPAC, Job ou 45 s.

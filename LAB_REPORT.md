@@ -125,3 +125,20 @@ Host ou o limite de 45 s excederia o pedido e não seria uma solução válida.
 MINIMAL_PATCH_PROPOSAL.md continua vazio. Folha e testes totais de uma versão
 corrigida ficam **NOT RUN**, porque o requisito prévio de correção não foi atingido.
 Todos os resultados focalizados e procedimentos ficam persistidos neste repositório.
+
+## Retoma — resultado de esperas
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37833226764,
+SHA bf8d569: testes originais 2 FAIL/45 s, 1 PASS canary; conta normal,
+runtime e seal originais restaurados. Evidência em lab-evidence/thread-waits/.
+344 amostras dos PIDs Writer 8056 e 2688, todas WCT com um node e sem ciclo.
+WaitReason: UserRequest 172, EventPairLow 129, Unknown 42, Executive 1.
+As labels do .NET e WCT são observações dinâmicas distintas, não uma pilha
+nem prova de que se trate de named pipe. Causa permanece NOT PROVEN.
+Novo ensaio justificado: snapshots mínimos das threads aos 10 e 25 s, ProcDump
+Microsoft externo e análise CDB offline. Sem clones, sem iniciar Writer fora
+da fronteira, sem novo token para Writer nem alteração do limite de 45 s.
+A recolha pode interromper brevemente o processo e afeta timing; é diagnóstico,
+nunca prova de desempenho/solução. Ferramentas instaladas só no runner descartável.
+Fontes: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump e
+https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/opening-a-crash-dump-file-using-cdb.

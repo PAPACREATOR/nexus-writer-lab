@@ -1,0 +1,21 @@
+{
+  "run": 37833226764,
+  "artifact": 11573554678,
+  "source_commit": "bf8d569a491ad47c0fd57e6a9f5134a460c7564b",
+  "samples": 344,
+  "pids": {
+    "8056": 168,
+    "2688": 176
+  },
+  "wait_reasons": {
+    "Executive": 1,
+    "EventPairLow": 129,
+    "UserRequest": 172,
+    "Unknown": 42
+  },
+  "all_single_node": true,
+  "all_no_cycle": true,
+  "raw_artifact_sha256": "96bc28f46c840005d5838ca1acc51baa076442140a6d76546db02177da433a94",
+  "causal_classification": "NOT PROVEN",
+  "interpretation": "A single WCT node may indicate unsupported waits. Dynamic state/reason queries are not call stacks."
+}

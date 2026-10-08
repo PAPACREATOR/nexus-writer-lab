@@ -1,0 +1,46 @@
+name: Writer original non-admin waiting thread snapshots
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshots:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+      LAB_TRACE_DUMPS: '1'
+      LAB_TRACE_WAITS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Official external diagnostic tools
+        shell: pwsh
+        run: ./lab/install-dump-tools.ps1
+      - name: Archival Writer
+        shell: pwsh
+        run: ./lab/install-writer.ps1
+      - run: python -m pip install jsonschema==4.26.0 pytest==9.1.1
+      - name: Original standard-user routes, external snapshots
+        shell: pwsh
+        run: ./lab/run-standard-user.ps1 -Suite baseline
+      - if: always()
+        name: Offline stack analysis
+        shell: pwsh
+        run: ./lab/analyze-dumps.ps1
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: writer-thread-snapshots
+          path: |
+            lab-evidence/dump-tools/
+            lab-evidence/standard-user/
+            lab-evidence/standard-user-launch/
+            lab-evidence/libreoffice-version.txt
+            lab-evidence/writer-binary-hash.json
+          if-no-files-found: error
