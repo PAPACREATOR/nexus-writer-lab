@@ -8,13 +8,7 @@ import sys
 import zipfile
 from pathlib import Path, PurePosixPath
 
-if 'nexus' not in sys.modules:
-    import importlib.util
-    package_root = Path(__file__).absolute().parents[1]
-    spec = importlib.util.spec_from_file_location('nexus', package_root / '__init__.py', submodule_search_locations=[str(package_root)])
-    package = importlib.util.module_from_spec(spec)
-    sys.modules['nexus'] = package
-    spec.loader.exec_module(package)
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from nexus.windows_sandbox import require_native_boundary
 from nexus.contracts import Blocked, strict_json
 
