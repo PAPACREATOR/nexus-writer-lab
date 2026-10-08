@@ -1,0 +1,575 @@
+name: Microsoft-Windows-Kernel-File
+guid: edd08927-9cc4-4e65-b970-c2560fb5c289
+helpLink: 
+resourceFileName: %SystemRoot%\system32\Microsoft-Windows-System-Events.dll
+messageFileName: %SystemRoot%\system32\Microsoft-Windows-System-Events.dll
+message: Microsoft-Windows-Kernel-File
+channels:
+  channel:
+    name: Microsoft-Windows-Kernel-File/Analytic
+    id: 16
+    flags: 0
+    message: 
+levels:
+  level:
+    name: win:Informational
+    value: 4
+    message: Information
+opcodes:
+  opcode:
+    name: win:Info
+    value: 0
+      task: 0
+      opcode: 0
+    message: Info
+tasks:
+  task:
+    name: NameCreate
+    value: 10
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: NameDelete
+    value: 11
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Create
+    value: 12
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Cleanup
+    value: 13
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Close
+    value: 14
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Read
+    value: 15
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Write
+    value: 16
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetInformation
+    value: 17
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetDelete
+    value: 18
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Rename
+    value: 19
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: DirEnum
+    value: 20
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: Flush
+    value: 21
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: QueryInformation
+    value: 22
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: FSCTL
+    value: 23
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: OperationEnd
+    value: 24
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: DirNotify
+    value: 25
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: DeletePath
+    value: 26
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: RenamePath
+    value: 27
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetLinkPath
+    value: 28
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetLink
+    value: 29
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: CreateNewFile
+    value: 30
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetSecurity
+    value: 31
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: QuerySecurity
+    value: 32
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: SetEA
+    value: 33
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: QueryEA
+    value: 34
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+keywords:
+  keyword:
+    name: KERNEL_FILE_KEYWORD_FILENAME
+    mask: 10
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_FILEIO
+    mask: 20
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_OP_END
+    mask: 40
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_CREATE
+    mask: 80
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_READ
+    mask: 100
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_WRITE
+    mask: 200
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_DELETE_PATH
+    mask: 400
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_RENAME_SETLINK_PATH
+    mask: 800
+    message: 
+  keyword:
+    name: KERNEL_FILE_KEYWORD_CREATE_NEW_FILE
+    mask: 1000
+    message: 
+events:
+  event:
+    value: 10
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 10
+    keywords: 0x8000000000000010
+    message: 
+  event:
+    value: 11
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 11
+    keywords: 0x8000000000000010
+    message: 
+  event:
+    value: 12
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 12
+    keywords: 0x80000000000000a0
+    message: 
+  event:
+    value: 12
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 12
+    keywords: 0x80000000000000a0
+    message: 
+  event:
+    value: 13
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 13
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 13
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 13
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 14
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 14
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 14
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 14
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 15
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 15
+    keywords: 0x8000000000000120
+    message: 
+  event:
+    value: 15
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 15
+    keywords: 0x8000000000000120
+    message: 
+  event:
+    value: 16
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 16
+    keywords: 0x8000000000000220
+    message: 
+  event:
+    value: 16
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 16
+    keywords: 0x8000000000000220
+    message: 
+  event:
+    value: 17
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 17
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 18
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 18
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 18
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 18
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 19
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 19
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 19
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 19
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 20
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 20
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 20
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 20
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 21
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 21
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 21
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 21
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 22
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 22
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 22
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 22
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 23
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 23
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 23
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 23
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 24
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 24
+    keywords: 0x8000000000000060
+    message: 
+  event:
+    value: 25
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 25
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 25
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 25
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 26
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 26
+    keywords: 0x8000000000000400
+    message: 
+  event:
+    value: 26
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 26
+    keywords: 0x8000000000000400
+    message: 
+  event:
+    value: 27
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 27
+    keywords: 0x8000000000000800
+    message: 
+  event:
+    value: 27
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 27
+    keywords: 0x8000000000000800
+    message: 
+  event:
+    value: 28
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 28
+    keywords: 0x8000000000000800
+    message: 
+  event:
+    value: 28
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 28
+    keywords: 0x8000000000000800
+    message: 
+  event:
+    value: 29
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 19
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 29
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 19
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 30
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 30
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 30
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 30
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 31
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 31
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 32
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 32
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 33
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 33
+    keywords: 0x8000000000000020
+    message: 
+  event:
+    value: 34
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 34
+    keywords: 0x8000000000000020
+    message: 

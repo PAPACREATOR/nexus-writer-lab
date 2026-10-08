@@ -1,0 +1,5703 @@
+[
+  {
+    "pid": 612,
+    "status": "0xC000003A",
+    "create": [
+      612,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\SystemResources\\python.exe.mun"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\VERSION.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\bcrypt.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858641DE4B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\pyvenv.cfg"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\pyvenv.cfg"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python312._pth"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python._pth"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python._pth"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\pybuilddir.txt"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC000003A",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\Modules\\Setup.local"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python312.zip"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\aliases.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\aliases.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\aliases.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\utf_8.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\utf_8.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\utf_8.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp1252.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp1252.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp1252.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\hashlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\hashlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\hashlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\Program Files\\Common Files\\SSL\\openssl.cnf"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\decoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\decoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\decoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\enum.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\enum.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\enum.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\types.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\types.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\types.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\operator.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\operator.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\operator.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\functools.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\functools.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\functools.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\keyword.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\keyword.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\keyword.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\reprlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\reprlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\reprlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_compiler.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_compiler.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_compiler.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_parser.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_parser.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_parser.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_constants.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_constants.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_constants.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_casefix.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_casefix.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\re\\__pycache__\\_casefix.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\copyreg.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\copyreg.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\copyreg.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\scanner.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\scanner.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\scanner.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\encoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\encoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\json\\__pycache__\\encoder.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\pathlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\pathlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\pathlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\fnmatch.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\fnmatch.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\fnmatch.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\warnings.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\warnings.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\warnings.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\parse.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\parse.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\urllib\\__pycache__\\parse.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ipaddress.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ipaddress.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ipaddress.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\_abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\_abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\importlib\\__pycache__\\_abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\contracts.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\contracts.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\contracts.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\windows_sandbox.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\windows_sandbox.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\__pycache__\\windows_sandbox.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\__future__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\__future__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\__future__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\struct.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\struct.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\struct.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\_endian.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\_endian.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\_endian.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\subprocess.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\subprocess.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\subprocess.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\locale.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\locale.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\locale.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\signal.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\signal.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\signal.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\threading.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\threading.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\threading.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_weakrefset.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_weakrefset.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_weakrefset.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\contextlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\contextlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\contextlib.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\uuid.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\uuid.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\uuid.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\wintypes.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\wintypes.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\ctypes\\__pycache__\\wintypes.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\userenv.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000034",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\__pycache__\\office.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\__pycache__\\office.cpython-312.pyc.2280798481280"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\shutil.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\shutil.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\shutil.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\bz2.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\bz2.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\bz2.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_compression.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_compression.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\_compression.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\lzma.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\lzma.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\lzma.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\__init__.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\glob.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\glob.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\zipfile\\_path\\__pycache__\\glob.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\input.bin"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\input.bin"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\input.bin"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp437.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp437.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\encodings\\__pycache__\\cp437.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\libreoffice.json"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\libreoffice.json"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\libreoffice.json"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\resultado.odt"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\registrymodifications.xcu"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\stdout.txt"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\stderr.txt"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MSVCP140.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140_1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140_1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 7808,
+    "status": "0xC0000034",
+    "create": [
+      7808,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\dbghelp.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MPR.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\USERENV.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\wer.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MSVCP140.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MSVCP140_1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140_1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\bcrypt.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\Secur32.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\WINHTTP.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\d2d1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\d3d9.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MFPlat.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MFPlay.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MFReadWrite.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\ncrypt.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\NETAPI32.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\oledlg.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\PROPSYS.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VCRUNTIME140_1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\WINMM.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VERSION.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\MSVCP140_2.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\HTTPAPI.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\FONTSUB.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\USP10.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\Secur32.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\IPHLPAPI.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\WSOCK32.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\WINMM.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\ncrypt.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\dwmapi.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\VERSION.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\SSPICLI.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\SSPICLI.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\NTASN1.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\RTWorkQ.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\dbgcore.DLL"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\temp\\embeddedfonts\\fromdocs\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\temp\\embeddedfonts\\fromsystem\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\DWrite.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447CF388",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\UxTheme.dll"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\program\\WINSPOOL.DRV"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Windows\\WinSxS\\SystemResources\\gdiplus.dll.mun"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\buildid"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\unorc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000011",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\buildid"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\shared\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\bundled\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0x80000006",
+    "create": [
+      9816,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\shared\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\bundled\\registry\\com.sun.star.comp.deployment.component.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0x80000006",
+    "create": [
+      9816,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\safemode_restart"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\safemode"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000000F",
+    "create": [
+      9816,
+      "fundamental.override.ini"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000000F"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\SafeMode\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586385030F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0x80000006",
+    "create": [
+      9816,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586447F20F8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\share\\registry\\schema\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000034",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume4\\Program Files\\LibreOffice\\share\\registry\\data\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642ECE8A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000034"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0x80000006",
+    "create": [
+      9816,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0x80000006",
+    "create": [
+      9816,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586402D67D8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\bundled\\registry\\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\extensions\\shared\\registry\\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC000003A",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858636F133C8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC000003A"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF858642FE98A8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000035",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000035"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000011",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\F9E.tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000061",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\registrymodifications.xcu"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000061"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\F9E.tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000022",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\F9E.tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC00002F0",
+    "create": [
+      9816,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-74m8u159\\runs\\5573647d98564a7597ba986d8244b97a\\office\\profile\\user\\F9E.tmp"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586390DC138",
+      "ExtraInformation": "0x0",
+      "Status": "0xC00002F0"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000123",
+    "create": null,
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000123"
+    }
+  },
+  {
+    "pid": 9816,
+    "status": "0xC0000123",
+    "create": null,
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000123"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000022",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586449D7B38",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000022"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\traceback.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\traceback.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\traceback.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000006",
+    "create": [
+      9916,
+      null
+    ],
+    "data": {
+      "Irp": "0xFFFF8586422CBBB8",
+      "ExtraInformation": "0x0",
+      "Status": "0x80000006"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\collections\\__pycache__\\abc.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\linecache.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\linecache.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\linecache.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\tokenize.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\tokenize.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\tokenize.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\token.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\token.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\token.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\textwrap.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\textwrap.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\textwrap.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume5\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ast.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0x80000005",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ast.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x68",
+      "Status": "0x80000005"
+    }
+  },
+  {
+    "pid": 9916,
+    "status": "0xC0000011",
+    "create": [
+      9916,
+      "\\Device\\HarddiskVolume4\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\__pycache__\\ast.cpython-312.pyc"
+    ],
+    "data": {
+      "Irp": "0xFFFF8586433EF0F8",
+      "ExtraInformation": "0x0",
+      "Status": "0xC0000011"
+    }
+  }
+]

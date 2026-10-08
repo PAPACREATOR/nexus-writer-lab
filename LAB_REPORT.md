@@ -36,8 +36,9 @@ O único remote de push local é PAPACREATOR/nexus-writer-lab.
 3. [Matriz arquivada](https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37814878330),
    commit aa14ad8: instalador oficial arquivado 26.2.6.2, SHA-256
    788ce7d4b56460357f57552cb8cd848e8f2254f28f6e51fa61e0c65a18096373.
-   A concluiu com FAIL, e o gate confirmou a mensagem de timeout original antes
-   de permitir B–G. Restantes resultados serão incorporados após conclusão.
+   A–G concluíram: 14 FAIL, 7 PASS. Cada variante manteve o timeout em ambas
+   as rotas; o canary IPC passou. A confirmou o timeout antes de permitir B–G.
+   Evidência: lab-evidence/sequential-matrix, incluindo comandos e hashes.
 
 ## Método e limites
 
@@ -63,3 +64,13 @@ Consultar RESULT_MATRIX.md, TRACE_EVIDENCE.md e os artefactos dos workflows.
 Conferir o SHA real em metadata.json e a versão/binário, não apenas o nome do
 pacote. Repetir apenas experiências justificadas, preservar o FAIL e nunca
 publicar no repositório principal. O material de diagnóstico está em lab/.
+
+## Alternativa oficial em diagnóstico
+
+Após a matriz sem melhoria, o probe LibreOfficeKit usa a API C oficial do mesmo tag, cuja inicialização desativa RequestHandler IPC. É uma hipótese independente, ainda sem PASS das rotas do produto. Mantém launcher original, raízes originais, perfil MacroSecurityLevel=3, Job e 45 s. Workflow: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37817330801.
+
+O pedido adicional de abrir a Folha e fazer testes totais será cumprido após solução reproduzível: abrir uma instância do laboratório, usar o Human Gate original e validar os 200 ensaios e restantes gates. Não declarar conclusão enquanto Writer falhar.
+
+## Limitação do runner
+
+O observador no runner GitHub regista TokenElevation=true nos processos observados, além de AppContainer=true, capabilities conformes e Job original. Não foi introduzido runas nem alterado o token, mas esta herança do runner impede afirmar execução não elevada comprovada. Qualquer futura solução exige também validação numa sessão Windows não elevada. O ensaio local não elevado falhou antes de Writer na DACL; não substitui esse gate.

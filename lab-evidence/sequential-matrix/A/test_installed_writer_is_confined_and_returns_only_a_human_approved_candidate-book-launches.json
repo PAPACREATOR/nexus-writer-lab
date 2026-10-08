@@ -1,0 +1,115 @@
+[
+  {
+    "command": [
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+      "-I",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py",
+      "book",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0\\input.bin"
+    ],
+    "cwd": "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0",
+    "read_roots": [
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus",
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub",
+      "C:\\Program Files\\LibreOffice"
+    ],
+    "deny_roots": [
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\data"
+    ],
+    "writer_timeout_seconds": 45,
+    "launch_seconds": 396.046,
+    "pid": 2972,
+    "appcontainer_verified_by_existing_launcher": true,
+    "lpac_requested_by_existing_launcher": true,
+    "job_verified_by_existing_launcher": true,
+    "worker_stdout": "",
+    "worker_stderr": "Traceback (most recent call last):\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 251, in <module>\r\n    print(json.dumps(execute(process, input_path), ensure_ascii=False))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 243, in execute\r\n    result = _direct_result(process, input_path)\r\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 230, in _direct_result\r\n    value = _dispatch(process, _input(input_path))\r\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 213, in _dispatch\r\n    return run(path)\r\n           ^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py\", line 94, in run\r\n    raise Blocked(\"Conversão excedeu o tempo permitido.\") from None\r\nnexus.contracts.Blocked: Conversão excedeu o tempo permitido.\r\nExecução direta indisponível ou resposta rejeitada.\r\n",
+    "communication_seconds": 45.10899999999998,
+    "worker_exit_code": 1,
+    "process_observation": {
+      "sampling_interval_seconds": 0.1,
+      "complete_process_inventory": false,
+      "events": [
+        {
+          "pid": 2972,
+          "parent_pid": 1108,
+          "name": "python.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe -I D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py book D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0\\input.bin"
+        },
+        {
+          "pid": 3132,
+          "parent_pid": 2972,
+          "name": "conhost.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 1252,
+          "parent_pid": 2972,
+          "name": "soffice.com",
+          "seconds": 0.10899999999998045,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\"C:\\Program Files\\LibreOffice\\program\\soffice.com\" -env:UserInstallation=file:///D:/a/nexus-writer-lab/nexus-writer-lab/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-11kki9ub/runs/2a5e70ce31ff43cb897ec0450100a8f0/office/profile --headless --norestore --convert-to pdf:writer_pdf_Export --outdir D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0 D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0\\office\\resultado.odt"
+        },
+        {
+          "pid": 3856,
+          "parent_pid": 1252,
+          "name": "conhost.exe",
+          "seconds": 0.10899999999998045,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 5720,
+          "parent_pid": 1252,
+          "name": "soffice.bin",
+          "seconds": 0.10899999999998045,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\"C:\\Program Files\\LibreOffice\\program\\soffice.com\" \"-env:UserInstallation=file:///D:/a/nexus-writer-lab/nexus-writer-lab/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-11kki9ub/runs/2a5e70ce31ff43cb897ec0450100a8f0/office/profile\" \"--headless\" \"--norestore\" \"--convert-to\" \"pdf:writer_pdf_Export\" \"--outdir\" \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0\" \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-11kki9ub\\runs\\2a5e70ce31ff43cb897ec0450100a8f0\\office\\resultado.odt\" \"-env:OOO_CWD=2D:\\\\a\\\\nexus-writer-lab\\\\nexus-writer-lab\\\\lab-evidence\\\\A\\\\tmp\\\\test_installed_writer_is_confi0\\\\.nexus-task-11kki9ub\\\\runs\\\\2a5e70ce31ff43cb897ec0450100a8f0\""
+        }
+      ],
+      "errors": []
+    },
+    "files": {
+      "office/stdout.txt": {
+        "length": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "office/stderr.txt": {
+        "length": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "office/profile/user/registrymodifications.xcu": {
+        "length": 476,
+        "sha256": "5004471cdb2b07461f24b3234b8aeb7748254e75abcd35276d2d5b605fb0aaae",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<oor:items xmlns:oor=\"http://openoffice.org/2001/registry\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<item oor:path=\"/org.openoffice.Office.Common/Security/Scripting\"><prop oor:name=\"MacroSecurityLevel\" oor:op=\"fuse\"><value>3</value></prop></item>\n<item oor:path=\"/org.openoffice.Setup/L10N\"><prop oor:name=\"ooLocale\" oor:op=\"fuse\"><value>en-US</value></prop></item>\n</oor:items>\n"
+      }
+    },
+    "profile_exists": true,
+    "profile_files": [
+      "office\\profile\\user\\registrymodifications.xcu",
+      "office\\profile\\user\\extensions\\buildid"
+    ]
+  }
+]

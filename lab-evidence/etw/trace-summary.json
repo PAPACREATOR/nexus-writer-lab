@@ -1,0 +1,19 @@
+{
+  "sampled_target_pids": [
+    612,
+    1960,
+    3952,
+    7264,
+    7432,
+    7808,
+    8916,
+    9372,
+    9816,
+    9916
+  ],
+  "total_etw_events": 1080640,
+  "target_pid_events": 6341,
+  "pipe_matches_all_pids": 0,
+  "causal_classification": "NOT PROVEN",
+  "note": "Correlate PID, operation, result and timestamps. Circular trace and sampling may omit events."
+}

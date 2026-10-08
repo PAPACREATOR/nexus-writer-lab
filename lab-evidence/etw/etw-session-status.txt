@@ -1,0 +1,40 @@
+
+Name:                 NexusWriterLab
+Status:               Running
+Root Path:            D:\a\nexus-writer-lab\nexus-writer-lab\lab-evidence
+Segment:              Off
+Schedules:            On
+Segment Max Size:     128 MB
+
+Name:                 NexusWriterLab\NexusWriterLab
+Type:                 Trace
+Output Location:      D:\a\nexus-writer-lab\nexus-writer-lab\lab-evidence\writer.etl
+Append:               Off
+Circular:             On
+Overwrite:            Off
+Buffer Size:          64
+Buffers Lost:         0
+Buffers Written:      4359
+Buffer Flush Timer:   0
+Clock Type:           Performance
+File Mode:            File
+
+Provider:
+Name:                 Microsoft-Windows-Kernel-Process
+Provider Guid:        {22FB2CD6-0E7B-422B-A0C7-2FAD1FD0E716}
+Level:                5
+KeywordsAll:          0x0
+KeywordsAny:          0x10 (WINEVENT_KEYWORD_PROCESS)
+Properties:           64
+Filter Type:          0
+
+Provider:
+Name:                 Microsoft-Windows-Kernel-File
+Provider Guid:        {EDD08927-9CC4-4E65-B970-C2560FB5C289}
+Level:                5
+KeywordsAll:          0x0
+KeywordsAny:          0xffffffffffffffff (KERNEL_FILE_KEYWORD_FILENAME,KERNEL_FILE_KEYWORD_FILEIO,KERNEL_FILE_KEYWORD_OP_END,KERNEL_FILE_KEYWORD_CREATE,KERNEL_FILE_KEYWORD_READ,KERNEL_FILE_KEYWORD_WRITE,KERNEL_FILE_KEYWORD_DELETE_PATH,KERNEL_FILE_KEYWORD_RENAME_SETLINK_PATH,KERNEL_FILE_KEYWORD_CREATE_NEW_FILE,Microsoft-Windows-Kernel-File/Analytic,0x1,0x2,0x4,0x8,0x2000,0x4000,0x8000,0x10000,0x20000,0x40000,0x80000,0x100000,0x200000,0x400000,0x800000,0x1000000,0x2000000,0x4000000,0x8000000,0x10000000,0x20000000,0x40000000,0x80000000,0x100000000,0x200000000,0x400000000,0x800000000,0x1000000000,0x2000000000,0x4000000000,0x8000000000,0x10000000000,0x20000000000,0x40000000000,0x80000000000,0x100000000000,0x200000000000,0x400000000000,0x800000000000,0x1000000000000,0x2000000000000,0x4000000000000,0x8000000000000,0x10000000000000,0x20000000000000,0x40000000000000,0x80000000000000,0x100000000000000,0x200000000000000,0x400000000000000,0x800000000000000,0x1000000000000000,0x2000000000000000,0x4000000000000000)
+Properties:           64
+Filter Type:          0
+
+The command completed successfully.

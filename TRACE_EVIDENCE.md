@@ -49,4 +49,14 @@ intervenção causal validada, manter NOT PROVEN.
 
 Ver as instruções oficiais de [logman](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/logman-create-trace)
 e [tracerpt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tracerpt).
-Resultados do ETW ainda em recolha; não foi declarada prova causal.
+Resultados recolhidos e revistos; não foi declarada prova causal.
+
+## Resultado ETW
+
+Execução https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37815673872: ambas as rotas falharam no timeout. O perfil efetivamente contém ACE herdada do SID da tarefa com máscara MODIFY 0x1301bf. O perfil contém MacroSecurityLevel=3. O observador identificou soffice.com e soffice.bin em AppContainer e no Job original; também registou TokenElevation=true, limitação documentada no relatório.
+
+O tracerpt processou 1 080 640 eventos, 6 341 com PIDs amostrados; zero matches de pipe no filtro. O resumo declara zero Events Lost, mas o buffer circular reteve apenas 109 segundos: isso não prova cobertura de toda a primeira rota. Há erros de ficheiro, mas sem stack/intervenção causal não identificam o bloqueio. Correlação exploratória por Irp também pode sofrer reutilização; nonzero-status-events.json não é prova causal. Classificação permanece NOT PROVEN.
+
+ETL original 128 MiB e XML 1,365 GB ficam no artefacto writer-etw-evidence (id 11567506747); o ZIP descarregado tem hash em lab-evidence/download-manifest.json. Os eventos filtrados e relatórios estão persistidos no Git em lab-evidence/etw. O ZIP original também está versionado em lab-evidence/trace-raw.zip (cerca de 30 MB), preservando ETL e XML independentemente da expiração do artefacto.
+
+A alternativa oficial é fundamentada em https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/lib/init.cxx e https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/include/LibreOfficeKit/LibreOfficeKitInit.h. Desativar RequestHandler pela API documentada não prova que esse era o bloqueio observado. Nenhuma interceção Win32 nem alteração de IPC foi aplicada ao Writer.

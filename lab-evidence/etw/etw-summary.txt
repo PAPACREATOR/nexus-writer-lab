@@ -1,0 +1,65 @@
+Files Processed:
+	D:\a\nexus-writer-lab\nexus-writer-lab\lab-evidence\writer.etl
+Total Buffers Processed 2048
+Total Events  Processed 1080640
+Total Events  Lost      0
+Start Time              Thursday, October 8, 2026
+End Time                Thursday, October 8, 2026
+Elapsed Time            109 sec
++-------------------------------------------------------------------------------------------------------------------------+
+|Event Count   Event Name           Task            Opcode          Version         Guid                                  |
++-------------------------------------------------------------------------------------------------------------------------+
+|          1   EventTrace           0               PartitionInfoExtension 2               {68fdd900-4a3e-11d1-84f4-0000f80464e3}|
+|          1   EventTrace           0               Header          2               {68fdd900-4a3e-11d1-84f4-0000f80464e3}|
+|         13   Microsoft-Windows-Kernel-File  34              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         69   Microsoft-Windows-Kernel-File  17              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         16   Microsoft-Windows-Kernel-File  27              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         16   Microsoft-Windows-Kernel-File  19              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         18   Microsoft-Windows-Kernel-File  21              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|        140   Microsoft-Windows-Kernel-File  10              Info            0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         59   Microsoft-Windows-Kernel-File  30              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         55   Microsoft-Windows-Kernel-File  11              Info            0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         42   Microsoft-Windows-Kernel-File  26              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         42   Microsoft-Windows-Kernel-File  18              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       9839   Microsoft-Windows-Kernel-File  20              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       3793   Microsoft-Windows-Kernel-File  15              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       6951   Microsoft-Windows-Kernel-File  16              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     104268   Microsoft-Windows-Kernel-File  23              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      52986   Microsoft-Windows-Kernel-File  31              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      53117   Microsoft-Windows-Kernel-File  32              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     118319   Microsoft-Windows-Kernel-File  22              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      62586   Microsoft-Windows-Kernel-File  14              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      62562   Microsoft-Windows-Kernel-File  13              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      65525   Microsoft-Windows-Kernel-File  12              Info            1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     540191   Microsoft-Windows-Kernel-File  24              Info            0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         13   Microsoft-Windows-Kernel-Process  1               Start           4               {22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716}|
+|         18   Microsoft-Windows-Kernel-Process  2               Stop            2               {22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716}|
++-------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+|Event Count   Event Name           Event ID        Version         Guid                                  |
++---------------------------------------------------------------------------------------------------------+
+|          2   EventTrace           0               2               {68fdd900-4a3e-11d1-84f4-0000f80464e3}|
+|        140   Microsoft-Windows-Kernel-File  10              0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         55   Microsoft-Windows-Kernel-File  11              0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      65525   Microsoft-Windows-Kernel-File  12              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      62562   Microsoft-Windows-Kernel-File  13              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      62586   Microsoft-Windows-Kernel-File  14              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       3793   Microsoft-Windows-Kernel-File  15              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       6951   Microsoft-Windows-Kernel-File  16              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         69   Microsoft-Windows-Kernel-File  17              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         42   Microsoft-Windows-Kernel-File  18              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         16   Microsoft-Windows-Kernel-File  19              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|       9839   Microsoft-Windows-Kernel-File  20              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         18   Microsoft-Windows-Kernel-File  21              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     118319   Microsoft-Windows-Kernel-File  22              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     104268   Microsoft-Windows-Kernel-File  23              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|     540191   Microsoft-Windows-Kernel-File  24              0               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         42   Microsoft-Windows-Kernel-File  26              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         16   Microsoft-Windows-Kernel-File  27              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         59   Microsoft-Windows-Kernel-File  30              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      52986   Microsoft-Windows-Kernel-File  31              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|      53117   Microsoft-Windows-Kernel-File  32              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         13   Microsoft-Windows-Kernel-File  34              1               {edd08927-9cc4-4e65-b970-c2560fb5c289}|
+|         13   Microsoft-Windows-Kernel-Process  1               4               {22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716}|
+|         18   Microsoft-Windows-Kernel-Process  2               2               {22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716}|
++---------------------------------------------------------------------------------------------------------+

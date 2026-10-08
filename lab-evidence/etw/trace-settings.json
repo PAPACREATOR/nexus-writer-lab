@@ -1,0 +1,7 @@
+{
+  "max_mb": 128,
+  "writer_security_changes": [],
+  "recorder": "ETW",
+  "circular": true,
+  "started": true
+}
