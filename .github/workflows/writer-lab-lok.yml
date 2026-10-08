@@ -27,7 +27,8 @@ jobs:
         shell: pwsh
         run: python -m lab.inspect_office_exports > lab-evidence/lok-exports.json
       - name: Official library inside unchanged native boundary, 45 seconds
-        run: python -m lab.run_lok_probe
+        shell: pwsh
+        run: ./lab/run-standard-user.ps1 -Suite probe
       - name: Preserve success or failure without claiming product PASS
         if: always()
         uses: actions/upload-artifact@v4

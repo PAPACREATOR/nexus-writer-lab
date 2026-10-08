@@ -15,7 +15,12 @@ from nexus.windows_sandbox import launch_confined, task_environment
 from lab.observe import Observer
 
 root = Path(__file__).resolve().parents[1]
-output = root / 'lab-evidence/lok-probe'
+case = sys.argv[1] if len(sys.argv) > 1 else 'baseline'
+if case not in ('baseline', 'sal_log', 'long_path'):
+    raise SystemExit('Unknown bounded diagnostic')
+output = root / ('lab-evidence/lok-probe' if case == 'baseline' else 'lab-evidence/lok-probe-' + case)
+if case == 'long_path':
+    output = output / ('path ' * 15).strip()
 output.mkdir(parents=True, exist_ok=True)
 source = output / 'synthetic-input.odt'
 raw = document(); source.write_bytes(raw)
@@ -32,7 +37,7 @@ profile = office / 'profile'
     '<?xml version="1.0"?><oor:items xmlns:oor="http://openoffice.org/2001/registry">'
     '<item oor:path="/org.openoffice.Office.Common/Security/Scripting"><prop oor:name="MacroSecurityLevel" oor:op="fuse"><value>3</value></prop></item></oor:items>', encoding='utf-8')
 command = [sys.executable, '-I', str(root / 'nexus/lab/writer_lok_probe.py'), str(exe.parent)]
-result = {'lab_sha': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+result = {'case': case, 'lab_sha': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
           'source_sha': 'b4d50ab8469cf60dfa3228c7c34ef9a1285ac827',
           'timeout_seconds': 45, 'input_sha256': hashlib.sha256(raw).hexdigest(),
           'read_roots': [str(p) for p in roots], 'security_changes': [],
@@ -43,7 +48,9 @@ with socket.socket() as listener:
     command.append(str(listener.getsockname()[1]))
     result['command'] = command
     try:
-        with launch_confined(command, cwd=work, env=task_environment(work), read_roots=roots) as worker:
+        env = task_environment(work)
+        if case == 'sal_log': env['SAL_LOG'] = '+WARN'
+        with launch_confined(command, cwd=work, env=env, read_roots=roots) as worker:
             observer = Observer(worker)
             try:
                 stdout, stderr = worker.communicate(timeout=45)

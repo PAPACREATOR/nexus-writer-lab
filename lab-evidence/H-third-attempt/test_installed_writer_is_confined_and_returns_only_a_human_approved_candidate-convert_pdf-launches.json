@@ -1,0 +1,156 @@
+[
+  {
+    "command": [
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+      "-I",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py",
+      "convert_pdf",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\input.bin"
+    ],
+    "cwd": "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f",
+    "read_roots": [
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus",
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64",
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531",
+      "C:\\Program Files\\LibreOffice"
+    ],
+    "deny_roots": [
+      "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\data"
+    ],
+    "writer_timeout_seconds": 45,
+    "launch_seconds": 1907.953,
+    "pid": 5860,
+    "appcontainer_verified_by_existing_launcher": true,
+    "lpac_requested_by_existing_launcher": true,
+    "job_verified_by_existing_launcher": true,
+    "worker_stdout": "",
+    "worker_stderr": "Writer child exit=3221226505\r\nTraceback (most recent call last):\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 251, in <module>\r\n    print(json.dumps(execute(process, input_path), ensure_ascii=False))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 243, in execute\r\n    result = _direct_result(process, input_path)\r\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 230, in _direct_result\r\n    value = _dispatch(process, _input(input_path))\r\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py\", line 213, in _dispatch\r\n    return run(path)\r\n           ^^^^^^^^^\r\n  File \"D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py\", line 159, in run\r\n    raise Blocked(\"LibreOffice não concluiu a conversão.\")\r\nnexus.contracts.Blocked: LibreOffice não concluiu a conversão.\r\nExecução direta indisponível ou resposta rejeitada.\r\n",
+    "communication_seconds": 1.155999999999949,
+    "worker_exit_code": 1,
+    "process_observation": {
+      "sampling_interval_seconds": 0.1,
+      "complete_process_inventory": false,
+      "events": [
+        {
+          "pid": 5860,
+          "parent_pid": 780,
+          "name": "python.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe -I D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\runner.py convert_pdf D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\input.bin"
+        },
+        {
+          "pid": 8164,
+          "parent_pid": 5860,
+          "name": "conhost.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 6964,
+          "parent_pid": 5860,
+          "name": "python.exe",
+          "seconds": 0.1089999999999236,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe -I D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py nexus_lok \"C:\\Program Files\\LibreOffice\\program\" D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\office\\resultado.odt D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\office\\profile D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\resultado.pdf"
+        },
+        {
+          "pid": 1988,
+          "parent_pid": 6964,
+          "name": "conhost.exe",
+          "seconds": 0.1089999999999236,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 9796,
+          "parent_pid": 6964,
+          "name": "python.exe",
+          "seconds": 0.43699999999989814,
+          "appcontainer": true,
+          "elevated": true,
+          "capabilities_match_existing_boundary": true,
+          "same_job": false,
+          "command_line": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe -I D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\adapters\\office.py nexus_lok \"C:\\Program Files\\LibreOffice\\program\" D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\office\\resultado.odt D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\office\\profile D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\H\\tmp\\test_installed_writer_is_confi1\\.nexus-task-hh0sl531\\runs\\b2a7e80a42744012b2de399a69fef80f\\resultado.pdf"
+        },
+        {
+          "pid": 3604,
+          "parent_pid": 6964,
+          "name": "WerFault.exe",
+          "seconds": 0.43699999999989814,
+          "appcontainer": false,
+          "elevated": true,
+          "capability_query_error": "O processo tem capacidades externas não autorizadas.",
+          "same_job": false,
+          "command_line": "C:\\Windows\\system32\\WerFault.exe -u -p 6964 -s 764"
+        }
+      ],
+      "errors": []
+    },
+    "job_after_communication": {
+      "query_ok": true,
+      "active_processes": 0
+    },
+    "files": {
+      "office/stdout.txt": {
+        "length": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "office/stderr.txt": {
+        "length": 39,
+        "sha256": "00600f7b30bb48a20cd45095196395ac17093b49194421d8a1e42b1f08428427",
+        "text": "LOK loading library\r\nLOK initializing\r\n"
+      },
+      "office/profile/user/registrymodifications.xcu": {
+        "length": 238,
+        "sha256": "6eab1ef92cb6a49912d44543d8d01590e42eb37df9c043200a78b2202c16d4fd",
+        "text": "<?xml version=\"1.0\"?><oor:items xmlns:oor=\"http://openoffice.org/2001/registry\"><item oor:path=\"/org.openoffice.Office.Common/Security/Scripting\"><prop oor:name=\"MacroSecurityLevel\" oor:op=\"fuse\"><value>3</value></prop></item></oor:items>"
+      }
+    },
+    "profile_exists": true,
+    "profile_files": [
+      "office\\profile\\.lock",
+      "office\\profile\\user\\registrymodifications.xcu",
+      "office\\profile\\user\\autotext\\mytexts.bau",
+      "office\\profile\\user\\basic\\dialog.xlc",
+      "office\\profile\\user\\basic\\script.xlc",
+      "office\\profile\\user\\config\\autotbl.fmt",
+      "office\\profile\\user\\database\\biblio.odb",
+      "office\\profile\\user\\database\\evolocal.odb",
+      "office\\profile\\user\\extensions\\buildid",
+      "office\\profile\\user\\gallery\\sg30.sdv",
+      "office\\profile\\user\\gallery\\sg30.thm",
+      "office\\profile\\user\\basic\\Standard\\dialog.xlb",
+      "office\\profile\\user\\basic\\Standard\\Module1.xba",
+      "office\\profile\\user\\basic\\Standard\\script.xlb",
+      "office\\profile\\user\\database\\biblio\\biblio.dbf",
+      "office\\profile\\user\\database\\biblio\\biblio.dbt",
+      "office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\\backenddb.xml",
+      "office\\profile\\user\\uno_packages\\cache\\registry\\com.sun.star.comp.deployment.help.PackageRegistryBackend\\backenddb.xml"
+    ],
+    "profile_acl": {
+      "query_error": 0,
+      "task_sid_aces": [
+        {
+          "type": 0,
+          "mask": 1245631,
+          "inherited": true
+        }
+      ]
+    }
+  }
+]
