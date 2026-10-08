@@ -7,7 +7,7 @@ $officeRoot=Split-Path (Split-Path $env:LIBREOFFICE_EXE -Parent) -Parent
 $name='NexusWriterLab'
 $secret=[guid]::NewGuid().ToString('N')+'aA!9'
 $secure=ConvertTo-SecureString $secret -AsPlainText -Force
-$null=New-LocalUser -Name $name -Password $secure -Description 'Disposable standard-user Writer laboratory fixture'
+$null=New-LocalUser -Name $name -Password $secure -Description 'Disposable Writer laboratory user'
 $users=Get-LocalGroup -SID 'S-1-5-32-545'
 Add-LocalGroupMember -Group $users -Member $name
 $credential=New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$name",$secure)

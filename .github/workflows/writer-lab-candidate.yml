@@ -29,5 +29,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: writer-candidate-routes
-          path: lab-evidence/
+          path: |
+            lab-evidence/standard-user/
+            lab-evidence/standard-user-launch/
+            lab-evidence/libreoffice-version.txt
+            lab-evidence/writer-binary-hash.json
           if-no-files-found: error
