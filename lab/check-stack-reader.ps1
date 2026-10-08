@@ -17,7 +17,7 @@ try {
  if (-not $finished) { $debugger.Kill() }
  $debugger.Refresh()
  $frames=$false
- if (Test-Path (Join-Path $output 'fixture-stacks.txt')) { $frames=(Get-Content (Join-Path $output 'fixture-stacks.txt') -Raw) -match '(?mi)^\s*00\s+[0-9a-f`]+\s+[0-9a-f`]+\s+' }
+ if (Test-Path (Join-Path $output 'fixture-stacks.txt')) { $frames=(Get-Content (Join-Path $output 'fixture-stacks.txt') -Raw).Replace("`r",'') -match '(?mi)^Child-SP[^\n]*RetAddr[^\n]*\n\n*[0-9a-f`]+\s+[0-9a-f`]+\s+\S' }
  @{version_exit_code=$versionExit;fixture='Synthetic sleeping PowerShell helper, not Writer';finished=$finished;exit_code=$(if ($finished) {$debugger.ExitCode} else {$null});stack_frames_present=$frames;dump=$false;mode='non-invasive non-suspending';writer_executed=$false} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
  if (-not $finished -or $debugger.ExitCode -ne 0 -or -not $frames) { throw 'Stack reader self-check failed; Writer is NOT RUN' }
 } finally { if (-not $fixture.HasExited) { $fixture.Kill() } }

@@ -68,3 +68,7 @@ Próxima verificação: opções antes do alvo -p, comandos iniciais -c em vez d
 ## Leitor — erro concreto isolado
 
 Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37838242509, SHA 3b84795: self-check FAIL, Writer NOT RUN. stdout contém `cdb: The system does not support detach on exit`. O erro não aparecia no ficheiro -logo: analisar stdout também é necessário. Removido apenas -pd, mantendo -pvr não invasivo e sem suspensão, texto de pilhas/módulos e nenhum dump. Self-check continua obrigatório. Em modo não invasivo o debugger não estabelece um debug attach ao alvo (Microsoft: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/noninvasive-debugging--user-mode-). Não é uma alteração do Writer.
+
+## Leitor — pilhas obtidas no helper
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37838559869, SHA 46f0677: exit 0, pilhas efetivamente presentes, Suspend: 0. Writer NOT RUN porque o validador procurava números de frame que o comando k não imprime. Corrigida a validação para cabeçalho Child-SP/RetAddr seguido de linha com dois endereços e Call Site; sem mudar os comandos ou ampliar payload. Evidência integral em stack-reader-fourth*. Isto valida a ferramenta no helper sintético, não resolve Writer.
