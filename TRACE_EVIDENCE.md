@@ -63,6 +63,20 @@ A alternativa oficial é fundamentada em https://github.com/LibreOffice/core/blo
 
 ## Procmon original A, conta normal — revisão final
 
+## Retoma: esperas das threads (novo ensaio)
+
+lab/trace-waits.ps1 usa System.Diagnostics.ProcessThread e a API Microsoft WCT
+somente no recorder externo, filtrando a instalação da conta descartável.
+Não suspende threads, não injeta código, não ajusta privilégios e não muda Writer.
+O helper é terminado após a execução; não interfere com o Job da tarefa.
+Um erro de consulta é preservado, não resolvido ampliando o token.
+WCT pode omitir esperas não suportadas e necessita acesso às threads; um único
+node não prova que a thread corre. Resultado ainda NOT RUN na preparação.
+Referências: https://learn.microsoft.com/en-us/windows/win32/api/wct/nf-wct-getthreadwaitchain
+e https://learn.microsoft.com/en-us/windows/win32/api/wct/ns-wct-waitchain_node_info.
+
+## Evidência Procmon da primeira fase
+
 Run: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37822420842
 Commit executado: 635a836; artefacto 11570414451. Recorder Microsoft assinado,
 externo ao sandbox; Writer elevated=false, AppContainer/capabilities/Job conforme

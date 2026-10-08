@@ -155,4 +155,4 @@ Código/documentação próprios: PolyForm Noncommercial 1.0.0. Dependências ma
 
 Os documentos conceptuais e planos datados preservam etapas anteriores (incluindo Activepieces/Conductor); a composição executável atual deve ser conferida no código, na PR #23 e na evidência por SHA. A organização documental não altera as invariantes M1–M14.
 
-Diagnóstico encerrado pelo resultado B: matriz e alternativa oficial sem solução reproduzível; causa NOT PROVEN. Consulte LAB_REPORT.md e TRACE_EVIDENCE.md.
+Primeira fase encerrada pelo resultado B: matriz e alternativa oficial sem solução reproduzível; causa NOT PROVEN. Investigação retomada por instrução humana: novo ensaio externo de esperas das threads, sem correção comprovada. Consulte LAB_REPORT.md e TRACE_EVIDENCE.md.

@@ -15,6 +15,11 @@ $output=Join-Path $source 'lab-evidence/standard-user-launch'
 $null=New-Item -ItemType Directory -Path $output -Force
 $arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard)
 try {
+    $waitObserver=$null
+    if ($env:LAB_TRACE_WAITS -eq '1') {
+        $waitArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-waits.ps1')+'"'),'-Output',('"'+(Join-Path $output 'waits.jsonl')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-waits')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'))
+        $waitObserver=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList $waitArgs -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $output 'wait-observer-error.txt')
+    }
     $process=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -Credential $credential -LoadUserProfile -WindowStyle Hidden -ArgumentList $arguments -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt') -Wait -PassThru
     $labProfile=Get-CimInstance Win32_UserProfile | Where-Object {$_.SID -eq (Get-LocalUser -Name $name).SID.Value} | Select-Object -First 1
     if ($labProfile) {
@@ -24,6 +29,10 @@ try {
     @{suite=$Suite;shard=$Shard;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
     if ($process.ExitCode -ne 0) { Get-Content (Join-Path $output 'stderr.txt'); throw 'Standard-user validation failed; preserve evidence' }
 } finally {
+    if ($waitObserver) {
+        $null=New-Item -ItemType File -Path (Join-Path $output 'stop-waits') -Force
+        if (-not $waitObserver.WaitForExit(15000)) { $waitObserver.Kill() }
+    }
     Remove-LocalUser -Name $name
     $secret=$null; $credential=$null; $secure=$null
 }

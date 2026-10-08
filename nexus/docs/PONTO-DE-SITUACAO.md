@@ -2,6 +2,11 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
+Retoma humana confirmada: não houve reposição. Este chat continua exclusivamente
+no laboratório Writer. Novo ensaio desenhado: ThreadState/WaitReason e WCT externo
+nas rotas A originais, sem ajustar privilégios, alterar runtime, LPAC, Job ou 45 s.
+Preparação não é PASS. Causa permanece NOT PROVEN até evidência nova.
+
 Esta entrada aplica-se **apenas a PAPACREATOR/nexus-writer-lab**. O estado Nexus
 abaixo é história congelada do SHA b4d50ab8469cf60dfa3228c7c34ef9a1285ac827.
 Pedido humano: laboratório separado, baseline exato, matriz de uma variável,

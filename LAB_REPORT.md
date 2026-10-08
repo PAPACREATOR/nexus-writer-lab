@@ -2,6 +2,10 @@
 
 ## Estado
 
+Investigação retomada por instrução humana após o encerramento abaixo. Próximo
+ensaio: observar ThreadState/WaitReason e Wait Chain Traversal externamente,
+no adapter A original e na conta normal. Nenhum resultado novo ainda.
+
 Resultado B: hipóteses razoáveis desta investigação esgotadas sem solução
 reproduzível. Causa efetiva: **NOT PROVEN**. Não há proposta de patch.
 O Nexus principal não foi alterado. O laboratório fica concluído como diagnóstico,
@@ -111,6 +115,8 @@ preparadas em writer-lab-full.yml, mas **NOT RUN**: o gate das rotas reais falho
 Os testes gerais verdes sobre os bytes originais não validam a variante I.
 
 ## Encerramento
+
+Este é o encerramento da primeira fase, preservado; a investigação foi retomada.
 
 A–G não melhoraram o resultado; H não tem combinação justificada. A alternativa
 I falhou nas rotas reais e nos três probes não elevados. Procmon e ETW não
