@@ -134,6 +134,18 @@ do estado ativo, preservada apenas na história do commit 9b35a91.
 Alternativa de menor exposição: CDB -pvr, não invasivo e sem suspensão, apenas
 comandos `~* k`, `lm`, `q`. Sem .dump, display de memória, argumentos de funções,
 clones, breakpoints ou injeção; artefacto limitado explicitamente a texto e JSON.
-Símbolos de rede desativados durante a leitura. Os frames podem ser incompletos
+O caminho de símbolos aponta só para uma pasta local vazia. Os frames podem ser incompletos
 ou desatualizados numa leitura sem suspensão; preservar essa limitação.
 Referência: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options.
+
+### Primeiro resultado do leitor de pilhas
+
+Run 37835201974, SHA a385058: rotas originais 2 FAIL/45 s e canary PASS.
+Oito invocações do CDB produziram só o cabeçalho, sem frames: **FAIL de recolha**,
+não evidência de IPC. O ExitCode estava null: corrigido mantendo o handle do
+processo antes de esperar e refrescando o estado. Teste local sintético de exit 7
+confirmou o registo correto, sem executar Writer. Artefacto completo textual
+preservado em lab-evidence/stack-text-first-raw.zip e ficheiros extraídos.
+Antes de repetir, o workflow passa a verificar o leitor num helper PowerShell
+sintético adormecido (não Writer), com saída/erro/code explícitos. O comando
+CDB foi simplificado; isso é reparação do diagnóstico, não uma variante do produto.

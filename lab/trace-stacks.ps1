@@ -21,9 +21,11 @@ while (-not (Test-Path -LiteralPath $StopFile) -and [DateTime]::UtcNow -lt $dead
     $log=Join-Path $Output ($key+'.stacks.txt')
     $start=[DateTime]::UtcNow
     # Non-invasive, non-suspending read. Stack-only text; no .dump or memory display.
-    $helper=Start-Process -FilePath $Debugger -ArgumentList @('-pvr','-pd','-noshell','-nosqm','-netsyms:no','-sins','-y',('"'+$symbols+'"'),'-p',([string]$p.Id),'-logo',('"'+$log+'"'),'-cf',('"'+$commands+'"')) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($log+'.stdout.txt') -RedirectStandardError ($log+'.stderr.txt')
+    $helper=Start-Process -FilePath $Debugger -ArgumentList @('-pvr','-pd','-noshell','-nosqm','-y',('"'+$symbols+'"'),'-p',([string]$p.Id),'-logo',('"'+$log+'"'),'-cf',('"'+$commands+'"')) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($log+'.stdout.txt') -RedirectStandardError ($log+'.stderr.txt')
+    $heldHandle=$helper.Handle
     $finished=$helper.WaitForExit(8000)
     if (-not $finished) { $helper.Kill() }
+    $helper.Refresh()
     @{utc=$start.ToString('o');pid=$p.Id;image=$path;age_seconds=$age;threshold_seconds=$threshold;finished=$finished;duration_seconds=([DateTime]::UtcNow-$start).TotalSeconds;exit_code=$(if ($finished) {$helper.ExitCode} else {$null});mode='non-invasive non-suspending -pvr';payload='stack frames and module list text only';memory_dump=$false;clone=$false;runtime_changes=@();non_atomic_observation=$true} | ConvertTo-Json -Compress | Add-Content (Join-Path $Output 'capture.jsonl')
    }
   } catch { @{utc=[DateTime]::UtcNow.ToString('o');pid=$p.Id;error=$_.Exception.Message} | ConvertTo-Json -Compress | Add-Content (Join-Path $Output 'errors.jsonl') }

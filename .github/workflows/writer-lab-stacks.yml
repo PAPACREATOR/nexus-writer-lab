@@ -22,6 +22,9 @@ jobs:
       - name: Official external stack reader
         shell: pwsh
         run: ./lab/install-stack-tools.ps1
+      - name: Check stack reader on a synthetic sleeping helper
+        shell: pwsh
+        run: ./lab/check-stack-reader.ps1
       - name: Archival Writer
         shell: pwsh
         run: ./lab/install-writer.ps1
@@ -35,6 +38,8 @@ jobs:
           name: writer-stack-text-only
           path: |
             lab-evidence/stack-tools/*.json*
+            lab-evidence/stack-reader-check/*.txt
+            lab-evidence/stack-reader-check/*.json
             lab-evidence/standard-user/A/*.json
             lab-evidence/standard-user/A/results.xml
             lab-evidence/standard-user/A/console.txt

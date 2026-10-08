@@ -2,6 +2,11 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
+Run 37835201974: 2 FAIL/45 s e canary PASS; leitor CDB só emitiu cabeçalho,
+sem pilhas. Recolha FAIL preservada. ExitCode null corrigido e teste local exit 7
+PASS. Próxima repetição verifica primeiro o leitor num helper sintético; nenhum
+Writer fora de LPAC, nenhum dump de memória. Causa ainda NOT PROVEN.
+
 Próximo diagnóstico revisto: CDB -pvr só pilhas textuais, sem suspensão, dumps,
 clones ou memória carregada. O dispatch ProcDump foi rejeitado por auto-review
 pela possibilidade de expor dados sensíveis: NOT RUN. Preparação removida do ativo.

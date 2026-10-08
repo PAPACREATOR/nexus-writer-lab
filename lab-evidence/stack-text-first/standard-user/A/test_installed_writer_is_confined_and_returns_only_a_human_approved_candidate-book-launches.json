@@ -1,0 +1,139 @@
+[
+  {
+    "command": [
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe",
+      "-I",
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py",
+      "book",
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3\\input.bin"
+    ],
+    "cwd": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3",
+    "read_roots": [
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus",
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python",
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a",
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office"
+    ],
+    "deny_roots": [
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\data"
+    ],
+    "writer_timeout_seconds": 45,
+    "launch_seconds": 312.593,
+    "pid": 2880,
+    "appcontainer_verified_by_existing_launcher": true,
+    "lpac_requested_by_existing_launcher": true,
+    "job_verified_by_existing_launcher": true,
+    "worker_stdout": "",
+    "worker_stderr": "Traceback (most recent call last):\r\n  File \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py\", line 251, in <module>\r\n    print(json.dumps(execute(process, input_path), ensure_ascii=False))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py\", line 243, in execute\r\n    result = _direct_result(process, input_path)\r\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py\", line 230, in _direct_result\r\n    value = _dispatch(process, _input(input_path))\r\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py\", line 213, in _dispatch\r\n    return run(path)\r\n           ^^^^^^^^^\r\n  File \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\office.py\", line 94, in run\r\n    raise Blocked(\"Conversão excedeu o tempo permitido.\") from None\r\nnexus.contracts.Blocked: Conversão excedeu o tempo permitido.\r\nExecução direta indisponível ou resposta rejeitada.\r\n",
+    "communication_seconds": 45.156000000000006,
+    "worker_exit_code": 1,
+    "process_observation": {
+      "sampling_interval_seconds": 0.1,
+      "complete_process_inventory": false,
+      "events": [
+        {
+          "pid": 2880,
+          "parent_pid": 1056,
+          "name": "python.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": false,
+          "lpac_query_error": 87,
+          "lpac_native_required_length": 0,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe -I C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py book C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3\\input.bin"
+        },
+        {
+          "pid": 1436,
+          "parent_pid": 2880,
+          "name": "conhost.exe",
+          "seconds": 0.0,
+          "appcontainer": true,
+          "elevated": false,
+          "lpac_query_error": 87,
+          "lpac_native_required_length": 0,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 1136,
+          "parent_pid": 2880,
+          "name": "soffice.com",
+          "seconds": 0.10899999999998045,
+          "appcontainer": true,
+          "elevated": false,
+          "lpac_query_error": 87,
+          "lpac_native_required_length": 0,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com -env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-q9b9fb5a/runs/afde59d97f0445e7a46ba9f22c6600a3/office/profile --headless --norestore --convert-to pdf:writer_pdf_Export --outdir C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3 C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3\\office\\resultado.odt"
+        },
+        {
+          "pid": 1224,
+          "parent_pid": 1136,
+          "name": "conhost.exe",
+          "seconds": 0.10899999999998045,
+          "appcontainer": true,
+          "elevated": false,
+          "lpac_query_error": 87,
+          "lpac_native_required_length": 0,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+        },
+        {
+          "pid": 1728,
+          "parent_pid": 1136,
+          "name": "soffice.bin",
+          "seconds": 0.20299999999997453,
+          "appcontainer": true,
+          "elevated": false,
+          "lpac_query_error": 87,
+          "lpac_native_required_length": 0,
+          "capabilities_match_existing_boundary": true,
+          "same_job": true,
+          "command_line": "\"C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com\" \"-env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-q9b9fb5a/runs/afde59d97f0445e7a46ba9f22c6600a3/office/profile\" \"--headless\" \"--norestore\" \"--convert-to\" \"pdf:writer_pdf_Export\" \"--outdir\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-q9b9fb5a\\runs\\afde59d97f0445e7a46ba9f22c6600a3\\office\\resultado.odt\" \"-env:OOO_CWD=2C:\\\\Users\\\\NexusWriterLab\\\\NexusWriterLab\\\\repo\\\\lab-evidence\\\\A\\\\tmp\\\\test_installed_writer_is_confi0\\\\.nexus-task-q9b9fb5a\\\\runs\\\\afde59d97f0445e7a46ba9f22c6600a3\""
+        }
+      ],
+      "errors": []
+    },
+    "job_after_communication": {
+      "query_ok": true,
+      "active_processes": 0
+    },
+    "files": {
+      "office/stdout.txt": {
+        "length": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "office/stderr.txt": {
+        "length": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "office/profile/user/registrymodifications.xcu": {
+        "length": 476,
+        "sha256": "5004471cdb2b07461f24b3234b8aeb7748254e75abcd35276d2d5b605fb0aaae",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<oor:items xmlns:oor=\"http://openoffice.org/2001/registry\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<item oor:path=\"/org.openoffice.Office.Common/Security/Scripting\"><prop oor:name=\"MacroSecurityLevel\" oor:op=\"fuse\"><value>3</value></prop></item>\n<item oor:path=\"/org.openoffice.Setup/L10N\"><prop oor:name=\"ooLocale\" oor:op=\"fuse\"><value>en-US</value></prop></item>\n</oor:items>\n"
+      }
+    },
+    "profile_exists": true,
+    "profile_files": [
+      "office\\profile\\user\\registrymodifications.xcu",
+      "office\\profile\\user\\extensions\\buildid"
+    ],
+    "profile_acl": {
+      "query_error": 0,
+      "task_sid_aces": [
+        {
+          "type": 0,
+          "mask": 1245631,
+          "inherited": true
+        }
+      ]
+    }
+  }
+]
