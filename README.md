@@ -156,3 +156,5 @@ Código/documentação próprios: PolyForm Noncommercial 1.0.0. Dependências ma
 Os documentos conceptuais e planos datados preservam etapas anteriores (incluindo Activepieces/Conductor); a composição executável atual deve ser conferida no código, na PR #23 e na evidência por SHA. A organização documental não altera as invariantes M1–M14.
 
 Primeira fase encerrada pelo resultado B: matriz e alternativa oficial sem solução reproduzível; causa NOT PROVEN. Investigação retomada por instrução humana: novo ensaio externo de esperas das threads, sem correção comprovada. Consulte LAB_REPORT.md e TRACE_EVIDENCE.md.
+
+Retoma de 08-10-2026 concluída como diagnóstico: pilhas reais sugerem diálogo/message loop; causa NOT PROVEN. Último run 37840879467: 2 FAIL/45 s e 1 PASS IPC, Jobs finais zero. Sem solução/patch nem regressão de solução; consulte o estado atual no início de LAB_REPORT.md.

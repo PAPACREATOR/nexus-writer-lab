@@ -2,17 +2,16 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
-Retoma humana confirmada: não houve reposição. Este chat continua no laboratório Writer.
-Rotas A originais continuam 2 FAIL/45 s e canary PASS. WCT: 344 amostras sem cadeia causal.
-Leitor textual CDB inicialmente falhou: -pd incompatível e validador do formato k incorreto;
-ambos corrigidos com provas preservadas. Self-check exige frames reais antes de Writer.
-Run 37838902004: oito pilhas reais, 2 FAIL/45 s e canary PASS; thread principal
-em espera de mensagens com Dialog::Execute nas duas rotas. Diálogo LIKELY,
-causa NOT PROVEN. Próximo diagnóstico: captions/classes Win32 dos PIDs Writer,
-sem mensagens, interação, suspensão, dumps ou clones.
-Causa permanece NOT PROVEN; principal intacto, Folha/regressão de solução NOT RUN.
-A proposta ProcDump foi rejeitada por auto-review por possível exposição de dados sensíveis:
-NOT RUN. Foi substituída pelo diagnóstico textual; não existe recolha de memória bruta.
+Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.
+Retoma concluída como diagnóstico sem solução (B): último run 37840879467,
+2 FAIL/45 s e canary PASS. Conta normal, runtime original, Jobs finais zero.
+O leitor CDB foi corrigido e validado num helper; pilhas reais indicam espera
+em diálogo/message loop (LIKELY). SALFRAME LibreOffice 26.2 visível; consulta
+de etiquetas sem texto disponível. Causa exata NOT PROVEN; não declarar Nexus resolvido.
+Proposta mínima vazia, Folha e regressão de solução NOT RUN; nenhum ensaio pendente.
+ProcDump rejeitado por auto-review por possível exposição de dados sensíveis:
+NOT RUN. Usados somente rastreios/texto/captions, sem memória bruta.
+Provas e tentativas do leitor persistidas em lab-evidence; principal intacto.
 
 Esta entrada aplica-se **apenas a PAPACREATOR/nexus-writer-lab**. O estado Nexus
 abaixo é história congelada do SHA b4d50ab8469cf60dfa3228c7c34ef9a1285ac827.

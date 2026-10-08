@@ -1,0 +1,124 @@
+Opened log file 'D:\a\nexus-writer-lab\nexus-writer-lab\lab-evidence\standard-user-launch\stacks\5708-25.stacks.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   EnableRedirectToV8JsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 30
+
+Microsoft (R) Windows Debugger Version 10.0.26100.8249 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             D:\a\_temp\nexus-empty-symbols
+Symbol search path is: D:\a\_temp\nexus-empty-symbols
+Executable search path is: 
+WARNING: Process 5708 is not attached as a debuggee
+         The process can be examined but debug events will not be received
+....................
+(164c.1ae8): Wake debugger - code 80000007 (first chance)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+win32u!NtUserMsgWaitForMultipleObjectsEx+0x14:
+00007fff`5eb5ad04 c3              ret
+0:000> ~* k; lm; q
+
+.  0  Id: 164c.1ae8 Suspend: 0 Teb: 000000fb`028c9000 Unfrozen
+Child-SP          RetAddr               Call Site
+000000fb`02adf2d8 00007ff7`ae5a3f94     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+000000fb`02adf2e0 00007ff7`ae5b7214     soffice+0x3f94
+000000fb`02aff8b0 00007fff`606be987     soffice+0x17214
+000000fb`02aff8f0 00007fff`612ac53c     KERNEL32!BaseThreadInitThunk+0x17
+000000fb`02aff920 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   1  Id: 164c.240c Suspend: 0 Teb: 000000fb`028cb000 Unfrozen
+Child-SP          RetAddr               Call Site
+000000fb`02bff848 00007fff`61295f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+000000fb`02bff850 00007fff`606be987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+000000fb`02bffbb0 00007fff`612ac53c     KERNEL32!BaseThreadInitThunk+0x17
+000000fb`02bffbe0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   2  Id: 164c.1a0c Suspend: 0 Teb: 000000fb`028cd000 Unfrozen
+Child-SP          RetAddr               Call Site
+000000fb`02cff808 00007fff`61295f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+000000fb`02cff810 00007fff`606be987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+000000fb`02cffb70 00007fff`612ac53c     KERNEL32!BaseThreadInitThunk+0x17
+000000fb`02cffba0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   3  Id: 164c.1db8 Suspend: 0 Teb: 000000fb`028cf000 Unfrozen
+Child-SP          RetAddr               Call Site
+000000fb`02dff688 00007fff`61295f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+000000fb`02dff690 00007fff`606be987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+000000fb`02dff9f0 00007fff`612ac53c     KERNEL32!BaseThreadInitThunk+0x17
+000000fb`02dffa20 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+start             end                 module name
+00007ff7`ae5a0000 00007ff7`ae622000   soffice    (no symbols)           
+00007fff`51d90000 00007fff`51d9c000   VCRUNTIME140_1   (deferred)             
+00007fff`51da0000 00007fff`51dcc000   VCRUNTIME140   (deferred)             
+00007fff`51ff0000 00007fff`5208d000   MSVCP140   (deferred)             
+00007fff`5e340000 00007fff`5e48b000   ucrtbase   (deferred)             
+00007fff`5e550000 00007fff`5e6ba000   wintypes   (deferred)             
+00007fff`5e6c0000 00007fff`5eaae000   KERNELBASE   (deferred)             
+00007fff`5eb50000 00007fff`5eb77000   win32u     (export symbols)       C:\Windows\System32\win32u.dll
+00007fff`5eb80000 00007fff`5ec23000   msvcp_win   (deferred)             
+00007fff`5ee70000 00007fff`5ef9b000   gdi32full   (deferred)             
+00007fff`5efa0000 00007fff`5f165000   USER32     (deferred)             
+00007fff`5f7b0000 00007fff`5ff03000   SHELL32    (deferred)             
+00007fff`5ff30000 00007fff`5ff61000   IMM32      (deferred)             
+00007fff`600c0000 00007fff`60167000   sechost    (deferred)             
+00007fff`60690000 00007fff`60759000   KERNEL32   (export symbols)       C:\Windows\System32\KERNEL32.DLL
+00007fff`60760000 00007fff`60878000   RPCRT4     (deferred)             
+00007fff`608f0000 00007fff`609e4000   shcore     (deferred)             
+00007fff`60a40000 00007fff`60dc6000   combase    (deferred)             
+00007fff`611b0000 00007fff`611db000   GDI32      (deferred)             
+00007fff`61220000 00007fff`61484000   ntdll      (export symbols)       C:\Windows\SYSTEM32\ntdll.dll
+quit:
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'

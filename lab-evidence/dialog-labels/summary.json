@@ -1,0 +1,266 @@
+{
+  "run": 37840879467,
+  "metadata": {
+    "source_repository": "PAPACREATOR/cerebro-parvo-",
+    "source_sha": "b4d50ab8469cf60dfa3228c7c34ef9a1285ac827",
+    "lab_sha": "ebbab11fc583db9a3ea83b1b69ac494ad9785038",
+    "variant": "A",
+    "description": "Exact original source baseline",
+    "windows": "Windows-2025Server-10.0.26100-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "writer_timeout_seconds": 45,
+    "libreoffice_executable": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com",
+    "original_office_sha256": "75e9d58152b9b2929ea056d0934207922afbf4dfdba290b38c99c629a5ef06c5",
+    "security_changes": [],
+    "tested_office_sha256": "75e9d58152b9b2929ea056d0934207922afbf4dfdba290b38c99c629a5ef06c5",
+    "integrity_verified": true,
+    "test_command": [
+      "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe",
+      "-u",
+      "-m",
+      "pytest",
+      "nexus/tests/test_native_writer_route_real.py",
+      "-vv",
+      "-s",
+      "--tb=short",
+      "-p",
+      "lab.evidence_plugin",
+      "--basetemp=C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp",
+      "--junitxml=C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\results.xml"
+    ],
+    "pytest_exit_code": 1,
+    "original_bytes_restored": true
+  },
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "2",
+    "skipped": "0",
+    "tests": "3",
+    "time": "107.229",
+    "timestamp": "2026-10-08T20:41:15.700688+00:00",
+    "hostname": "runnervmfi6oq"
+  },
+  "labels": [
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 10080,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 10080,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 5708,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 5708,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 8008,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 8008,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 9240,
+      "interaction": false,
+      "memory_dump": false
+    },
+    {
+      "document_payload": false,
+      "labels": [],
+      "pid": 9240,
+      "interaction": false,
+      "memory_dump": false
+    }
+  ],
+  "routes": [
+    {
+      "file": "test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate-book-launches.json",
+      "seconds": 45.139999999999986,
+      "job": {
+        "query_ok": true,
+        "active_processes": 0
+      },
+      "tokens": {
+        "sampling_interval_seconds": 0.1,
+        "complete_process_inventory": false,
+        "events": [
+          {
+            "pid": 3796,
+            "parent_pid": 6292,
+            "name": "python.exe",
+            "seconds": 0.0,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe -I C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py book C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-a72a1y9f\\runs\\a5ac05dd31e34d4c952f2fe3b0b50efd\\input.bin"
+          },
+          {
+            "pid": 8860,
+            "parent_pid": 3796,
+            "name": "conhost.exe",
+            "seconds": 0.0,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+          },
+          {
+            "pid": 9240,
+            "parent_pid": 3796,
+            "name": "soffice.com",
+            "seconds": 0.10899999999998045,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com -env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-a72a1y9f/runs/a5ac05dd31e34d4c952f2fe3b0b50efd/office/profile --headless --norestore --convert-to pdf:writer_pdf_Export --outdir C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-a72a1y9f\\runs\\a5ac05dd31e34d4c952f2fe3b0b50efd C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-a72a1y9f\\runs\\a5ac05dd31e34d4c952f2fe3b0b50efd\\office\\resultado.odt"
+          },
+          {
+            "pid": 2328,
+            "parent_pid": 9240,
+            "name": "conhost.exe",
+            "seconds": 0.10899999999998045,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+          },
+          {
+            "pid": 8008,
+            "parent_pid": 9240,
+            "name": "soffice.bin",
+            "seconds": 0.21800000000001774,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\"C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com\" \"-env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi0/.nexus-task-a72a1y9f/runs/a5ac05dd31e34d4c952f2fe3b0b50efd/office/profile\" \"--headless\" \"--norestore\" \"--convert-to\" \"pdf:writer_pdf_Export\" \"--outdir\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-a72a1y9f\\runs\\a5ac05dd31e34d4c952f2fe3b0b50efd\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi0\\.nexus-task-a72a1y9f\\runs\\a5ac05dd31e34d4c952f2fe3b0b50efd\\office\\resultado.odt\" \"-env:OOO_CWD=2C:\\\\Users\\\\NexusWriterLab\\\\NexusWriterLab\\\\repo\\\\lab-evidence\\\\A\\\\tmp\\\\test_installed_writer_is_confi0\\\\.nexus-task-a72a1y9f\\\\runs\\\\a5ac05dd31e34d4c952f2fe3b0b50efd\""
+          }
+        ],
+        "errors": []
+      }
+    },
+    {
+      "file": "test_installed_writer_is_confined_and_returns_only_a_human_approved_candidate-convert_pdf-launches.json",
+      "seconds": 45.14100000000002,
+      "job": {
+        "query_ok": true,
+        "active_processes": 0
+      },
+      "tokens": {
+        "sampling_interval_seconds": 0.1,
+        "complete_process_inventory": false,
+        "events": [
+          {
+            "pid": 9680,
+            "parent_pid": 6292,
+            "name": "python.exe",
+            "seconds": 0.0,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\python\\python.exe -I C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\nexus\\adapters\\runner.py convert_pdf C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-gfgt8s6t\\runs\\47d7eab8c5a04ef8b19b0cd2aee4f5b3\\input.bin"
+          },
+          {
+            "pid": 8836,
+            "parent_pid": 9680,
+            "name": "conhost.exe",
+            "seconds": 0.11000000000001364,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+          },
+          {
+            "pid": 5708,
+            "parent_pid": 9680,
+            "name": "soffice.com",
+            "seconds": 0.11000000000001364,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com -env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi1/.nexus-task-gfgt8s6t/runs/47d7eab8c5a04ef8b19b0cd2aee4f5b3/office/profile --headless --norestore --convert-to pdf:writer_pdf_Export --outdir C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-gfgt8s6t\\runs\\47d7eab8c5a04ef8b19b0cd2aee4f5b3 C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-gfgt8s6t\\runs\\47d7eab8c5a04ef8b19b0cd2aee4f5b3\\office\\resultado.odt"
+          },
+          {
+            "pid": 8228,
+            "parent_pid": 5708,
+            "name": "conhost.exe",
+            "seconds": 0.11000000000001364,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+          },
+          {
+            "pid": 10080,
+            "parent_pid": 5708,
+            "name": "soffice.bin",
+            "seconds": 0.11000000000001364,
+            "appcontainer": true,
+            "elevated": false,
+            "lpac_query_error": 87,
+            "lpac_native_required_length": 0,
+            "capabilities_match_existing_boundary": true,
+            "same_job": true,
+            "command_line": "\"C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.com\" \"-env:UserInstallation=file:///C:/Users/NexusWriterLab/NexusWriterLab/repo/lab-evidence/A/tmp/test_installed_writer_is_confi1/.nexus-task-gfgt8s6t/runs/47d7eab8c5a04ef8b19b0cd2aee4f5b3/office/profile\" \"--headless\" \"--norestore\" \"--convert-to\" \"pdf:writer_pdf_Export\" \"--outdir\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-gfgt8s6t\\runs\\47d7eab8c5a04ef8b19b0cd2aee4f5b3\" \"C:\\Users\\NexusWriterLab\\NexusWriterLab\\repo\\lab-evidence\\A\\tmp\\test_installed_writer_is_confi1\\.nexus-task-gfgt8s6t\\runs\\47d7eab8c5a04ef8b19b0cd2aee4f5b3\\office\\resultado.odt\" \"-env:OOO_CWD=2C:\\\\Users\\\\NexusWriterLab\\\\NexusWriterLab\\\\repo\\\\lab-evidence\\\\A\\\\tmp\\\\test_installed_writer_is_confi1\\\\.nexus-task-gfgt8s6t\\\\runs\\\\47d7eab8c5a04ef8b19b0cd2aee4f5b3\""
+          }
+        ],
+        "errors": []
+      }
+    }
+  ],
+  "cause": "NOT PROVEN",
+  "raw_zip_sha256": "a42055df87e8d4f824e8e1b114ebe72c02861857a7098ec9e6bc2eda1a6e8673"
+}
