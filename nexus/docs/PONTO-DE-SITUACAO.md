@@ -2,6 +2,10 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
+Próximo diagnóstico revisto: CDB -pvr só pilhas textuais, sem suspensão, dumps,
+clones ou memória carregada. O dispatch ProcDump foi rejeitado por auto-review
+pela possibilidade de expor dados sensíveis: NOT RUN. Preparação removida do ativo.
+
 Retoma: run 37833226764 concluído, 2 FAIL/45 s e canary PASS. 344 amostras
 WCT sem cadeia causal; evidência persistida em lab-evidence/thread-waits.
 Próximo ensaio: snapshots mínimos e análise offline, diagnóstico separado da

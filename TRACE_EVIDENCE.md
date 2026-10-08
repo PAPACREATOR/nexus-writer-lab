@@ -123,3 +123,17 @@ A recolha pode interromper brevemente o processo e afeta timing; é diagnóstico
 nunca prova de desempenho/solução. Ferramentas instaladas só no runner descartável.
 Fontes: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump e
 https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/opening-a-crash-dump-file-using-cdb.
+
+### Revisão do payload do próximo ensaio
+
+O dispatch com ProcDump/dumps foi rejeitado pela revisão automática: dumps podem
+conter dados sensíveis e esse payload/destino não estava explicitamente autorizado.
+**NOT RUN**; nenhum dump foi capturado ou carregado. A preparação foi removida
+do estado ativo, preservada apenas na história do commit 9b35a91.
+
+Alternativa de menor exposição: CDB -pvr, não invasivo e sem suspensão, apenas
+comandos `~* k`, `lm`, `q`. Sem .dump, display de memória, argumentos de funções,
+clones, breakpoints ou injeção; artefacto limitado explicitamente a texto e JSON.
+Símbolos de rede desativados durante a leitura. Os frames podem ser incompletos
+ou desatualizados numa leitura sem suspensão; preservar essa limitação.
+Referência: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options.

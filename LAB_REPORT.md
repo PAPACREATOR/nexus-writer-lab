@@ -3,8 +3,9 @@
 ## Estado
 
 Investigação retomada por instrução humana após o encerramento abaixo. Próximo
-ensaio: observar ThreadState/WaitReason e Wait Chain Traversal externamente,
-no adapter A original e na conta normal. Nenhum resultado novo ainda.
+ensaio: pilhas textuais com CDB não invasivo, sem suspensão e sem dumps.
+ThreadState/WaitReason/WCT já recolhidos: 344 amostras, causa NOT PROVEN.
+Adapter A original, conta normal; nenhuma correção reproduzível.
 
 Resultado B: hipóteses razoáveis desta investigação esgotadas sem solução
 reproduzível. Causa efetiva: **NOT PROVEN**. Não há proposta de patch.

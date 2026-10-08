@@ -16,10 +16,10 @@ $null=New-Item -ItemType Directory -Path $output -Force
 $arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard)
 try {
     $waitObserver=$null
-    $dumpObserver=$null
-    if ($env:LAB_TRACE_DUMPS -eq '1') {
-        $dumpArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-dumps.ps1')+'"'),'-Output',('"'+(Join-Path $output 'dumps')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-dumps')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'),'-DumpExe',('"'+$env:LAB_PROCDUMP_EXE+'"'))
-        $dumpObserver=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList $dumpArgs -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $output 'dump-observer-error.txt')
+    $stackObserver=$null
+    if ($env:LAB_TRACE_STACKS -eq '1') {
+        $stackArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-stacks.ps1')+'"'),'-Output',('"'+(Join-Path $output 'stacks')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-stacks')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'),'-Debugger',('"'+$env:LAB_CDB_EXE+'"'))
+        $stackObserver=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList $stackArgs -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $output 'stack-observer-error.txt')
     }
     if ($env:LAB_TRACE_WAITS -eq '1') {
         $waitArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-waits.ps1')+'"'),'-Output',('"'+(Join-Path $output 'waits.jsonl')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-waits')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'))
@@ -34,9 +34,9 @@ try {
     @{suite=$Suite;shard=$Shard;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
     if ($process.ExitCode -ne 0) { Get-Content (Join-Path $output 'stderr.txt'); throw 'Standard-user validation failed; preserve evidence' }
 } finally {
-    if ($dumpObserver) {
-        $null=New-Item -ItemType File -Path (Join-Path $output 'stop-dumps') -Force
-        if (-not $dumpObserver.WaitForExit(15000)) { $dumpObserver.Kill() }
+    if ($stackObserver) {
+        $null=New-Item -ItemType File -Path (Join-Path $output 'stop-stacks') -Force
+        if (-not $stackObserver.WaitForExit(15000)) { $stackObserver.Kill() }
     }
     if ($waitObserver) {
         $null=New-Item -ItemType File -Path (Join-Path $output 'stop-waits') -Force
