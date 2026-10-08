@@ -1,0 +1,43 @@
+{
+  "total_events": 3947519,
+  "first": "6:14:26.1116055 PM",
+  "last": "6:18:12.5926513 PM",
+  "expected_pids": [
+    4420,
+    4580,
+    6812,
+    7792,
+    7868,
+    7960
+  ],
+  "pid_counts": {
+    "4420": 2394,
+    "6812": 552,
+    "4580": 12700,
+    "7792": 2142,
+    "7868": 395,
+    "7960": 12584
+  },
+  "results": {
+    "SUCCESS": 22246,
+    "REPARSE": 1641,
+    "NAME NOT FOUND": 2641,
+    "BUFFER TOO SMALL": 24,
+    "FILE LOCKED WITH ONLY READERS": 949,
+    "FAST IO DISALLOWED": 785,
+    "PATH NOT FOUND": 122,
+    "NO MORE FILES": 48,
+    "BUFFER OVERFLOW": 1756,
+    "END OF FILE": 140,
+    "ACCESS DENIED": 366,
+    "NO SUCH FILE": 14,
+    "NO MORE ENTRIES": 11,
+    "NAME COLLISION": 16,
+    "PRIVILEGE NOT HELD": 2,
+    "OBJECTID NOT FOUND": 2,
+    "PIPE BROKEN": 4
+  },
+  "focused_events": 30767,
+  "run": 37822420842,
+  "artifact": 11570414451
+}

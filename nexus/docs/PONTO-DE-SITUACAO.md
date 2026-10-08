@@ -16,12 +16,13 @@ Workflow original 37813977363: 2 FAIL/5 PASS, Writer timeout 45 s nas duas rotas
 legacy pipe WinError 5/LOCAL permitido. O pacote baixou 26.2.6.3; esse resultado
 não substitui o build original. Matriz 37814878330 em aa14ad8 usa instalador
 arquivado 26.2.6.2 e hash oficial. A confirmou o timeout antes de B–G.
-ETW em recolha. Fonte do mesmo tag contradiz a hipótese de UserInstallation
+ETW e Procmon revistos e evidência focalizada persistida. Fonte do mesmo tag contradiz a hipótese de UserInstallation
 mudar o prefixo legacy para LOCAL; causa efetiva do timeout permanece NOT PROVEN.
 
 PC local: Windows 11/26200, LO 26.8.0.3; probe IPC PASS, rotas BLOCKED antes de
 Writer por falta de direito para preparar DACL. Não ampliar permissões.
-Próximo passo: concluir matriz, rever rastreio, persistir todos os resultados.
+Diagnóstico encerrado (resultado B): A–G falharam; alternativa I também falhou
+na conta normal. Causa NOT PROVEN; não declarar Nexus resolvido.
 Sem solução PASS, regressão 100+100 ainda NOT RUN e proposta mínima vazia.
 Ver ../../LAB_REPORT.md, ../../RESULT_MATRIX.md e ../../TRACE_EVIDENCE.md.
 

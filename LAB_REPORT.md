@@ -2,8 +2,10 @@
 
 ## Estado
 
-Investigação em execução, aguardando revisão do Procmon. Nenhuma solução
-reproduzível nem proposta de patch. O Nexus principal não foi alterado.
+Resultado B: hipóteses razoáveis desta investigação esgotadas sem solução
+reproduzível. Causa efetiva: **NOT PROVEN**. Não há proposta de patch.
+O Nexus principal não foi alterado. O laboratório fica concluído como diagnóstico,
+e não como resolução do Nexus.
 
 ## Proveniência
 
@@ -96,8 +98,24 @@ O rastreio Procmon do adapter original, sem variante de conversão, está em
 https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37822420842.
 O recorder externo exige direitos de instalação próprios do runner; Writer
 continua na conta normal e na fronteira original. Não se desativa política
-Windows nem se muda o token de Writer. Resultados aguardam revisão.
+Windows nem se muda o token de Writer. Revisão concluída: 3 947 519 eventos, dos quais 30 767 pertencem aos seis PIDs
+do worker/Writer das duas rotas. Ambas falharam aos 45 s, IPC canary PASS.
+A gravação cobre 18:14:26–18:18:12 UTC e inclui o arranque e a terminação.
+Não foi observado um CreatePipe com nome OSL/SINGLEOFFICE dos PIDs Writer;
+essa ausência não prova que a API não foi chamada ou identifica o motivo da espera.
+Os erros de acesso ao perfil são seguidos por abertura/escrita bem-sucedidas.
+Não ampliar direitos com base em erros recuperados. Ver TRACE_EVIDENCE.md.
 
 As suites de 100+100, inputs adversos e regressão geral do candidato foram
 preparadas em writer-lab-full.yml, mas **NOT RUN**: o gate das rotas reais falhou.
 Os testes gerais verdes sobre os bytes originais não validam a variante I.
+
+## Encerramento
+
+A–G não melhoraram o resultado; H não tem combinação justificada. A alternativa
+I falhou nas rotas reais e nos três probes não elevados. Procmon e ETW não
+identificaram uma causa causalmente demonstrada. Alterar permissões, segurança,
+Host ou o limite de 45 s excederia o pedido e não seria uma solução válida.
+MINIMAL_PATCH_PROPOSAL.md continua vazio. Folha e testes totais de uma versão
+corrigida ficam **NOT RUN**, porque o requisito prévio de correção não foi atingido.
+Todos os resultados focalizados e procedimentos ficam persistidos neste repositório.

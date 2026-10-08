@@ -45,3 +45,5 @@ de Writer. Logs e correções estão versionados. A via I não constitui soluç�
 reproduzível no estado observado. A causa do timeout original continua NOT PROVEN.
 
 Cada caso: 3 testes originais, 2 falhas (book e convert_pdf) e 1 PASS (canary IPC). Total da matriz: 14 FAIL, 7 PASS. Todos os casos restauraram os bytes originais e verificaram a integridade antes de executar. Evidência persistida em lab-evidence/sequential-matrix. H não tem melhoria em A–G que justifique uma combinação.
+
+Procmon A em conta normal, run 37822420842: **2 FAIL / 1 PASS**; timeout 45 s nas duas rotas, Job final zero. Causa final **NOT PROVEN**. Encerramento B, sem patch; Folha e regressão de solução **NOT RUN**.

@@ -1,0 +1,7 @@
+Exception: D:\a\nexus-writer-lab\nexus-writer-lab\lab\run-standard-user.ps1:25
+Line |
+  25 |  … derr.txt'); throw 'Standard-user validation failed; preserve evidence …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Standard-user validation failed; preserve evidence
+
+

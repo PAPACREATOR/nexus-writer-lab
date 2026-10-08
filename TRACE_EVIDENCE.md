@@ -60,3 +60,35 @@ O tracerpt processou 1 080 640 eventos, 6 341 com PIDs amostrados; zero matches 
 ETL original 128 MiB e XML 1,365 GB ficam no artefacto writer-etw-evidence (id 11567506747); o ZIP descarregado tem hash em lab-evidence/download-manifest.json. Os eventos filtrados e relatórios estão persistidos no Git em lab-evidence/etw. O ZIP original também está versionado em lab-evidence/trace-raw.zip (cerca de 30 MB), preservando ETL e XML independentemente da expiração do artefacto.
 
 A alternativa oficial é fundamentada em https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/lib/init.cxx e https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/include/LibreOfficeKit/LibreOfficeKitInit.h. Desativar RequestHandler pela API documentada não prova que esse era o bloqueio observado. Nenhuma interceção Win32 nem alteração de IPC foi aplicada ao Writer.
+
+## Procmon original A, conta normal — revisão final
+
+Run: https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37822420842
+Commit executado: 635a836; artefacto 11570414451. Recorder Microsoft assinado,
+externo ao sandbox; Writer elevated=false, AppContainer/capabilities/Job conforme
+o launcher original. Flag LPAC solicitado; leitura direta indisponível (erro 87).
+Os três testes originais: 2 FAIL (book, convert_pdf), 1 PASS (canary IPC).
+Job após comunicação: zero processos ativos, nos dois casos.
+
+3 947 519 eventos CSV, 30 767 dos PIDs 4420/6812/4580 e 7792/7868/7960.
+Janela 18:14:26.1116055–18:18:12.5926513 UTC. A primeira execução Writer está
+presente desde 18:16:14 e a segunda desde 18:17:17; ambas terminam ao limite.
+Os 366 ACCESS DENIED incluem tentativas de acesso a diretórios ancestrais e
+pedidos Write DAC/Write Owner nos temporários do perfil. Essas tentativas são
+seguidas por fallback SUCCESS sem esses direitos. PRIVILEGE NOT HELD no perfil
+também é seguido por abertura SUCCESS sem Access System Security. Não provam
+um perfil sem MODIFY nem justificam um grante mais amplo.
+
+Não há evento com pipe OSL/SINGLEOFFICE dos PIDs Writer. Procmon não garante que
+toda falha anterior à emissão de um IRP apareça como CreatePipe. O canary legacy
+WinError 5 e LOCAL permitido prova a diferença observada no canary, não o caminho
+de espera do Writer. Pilhas exportadas sem símbolos identificam módulos/offsets;
+não constituem um dump das threads paradas. Causa do timeout: **NOT PROVEN**.
+
+Evidência permanente: lab-evidence/procmon/summary.json, writer-events.json,
+writer-stacks.zip (XML focalizado integral dos seis PIDs), stack-filter.json,
+metadata e resultados originais em standard-user/. O filtro e seus hashes estão
+preservados para reprodução. O PML e os exports sistémicos completos permanecem
+no artefacto GitHub do run, sujeitos à retenção Actions; não os confundir com os
+eventos focalizados permanentes. O XML completo tinha 24 929 560 305 bytes e o PML
+2 371 246 885 bytes. O relatório não depende da disponibilidade futura do artefacto.

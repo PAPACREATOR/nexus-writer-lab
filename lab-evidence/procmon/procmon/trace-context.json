@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-10-08T18:14:25.9570974Z",
+  "baseline_workflow_result": "FAIL",
+  "recorder_pid": 8060,
+  "timezone": "UTC",
+  "security_changes": [],
+  "writer_timeout_seconds": 45,
+  "writer_standard_user_required": true,
+  "stopped_utc": "2026-10-08T18:18:14.4764077Z"
+}
