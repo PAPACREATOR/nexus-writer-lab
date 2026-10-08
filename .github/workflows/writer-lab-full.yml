@@ -40,10 +40,11 @@ jobs:
         run: ./lab/install-writer.ps1
       - run: python -m pip install -r nexus/requirements-test.txt
       - name: Candidate suite with original assertions and 45-second Writer bound
-        run: python -m lab.run_candidate_suite ${{ matrix.suite }} ${{ matrix.shard }}
+        shell: pwsh
+        run: ./lab/run-standard-user.ps1 -Suite ${{ matrix.suite }} -Shard ${{ matrix.shard }}
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: writer-candidate-${{ matrix.suite }}-${{ matrix.shard }}
-          path: lab-evidence/candidate-${{ matrix.suite }}-${{ matrix.shard }}/
+          path: lab-evidence/
           if-no-files-found: error

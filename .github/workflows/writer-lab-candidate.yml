@@ -23,10 +23,11 @@ jobs:
         run: ./lab/install-writer.ps1
       - run: python -m pip install jsonschema==4.26.0 pytest==9.1.1
       - name: Original real routes, original Human Gate and restart assertions
-        run: python -m lab.run_case H
+        shell: pwsh
+        run: ./lab/run-standard-user.ps1 -Suite routes
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: writer-candidate-routes
-          path: lab-evidence/H/
+          path: lab-evidence/
           if-no-files-found: error
