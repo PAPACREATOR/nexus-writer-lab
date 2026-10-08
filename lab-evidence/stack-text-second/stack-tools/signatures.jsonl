@@ -1,0 +1,6 @@
+{
+  "sha256": "31789C2C2645D5FDAFB1621C47B0DB8BC2FBCA47B510A0E4E6FDEDE0479CE105",
+  "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+  "status": "Valid",
+  "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\cdb.exe"
+}

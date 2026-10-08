@@ -57,10 +57,10 @@ runtime e seal originais restaurados. Evidência em lab-evidence/thread-waits/.
 WaitReason: UserRequest 172, EventPairLow 129, Unknown 42, Executive 1.
 As labels do .NET e WCT são observações dinâmicas distintas, não uma pilha
 nem prova de que se trate de named pipe. Causa permanece NOT PROVEN.
-Novo ensaio justificado: snapshots mínimos das threads aos 10 e 25 s, ProcDump
-Microsoft externo e análise CDB offline. Sem clones, sem iniciar Writer fora
-da fronteira, sem novo token para Writer nem alteração do limite de 45 s.
-A recolha pode interromper brevemente o processo e afeta timing; é diagnóstico,
-nunca prova de desempenho/solução. Ferramentas instaladas só no runner descartável.
-Fontes: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump e
-https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/opening-a-crash-dump-file-using-cdb.
+A proposta de ProcDump foi rejeitada pela revisão automática e NÃO EXECUTADA. Foi substituída por texto de pilhas não invasivo, sem dumps.
+
+## Pilhas textuais — segunda tentativa
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37836600860, SHA 5bd8b1a. O leitor devolveu exit code 0 mas nenhuma pilha, também no helper sintético. Não é PASS do leitor nem evidência causal do Writer. Rotas originais: 2 FAIL, 1 PASS IPC. ZIP e textos preservados em lab-evidence/stack-text-second*.
+
+Próxima verificação: opções antes do alvo -p, comandos iniciais -c em vez de -cf; self-check exige frames e interrompe o workflow antes de instalar/executar Writer se falhar. Modo -pvr sem suspensão mantido, sem dumps.

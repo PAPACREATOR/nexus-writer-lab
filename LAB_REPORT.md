@@ -3,7 +3,8 @@
 ## Estado
 
 Investigação retomada por instrução humana após o encerramento abaixo. Próximo
-ensaio: pilhas textuais com CDB não invasivo, sem suspensão e sem dumps.
+ensaio: corrigir o leitor CDB textual; duas tentativas não produziram pilhas,
+incluindo o helper sintético. Não são evidência causal. Sem suspensão ou dumps.
 ThreadState/WaitReason/WCT já recolhidos: 344 amostras, causa NOT PROVEN.
 Adapter A original, conta normal; nenhuma correção reproduzível.
 

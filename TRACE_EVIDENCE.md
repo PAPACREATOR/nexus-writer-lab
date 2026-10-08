@@ -149,3 +149,9 @@ preservado em lab-evidence/stack-text-first-raw.zip e ficheiros extraídos.
 Antes de repetir, o workflow passa a verificar o leitor num helper PowerShell
 sintético adormecido (não Writer), com saída/erro/code explícitos. O comando
 CDB foi simplificado; isso é reparação do diagnóstico, não uma variante do produto.
+
+## Pilhas textuais — segunda tentativa
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37836600860, SHA 5bd8b1a. O leitor devolveu exit code 0 mas nenhuma pilha, também no helper sintético. Não é PASS do leitor nem evidência causal do Writer. Rotas originais: 2 FAIL, 1 PASS IPC. ZIP e textos preservados em lab-evidence/stack-text-second*.
+
+Próxima verificação: opções antes do alvo -p, comandos iniciais -c em vez de -cf; self-check exige frames e interrompe o workflow antes de instalar/executar Writer se falhar. Modo -pvr sem suspensão mantido, sem dumps.
