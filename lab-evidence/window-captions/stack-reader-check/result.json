@@ -1,0 +1,10 @@
+{
+  "writer_executed": false,
+  "finished": true,
+  "stack_frames_present": true,
+  "dump": false,
+  "fixture": "Synthetic sleeping PowerShell helper, not Writer",
+  "exit_code": 0,
+  "mode": "non-invasive non-suspending",
+  "version_exit_code": 0
+}

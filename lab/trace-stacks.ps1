@@ -43,6 +43,10 @@ while (-not (Test-Path -LiteralPath $StopFile) -and [DateTime]::UtcNow -lt $dead
     $key=([string]$p.Id)+'-'+$threshold
     if ($age -lt $threshold -or $seen.ContainsKey($key)) { continue }
     $seen[$key]=$true
+    # Bound the external accessibility reader; only stop the reader on timeout.
+    $labelLog=Join-Path $Output ($key+'.dialog-labels.json')
+    $reader=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList @('-NoProfile','-File',('"'+(Join-Path $PSScriptRoot 'read-dialog-labels.ps1')+'"'),'-TargetPid',([string]$p.Id),'-Output',('"'+$labelLog+'"')) -WindowStyle Hidden -PassThru -RedirectStandardError ($labelLog+'.stderr.txt')
+    if (-not $reader.WaitForExit(3000)) { $reader.Kill(); @{pid=$p.Id;reader_timeout=$true;interaction=$false;memory_dump=$false} | ConvertTo-Json | Set-Content $labelLog }
     @{utc=[DateTime]::UtcNow.ToString('o');pid=$p.Id;threshold_seconds=$threshold;image=$path;windows=@([NexusWindowCaption]::Query([uint32]$p.Id));payload='window captions/classes only';interaction=$false;memory_dump=$false} | ConvertTo-Json -Depth 5 -Compress | Add-Content (Join-Path $Output 'windows.jsonl')
     $log=Join-Path $Output ($key+'.stacks.txt')
     $start=[DateTime]::UtcNow

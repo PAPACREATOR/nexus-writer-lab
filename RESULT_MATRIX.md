@@ -81,3 +81,9 @@ soffice.bin PIDs 6760/6132 aos 10 e 25 s: thread principal `NtUserGetMessage -> 
 
 Próximo diagnóstico mínimo: EnumWindows/EnumChildWindows, GetWindowTextW/GetClassNameW/IsWindowVisible, apenas PIDs filtrados do Writer original no runner sintético. Sem WM_GETTEXT, mensagens, cliques, fechar janelas, UI Automation, suspensão, escrita de memória ou dumps. GetWindowTextW entre processos lê captions; não garante texto de controlos. Diagnóstico, não correção.
 Fonte: https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextw.
+
+## Janela confirmada, mensagem ainda não identificada
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37839902959, SHA 57d6914: duas rotas FAIL/45 s, canary PASS; Job final 0, AppContainer/Job/capabilities observados, elevated=false. Consulta LPAC classe 46 continua erro 87 (não inferir lpac=false). PIDs bin 1744/5188: SALFRAME visível, título LibreOffice 26.2 aos 10 e 25 s. Pilhas repetem espera em Dialog::Execute. Janela e espera PROVEN como observação; motivo/causa NOT PROVEN. GetWindowTextW não revelou mensagem/child controls. Runtime original intacto.
+
+Última leitura delimitada: helper externo UI Automation lê apenas propriedades Name de Text/Button descendentes da janela SALFRAME LibreOffice 26.2 do PID Writer sintético filtrado. Sem padrões/actions, clicar, fechar, ativar, alterar accessibility settings ou conteúdo do documento. Helper limitado a 3 s, morto apenas ele se ultrapassar; Writer mantém 45 s. Esta consulta pode envolver provider accessibility e não é observação atómica; nunca prova de desempenho/solução. Não recolhe dumps.
