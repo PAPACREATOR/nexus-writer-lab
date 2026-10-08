@@ -21,7 +21,7 @@ while (-not (Test-Path -LiteralPath $StopFile) -and [DateTime]::UtcNow -lt $dead
     $log=Join-Path $Output ($key+'.stacks.txt')
     $start=[DateTime]::UtcNow
     # Non-invasive, non-suspending read. Stack-only text; no .dump or memory display.
-    $helper=Start-Process -FilePath $Debugger -ArgumentList @('-pvr','-pd','-noshell','-nosqm','-y',('"'+$symbols+'"'),'-logo',('"'+$log+'"'),'-c','"~* k; lm; q"','-p',([string]$p.Id)) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($log+'.stdout.txt') -RedirectStandardError ($log+'.stderr.txt')
+    $helper=Start-Process -FilePath $Debugger -ArgumentList @('-pvr','-noshell','-nosqm','-y',('"'+$symbols+'"'),'-logo',('"'+$log+'"'),'-c','"~* k; lm; q"','-p',([string]$p.Id)) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($log+'.stdout.txt') -RedirectStandardError ($log+'.stderr.txt')
     $heldHandle=$helper.Handle
     $finished=$helper.WaitForExit(8000)
     if (-not $finished) { $helper.Kill() }

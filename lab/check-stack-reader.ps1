@@ -11,7 +11,7 @@ $commands=Join-Path $output 'commands.txt'
 $fixture=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList @('-NoProfile','-Command','Start-Sleep -Seconds 60') -WindowStyle Hidden -PassThru
 $fixtureHandle=$fixture.Handle
 try {
- $debugger=Start-Process -FilePath $env:LAB_CDB_EXE -ArgumentList @('-pvr','-pd','-noshell','-nosqm','-y',('"'+$symbols+'"'),'-logo',('"'+(Join-Path $output 'fixture-stacks.txt')+'"'),'-c','"~* k; lm; q"','-p',([string]$fixture.Id)) -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt')
+ $debugger=Start-Process -FilePath $env:LAB_CDB_EXE -ArgumentList @('-pvr','-noshell','-nosqm','-y',('"'+$symbols+'"'),'-logo',('"'+(Join-Path $output 'fixture-stacks.txt')+'"'),'-c','"~* k; lm; q"','-p',([string]$fixture.Id)) -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt')
  $debuggerHandle=$debugger.Handle
  $finished=$debugger.WaitForExit(15000)
  if (-not $finished) { $debugger.Kill() }

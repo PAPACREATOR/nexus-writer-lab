@@ -155,3 +155,7 @@ CDB foi simplificado; isso é reparação do diagnóstico, não uma variante do 
 Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37836600860, SHA 5bd8b1a. O leitor devolveu exit code 0 mas nenhuma pilha, também no helper sintético. Não é PASS do leitor nem evidência causal do Writer. Rotas originais: 2 FAIL, 1 PASS IPC. ZIP e textos preservados em lab-evidence/stack-text-second*.
 
 Próxima verificação: opções antes do alvo -p, comandos iniciais -c em vez de -cf; self-check exige frames e interrompe o workflow antes de instalar/executar Writer se falhar. Modo -pvr sem suspensão mantido, sem dumps.
+
+## Leitor — erro concreto isolado
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37838242509, SHA 3b84795: self-check FAIL, Writer NOT RUN. stdout contém `cdb: The system does not support detach on exit`. O erro não aparecia no ficheiro -logo: analisar stdout também é necessário. Removido apenas -pd, mantendo -pvr não invasivo e sem suspensão, texto de pilhas/módulos e nenhum dump. Self-check continua obrigatório. Em modo não invasivo o debugger não estabelece um debug attach ao alvo (Microsoft: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/noninvasive-debugging--user-mode-). Não é uma alteração do Writer.
