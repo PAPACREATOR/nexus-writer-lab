@@ -1,5 +1,6 @@
 """Additional evidence around original tests; no PASS assertions are removed."""
 import hashlib
+import ctypes as C
 import json
 import os
 from pathlib import Path
@@ -59,6 +60,29 @@ def record_existing_launch(monkeypatch, request):
                         record['files'][name] = item
                 record['profile_exists'] = (work / 'office/profile').is_dir()
                 record['profile_files'] = [str(p.relative_to(work)) for p in (work / 'office/profile').rglob('*') if p.is_file()]
+                profile = work / 'office/profile'
+                if profile.is_dir():
+                    a = worker.api
+                    dacl, descriptor = a.P(), a.P()
+                    error = a.a.GetNamedSecurityInfoW(str(profile), 1, 4, None, None, C.byref(dacl), None, C.byref(descriptor))
+                    record['profile_acl'] = {'query_error': error, 'task_sid_aces': []}
+                    if not error:
+                        try:
+                            get_ace = a.a.GetAce
+                            get_ace.argtypes = [a.P, a.D, C.POINTER(a.P)]
+                            get_ace.restype = a.D
+                            if dacl:
+                                count = C.c_ushort.from_address(dacl.value + 4).value
+                                for index in range(count):
+                                    ace = a.P()
+                                    if get_ace(dacl, index, C.byref(ace)):
+                                        kind = C.c_ubyte.from_address(ace.value).value
+                                        flags = C.c_ubyte.from_address(ace.value + 1).value
+                                        if kind in (0, 1) and a.a.EqualSid(a.P(ace.value + 8), worker.sid):
+                                            mask = C.c_ulong.from_address(ace.value + 4).value
+                                            record['profile_acl']['task_sid_aces'].append({'type': kind, 'mask': mask, 'inherited': bool(flags & 0x10)})
+                        finally:
+                            if descriptor: a.k.LocalFree(descriptor)
         worker.communicate = communication
         return worker
     monkeypatch.setattr(host, 'launch_confined', observed)
