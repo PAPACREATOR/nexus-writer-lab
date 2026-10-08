@@ -92,21 +92,17 @@ def _lok_convert():
     ure = program.parent / 'URE/bin'
     if ure.is_dir(): handles.append(os.add_dll_directory(str(ure)))
     os.environ['PATH'] = str(program) + os.pathsep + os.environ['PATH']
-    print("LOK loading library", file=sys.stderr, flush=True)
     library = C.CDLL(str(program / 'mergedlo.dll'))
     init = library.libreofficekit_hook_2
     init.argtypes = [C.c_char_p, C.c_char_p]
     init.restype = C.POINTER(Office)
-    print("LOK initializing", file=sys.stderr, flush=True)
     kit = init(str(program).encode('utf-8'), profile.as_uri().encode('utf-8'))
-    print("LOK initialized=" + str(bool(kit)), file=sys.stderr, flush=True)
     if not kit:
         return 4
     klass = kit.contents.klass.contents
     if klass.size < C.sizeof(OfficeClass):
         return 5
     load = C.CFUNCTYPE(C.POINTER(Document), C.POINTER(Office), C.c_char_p)(klass.document_load)
-    print("LOK loading document", file=sys.stderr, flush=True)
     document = load(kit, source.as_uri().encode('utf-8'))
     if not document:
         return 6
@@ -114,7 +110,6 @@ def _lok_convert():
     if docclass.size < C.sizeof(DocumentClass):
         return 7
     save = C.CFUNCTYPE(C.c_int, C.POINTER(Document), C.c_char_p, C.c_char_p, C.c_char_p)(docclass.save_as)
-    print("LOK exporting PDF", file=sys.stderr, flush=True)
     saved = save(document, destination.as_uri().encode('utf-8'), b'pdf', None)
     C.CFUNCTYPE(None, C.POINTER(Document))(docclass.destroy)(document)
     C.CFUNCTYPE(None, C.POINTER(Office))(klass.destroy)(kit)
@@ -144,7 +139,7 @@ def run(input_path):
         '<item oor:path="/org.openoffice.Office.Common/Security/Scripting"><prop oor:name="MacroSecurityLevel" oor:op="fuse"><value>3</value></prop></item></oor:items>', encoding="utf-8")
     command = [str(executable), "-env:UserInstallation=" + profile.as_uri(), "--headless", "--norestore", "--convert-to", "pdf:writer_pdf_Export", "--outdir", str(source.parent), str(document)]
     if sys.platform == "win32":
-        command = [sys.executable, "-I", str(Path(__file__).resolve()), "nexus_lok", str(executable.parent), str(document), str(profile), str(source.parent / "resultado.pdf")]
+        command = [sys.executable, "-I", str(Path(__file__).resolve()), "--lok", str(executable.parent), str(document), str(profile), str(source.parent / "resultado.pdf")]
     with (working / "stdout.txt").open("wb") as stdout, (working / "stderr.txt").open("wb") as stderr:
         proc = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=stdout, stderr=stderr, creationflags=subprocess.CREATE_NO_WINDOW)
         proc.stdin.close()  # Explicit EOF; LPAC cannot open the global NUL device.
@@ -154,7 +149,6 @@ def run(input_path):
             subprocess.run([str(Path(os.environ["SystemRoot"]) / "System32/taskkill.exe"), "/PID", str(proc.pid), "/T", "/F"], capture_output=True, timeout=10)
             proc.kill(); proc.wait()
             raise Blocked("Conversão excedeu o tempo permitido.") from None
-    print("Writer child exit=" + str(code), file=sys.stderr, flush=True)
     if code != 0:
         raise Blocked("LibreOffice não concluiu a conversão.")
     pdf = pdf_bytes(source.parent / "resultado.pdf")
@@ -166,7 +160,7 @@ def run(input_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "nexus_lok":
+    if len(sys.argv) > 1 and sys.argv[1] == "--lok":
         raise SystemExit(_lok_convert())
     sys.stdout.reconfigure(encoding="utf-8")
     try:

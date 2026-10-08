@@ -61,13 +61,13 @@ def test_interrupted_native_job_reconciles_and_fresh_writer_works(tmp_path,monke
             from lab.observe import Observer
             observer=Observer(worker)
             end=time.monotonic()+10
-            while time.monotonic()<end and not any('--lok' in row.get('command_line','') for row in observer.events):
+            while time.monotonic()<end and not any('nexus_lok' in row.get('command_line','') for row in observer.events):
                 time.sleep(.01)
             worker.kill()
             observed=observer.finish()
             (tmp_path/'interrupted-processes.json').write_text(json.dumps(observed,indent=2),encoding='utf-8')
             result=communicate(*args,**options)
-            assert any('--lok' in row.get('command_line','') for row in observed['events']), 'No actual LOK child observed before interruption'
+            assert any('nexus_lok' in row.get('command_line','') for row in observed['events']), 'No actual LOK child observed before interruption'
             return result
         worker.communicate=killed
         return worker
