@@ -1,0 +1,103 @@
+{
+  "lab_sha": "70fb1832356f24569331455da56b7af3fb118e5e",
+  "source_sha": "b4d50ab8469cf60dfa3228c7c34ef9a1285ac827",
+  "timeout_seconds": 45,
+  "input_sha256": "adfed824db742973f70299f76db88859a9bfbfe7e8ebce81ff040a66ea92448f",
+  "read_roots": [
+    "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus",
+    "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64",
+    "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\lab-evidence\\lok-probe\\.nexus-task-lok",
+    "C:\\Program Files\\LibreOffice"
+  ],
+  "security_changes": [],
+  "product_routes_validated": false,
+  "human_gate_validated": false,
+  "command": [
+    "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+    "-I",
+    "D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\lab\\writer_lok_probe.py",
+    "C:\\Program Files\\LibreOffice\\program",
+    "53196"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"stage\": \"native_boundary_verified\", \"seconds\": 0.0}\r\n{\"stage\": \"network_denied\", \"seconds\": 0.03100000000000591, \"winerror\": 10013, \"errno\": 13}\r\n{\"stage\": \"loading_library\", \"seconds\": 0.03100000000000591, \"library\": \"C:\\\\Program Files\\\\LibreOffice\\\\program\\\\mergedlo.dll\"}\r\n{\"stage\": \"initializing_lok\", \"seconds\": 0.07799999999997453, \"userinstallation\": \"file:///D:/a/nexus-writer-lab/nexus-writer-lab/lab-evidence/lok-probe/.nexus-task-lok/runs/80254b7a28be4e83b9c2e36227ba6c99/office/profile\"}\r\n{\"stage\": \"lok_initialized\", \"seconds\": 0.45299999999997453}\r\n{\"stage\": \"document_loaded\", \"seconds\": 0.9219999999999686}\r\n{\"stage\": \"pdf_export\", \"seconds\": 0.9839999999999804, \"result\": 1}\r\n{\"stage\": \"document_destroyed\", \"seconds\": 1.0}\r\n{\"stage\": \"office_destroyed\", \"seconds\": 1.0469999999999686}\r\n",
+  "stderr": "No language allowlisted, turning off the language support.\n",
+  "process_observation": {
+    "sampling_interval_seconds": 0.1,
+    "complete_process_inventory": false,
+    "events": [
+      {
+        "pid": 1108,
+        "parent_pid": 1368,
+        "name": "python.exe",
+        "seconds": 0.0,
+        "appcontainer": true,
+        "elevated": true,
+        "capabilities_match_existing_boundary": true,
+        "same_job": true,
+        "command_line": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe -I D:\\a\\nexus-writer-lab\\nexus-writer-lab\\nexus\\lab\\writer_lok_probe.py \"C:\\Program Files\\LibreOffice\\program\" 53196"
+      },
+      {
+        "pid": 6744,
+        "parent_pid": 1108,
+        "name": "conhost.exe",
+        "seconds": 0.0,
+        "appcontainer": true,
+        "elevated": true,
+        "capabilities_match_existing_boundary": true,
+        "same_job": true,
+        "command_line": "\\??\\C:\\Windows\\system32\\conhost.exe 0x4"
+      }
+    ],
+    "errors": []
+  },
+  "seconds": 17.875,
+  "stages": [
+    {
+      "stage": "native_boundary_verified",
+      "seconds": 0.0
+    },
+    {
+      "stage": "network_denied",
+      "seconds": 0.03100000000000591,
+      "winerror": 10013,
+      "errno": 13
+    },
+    {
+      "stage": "loading_library",
+      "seconds": 0.03100000000000591,
+      "library": "C:\\Program Files\\LibreOffice\\program\\mergedlo.dll"
+    },
+    {
+      "stage": "initializing_lok",
+      "seconds": 0.07799999999997453,
+      "userinstallation": "file:///D:/a/nexus-writer-lab/nexus-writer-lab/lab-evidence/lok-probe/.nexus-task-lok/runs/80254b7a28be4e83b9c2e36227ba6c99/office/profile"
+    },
+    {
+      "stage": "lok_initialized",
+      "seconds": 0.45299999999997453
+    },
+    {
+      "stage": "document_loaded",
+      "seconds": 0.9219999999999686
+    },
+    {
+      "stage": "pdf_export",
+      "seconds": 0.9839999999999804,
+      "result": 1
+    },
+    {
+      "stage": "document_destroyed",
+      "seconds": 1.0
+    },
+    {
+      "stage": "office_destroyed",
+      "seconds": 1.0469999999999686
+    }
+  ],
+  "pdf": {
+    "length": 13364,
+    "sha256": "aa5558874881054346492104a4f823c72c9476fe84bd8e263fbb895129e8ee2b"
+  },
+  "render_pass": true
+}

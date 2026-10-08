@@ -48,6 +48,22 @@ def record_existing_launch(monkeypatch, request):
                 record['communication_seconds'] = time.monotonic() - start
                 record['worker_exit_code'] = worker.returncode
                 record['process_observation'] = observer.finish()
+                class Accounting(C.Structure):
+                    _fields_ = [('user', C.c_longlong), ('kernel', C.c_longlong),
+                                ('period_user', C.c_longlong), ('period_kernel', C.c_longlong),
+                                ('faults', C.c_ulong), ('total', C.c_ulong),
+                                ('active', C.c_ulong), ('terminated', C.c_ulong)]
+                query = worker.api.k.QueryInformationJobObject
+                query.argtypes = [worker.api.H, C.c_int, worker.api.P, worker.api.D, worker.api.P]
+                query.restype = worker.api.D
+                accounting = Accounting()
+                deadline = time.monotonic() + 5
+                while True:
+                    ok = query(worker.job, 1, C.byref(accounting), C.sizeof(accounting), None)
+                    if not ok or accounting.active == 0 or time.monotonic() >= deadline:
+                        break
+                    time.sleep(0.05)
+                record['job_after_communication'] = {'query_ok': bool(ok), 'active_processes': accounting.active if ok else None}
                 work = Path(kwargs['cwd'])
                 record['files'] = {}
                 for name in ('office/stdout.txt', 'office/stderr.txt', 'office/profile/user/registrymodifications.xcu', 'resultado.pdf'):
@@ -89,3 +105,6 @@ def record_existing_launch(monkeypatch, request):
     yield
     safe = request.node.name.replace('[', '-').replace(']', '')
     (output / (safe + '-launches.json')).write_text(json.dumps(launches, indent=2, ensure_ascii=False), encoding='utf-8')
+    if os.environ.get('LAB_REQUIRE_NO_ORPHANS') == '1':
+        assert launches, 'No real Host launch observed'
+        assert all(row.get('job_after_communication') == {'query_ok': True, 'active_processes': 0} for row in launches), 'Native Job retained processes or could not be queried'
