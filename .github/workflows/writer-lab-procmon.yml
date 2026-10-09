@@ -1,6 +1,12 @@
 name: Writer non-admin original Procmon trace
 on:
   workflow_dispatch:
+    inputs:
+      office_layout:
+        description: Installation location inside the disposable fixture
+        type: choice
+        default: separate
+        options: [separate, python-read-root]
 permissions:
   contents: read
 jobs:
@@ -24,7 +30,7 @@ jobs:
       - run: python -m pip install jsonschema==4.26.0 pytest==9.1.1
       - name: Recorder observes; original Writer runs as standard account
         shell: pwsh
-        run: ./lab/trace-procmon.ps1
+        run: ./lab/trace-procmon.ps1 -OfficeLayout '${{ inputs.office_layout }}'
       - if: always()
         uses: actions/upload-artifact@v4
         with:

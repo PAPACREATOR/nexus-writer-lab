@@ -1,3 +1,4 @@
+param([ValidateSet('separate','python-read-root')][string]$OfficeLayout='separate')
 $ErrorActionPreference='Stop'
 if (-not $env:GITHUB_ACTIONS) { throw 'Disposable runner only' }
 $output=Join-Path $PWD 'lab-evidence/procmon'
@@ -33,7 +34,7 @@ if (-not $ready) {
 $baseline='NOT RUN'
 try {
     Write-Output ('TRACE_STAGE=standard_user_baseline UTC='+[DateTime]::UtcNow.ToString('o'))
-    ./lab/run-standard-user.ps1 -Suite baseline
+    ./lab/run-standard-user.ps1 -Suite baseline -OfficeLayout $OfficeLayout
     $baseline='PASS'
 } catch {
     $baseline='FAIL'
@@ -42,7 +43,7 @@ try {
     Invoke-RecorderBounded -Arguments @('/Terminate') -Name 'stop' -Seconds 30 | Out-Null
     $controller.WaitForExit(30000) | Out-Null
 }
-@{started_utc=$started;stopped_utc=[DateTime]::UtcNow.ToString('o');timezone=(Get-TimeZone).Id;baseline_workflow_result=$baseline;recorder_pid=$controller.Id;writer_timeout_seconds=45;writer_standard_user_required=$true;security_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'trace-context.json')
+@{started_utc=$started;stopped_utc=[DateTime]::UtcNow.ToString('o');timezone=(Get-TimeZone).Id;baseline_workflow_result=$baseline;office_layout=$OfficeLayout;recorder_pid=$controller.Id;writer_timeout_seconds=45;writer_standard_user_required=$true;security_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'trace-context.json')
 if (-not (Test-Path -LiteralPath $pml)) { throw 'Recorder did not produce native trace' }
 $csv=Join-Path $output 'writer.csv'
 $finished=Invoke-RecorderBounded -Arguments @('/Quiet','/OpenLog',('"'+$pml+'"'),'/SaveAs',('"'+$csv+'"')) -Name 'csv_export'
