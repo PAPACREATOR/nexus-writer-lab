@@ -212,3 +212,13 @@ conceder direitos a objetos do sistema; World3/AAP1/ARAP2 discriminam LPAC=2
 de AC normal=3. APIs falhadas continuam UNKNOWN. A consulta classe46 original
 e o seu erro87 ficam preservados. Controlos ordinary/invalid handle não lançam Writer.
 https://chromium.googlesource.com/chromium/src/+/refs/tags/133.0.6909.0/sandbox/win/src/app_container_test.cc
+
+## Metadados e controlos — 09-10
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37900610141,
+SHA 74e570c: controlos LPAC AccessCheck ordinary/invalid PASS, sem iniciar Writer.
+mergedlo.pdb CodeView GUID 4b71bc20-183e-451a-b4b5-6aedb5de7413, age2,
+key 4B71BC20183E451AB4B56AEDB5DE74132. Identificadores dos quatro binários e
+hashes preservados em lab-evidence/debug-metadata/ e raw ZIP. Isso não valida
+um símbolo ainda não obtido nem a conversão. A leitura real de LPAC/diálogo
+em curso no run37900791913, SHA31fa784; resultado ainda NOT RUN/PENDING.

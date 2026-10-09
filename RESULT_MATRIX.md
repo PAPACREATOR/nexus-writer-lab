@@ -95,3 +95,13 @@ Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37840879467, SH
 Oito consultas de etiquetas retornaram listas vazias. Não permitem inferir que o diálogo não tem mensagem; não registam contagem de janelas/descendentes acessíveis. Limitação explícita do método. Pilhas reais e janela SALFRAME LibreOffice 26.2 foram persistidas: espera em diálogo/message loop **LIKELY**, causa exata **NOT PROVEN**. Nenhuma correção válida emergiu das hipóteses examinadas nesta retoma. Resultado B permanece: relatório/evidência completos para estes ensaios, sem declarar Nexus resolvido.
 
 As provas integrais estão em lab-evidence/dialog-labels/ e dialog-labels-raw.zip, além das tentativas anteriores identificadas. As tentativas falhadas do leitor não são PASS do Writer. ProcDump foi rejeitado e nunca executado; a alternativa textual não carrega memória bruta. MINIMAL_PATCH_PROPOSAL.md permanece vazio. Folha e regressão de solução 100+100 permanecem **NOT RUN**, pois não existe solução comprovada. Principal intacto. Sem execução adicional pendente.
+
+## Metadados e controlos — 09-10
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37900610141,
+SHA 74e570c: controlos LPAC AccessCheck ordinary/invalid PASS, sem iniciar Writer.
+mergedlo.pdb CodeView GUID 4b71bc20-183e-451a-b4b5-6aedb5de7413, age2,
+key 4B71BC20183E451AB4B56AEDB5DE74132. Identificadores dos quatro binários e
+hashes preservados em lab-evidence/debug-metadata/ e raw ZIP. Isso não valida
+um símbolo ainda não obtido nem a conversão. A leitura real de LPAC/diálogo
+em curso no run37900791913, SHA31fa784; resultado ainda NOT RUN/PENDING.
