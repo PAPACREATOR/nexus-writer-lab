@@ -34,6 +34,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Standard-user token verification failed' }
 if ($Suite -eq 'routes') { & $python -m lab.run_case I }
 elseif ($Suite -eq 'baseline') { & $python -m lab.run_case A }
 elseif ($Suite -eq 'sal_paths') { & $python -m lab.run_sal_path_probe }
+elseif ($Suite -eq 'pipe_namespaces') { & $python -m lab.run_pipe_namespace_probe }
 elseif ($Suite -eq 'probe') {
     $failed=0
     foreach ($case in @('baseline','sal_log','long_path')) {
