@@ -2,6 +2,10 @@
 
 ## Estado
 
+**Loop retomado em 09-10-2026 por instrução humana, até solução validada.**
+Em preparação: símbolos correspondentes ao build instalado, leitura de diálogo
+pelo HWND exato e LPAC independente. As provas anteriores permanecem abaixo.
+
 Retoma diagnóstica concluída sem solução reproduzível (resultado B).
 Causa efetiva: **NOT PROVEN**. As pilhas reais apontam para espera em
 diálogo/message loop (**LIKELY**), mas o motivo do diálogo não foi identificado.

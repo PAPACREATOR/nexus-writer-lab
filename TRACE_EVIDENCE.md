@@ -186,3 +186,29 @@ Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37840879467, SH
 Oito consultas de etiquetas retornaram listas vazias. Não permitem inferir que o diálogo não tem mensagem; não registam contagem de janelas/descendentes acessíveis. Limitação explícita do método. Pilhas reais e janela SALFRAME LibreOffice 26.2 foram persistidas: espera em diálogo/message loop **LIKELY**, causa exata **NOT PROVEN**. Nenhuma correção válida emergiu das hipóteses examinadas nesta retoma. Resultado B permanece: relatório/evidência completos para estes ensaios, sem declarar Nexus resolvido.
 
 As provas integrais estão em lab-evidence/dialog-labels/ e dialog-labels-raw.zip, além das tentativas anteriores identificadas. As tentativas falhadas do leitor não são PASS do Writer. ProcDump foi rejeitado e nunca executado; a alternativa textual não carrega memória bruta. MINIMAL_PATCH_PROPOSAL.md permanece vazio. Folha e regressão de solução 100+100 permanecem **NOT RUN**, pois não existe solução comprovada. Principal intacto. Sem execução adicional pendente.
+
+## Retoma 09-10 — discriminar o diálogo de bootstrap
+
+Ajuda de #36 relida; não há nova solução técnica publicada no laboratório.
+A fonte do tag 26.2.6.2 coloca HandleBootstrapErrors antes de RegisterServices
+ativar EnableHeadlessMode(false), que autocancela diálogos. Um diálogo de
+bootstrap pode preceder esse mecanismo. dp_misc::generateOfficePipeId pode
+rejeitar UserInstallation antes de qualquer API de pipe. Hipótese, NOT PROVEN.
+Não inferir IPC a partir do canary nem aplicar grants gerais.
+
+A raiz do symbol store redireciona pedidos que não correspondam a símbolos;
+isso não prova indisponibilidade de ficheiro exato. bin/symstore.sh do mesmo tag
+utiliza /compress; consultar nome CodeView + GUID/age e variante .pd_.
+Leitura apenas de metadados em disco, sem dump. Fontes:
+https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/bin/symstore.sh
+https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/appinit.cxx
+https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/app.cxx
+https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/deployment/misc/dp_misc.cxx
+https://mail-archive.com/libreoffice%40lists.freedesktop.org/msg368207.html
+
+O observador LPAC adicional usa o AccessCheck sintético de Chromium
+(CheckLpacToken). Duplica token só para consulta, sem impersonar/assignar ou
+conceder direitos a objetos do sistema; World3/AAP1/ARAP2 discriminam LPAC=2
+de AC normal=3. APIs falhadas continuam UNKNOWN. A consulta classe46 original
+e o seu erro87 ficam preservados. Controlos ordinary/invalid handle não lançam Writer.
+https://chromium.googlesource.com/chromium/src/+/refs/tags/133.0.6909.0/sandbox/win/src/app_container_test.cc

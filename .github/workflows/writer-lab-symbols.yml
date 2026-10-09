@@ -1,0 +1,35 @@
+name: Writer on-disk debug metadata, no Writer execution
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Independent LPAC reader controls, no Writer
+        run: python -m lab.check_lpac_evidence --output lab-evidence/lpac-accesscheck-control.json
+      - name: Official pinned archival fixture
+        shell: pwsh
+        run: ./lab/install-writer.ps1
+      - name: Read on-disk CodeView identifiers
+        run: python lab/pe_debug_info.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: writer-on-disk-debug-metadata
+          path: |
+            lab-evidence/pe-debug-info.json
+            lab-evidence/lpac-accesscheck-control.json
+            lab-evidence/libreoffice-version.txt
+            lab-evidence/writer-binary-hash.json
+          if-no-files-found: error

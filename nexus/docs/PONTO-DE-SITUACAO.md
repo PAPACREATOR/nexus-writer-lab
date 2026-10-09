@@ -2,6 +2,13 @@
 
 ## Laboratório Writer isolado — 08-10-2026
 
+Loop de resolução retomado por instrução humana em 09-10-2026. Goal ativo:
+procurar solução reproduzível e validar integralmente antes de preencher proposta.
+Próximo ensaio: metadados PE/CodeView para símbolos exatos; UIA/MSAA a partir
+do HWND validado com inventário/contagens; evidência LPAC independente por
+AccessCheck num descritor sintético em memória, sem mudar ACLs/token do Writer.
+Resultado B abaixo é história da fase anterior, não encerramento deste loop.
+
 Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.
 Retoma concluída como diagnóstico sem solução (B): último run 37840879467,
 2 FAIL/45 s e canary PASS. Conta normal, runtime original, Jobs finais zero.
