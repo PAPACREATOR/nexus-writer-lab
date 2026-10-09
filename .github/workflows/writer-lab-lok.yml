@@ -1,6 +1,12 @@
 name: Writer isolated official LibreOfficeKit probe
 on:
   workflow_dispatch:
+    inputs:
+      office_layout:
+        description: Installation location inside the disposable fixture
+        type: choice
+        default: separate
+        options: [separate, python-read-root]
 permissions:
   contents: read
 jobs:
@@ -28,7 +34,7 @@ jobs:
         run: python -m lab.inspect_office_exports > lab-evidence/lok-exports.json
       - name: Official library inside unchanged native boundary, 45 seconds
         shell: pwsh
-        run: ./lab/run-standard-user.ps1 -Suite probe
+        run: ./lab/run-standard-user.ps1 -Suite probe -OfficeLayout '${{ inputs.office_layout }}'
       - name: Preserve success or failure without claiming product PASS
         if: always()
         uses: actions/upload-artifact@v4
