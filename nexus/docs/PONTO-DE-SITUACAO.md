@@ -17,6 +17,15 @@ HandleBootstrapPathErrors :698 → Dialog::Execute. Espera no aviso de caminhos
 de arranque demonstrada. FailureCode e caminho concretos NOT PROVEN; próximo
 passo: identificar essa condição sem memória bruta, permissões alargadas ou
 alterações ao runtime principal.
+Atribuição offline 37936886424 SUCCESS: os dois ACCESS DENIED no pai da
+instalação passam por checkStatusAndNormalizeURL → Bootstrap::Impl::initialize
+→ generateOfficePipeId → PipeIpcThread::enable → Desktop::Init. Consulta da
+pasta base LIKELY; retorno SAL/FailureCode ainda não observado. Primeiro SAL
+37937173980 falhou só por localização do helper fora dos roots, corrigida sem
+novas permissões em 4bc89e1. Repetição corrigida em curso. Layout 37937906490
+testa instalação byte-a-byte sob o Python já autorizado, mantendo o runtime,
+conta normal, LPAC/Job/rede e 45 s. A/I reais em curso; sem solução demonstrada.
+
 Resultado B abaixo é história da fase anterior, não encerramento deste loop.
 
 Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.

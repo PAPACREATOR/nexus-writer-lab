@@ -208,3 +208,49 @@ Regressão preparada reforçada: cada shard de stress exige exatamente os
 módulo. Cinco controlos sintéticos PASS. As conversões reais dessa bateria,
 a agregação 100+100 e os restantes gates da solução continuam NOT RUN.
 Loop ativo; MINIMAL_PATCH_PROPOSAL.md vazio; Nexus principal intacto.
+
+
+## 09-10-2026 — atribuição dos acessos à pasta base e teste de localização
+
+Run offline [37936886424](https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37936886424),
+source dd9364e72acc9d5bbb14b0fe2599a103b9e2d34e, SUCCESS. Sem executar Writer,
+sem attach e sem memória de processos. Artefacto original `lab-evidence/parent-denial-symbols.zip`,
+SHA-256 a362fae8451248d2851a427e953344000a71abb0e3dccb46db6b2c4fca6568fd.
+PDB oficial com GUID/DBI age correspondentes resolveu os dez RVAs originais de
+cada um dos dois eventos Procmon anteriores (PIDs 4580/7960); todos dentro de
+símbolos Tag5 com extensão e linha do build. RVAs Procmon não foram ajustados
+como endereços de retorno CDB. Prova preservada em `parent-denial-symbols/`,
+entrada em `bootstrap-parent-denials.json`, fontes em `parent-denial-source-map.json`.
+
+Ambos os ACCESS DENIED sobre `C:\Users\NexusWriterLab\NexusWriterLab`
+passam por `utl::checkStatusAndNormalizeURL` (bootstrap.cxx:300),
+`Bootstrap::Impl::initialize` (:679), `dp_misc::generateOfficePipeId` (:294),
+`PipeIpcThread::enable` (:722), `RequestHandler::Enable` (:691) e `Desktop::Init` (:531).
+O tag exato valida BRAND_BASE_DIR em :637–639 e depois bootstrap.ini em :641;
+a inlining em :679 por si só não identifica qual argumento. O caminho recusado,
+a consulta FindFirstFileW e os ficheiros program/*.ini lidos com sucesso tornam
+a atribuição à consulta da pasta base LIKELY. O valor de retorno SAL, estado
+bootstrap e FailureCode não foram lidos nesses processos. A propagação
+E_ACCES → DATA_UNKNOWN → INVALID_BASE_INSTALL → FailureCode 9 continua uma
+inferência condicional do código, não um valor runtime observado.
+
+Primeiro diagnóstico SAL [37937173980](https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37937173980)
+FAIL antes de carregar SAL: o helper estava em repo/lab, fora dos read_roots.
+Child Python observado LPAC positivo independente, conta normal, mesmo Job e
+capabilities; Job final zero. Nenhuma consulta SAL nem rede foi executada.
+Artefacto `sal-paths-baseline.zip`, SHA-256
+9128e6e3278d0f5fcddc5da6043806ee6e8cf7f4f63f76a985899189733267e7.
+Corrigido em 4bc89e1: helper sintético copiado para o work já atribuído; pacote
+Nexus carregado pelo caminho absoluto original. Sem acrescentar read roots.
+Repetição corrigida e comparação SAL de localização em curso.
+
+Experiência de localização [37937906490](https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37937906490),
+source d837eca0bfaddf558aa45e3b66b23900ed90ad15, em curso: cópia idêntica da
+instalação sob o runtime Python que já tem leitura recursiva autorizada.
+Comparações separadas de SAL, baseline CLI A e variante LibreOfficeKit I.
+Verificação da árvore completa por nomes relativos, diretórios, tamanhos e
+SHA-256, sem reparse points; quatro controlos sintéticos PASS. Nenhum novo ACE,
+read_dirs, root geral, alteração Host/sandbox, elevação ou aumento dos 45 s.
+O primeiro job SAL desse run usa ainda o helper anterior; só os jobs reais A/I
+avaliam a localização nesse commit. Medição SAL corrigida corre separadamente.
+Ainda não há solução reproduzível nem regressão real 100+100.

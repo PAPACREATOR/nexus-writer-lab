@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "finished": true,
+  "rva_events": "",
+  "timeout_seconds": 120,
+  "memory_dump": false,
+  "inputs": "Installed PE, public PDB and persisted stack text only",
+  "duration_seconds": 7.6040253,
+  "process_attach": false,
+  "report": "lab-evidence/resolved-writer-frames.json",
+  "writer_execution": false
+}

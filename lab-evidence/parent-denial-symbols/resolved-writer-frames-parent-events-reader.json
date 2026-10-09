@@ -1,0 +1,12 @@
+{
+  "rva_events": "lab-evidence/bootstrap-parent-denials.json",
+  "finished": true,
+  "exit_code": 0,
+  "writer_execution": false,
+  "timeout_seconds": 120,
+  "memory_dump": false,
+  "inputs": "Installed PE, public PDB and persisted stack text only",
+  "report": "lab-evidence/resolved-writer-frames-parent-events.json",
+  "duration_seconds": 3.4980655,
+  "process_attach": false
+}

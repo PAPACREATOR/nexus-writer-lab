@@ -1,0 +1,631 @@
+{
+  "schema": "nexus.writer.parent-denial-source-map.v1",
+  "analysis_kind": "read_only_exact_source_and_offline_symbols",
+  "source_tag": "libreoffice-26.2.6.2",
+  "offline_resolution_run": 37936886424,
+  "offline_resolution_lab_sha_prefix": "dd9364e",
+  "input": {
+    "path": "lab-evidence/parent-denial-symbols/resolved-writer-frames-parent-events.json",
+    "raw_sha256": "3d61f0591efbc83428ed940e4e48dd4260a247a1416dd34d1cb2a618b9a07cd7",
+    "bytes": 99131,
+    "status": "resolved",
+    "unique_rvas": 10,
+    "resolved_unique_rvas": 10,
+    "records": 20,
+    "events": 2,
+    "symbol_tag": 5,
+    "all_within_reported_symbol_extent": true,
+    "image_sha256": "bd61f2f06549720a1880a85b8c49d5b7fdffc2ff2c1e3e50d305e15ae4f5ed18",
+    "pdb_sha256": "05efcd7594575c851a9f125dafe2295686bbcd73f72054763e22a5b01ea1d7f8",
+    "sym_type": "SymPdb",
+    "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+    "image_and_dbi_age": 2,
+    "pdb_unmatched": false,
+    "dbg_unmatched": false
+  },
+  "observed_events": [
+    {
+      "run": 37822420842,
+      "pid": 4580,
+      "time": "6:16:15.3850381 PM",
+      "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+      "operation": "CreateFile",
+      "result": "ACCESS DENIED",
+      "desired_access": "Read Data/List Directory, Synchronize",
+      "status": "OBSERVED"
+    },
+    {
+      "run": 37822420842,
+      "pid": 7960,
+      "time": "6:17:18.3816975 PM",
+      "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+      "operation": "CreateFile",
+      "result": "ACCESS DENIED",
+      "desired_access": "Read Data/List Directory, Synchronize",
+      "status": "OBSERVED"
+    }
+  ],
+  "common_matched_stack": [
+    {
+      "rva": "0x2a5a845",
+      "symbol": "utl::checkStatusAndNormalizeURL",
+      "source": "unotools/source/config/bootstrap.cxx",
+      "line": 300
+    },
+    {
+      "rva": "0x2a5bb26",
+      "symbol": "utl::Bootstrap::Impl::initialize",
+      "source": "unotools/source/config/bootstrap.cxx",
+      "line": 679
+    },
+    {
+      "rva": "0x2a5a08a",
+      "symbol": "utl::anonymous namespace::theImpl",
+      "source": "unotools/source/config/bootstrap.cxx",
+      "line": 116
+    },
+    {
+      "rva": "0x9fb17f",
+      "symbol": "dp_misc::generateOfficePipeId",
+      "source": "desktop/source/deployment/misc/dp_misc.cxx",
+      "line": 294
+    },
+    {
+      "rva": "0x1c5b33c",
+      "symbol": "desktop::PipeIpcThread::enable",
+      "source": "desktop/source/app/officeipcthread.cxx",
+      "line": 722
+    },
+    {
+      "rva": "0x1c5b24c",
+      "symbol": "desktop::RequestHandler::Enable",
+      "source": "desktop/source/app/officeipcthread.cxx",
+      "line": 691
+    },
+    {
+      "rva": "0x1c3bb53",
+      "symbol": "desktop::Desktop::Init",
+      "source": "desktop/source/app/app.cxx",
+      "line": 531
+    }
+  ],
+  "exact_source": [
+    {
+      "path": "unotools/source/config/bootstrap.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/unotools/source/config/bootstrap.cxx",
+      "git_blob_sha1": "8804a2229f36e33614a2d75e2e955d65586c82ba",
+      "raw_sha256": "ac55b09191180d5946dd3a287dec743c83ec4805450688e5001b90007e040553",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 44,
+          "text": "constexpr OUStringLiteral BOOTSTRAP_ITEM_BASEINSTALLATION = u\"BRAND_BASE_DIR\";"
+        },
+        {
+          "line": 49,
+          "text": "constexpr OUStringLiteral BOOTSTRAP_DEFAULT_BASEINSTALL = u\"$SYSBINDIR/..\";"
+        },
+        {
+          "line": 63,
+          "text": "    rtl::Bootstrap::get( u\"BRAND_BASE_DIR\"_ustr, uri);"
+        },
+        {
+          "line": 64,
+          "text": "    return uri + \"/\" LIBO_ETC_FOLDER \"/\" SAL_CONFIGFILE(\"bootstrap\");"
+        },
+        {
+          "line": 77,
+          "text": "        : status(DATA_UNKNOWN)"
+        },
+        {
+          "line": 95,
+          "text": "    Impl() : m_aImplName(makeImplName())"
+        },
+        {
+          "line": 97,
+          "text": "        initialize();"
+        },
+        {
+          "line": 116,
+          "text": "        static Bootstrap::Impl SINGLETON;"
+        },
+        {
+          "line": 170,
+          "text": "        switch( DirectoryItem::get(_sURL, aDirItem) )"
+        },
+        {
+          "line": 188,
+          "text": "        case DirectoryItem::E_ACCES:        // permission denied"
+        },
+        {
+          "line": 191,
+          "text": "            eStatus = Bootstrap::DATA_UNKNOWN;"
+        },
+        {
+          "line": 300,
+          "text": "        eStatus = implCheckStatusOfURL(_sURL,aDirItem);"
+        },
+        {
+          "line": 392,
+          "text": "    _rResult.status = checkStatusAndNormalizeURL(_rResult.path);"
+        },
+        {
+          "line": 393,
+          "text": "    return _rResult.status;"
+        },
+        {
+          "line": 403,
+          "text": "static Bootstrap::PathStatus implGetVersionFile(rtl::Bootstrap const & _rData, Bootstrap::Impl::PathData & _rVersionFile)"
+        },
+        {
+          "line": 406,
+          "text": ""
+        },
+        {
+          "line": 433,
+          "text": "static void addUnexpectedError(OUStringBuffer& _rBuf, AsciiString _sExtraInfo = nullptr)"
+        },
+        {
+          "line": 435,
+          "text": "    if (nullptr == _sExtraInfo)"
+        },
+        {
+          "line": 436,
+          "text": "        _sExtraInfo = \"An internal failure occurred\";"
+        },
+        {
+          "line": 441,
+          "text": "static Bootstrap::FailureCode describeError(OUStringBuffer& _rBuf, Bootstrap::Impl const& _rData)"
+        },
+        {
+          "line": 443,
+          "text": "    Bootstrap::FailureCode eErrCode = Bootstrap::INVALID_BOOTSTRAP_DATA;"
+        },
+        {
+          "line": 445,
+          "text": "    _rBuf.append(\"The program cannot be started. \");"
+        },
+        {
+          "line": 447,
+          "text": "    switch (_rData.aUserInstall_.status)"
+        },
+        {
+          "line": 529,
+          "text": "    default: OSL_ASSERT(false);"
+        },
+        {
+          "line": 530,
+          "text": "        addUnexpectedError(_rBuf);"
+        },
+        {
+          "line": 534,
+          "text": "    return eErrCode;"
+        },
+        {
+          "line": 575,
+          "text": "{"
+        },
+        {
+          "line": 577,
+          "text": ""
+        },
+        {
+          "line": 578,
+          "text": "    _rURL = aPathData.path;"
+        },
+        {
+          "line": 579,
+          "text": "    return aPathData.status;"
+        },
+        {
+          "line": 614,
+          "text": "Bootstrap::Status Bootstrap::checkBootstrapStatus(OUString& _rDiagnosticMessage, FailureCode& _rErrCode)"
+        },
+        {
+          "line": 616,
+          "text": "    Impl const& aData = data();"
+        },
+        {
+          "line": 618,
+          "text": "    Status result = aData.status_;"
+        },
+        {
+          "line": 623,
+          "text": "    if (result != DATA_OK)"
+        },
+        {
+          "line": 624,
+          "text": "        _rErrCode = describeError(sErrorBuffer,aData);"
+        },
+        {
+          "line": 627,
+          "text": "        _rErrCode = NO_FAILURE;"
+        },
+        {
+          "line": 629,
+          "text": "    _rDiagnosticMessage = sErrorBuffer.makeStringAndClear();"
+        },
+        {
+          "line": 631,
+          "text": "    return result;"
+        },
+        {
+          "line": 637,
+          "text": "    _rData.getFrom(BOOTSTRAP_ITEM_BASEINSTALLATION, aBaseInstall_.path, BOOTSTRAP_DEFAULT_BASEINSTALL);"
+        },
+        {
+          "line": 639,
+          "text": "    bool bResult = (PATH_EXISTS == updateStatus(aBaseInstall_));"
+        },
+        {
+          "line": 641,
+          "text": "    implGetBootstrapFile(_rData, aBootstrapINI_);"
+        },
+        {
+          "line": 643,
+          "text": "    return bResult;"
+        },
+        {
+          "line": 679,
+          "text": "    if (!initBaseInstallationData(aData))"
+        },
+        {
+          "line": 681,
+          "text": "        status_ = INVALID_BASE_INSTALL;"
+        },
+        {
+          "line": 683,
+          "text": "    else if (!initUserInstallationData(aData))"
+        }
+      ]
+    },
+    {
+      "path": "include/unotools/bootstrap.hxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/include/unotools/bootstrap.hxx",
+      "git_blob_sha1": "3f87741408c4375675129d2a5e86774b57001b01",
+      "raw_sha256": "d23b4bf3fd1fbf0044ee6b66913ed95c670b1588c84d12241000ea64fe1651b2",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 53,
+          "text": "        enum PathStatus"
+        },
+        {
+          "line": 55,
+          "text": "            PATH_EXISTS,  // Success: Found a path to an existing file or directory"
+        },
+        {
+          "line": 56,
+          "text": "            PATH_VALID,   // Found a valid path, but the file or directory does not exist"
+        },
+        {
+          "line": 57,
+          "text": "            DATA_INVALID, // Retrieved a string for this path, that is not a valid file url or system path"
+        },
+        {
+          "line": 58,
+          "text": "            DATA_MISSING, // Could not retrieve any data for this path"
+        },
+        {
+          "line": 59,
+          "text": "            DATA_UNKNOWN  // No attempt to retrieve data for this path was made"
+        },
+        {
+          "line": 79,
+          "text": "        enum Status"
+        },
+        {
+          "line": 81,
+          "text": "            DATA_OK,              /// user-dir and share-dir do exist, product key found or can be defaulted to exe-name"
+        },
+        {
+          "line": 82,
+          "text": "            MISSING_USER_INSTALL, /// ${userurl} does not exist; or version-file cannot be found or is invalid"
+        },
+        {
+          "line": 83,
+          "text": "            INVALID_USER_INSTALL, /// can locate ${userurl}, but user-dir is missing"
+        },
+        {
+          "line": 84,
+          "text": "            INVALID_BASE_INSTALL  /// other failure: e.g. cannot locate share-dir; bootstraprc missing or invalid; no product key"
+        },
+        {
+          "line": 88,
+          "text": "        enum FailureCode"
+        },
+        {
+          "line": 90,
+          "text": "            NO_FAILURE,                   /// bootstrap was successful"
+        },
+        {
+          "line": 99,
+          "text": "            INVALID_BOOTSTRAP_DATA        /// some bootstrap data was invalid in unexpected ways"
+        },
+        {
+          "line": 105,
+          "text": "        static Status checkBootstrapStatus(OUString& _rDiagnosticMessage, FailureCode& _rErrCode);"
+        }
+      ]
+    },
+    {
+      "path": "sal/osl/w32/file_dirvol.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/sal/osl/w32/file_dirvol.cxx",
+      "git_blob_sha1": "ad92c6f050872819dea7d0c3321ea80b39653716",
+      "raw_sha256": "14179862623661eb74e42ce0c72202aba8e8448b2d4fdea8e18ec0d05f97ea6f",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 875,
+          "text": "oslFileError SAL_CALL osl_getDirectoryItem(rtl_uString *strFilePath, oslDirectoryItem *pItem)"
+        },
+        {
+          "line": 889,
+          "text": "    error = osl_getSystemPathFromFileURL_(OUString::unacquired(&strFilePath), &strSysFilePath.pData, false);"
+        },
+        {
+          "line": 959,
+          "text": "            if (!strSysFilePath.isEmpty() && strSysFilePath[strSysFilePath.getLength() - 1] == '\\\\')"
+        },
+        {
+          "line": 960,
+          "text": "                strSysFilePath = strSysFilePath.copy(0, strSysFilePath.getLength() - 1);"
+        },
+        {
+          "line": 962,
+          "text": "            hFind = FindFirstFileW( o3tl::toW(strSysFilePath.getStr()), &aFindData );"
+        },
+        {
+          "line": 983,
+          "text": "            else"
+        },
+        {
+          "line": 984,
+          "text": "                error = oslTranslateFileError( GetLastError() );"
+        },
+        {
+          "line": 989,
+          "text": "    return error;"
+        }
+      ]
+    },
+    {
+      "path": "sal/osl/w32/file_error.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/sal/osl/w32/file_error.cxx",
+      "git_blob_sha1": "092a5ae01cf9519083d9603c7f53ec51ac0f4c9c",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 38,
+          "text": "  {  ERROR_ACCESS_DENIED,          osl_File_E_ACCES    },  /* 5 */"
+        },
+        {
+          "line": 101,
+          "text": "oslFileError oslTranslateFileError (/*DWORD*/ unsigned long dwError)"
+        },
+        {
+          "line": 103,
+          "text": "    for (auto& mapping : errtable)"
+        },
+        {
+          "line": 105,
+          "text": "        if (dwError == mapping.oscode)"
+        },
+        {
+          "line": 106,
+          "text": "            return mapping.errnocode;"
+        }
+      ]
+    },
+    {
+      "path": "desktop/source/deployment/misc/dp_misc.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/deployment/misc/dp_misc.cxx",
+      "git_blob_sha1": "be180c163fbc4a0e40813b8f066c8693e4acac59",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 294,
+          "text": "    ::utl::Bootstrap::PathStatus aLocateResult ="
+        },
+        {
+          "line": 295,
+          "text": "    ::utl::Bootstrap::locateUserInstallation( userPath );"
+        },
+        {
+          "line": 296,
+          "text": "    if (aLocateResult != ::utl::Bootstrap::PATH_EXISTS &&"
+        },
+        {
+          "line": 297,
+          "text": "        aLocateResult != ::utl::Bootstrap::PATH_VALID)"
+        },
+        {
+          "line": 299,
+          "text": "        throw Exception(u\"Extension Manager: Could not obtain path for UserInstallation.\"_ustr, nullptr);"
+        }
+      ]
+    },
+    {
+      "path": "desktop/source/app/officeipcthread.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/officeipcthread.cxx",
+      "git_blob_sha1": "9c1a040768b237075a5244fb26ae495e9bfa370f",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 691,
+          "text": "        stat = PipeIpcThread::enable(&thread);"
+        },
+        {
+          "line": 722,
+          "text": "        aPipeIdent = dp_misc::generateOfficePipeId();"
+        },
+        {
+          "line": 724,
+          "text": "    catch (const Exception&)"
+        },
+        {
+          "line": 727,
+          "text": "        return RequestHandler::IPC_STATUS_BOOTSTRAP_ERROR; // Something completely broken, we cannot create a valid hash code!"
+        }
+      ]
+    },
+    {
+      "path": "desktop/source/app/app.cxx",
+      "url": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/app.cxx",
+      "git_blob_sha1": "78b6b98cc2d0a697916278b79b594c6b354044c9",
+      "raw_line_numbers": true,
+      "points": [
+        {
+          "line": 530,
+          "text": "    RequestHandler::Status aStatus = RequestHandler::Enable(true);"
+        },
+        {
+          "line": 531,
+          "text": "    if ( aStatus == RequestHandler::IPC_STATUS_PIPE_ERROR )"
+        },
+        {
+          "line": 545,
+          "text": "    else if ( aStatus == RequestHandler::IPC_STATUS_BOOTSTRAP_ERROR )"
+        },
+        {
+          "line": 547,
+          "text": "        SetBootstrapError( BE_PATHINFO_MISSING, OUString() );"
+        },
+        {
+          "line": 791,
+          "text": "    if ( aBootstrapError == BE_PATHINFO_MISSING )"
+        },
+        {
+          "line": 798,
+          "text": "        aBootstrapStatus = ::utl::Bootstrap::checkBootstrapStatus( aBuffer, nFailureCode );"
+        },
+        {
+          "line": 799,
+          "text": "        if ( aBootstrapStatus != ::utl::Bootstrap::DATA_OK )"
+        },
+        {
+          "line": 804,
+          "text": "                case ::utl::Bootstrap::INVALID_BOOTSTRAP_DATA:"
+        },
+        {
+          "line": 806,
+          "text": "                    aErrorMsg = CreateErrorMsgString( nFailureCode, OUString() );"
+        },
+        {
+          "line": 855,
+          "text": "            HandleBootstrapPathErrors( aBootstrapStatus, aErrorMsg );"
+        },
+        {
+          "line": 698,
+          "text": "    xBootstrapFailedBox->run();"
+        },
+        {
+          "line": 1331,
+          "text": "        HandleBootstrapErrors( m_aBootstrapError, m_aBootstrapErrorMessage );"
+        }
+      ]
+    }
+  ],
+  "line_679_interpretation": {
+    "status": "EXACT_SOURCE_PROVEN",
+    "expression": "if (!initBaseInstallationData(aData))",
+    "primary_variable": "aBaseInstall_.path",
+    "bootstrap_key": "BRAND_BASE_DIR",
+    "fallback": "$SYSBINDIR/..",
+    "primary_check": "initBaseInstallationData line637 reads aBaseInstall_.path; line639 updateStatus(aBaseInstall_) invokes checkStatusAndNormalizeURL and records whether PATH_EXISTS.",
+    "additional_inlined_check": "The same initBaseInstallationData call subsequently checks aBootstrapINI_ via implGetBootstrapFile at641. That is a second checkStatusAndNormalizeURL call under the same outer source line679.",
+    "returned_value": "bResult is captured from aBaseInstall_ at639 and returned unchanged at643; bootstrap.ini's path-status check at641 does not determine bResult.",
+    "line_table_limit": "Optimized/inlined source attribution to679 identifies base-initialization phase, not by itself the precise OUString argument of checkStatusAndNormalizeURL."
+  },
+  "path_attribution": {
+    "status": "HIGH_CONFIDENCE_SOURCE_GROUNDED_INFERENCE",
+    "expected_base": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office",
+    "denied_base_parent": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+    "expected_bootstrap_ini_parent": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program",
+    "reason": "Windows DirectoryItem lookup calls FindFirstFileW(target). The observed denial opens the Office installation's parent for directory listing; this fits checking aBaseInstall_.path=OfficeRoot. Checking bootstrap.ini instead would search its program parent. The normalized lookup argument itself was not captured.",
+    "not_measured": [
+      "checkStatusAndNormalizeURL argument",
+      "GetLastError at FindFirstFileW return",
+      "osl_getDirectoryItem return value",
+      "aBaseInstall_.status",
+      "Bootstrap::Status return value",
+      "Bootstrap::FailureCode return value"
+    ]
+  },
+  "conditional_state_propagation": [
+    {
+      "if": "The observed denied parent open makes FindFirstFileW(OfficeRoot) fail with ERROR_ACCESS_DENIED (5)",
+      "then": "osl_getDirectoryItem returns osl_File_E_ACCES (13)",
+      "status": "DETERMINISTIC_SOURCE_CONDITIONAL",
+      "source_points": [
+        "sal/osl/w32/file_dirvol.cxx:962",
+        "sal/osl/w32/file_dirvol.cxx:984",
+        "sal/osl/w32/file_error.cxx:38"
+      ]
+    },
+    {
+      "if": "The failing lookup is updateStatus(aBaseInstall_) and returns E_ACCES",
+      "then": "implCheckStatusOfURL maps it to DATA_UNKNOWN (4); initBaseInstallationData captures bResult=false",
+      "status": "DETERMINISTIC_SOURCE_CONDITIONAL",
+      "source_points": [
+        "unotools/source/config/bootstrap.cxx:188",
+        "unotools/source/config/bootstrap.cxx:191",
+        "unotools/source/config/bootstrap.cxx:639"
+      ]
+    },
+    {
+      "if": "This first singleton initialization has bResult=false",
+      "then": "initialize sets status_=INVALID_BASE_INSTALL (3) at681 and skips initUserInstallationData. aUserInstall_ and aVersionINI_ retain constructor default DATA_UNKNOWN (4). This does not prove that the on-disk synthetic user profile is missing or unreadable.",
+      "status": "DETERMINISTIC_SOURCE_CONDITIONAL",
+      "source_points": [
+        "unotools/source/config/bootstrap.cxx:77",
+        "unotools/source/config/bootstrap.cxx:116",
+        "unotools/source/config/bootstrap.cxx:679",
+        "unotools/source/config/bootstrap.cxx:681",
+        "unotools/source/config/bootstrap.cxx:683"
+      ]
+    },
+    {
+      "if": "generateOfficePipeId subsequently sees locateUserInstallation return DATA_UNKNOWN",
+      "then": "It throws before calculating the profile hash or creating/opening an office pipe; PipeIpcThread::enable catches the UNO Exception and returns IPC_STATUS_BOOTSTRAP_ERROR; Desktop::Init sets BE_PATHINFO_MISSING.",
+      "status": "DETERMINISTIC_SOURCE_CONDITIONAL",
+      "source_points": [
+        "desktop/source/deployment/misc/dp_misc.cxx:295",
+        "desktop/source/deployment/misc/dp_misc.cxx:296",
+        "desktop/source/deployment/misc/dp_misc.cxx:299",
+        "desktop/source/app/officeipcthread.cxx:727",
+        "desktop/source/app/app.cxx:547"
+      ]
+    },
+    {
+      "if": "checkBootstrapStatus is called with cached INVALID_BASE_INSTALL and aUserInstall_.status still DATA_UNKNOWN",
+      "then": "describeError takes its outer default, keeps INVALID_BOOTSTRAP_DATA (9), and generates the generic internal-failure diagnostic. Desktop::HandleBootstrapErrors then shows the path/bootstrap warning.",
+      "status": "DETERMINISTIC_SOURCE_CONDITIONAL",
+      "source_points": [
+        "unotools/source/config/bootstrap.cxx:443",
+        "unotools/source/config/bootstrap.cxx:447",
+        "unotools/source/config/bootstrap.cxx:529",
+        "unotools/source/config/bootstrap.cxx:530",
+        "unotools/source/config/bootstrap.cxx:436",
+        "unotools/source/config/bootstrap.cxx:624",
+        "desktop/source/app/app.cxx:804",
+        "desktop/source/app/app.cxx:855"
+      ]
+    }
+  ],
+  "causal_assessment": {
+    "denied_operation_attributed_to_bootstrap_initialization": "PROVEN_BY_MATCHED_SYMBOL_EXTENTS_AND_EXACT_SOURCE_LINES",
+    "base_installation_path_is_denied_lookup_operand": "HIGH_CONFIDENCE_INFERENCE_PENDING_DIRECT_SAL_RETURN",
+    "actual_invalid_base_install_status": "HIGH_CONFIDENCE_INFERENCE_NOT_DIRECTLY_MEASURED",
+    "actual_failure_code_9": "CONDITIONAL_INFERENCE_NOT_DIRECTLY_MEASURED",
+    "generic_bootstrap_dialog": "CONSISTENT_WITH_SEPARATE_MATCHED_DIALOG_STACK",
+    "cross_run_limit": "The denied events come from run37822420842. Dialog call-path evidence was captured in a later run. They share the exact LibreOffice build but are not a single continuously traced process.",
+    "product_solution": "NOT_PROVEN",
+    "next_falsifiable_check": "Run the existing identity-independent SAL helper under original LPAC/Job/capabilities/read roots/45s. Prediction: OfficeRoot and its trailing-slash spelling return E_ACCES while program, installed INI files and private profile succeed; GetFileAttributesW(OfficeRoot) may still succeed. A successful OfficeRoot SAL lookup under an equivalent boundary falsifies the direct reproduction, requiring re-examination before a fix.",
+    "no_permission_change_authorized_by_this_map": true
+  },
+  "writer_executed": false,
+  "process_memory_read": false,
+  "memory_dump": false,
+  "runtime_changes": []
+}
