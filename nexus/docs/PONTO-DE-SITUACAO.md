@@ -4,13 +4,15 @@
 
 Loop de resolução retomado por instrução humana em 09-10-2026. Goal ativo:
 procurar solução reproduzível e validar integralmente antes de preencher proposta.
-Último ensaio Writer 37900791913: duas rotas FAIL aos 45 s, canary IPC PASS,
-Jobs finais zero. LPAC confirmado independentemente nos dez eventos observados
+Último ensaio Writer 37903488590: duas rotas FAIL aos 45 s, canary IPC PASS.
+LPAC confirmado independentemente no ensaio 37900791913, dez eventos observados
 por AccessCheck num descritor em memória; conta não elevada, mesmo Job/capabilities.
-O leitor MSAA teve CO_E_NOTINITIALIZED; COM corrigido apenas no leitor externo,
-execução real dessa correção ainda NOT RUN. Run 37901277588 parou antes de
-Writer: PDB oficial tem GUID correto, mas age PDBI 3 versus PE 2. Correspondência
-recusada; a semântica do validador Microsoft está em investigação.
+COM inicializado no leitor externo retornou S_FALSE; MSAA continuou
+CO_E_NOTINITIALIZED, sem texto do diálogo. Atribuição original só ao leitor
+não foi confirmada. PDB oficial agora validado pelo contrato Microsoft:
+GUID exato, PDBI age 3 >= PE age 2, DBI age 2 == PE. Leitura offline dos runs
+37903488590 e 37904071891 falhou na verificação auxiliar da assinatura digital,
+antes de resolver endereços. Próximo passo: corrigir só essa leitura offline.
 Resultado B abaixo é história da fase anterior, não encerramento deste loop.
 
 Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.

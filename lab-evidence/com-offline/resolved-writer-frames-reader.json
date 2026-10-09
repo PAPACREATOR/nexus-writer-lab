@@ -1,0 +1,10 @@
+{
+  "memory_dump": false,
+  "duration_seconds": 1.8637885,
+  "exit_code": 2,
+  "process_attach": false,
+  "timeout_seconds": 120,
+  "finished": true,
+  "inputs": "Installed PE, public PDB and persisted stack text only",
+  "writer_execution": false
+}

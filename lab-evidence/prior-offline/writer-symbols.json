@@ -1,0 +1,111 @@
+{
+  "schema": "nexus.writer.public-symbols.v1",
+  "utc": "2026-10-09T08:19:16.617793+00:00",
+  "metadata_sha256": "7a61a2d516e0270b793afa2eb603ba985f2fd64a23597140fbb92b01c80372d1",
+  "official_host": "dev-downloads.libreoffice.org",
+  "output_directory": "D:\\a\\_temp\\nexus-writer-symbols-rqq3nqe3",
+  "overall_timeout_seconds": 600,
+  "download_timeout_seconds": 180,
+  "socket_timeout_seconds": 15,
+  "max_file_bytes": 2147483648,
+  "memory_dump": false,
+  "uploaded_binary": false,
+  "runtime_changes": [],
+  "modules": [
+    {
+      "image": "mergedlo.dll",
+      "image_sha256": "bd61f2f06549720a1880a85b8c49d5b7fdffc2ff2c1e3e50d305e15ae4f5ed18",
+      "attempts": [
+        {
+          "url": "https://dev-downloads.libreoffice.org/symstore/symbols/mergedlo.pdb/4B71BC20183E451AB4B56AEDB5DE74132/mergedlo.pdb",
+          "compressed": false,
+          "bytes": 0,
+          "http_status": 404,
+          "response_url": "https://dev-downloads.libreoffice.org/symstore/symbols/mergedlo.pdb/4B71BC20183E451AB4B56AEDB5DE74132/mergedlo.pdb",
+          "duration_seconds": 1.078,
+          "status": "refused_or_unavailable",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://dev-downloads.libreoffice.org/symstore/symbols/mergedlo.pdb/4B71BC20183E451AB4B56AEDB5DE74132/mergedlo.pd_",
+          "compressed": true,
+          "bytes": 215809695,
+          "http_status": 200,
+          "final_url": "https://dev-downloads.libreoffice.org/symstore/symbols/mergedlo.pdb/4B71BC20183E451AB4B56AEDB5DE74132/mergedlo.pd_",
+          "content_type": "application/vnd.ms-cab-compressed",
+          "sha256": "e70b64c6844a809dd42f1b4ea9a06a843d3cc17d2ffd48742f391e4aa268dd17",
+          "duration_seconds": 12.296,
+          "cabinet": {
+            "member": "mergedlo.pdb",
+            "declared_output_bytes": 1305989120
+          },
+          "expand_exit_code": 0,
+          "expand_stdout": "Microsoft (R) File Expansion Utility\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nAdding D:\\a\\_temp\\nexus-writer-symbols-rqq3nqe3\\mergedlo.dll\\mergedlo.pdb to Extraction Queue\n\nExpanding Files ....\nProgress: 0 out of 1 files\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bProgress: 0 out of 1 files\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bProgress: 0 out of 1 files\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bProgress: 0 out of 1 files\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bProgress: 0 out of 1 files\nExpanding Files Complete ...\n",
+          "expand_stderr": "",
+          "pdb_identity": {
+            "format": "MSF7 info stream 1 and modern DBI stream 3",
+            "version": 20000404,
+            "signature": 1788269753,
+            "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+            "age": 3,
+            "key": "4B71BC20183E451AB4B56AEDB5DE74133",
+            "dbi": {
+              "version_signature": -1,
+              "version": 19990903,
+              "age": 2,
+              "flags": 0,
+              "private_symbols_stripped": false,
+              "machine": 34404
+            }
+          },
+          "binding_verification": {
+            "rule": "Microsoft OpenValidate4: exact GUID, info age >= image age, nonzero DBI age == image age",
+            "guid_exact": true,
+            "image_age": 2,
+            "pdb_info_age": 3,
+            "pdb_dbi_age": 2,
+            "legacy_zero_age_allowed": false,
+            "ignore_mismatch": false
+          },
+          "status": "verified"
+        }
+      ],
+      "expected": {
+        "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+        "age": 2,
+        "key": "4B71BC20183E451AB4B56AEDB5DE74132",
+        "pdb_name": "mergedlo.pdb"
+      },
+      "status": "verified",
+      "verified_file": "D:\\a\\_temp\\nexus-writer-symbols-rqq3nqe3\\mergedlo.dll\\mergedlo.pdb",
+      "pdb_identity": {
+        "format": "MSF7 info stream 1 and modern DBI stream 3",
+        "version": 20000404,
+        "signature": 1788269753,
+        "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+        "age": 3,
+        "key": "4B71BC20183E451AB4B56AEDB5DE74133",
+        "dbi": {
+          "version_signature": -1,
+          "version": 19990903,
+          "age": 2,
+          "flags": 0,
+          "private_symbols_stripped": false,
+          "machine": 34404
+        }
+      },
+      "pdb_bytes": 1305989120,
+      "pdb_sha256": "05efcd7594575c851a9f125dafe2295686bbcd73f72054763e22a5b01ea1d7f8",
+      "binding_verification": {
+        "rule": "Microsoft OpenValidate4: exact GUID, info age >= image age, nonzero DBI age == image age",
+        "guid_exact": true,
+        "image_age": 2,
+        "pdb_info_age": 3,
+        "pdb_dbi_age": 2,
+        "legacy_zero_age_allowed": false,
+        "ignore_mismatch": false
+      }
+    }
+  ],
+  "all_selected_verified": true
+}

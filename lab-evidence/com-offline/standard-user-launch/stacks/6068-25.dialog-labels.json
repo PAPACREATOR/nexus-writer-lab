@@ -1,0 +1,38 @@
+﻿{
+    "document_payload":  false,
+    "window":  {
+                   "native_caption":  "LibreOffice 26.2",
+                   "native_class":  "SALFRAME",
+                   "owner_pid":  6068,
+                   "thread_id":  6372,
+                   "image":  "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin"
+               },
+    "pid":  6068,
+    "interaction":  false,
+    "hwnd":  "0x4017c",
+    "non_atomic_observation":  true,
+    "schema":  2,
+    "uia":  {
+                "status":  "not_run"
+            },
+    "reader":  "MSAA",
+    "utc":  "2026-10-09T08:16:10.9305014Z",
+    "stage":  "finished",
+    "memory_dump":  false,
+    "completed":  true,
+    "msaa":  {
+                 "status":  "unavailable",
+                 "hresult":  -2147221008,
+                 "com_initialization_hresult":  1,
+                 "com_initialization_hresult_hex":  "0x00000001",
+                 "com_apartment":  "STA",
+                 "com_uninitialize_called":  true,
+                 "truncated":  false,
+                 "nodes":  [
+
+                           ],
+                 "errors":  [
+
+                            ]
+             }
+}

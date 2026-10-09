@@ -1,0 +1,54 @@
+[
+  {
+    "image": "mergedlo.dll",
+    "sha256": "bd61f2f06549720a1880a85b8c49d5b7fdffc2ff2c1e3e50d305e15ae4f5ed18",
+    "codeview": [
+      {
+        "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+        "age": 2,
+        "key": "4B71BC20183E451AB4B56AEDB5DE74132",
+        "pdb_name": "mergedlo.pdb",
+        "embedded_build_path": "E:\\build\\workdir\\LinkTarget\\Library\\mergedlo.pdb"
+      }
+    ]
+  },
+  {
+    "image": "vclplug_winlo.dll",
+    "sha256": "3f99221de50cf7c23bc27a54ec8a4c63de24b77c234e761a1bb5d7cd0a12b68f",
+    "codeview": [
+      {
+        "guid": "950c8ab1-0291-4a7d-9d53-2ec10f75688c",
+        "age": 2,
+        "key": "950C8AB102914A7D9D532EC10F75688C2",
+        "pdb_name": "vclplug_winlo.pdb",
+        "embedded_build_path": "E:\\build\\workdir\\LinkTarget\\Library\\vclplug_winlo.pdb"
+      }
+    ]
+  },
+  {
+    "image": "sal3.dll",
+    "sha256": "a0a1372e1c0c5b57d42d57884a3945fc2a7bc753b314f129aad6bf4c27797a0b",
+    "codeview": [
+      {
+        "guid": "007a3662-f41a-4592-9417-8daf23f35fa2",
+        "age": 1,
+        "key": "007A3662F41A459294178DAF23F35FA21",
+        "pdb_name": "sal3.pdb",
+        "embedded_build_path": "E:\\build\\workdir\\LinkTarget\\Library\\sal3.pdb"
+      }
+    ]
+  },
+  {
+    "image": "soffice.bin",
+    "sha256": "c0d5fabc7717c1a32a281f44798f964c458f406c90fb508ba03b98b53fa0c86c",
+    "codeview": [
+      {
+        "guid": "c5240cf0-02f7-4e3f-a46b-fe13936f8e85",
+        "age": 2,
+        "key": "C5240CF002F74E3FA46BFE13936F8E852",
+        "pdb_name": "soffice.bin.pdb",
+        "embedded_build_path": "E:\\build\\workdir\\LinkTarget\\Executable\\soffice.bin.pdb"
+      }
+    ]
+  }
+]

@@ -1,0 +1,284 @@
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   EnableRedirectToV8JsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.094 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+.
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.891 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 30
+
+Microsoft (R) Windows Debugger Version 10.0.26100.8249 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             D:\a\_temp\nexus-empty-symbols
+Symbol search path is: D:\a\_temp\nexus-empty-symbols
+Executable search path is: 
+WARNING: Process 8092 is not attached as a debuggee
+         The process can be examined but debug events will not be received
+................................................................
+......
+Loading unloaded module list
+.
+(1f9c.13fc): Wake debugger - code 80000007 (first chance)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+*** WARNING: Unable to verify checksum for C:\Windows\assembly\NativeImages_v4.0.30319_64\System.Manaa57fc8cc#\b5f390442380e0880d7422ab0d60f07a\System.Management.Automation.ni.dll
+System_Management_Automation_ni+0x1516590:
+00007ffa`96b56590 57              push    rdi
+0:000> cdb: Reading initial command '~* k; lm; q'
+
+.  0  Id: 1f9c.13fc Suspend: 0 Teb: 0000003e`a280e000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2a7b908 00000000`00000004     System_Management_Automation_ni+0x1516590
+0000003e`a2a7b910 00007ffa`c6d84c80     0x4
+0000003e`a2a7b918 00007ffa`c64e2a87     clr!LegacyNGenTryEnumerateFusionCache+0x2aef90
+0000003e`a2a7b920 00007ffa`c6d84c80     clr!LogHelp_LogAssert+0x5c7
+0000003e`a2a7b960 00000000`00000000     clr!LegacyNGenTryEnumerateFusionCache+0x2aef90
+
+   1  Id: 1f9c.1414 Suspend: 0 Teb: 0000003e`a2810000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2affae8 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a2affaf0 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a2affe50 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2affe80 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   2  Id: 1f9c.2294 Suspend: 0 Teb: 0000003e`a2812000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2b7f698 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a2b7f6a0 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a2b7fa00 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2b7fa30 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   3  Id: 1f9c.1a10 Suspend: 0 Teb: 0000003e`a2814000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2bff548 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a2bff550 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a2bff8b0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2bff8e0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   4  Id: 1f9c.a44 Suspend: 0 Teb: 0000003e`a2816000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2c7f8e8 00007ffa`d3f7de73     ntdll!NtWaitForMultipleObjects+0x14
+0000003e`a2c7f8f0 00007ffa`c65c8f76     KERNELBASE!WaitForMultipleObjectsEx+0x123
+0000003e`a2c7fbe0 00007ffa`c65c8e5c     clr!StrongNameFreeBuffer+0xe796
+0000003e`a2c7fc90 00007ffa`c65c8cf6     clr!StrongNameFreeBuffer+0xe67c
+0000003e`a2c7fcf0 00007ffa`d631e987     clr!StrongNameFreeBuffer+0xe516
+0000003e`a2c7fd30 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2c7fd60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   5  Id: 1f9c.21b8 Suspend: 0 Teb: 0000003e`a2818000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2cff108 00007ffa`d3f7de73     ntdll!NtWaitForMultipleObjects+0x14
+0000003e`a2cff110 00007ffa`c6486a1f     KERNELBASE!WaitForMultipleObjectsEx+0x123
+0000003e`a2cff400 00007ffa`c64867d0     clr+0x26a1f
+0000003e`a2cff440 00007ffa`c64c702b     clr+0x267d0
+0000003e`a2cff470 00007ffa`c64c6f4f     clr+0x6702b
+0000003e`a2cff4b0 00007ffa`c64c6e1b     clr+0x66f4f
+0000003e`a2cff5a0 00007ffa`c64f8c97     clr+0x66e1b
+0000003e`a2cff630 00007ffa`c65d642a     clr!LogHelp_LogAssert+0x167d7
+0000003e`a2cff6d0 00007ffa`d631e987     clr!IsOS+0x5d6a
+0000003e`a2cff790 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2cff7c0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   6  Id: 1f9c.2098 Suspend: 0 Teb: 0000003e`a281a000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2d7f908 00007ffa`d3f7de73     ntdll!NtWaitForMultipleObjects+0x14
+0000003e`a2d7f910 00007ffa`d496486e     KERNELBASE!WaitForMultipleObjectsEx+0x123
+0000003e`a2d7fc00 00007ffa`d495c2e1     combase!RoClearError+0x14fe
+0000003e`a2d7fe70 00007ffa`d495c199     combase!RoParameterizedTypeExtraGetTypeSignature+0x211
+0000003e`a2d7fee0 00007ffa`d631e987     combase!RoParameterizedTypeExtraGetTypeSignature+0xc9
+0000003e`a2d7ff10 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2d7ff40 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   7  Id: 1f9c.ed0 Suspend: 0 Teb: 0000003e`a281c000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2dff9c8 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a2dff9d0 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a2dffd30 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2dffd60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   8  Id: 1f9c.1174 Suspend: 0 Teb: 0000003e`a281e000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2e7f788 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a2e7f790 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a2e7faf0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2e7fb20 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   9  Id: 1f9c.760 Suspend: 0 Teb: 0000003e`a2820000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2eff5c8 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+0000003e`a2eff5d0 00007ffa`c654eb4a     KERNELBASE!WaitForSingleObjectEx+0xaf
+0000003e`a2eff670 00007ffa`c647f1cb     clr!CreateAssemblyNameObject+0x1216a
+0000003e`a2eff730 00007ffa`c654e543     clr+0x1f1cb
+0000003e`a2eff760 00007ffa`c65d642a     clr!CreateAssemblyNameObject+0x11b63
+0000003e`a2eff7f0 00007ffa`d631e987     clr!IsOS+0x5d6a
+0000003e`a2eff930 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2eff960 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  10  Id: 1f9c.2370 Suspend: 0 Teb: 0000003e`a2822000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a27efc68 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+0000003e`a27efc70 00007ffa`c654f4ec     KERNELBASE!WaitForSingleObjectEx+0xaf
+0000003e`a27efd10 00007ffa`d631e987     clr!CreateAssemblyNameObject+0x12b0c
+0000003e`a27eff30 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a27eff60 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  11  Id: 1f9c.d0 Suspend: 0 Teb: 0000003e`a2824000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2f7f5b8 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+0000003e`a2f7f5c0 00007ffa`c654eb4a     KERNELBASE!WaitForSingleObjectEx+0xaf
+0000003e`a2f7f660 00007ffa`c647f1cb     clr!CreateAssemblyNameObject+0x1216a
+0000003e`a2f7f720 00007ffa`c654e543     clr+0x1f1cb
+0000003e`a2f7f750 00007ffa`c65d642a     clr!CreateAssemblyNameObject+0x11b63
+0000003e`a2f7f7e0 00007ffa`d631e987     clr!IsOS+0x5d6a
+0000003e`a2f7f9a0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2f7f9d0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  12  Id: 1f9c.8bc Suspend: 0 Teb: 0000003e`a2826000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a2fff378 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+0000003e`a2fff380 00007ffa`c654eb4a     KERNELBASE!WaitForSingleObjectEx+0xaf
+0000003e`a2fff420 00007ffa`c647f1cb     clr!CreateAssemblyNameObject+0x1216a
+0000003e`a2fff4e0 00007ffa`c654e543     clr+0x1f1cb
+0000003e`a2fff510 00007ffa`c65d642a     clr!CreateAssemblyNameObject+0x11b63
+0000003e`a2fff5a0 00007ffa`d631e987     clr!IsOS+0x5d6a
+0000003e`a2fff7e0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a2fff810 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  13  Id: 1f9c.14c8 Suspend: 0 Teb: 0000003e`a2828000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a307f318 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+0000003e`a307f320 00007ffa`c654eb4a     KERNELBASE!WaitForSingleObjectEx+0xaf
+0000003e`a307f3c0 00007ffa`c647f1cb     clr!CreateAssemblyNameObject+0x1216a
+0000003e`a307f480 00007ffa`c654e543     clr+0x1f1cb
+0000003e`a307f4b0 00007ffa`c65d642a     clr!CreateAssemblyNameObject+0x11b63
+0000003e`a307f540 00007ffa`d631e987     clr!IsOS+0x5d6a
+0000003e`a307f800 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a307f830 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  14  Id: 1f9c.4fc Suspend: 0 Teb: 0000003e`a282a000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a30ff5d8 00007ffa`d3f7de73     ntdll!NtWaitForMultipleObjects+0x14
+0000003e`a30ff5e0 00007ffa`d377e6b7     KERNELBASE!WaitForMultipleObjectsEx+0x123
+0000003e`a30ff8d0 00007ffa`d631e987     CRYPT32!I_CryptWalkAllLruCacheEntries+0x147
+0000003e`a30ff910 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a30ff940 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+  15  Id: 1f9c.1fa0 Suspend: 0 Teb: 0000003e`a282c000 Unfrozen
+Child-SP          RetAddr               Call Site
+0000003e`a317fab8 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+0000003e`a317fac0 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+0000003e`a317fe20 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+0000003e`a317fe50 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+start             end                 module name
+00007ff7`eb650000 00007ff7`eb6c9000   powershell   (deferred)             
+00007ffa`94890000 00007ffa`94bfa000   System_Data   (deferred)             
+00007ffa`94c00000 00007ffa`95583000   System_Data_ni   (deferred)             
+00007ffa`95590000 00007ffa`95631000   Microsoft_Management_Infrastructure_ni   (deferred)             
+00007ffa`95640000 00007ffa`97753000   System_Management_Automation_ni C (no symbols)           
+00007ffa`97760000 00007ffa`97883000   Microsoft_PowerShell_ConsoleHost_ni   (deferred)             
+00007ffa`9db20000 00007ffa`9db71000   System_Numerics_ni   (deferred)             
+00007ffa`ad060000 00007ffa`ad15b000   dtrace     (deferred)             
+00007ffa`ad350000 00007ffa`ad35d000   pwrshsip   (deferred)             
+00007ffa`ae790000 00007ffa`ae7f5000   AppxSip    (deferred)             
+00007ffa`ae800000 00007ffa`ae81b000   wshext     (deferred)             
+00007ffa`ae820000 00007ffa`ae838000   MSISIP     (deferred)             
+00007ffa`aed20000 00007ffa`aef01000   OpcServices   (deferred)             
+00007ffa`b46f0000 00007ffa`b493c000   dbghelp    (deferred)             
+00007ffa`b9d10000 00007ffa`b9d2e000   ATL        (deferred)             
+00007ffa`bc320000 00007ffa`bc488000   System_DirectoryServices_ni   (deferred)             
+00007ffa`bc880000 00007ffa`bc9e6000   System_Management_ni   (deferred)             
+00007ffa`bcbc0000 00007ffa`bcbfb000   cryptnet   (deferred)             
+00007ffa`bd130000 00007ffa`bd9e2000   System_Xml_ni   (deferred)             
+00007ffa`c0550000 00007ffa`c0fd5000   System_Core_ni   (deferred)             
+00007ffa`c0fe0000 00007ffa`c10a4000   Windows_StateRepositoryPS   (deferred)             
+00007ffa`c1310000 00007ffa`c1f35000   System_ni   (deferred)             
+00007ffa`c2490000 00007ffa`c3a9f000   mscorlib_ni   (deferred)             
+00007ffa`c5990000 00007ffa`c5a5e000   ucrtbase_clr0400   (deferred)             
+00007ffa`c6120000 00007ffa`c613b000   VCRUNTIME140_CLR0400   (deferred)             
+00007ffa`c61e0000 00007ffa`c61ec000   VCRUNTIME140_1_CLR0400   (deferred)             
+00007ffa`c6460000 00007ffa`c6e04000   clr        (export symbols)       C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+00007ffa`c73b0000 00007ffa`c744b000   mscoreei   (deferred)             
+00007ffa`c79c0000 00007ffa`c7a2d000   mscoree    (deferred)             
+00007ffa`c7d00000 00007ffa`c7da4000   MpOav      (deferred)             
+00007ffa`c8380000 00007ffa`c839d000   amsi       (deferred)             
+00007ffa`c8fa0000 00007ffa`c8fab000   VERSION    (deferred)             
+00007ffa`cbb80000 00007ffa`cc3e1000   windows_storage   (deferred)             
+00007ffa`d19d0000 00007ffa`d19eb000   kernel_appcore   (deferred)             
+00007ffa`d2450000 00007ffa`d248a000   rsaenh     (deferred)             
+00007ffa`d29b0000 00007ffa`d29e0000   gpapi      (deferred)             
+00007ffa`d29f0000 00007ffa`d2a1b000   USERENV    (deferred)             
+00007ffa`d2b90000 00007ffa`d2b9c000   CRYPTBASE   (deferred)             
+00007ffa`d2c50000 00007ffa`d2cb6000   wldp       (deferred)             
+00007ffa`d2d50000 00007ffa`d2d6b000   CRYPTSP    (deferred)             
+00007ffa`d2dc0000 00007ffa`d2dd3000   MSASN1     (deferred)             
+00007ffa`d35c0000 00007ffa`d35ea000   bcrypt     (deferred)             
+00007ffa`d35f0000 00007ffa`d3619000   profapi    (deferred)             
+00007ffa`d36e0000 00007ffa`d3857000   CRYPT32    (export symbols)       C:\Windows\System32\CRYPT32.dll
+00007ffa`d3860000 00007ffa`d3887000   win32u     (deferred)             
+00007ffa`d3890000 00007ffa`d39db000   ucrtbase   (deferred)             
+00007ffa`d39e0000 00007ffa`d3b4a000   wintypes   (deferred)             
+00007ffa`d3b50000 00007ffa`d3bf3000   msvcp_win   (deferred)             
+00007ffa`d3c00000 00007ffa`d3cac000   bcryptPrimitives   (deferred)             
+00007ffa`d3cc0000 00007ffa`d3d3e000   wintrust   (deferred)             
+00007ffa`d3e10000 00007ffa`d3f3b000   gdi32full   (deferred)             
+00007ffa`d3f40000 00007ffa`d432e000   KERNELBASE   (export symbols)       C:\Windows\System32\KERNELBASE.dll
+00007ffa`d43c0000 00007ffa`d4557000   OLE32      (deferred)             
+00007ffa`d4560000 00007ffa`d4654000   SHCORE     (deferred)             
+00007ffa`d4840000 00007ffa`d4bc6000   combase    (export symbols)       C:\Windows\System32\combase.dll
+00007ffa`d4be0000 00007ffa`d4c11000   IMM32      (deferred)             
+00007ffa`d4c20000 00007ffa`d4c4b000   GDI32      (deferred)             
+00007ffa`d4c50000 00007ffa`d4cce000   WS2_32     (deferred)             
+00007ffa`d4ce0000 00007ffa`d4d47000   SHLWAPI    (deferred)             
+00007ffa`d4f80000 00007ffa`d5029000   msvcrt     (deferred)             
+00007ffa`d5030000 00007ffa`d50e4000   ADVAPI32   (deferred)             
+00007ffa`d5110000 00007ffa`d51e7000   OLEAUT32   (deferred)             
+00007ffa`d52b0000 00007ffa`d53c8000   RPCRT4     (deferred)             
+00007ffa`d5860000 00007ffa`d5910000   clbcatq    (deferred)             
+00007ffa`d5920000 00007ffa`d6073000   shell32    (deferred)             
+00007ffa`d6080000 00007ffa`d6245000   USER32     (deferred)             
+00007ffa`d62e0000 00007ffa`d62e8000   psapi      (deferred)             
+00007ffa`d62f0000 00007ffa`d63b9000   KERNEL32   (export symbols)       C:\Windows\System32\KERNEL32.DLL
+00007ffa`d63c0000 00007ffa`d6467000   sechost    (deferred)             
+00007ffa`d65c0000 00007ffa`d6824000   ntdll      (export symbols)       C:\Windows\SYSTEM32\ntdll.dll
+
+Unloaded modules:
+00007ffa`d62e0000 00007ffa`d62e8000   psapi.dll
+quit:
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'

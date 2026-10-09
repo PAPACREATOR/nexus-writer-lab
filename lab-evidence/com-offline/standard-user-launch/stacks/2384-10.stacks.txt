@@ -1,0 +1,286 @@
+Opened log file 'D:\a\nexus-writer-lab\nexus-writer-lab\lab-evidence\standard-user-launch\stacks\2384-10.stacks.txt'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   EnableRedirectToV8JsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 30
+
+Microsoft (R) Windows Debugger Version 10.0.26100.8249 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+*** wait with pending attach
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             D:\a\_temp\nexus-empty-symbols
+Symbol search path is: D:\a\_temp\nexus-empty-symbols
+Executable search path is: 
+WARNING: Process 2384 is not attached as a debuggee
+         The process can be examined but debug events will not be received
+................................................................
+................................................................
+..
+(950.11d0): Wake debugger - code 80000007 (first chance)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+win32u!NtUserGetMessage+0x14:
+00007ffa`d3861324 c3              ret
+0:000> ~* k; lm; q
+
+.  0  Id: 950.11d0 Suspend: 0 Teb: 00000051`99f79000 Unfrozen "VCL Main"
+Child-SP          RetAddr               Call Site
+00000051`9a98f2e8 00007ffa`d60bf402     win32u!NtUserGetMessage+0x14
+00000051`9a98f2f0 00007ffa`8e31ebd8     USER32!GetMessageW+0x22
+00000051`9a98f350 00007ffa`8e31ed0d     vclplug_winlo!create_SalInstance+0xa18
+00000051`9a98f3d0 00007ffa`84c2564b     vclplug_winlo!create_SalInstance+0xb4d
+00000051`9a98f400 00007ffa`847e86df     mergedlo!Application::Execute+0x15b
+00000051`9a98f440 00007ffa`84bcabb6     mergedlo!Dialog::Execute+0x8f
+00000051`9a98f480 00007ffa`837dc0d2     mergedlo!SalInstanceWidget::draw+0x2686
+00000051`9a98f4b0 00007ffa`837dc994     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622
+00000051`9a98f530 00007ffa`837dded4     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4
+00000051`9a98f610 00007ffa`84c38f52     mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424
+00000051`9a98f840 00007ffa`8380185c     mergedlo!ImplSVMain+0x62
+00000051`9a98f870 00007ff7`021e101b     mergedlo!soffice_main+0x2cc
+00000051`9a98f980 00007ff7`021e12d4     soffice!main+0x1b
+00000051`9a98f9b0 00007ffa`d631e987     soffice!main+0x2d4
+00000051`9a98f9f0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9a98fa20 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   1  Id: 950.1f04 Suspend: 0 Teb: 00000051`99f7b000 Unfrozen
+Child-SP          RetAddr               Call Site
+00000051`9b31f9a8 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+00000051`9b31f9b0 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+00000051`9b31fd10 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9b31fd40 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   2  Id: 950.1c9c Suspend: 0 Teb: 00000051`99f7d000 Unfrozen
+Child-SP          RetAddr               Call Site
+00000051`9bcaf828 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+00000051`9bcaf830 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+00000051`9bcafb90 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9bcafbc0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   3  Id: 950.1bcc Suspend: 0 Teb: 00000051`99f7f000 Unfrozen
+Child-SP          RetAddr               Call Site
+00000051`9c63f6f8 00007ffa`d6635f3e     ntdll!NtWaitForWorkViaWorkerFactory+0x14
+00000051`9c63f700 00007ffa`d631e987     ntdll!RtlSetThreadSubProcessTag+0x1aee
+00000051`9c63fa60 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9c63fa90 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   4  Id: 950.1a68 Suspend: 0 Teb: 00000051`99f81000 Unfrozen "headless ParentMonitorThread"
+Child-SP          RetAddr               Call Site
+00000051`9cfcf998 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+00000051`9cfcf9a0 00007ffa`af90a776     KERNELBASE!WaitForSingleObjectEx+0xaf
+00000051`9cfcfa40 00007ffa`d38937b0     sal3!osl_checkCondition+0x1a6
+00000051`9cfcfa70 00007ffa`d631e987     ucrtbase!wcsrchr+0x150
+00000051`9cfcfaa0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9cfcfad0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   5  Id: 950.1e0c Suspend: 0 Teb: 00000051`99f83000 Unfrozen
+Child-SP          RetAddr               Call Site
+00000051`9d95f7e8 00007ffa`d3f7759f     ntdll!NtWaitForSingleObject+0x14
+00000051`9d95f7f0 00007ffa`86495493     KERNELBASE!WaitForSingleObjectEx+0xaf
+00000051`9d95f890 00007ffa`d631e987     mergedlo!XMLSignatureHelper::SetStorage+0x2ae493
+00000051`9d95f8d0 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9d95f900 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   6  Id: 950.17ac Suspend: 0 Teb: 00000051`99f85000 Unfrozen
+Child-SP          RetAddr               Call Site
+00000051`9e2ef968 00007ffa`b40f52bb     win32u!NtUserMsgWaitForMultipleObjectsEx+0x14
+00000051`9e2ef970 00007ffa`b41278be     gdiplus!GdipGetGenericFontFamilySansSerif+0xafb
+00000051`9e2ef9e0 00007ffa`d631e987     gdiplus!GdipGetMetafileHeaderFromStream+0x3be
+00000051`9e2efa10 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9e2efa40 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+
+   7  Id: 950.11f8 Suspend: 0 Teb: 00000051`99f87000 Unfrozen "configmgrWriter"
+Child-SP          RetAddr               Call Site
+00000051`9ec7f948 00007ffa`d6654d4e     ntdll!ZwWaitForAlertByThreadId+0x14
+00000051`9ec7f950 00007ffa`d3f7e158     ntdll!RtlSleepConditionVariableSRW+0x1de
+00000051`9ec7f9f0 00007ffa`c71f76ea     KERNELBASE!SleepConditionVariableSRW+0x38
+00000051`9ec7fa30 00007ffa`823aa061     MSVCP140!Cnd_wait+0x2a
+00000051`9ec7fa60 00007ffa`ba6b2e81     mergedlo!cppu::WeakImplHelper<com::sun::star::io::XInputStream,com::sun::star::io::XSeekable>::operator=+0x2ca41
+00000051`9ec7fac0 00007ffa`ba6b2ac8     salhelper3MSC!salhelper::Thread::run+0x31
+00000051`9ec7fb00 00007ffa`af92df88     salhelper3MSC!salhelper::SimpleReferenceObject::operator delete+0xaf8
+00000051`9ec7fb30 00007ffa`d38937b0     sal3!osl_getTempDirURL+0x3d8
+00000051`9ec7fb60 00007ffa`d631e987     ucrtbase!wcsrchr+0x150
+00000051`9ec7fb90 00007ffa`d664c53c     KERNEL32!BaseThreadInitThunk+0x17
+00000051`9ec7fbc0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+start             end                 module name
+00000198`5c0c0000 00000198`5e055000   icudt78    (deferred)             
+00007ff7`021e0000 00007ff7`0247d000   soffice    (export symbols)       C:\Users\NexusWriterLab\NexusWriterLab\office\program\soffice.bin
+00007ffa`81ba0000 00007ffa`8a907000   mergedlo   (export symbols)       C:\Users\NexusWriterLab\NexusWriterLab\office\program\mergedlo.dll
+00007ffa`8ae00000 00007ffa`8b018000   MFPlat     (deferred)             
+00007ffa`8e1a0000 00007ffa`8e20d000   UAccCOM    (deferred)             
+00007ffa`8e310000 00007ffa`8e6cf000   vclplug_winlo   (export symbols)       C:\Users\NexusWriterLab\NexusWriterLab\office\program\vclplug_winlo.dll
+00007ffa`8e6d0000 00007ffa`8e787000   orcus_parser   (deferred)             
+00007ffa`8e790000 00007ffa`8e87d000   unoidllo   (deferred)             
+00007ffa`8e880000 00007ffa`8e955000   MFReadWrite   (deferred)             
+00007ffa`8e960000 00007ffa`8eb13000   d3d9       (deferred)             
+00007ffa`8eb20000 00007ffa`8ec3c000   nss3       (deferred)             
+00007ffa`8ec40000 00007ffa`8ee90000   icuuc78    (deferred)             
+00007ffa`8ee90000 00007ffa`8f213000   icuin78    (deferred)             
+00007ffa`8f220000 00007ffa`8f45b000   ifbclient   (deferred)             
+00007ffa`8f710000 00007ffa`8f77d000   winaccessibility   (deferred)             
+00007ffa`8f9a0000 00007ffa`8fd29000   CoinMP     (deferred)             
+00007ffa`8fd30000 00007ffa`9008b000   wps        (deferred)             
+00007ffa`90090000 00007ffa`903da000   staroffice   (deferred)             
+00007ffa`903e0000 00007ffa`90ccd000   skialo     (deferred)             
+00007ffa`90cd0000 00007ffa`9131e000   pdfiumlo   (deferred)             
+00007ffa`91320000 00007ffa`91e07000   mwaw       (deferred)             
+00007ffa`96240000 00007ffa`962c4000   rasqal     (deferred)             
+00007ffa`962d0000 00007ffa`96408000   libxml2    (deferred)             
+00007ffa`96410000 00007ffa`96668000   orcus      (deferred)             
+00007ffa`96670000 00007ffa`967ec000   odfgen     (deferred)             
+00007ffa`967f0000 00007ffa`96cca000   etonyek    (deferred)             
+00007ffa`96cd0000 00007ffa`96f3f000   clucene    (deferred)             
+00007ffa`97590000 00007ffa`97615000   MFPlay     (deferred)             
+00007ffa`978a0000 00007ffa`978f6000   stocserviceslo   (deferred)             
+00007ffa`97900000 00007ffa`97ade000   epoxy      (deferred)             
+00007ffa`98720000 00007ffa`98890000   cppuhelper3MSC   (deferred)             
+00007ffa`9bed0000 00007ffa`9bf21000   reglo      (deferred)             
+00007ffa`9bf30000 00007ffa`9bfb5000   libxmlsec   (deferred)             
+00007ffa`9cc10000 00007ffa`9cc61000   libxmlsec_mscng   (deferred)             
+00007ffa`9cd90000 00007ffa`9ce3d000   lpsolve55   (deferred)             
+00007ffa`9dc00000 00007ffa`9dc48000   localedata_en   (deferred)             
+00007ffa`9de90000 00007ffa`9df21000   lcms2      (deferred)             
+00007ffa`a2200000 00007ffa`a2243000   MSVCP140_2   (deferred)             
+00007ffa`a5320000 00007ffa`a535c000   RTWorkQ    (deferred)             
+00007ffa`a5370000 00007ffa`a53e9000   OLEACC     (deferred)             
+00007ffa`a5990000 00007ffa`a59b6000   mscx_uno   (deferred)             
+00007ffa`a5ce0000 00007ffa`a5d1a000   oledlg     (deferred)             
+00007ffa`a5d20000 00007ffa`a5d56000   nspr4      (deferred)             
+00007ffa`a5d60000 00007ffa`a5df9000   libcurl    (deferred)             
+00007ffa`aa9c0000 00007ffa`aaae3000   gpgmepp    (deferred)             
+00007ffa`abc20000 00007ffa`abc5c000   libxslt    (deferred)             
+00007ffa`ae960000 00007ffa`aea5b000   wpd        (deferred)             
+00007ffa`af3a0000 00007ffa`af418000   revenge    (deferred)             
+00007ffa`af420000 00007ffa`af477000   raptor2    (deferred)             
+00007ffa`af8c0000 00007ffa`af9a1000   sal3       (export symbols)       C:\Users\NexusWriterLab\NexusWriterLab\office\program\sal3.dll
+00007ffa`afab0000 00007ffa`afadb000   storelo    (deferred)             
+00007ffa`afae0000 00007ffa`afb4c000   jvmfwklo   (deferred)             
+00007ffa`b2f70000 00007ffa`b2f9e000   nssutil3   (deferred)             
+00007ffa`b2fa0000 00007ffa`b3023000   i18nlangtag   (deferred)             
+00007ffa`b3b30000 00007ffa`b3b3f000   davhlpr    (deferred)             
+00007ffa`b4050000 00007ffa`b422b000   gdiplus    (export symbols)       C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.33438_none_83c0b4811e9410ca\gdiplus.dll
+00007ffa`b46f0000 00007ffa`b493c000   dbghelp    (deferred)             
+00007ffa`b96e0000 00007ffa`b9790000   WINSPOOL   (deferred)             
+00007ffa`b9cd0000 00007ffa`b9cf6000   FONTSUB    (deferred)             
+00007ffa`b9d50000 00007ffa`b9d69000   libexslt   (deferred)             
+00007ffa`b9d70000 00007ffa`b9e01000   cppu3      (deferred)             
+00007ffa`b9e50000 00007ffa`b9e7e000   wpg        (deferred)             
+00007ffa`b9fe0000 00007ffa`ba015000   WINMM      (deferred)             
+00007ffa`ba020000 00007ffa`ba029000   plds4      (deferred)             
+00007ffa`ba050000 00007ffa`ba05a000   plc4       (deferred)             
+00007ffa`ba1f0000 00007ffa`ba225000   librdf     (deferred)             
+00007ffa`ba2e0000 00007ffa`ba2fe000   xmlreaderlo   (deferred)             
+00007ffa`ba6a0000 00007ffa`ba6a9000   MSVCP140_1   (deferred)             
+00007ffa`ba6b0000 00007ffa`ba6c5000   salhelper3MSC   (export symbols)       C:\Users\NexusWriterLab\NexusWriterLab\office\program\salhelper3MSC.dll
+00007ffa`ba6d0000 00007ffa`ba6e8000   jvmaccesslo   (deferred)             
+00007ffa`bcc00000 00007ffa`bcc19000   USP10      (deferred)             
+00007ffa`c5640000 00007ffa`c567c000   dbgcore    (deferred)             
+00007ffa`c5980000 00007ffa`c598a000   WSOCK32    (deferred)             
+00007ffa`c60e0000 00007ffa`c60fa000   NETAPI32   (deferred)             
+00007ffa`c6440000 00007ffa`c644d000   Secur32    (deferred)             
+00007ffa`c7070000 00007ffa`c709c000   VCRUNTIME140   (deferred)             
+00007ffa`c71e0000 00007ffa`c727d000   MSVCP140   (export symbols)       C:\Windows\SYSTEM32\MSVCP140.dll
+00007ffa`c7db0000 00007ffa`c7dbc000   VCRUNTIME140_1   (deferred)             
+00007ffa`c8fa0000 00007ffa`c8fab000   VERSION    (deferred)             
+00007ffa`cbb80000 00007ffa`cc3e1000   windows_storage   (deferred)             
+00007ffa`cc8a0000 00007ffa`ccb64000   iertutil   (deferred)             
+00007ffa`cd860000 00007ffa`cd877000   HTTPAPI    (deferred)             
+00007ffa`cd880000 00007ffa`cd8a9000   srvcli     (deferred)             
+00007ffa`cd8b0000 00007ffa`cd8d1000   MPR        (deferred)             
+00007ffa`cdaf0000 00007ffa`cdbf3000   PROPSYS    (deferred)             
+00007ffa`cdc70000 00007ffa`cdd96000   WINHTTP    (deferred)             
+00007ffa`ce510000 00007ffa`ce779000   DWrite     (deferred)             
+00007ffa`cea70000 00007ffa`cf0ac000   d2d1       (deferred)             
+00007ffa`d0b20000 00007ffa`d0b2d000   Argon2OptDll   (deferred)             
+00007ffa`d0b30000 00007ffa`d0b3b000   clewlo     (deferred)             
+00007ffa`d12a0000 00007ffa`d1391000   wer        (deferred)             
+00007ffa`d13a0000 00007ffa`d144b000   UxTheme    (deferred)             
+00007ffa`d1580000 00007ffa`d15c4000   dxcore     (deferred)             
+00007ffa`d1730000 00007ffa`d1760000   dwmapi     (deferred)             
+00007ffa`d19d0000 00007ffa`d19eb000   kernel_appcore   (deferred)             
+00007ffa`d1f20000 00007ffa`d1f2d000   netutils   (deferred)             
+00007ffa`d1f40000 00007ffa`d1f74000   IPHLPAPI   (deferred)             
+00007ffa`d2670000 00007ffa`d26b9000   SSPICLI    (deferred)             
+00007ffa`d29f0000 00007ffa`d2a1b000   USERENV    (deferred)             
+00007ffa`d2de0000 00007ffa`d2e1f000   NTASN1     (deferred)             
+00007ffa`d2ea0000 00007ffa`d2ed0000   ncrypt     (deferred)             
+00007ffa`d3240000 00007ffa`d3297000   cfgmgr32   (deferred)             
+00007ffa`d35c0000 00007ffa`d35ea000   bcrypt     (deferred)             
+00007ffa`d35f0000 00007ffa`d3619000   profapi    (deferred)             
+00007ffa`d36e0000 00007ffa`d3857000   CRYPT32    (deferred)             
+00007ffa`d3860000 00007ffa`d3887000   win32u     (export symbols)       C:\Windows\System32\win32u.dll
+00007ffa`d3890000 00007ffa`d39db000   ucrtbase   (export symbols)       C:\Windows\System32\ucrtbase.dll
+00007ffa`d39e0000 00007ffa`d3b4a000   wintypes   (deferred)             
+00007ffa`d3b50000 00007ffa`d3bf3000   msvcp_win   (deferred)             
+00007ffa`d3c00000 00007ffa`d3cac000   bcryptPrimitives   (deferred)             
+00007ffa`d3e10000 00007ffa`d3f3b000   gdi32full   (deferred)             
+00007ffa`d3f40000 00007ffa`d432e000   KERNELBASE   (export symbols)       C:\Windows\System32\KERNELBASE.dll
+00007ffa`d43c0000 00007ffa`d4557000   ole32      (deferred)             
+00007ffa`d4560000 00007ffa`d4654000   shcore     (deferred)             
+00007ffa`d4840000 00007ffa`d4bc6000   combase    (deferred)             
+00007ffa`d4be0000 00007ffa`d4c11000   IMM32      (deferred)             
+00007ffa`d4c20000 00007ffa`d4c4b000   GDI32      (deferred)             
+00007ffa`d4c50000 00007ffa`d4cce000   WS2_32     (deferred)             
+00007ffa`d4ce0000 00007ffa`d4d47000   SHLWAPI    (deferred)             
+00007ffa`d4e10000 00007ffa`d4f6f000   MSCTF      (deferred)             
+00007ffa`d4f80000 00007ffa`d5029000   msvcrt     (deferred)             
+00007ffa`d5030000 00007ffa`d50e4000   ADVAPI32   (deferred)             
+00007ffa`d5110000 00007ffa`d51e7000   OLEAUT32   (deferred)             
+00007ffa`d52b0000 00007ffa`d53c8000   RPCRT4     (deferred)             
+00007ffa`d53d0000 00007ffa`d585a000   SETUPAPI   (deferred)             
+00007ffa`d5920000 00007ffa`d6073000   SHELL32    (deferred)             
+00007ffa`d6080000 00007ffa`d6245000   USER32     (export symbols)       C:\Windows\System32\USER32.dll
+00007ffa`d62f0000 00007ffa`d63b9000   KERNEL32   (export symbols)       C:\Windows\System32\KERNEL32.DLL
+00007ffa`d63c0000 00007ffa`d6467000   sechost    (deferred)             
+00007ffa`d65c0000 00007ffa`d6824000   ntdll      (export symbols)       C:\Windows\SYSTEM32\ntdll.dll
+quit:
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'

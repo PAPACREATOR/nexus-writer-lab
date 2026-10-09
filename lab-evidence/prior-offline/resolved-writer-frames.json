@@ -1,0 +1,24 @@
+{
+  "schema": "nexus.writer.offline-symbol-frames.v1",
+  "utc": "2026-10-09T08:19:37.726496+00:00",
+  "status": "error",
+  "stage": "validate_inputs",
+  "memory_dump": false,
+  "process_attach": false,
+  "writer_executed": false,
+  "process_memory_read": false,
+  "runtime_changes": [],
+  "caller_timeout_seconds": 120,
+  "controls": {
+    "return_address_rva": "PASS",
+    "row_label_not_reinterpreted": "PASS",
+    "conflicting_module_bases_refused": "PASS",
+    "nearest_symbol_quality": "PASS",
+    "amd64_native_structure_layouts": "PASS",
+    "native_calls": false
+  },
+  "captures": [],
+  "duration_seconds": 3.765,
+  "error_type": "ValueError",
+  "error": "Unable to verify SDK DbgHelp signature"
+}

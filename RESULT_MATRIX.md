@@ -140,3 +140,33 @@ restart sem replay. Controlos de classificação PASS; 17 contratos de
 segurança documentais PASS. Conversões desta regressão NOT RUN até existir
 solução. O gate LPAC exige a leitura independente positiva; conflitos ou
 evidência inconclusiva continuam a falhar. Não é PASS global.
+
+## Repetição e símbolos oficiais verificados — 09-10-2026
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37903488590,
+SHA 85a3696: duas rotas FAIL aos 45 s e canary IPC PASS; 3 testes, 108,080 s
+totais. O campo launch_seconds do observador é um instante time.monotonic(),
+não a duração de preparação. O ensaio anterior teve testes de 52,971 e
+51,700 s, não 602 s de preparação. Não alterar o timeout por essa leitura.
+
+CoInitializeEx retornou S_FALSE (COM já inicializado), mas quatro leituras
+AccessibleObjectFromWindow continuaram HRESULT 0x800401F0. A hipótese de
+que bastava inicializar COM no leitor não foi confirmada; o erro original
+não pode ser atribuído só ao leitor. Nenhum texto do diálogo obtido.
+
+O PDB oficial foi verificado: GUID exato, PDBI age=3, DBI age=2, PE age=2,
+DBI moderno AMD64, private_symbols_stripped=false. A correspondência nativa
+Microsoft passou, sem forçar símbolos. O leitor offline, porém, falhou antes
+de carregar DbgHelp: subprocesso Windows PowerShell não completou a
+verificação de assinatura. A etapa de instalação em pwsh verificou Valid,
+Microsoft Corporation, dbghelp.dll SHA-256
+140adb286a11fbdfb63b6d8dff30039c50ff9c88b6909be9ce8292680d5be2af.
+Isso é falha diagnóstica, não causa do Writer nem PASS de resolução.
+
+Run paralelo https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37904071891,
+SHA 6c54cb1: somente PE/PDB em disco e pilhas anteriores, nenhum Writer
+executado. Mesmo PDB verificado, mesma falha da verificação auxiliar antes
+da resolução. Provas completas em lab-evidence/com-offline/ e prior-offline/,
+com ZIPs integrais preservados. Próximo passo: corrigir e repetir apenas a
+leitura offline. Causa Writer NOT PROVEN; proposta vazia e regressão de
+solução NOT RUN. Loop ativo, principal intacto.

@@ -244,24 +244,77 @@ class IMAGEHLP_LINE64(C.Structure):
                 ("FileName", C.c_char_p), ("Address", DWORD64)]
 
 
+class SignatureProbeError(ValueError):
+    def __init__(self, message, diagnostics):
+        super().__init__(message)
+        self.diagnostics = diagnostics
+
+
+def signature_probe(path):
+    """Read an Authenticode signature in an isolated Windows PowerShell child.
+
+    pwsh -> Python -> Windows PowerShell otherwise inherits incompatible pwsh
+    modules. Remove only the child's PSModulePath, as Microsoft documents:
+    https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath#starting-windows-powershell-from-powershell-7
+    Also import the two built-in modules by absolute PSHOME paths.
+    """
+    powershell = Path(os.environ["SystemRoot"]) / "System32" / "WindowsPowerShell" / "v1.0" / "powershell.exe"
+    quoted = str(path).replace("'", "''")
+    script = (
+        "$ErrorActionPreference='Stop';$ProgressPreference='SilentlyContinue';"
+        "Import-Module ($PSHOME+'\\Modules\\Microsoft.PowerShell.Security\\Microsoft.PowerShell.Security.psd1') -ErrorAction Stop;"
+        "Import-Module ($PSHOME+'\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1') -ErrorAction Stop;"
+        "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new($false);"
+        "$s=Microsoft.PowerShell.Security\\Get-AuthenticodeSignature -LiteralPath '" + quoted + "';"
+        "@{status=$s.Status.ToString();subject=$s.SignerCertificate.Subject;"
+        "powershell_version=$PSVersionTable.PSVersion.ToString()}|Microsoft.PowerShell.Utility\\ConvertTo-Json -Compress"
+    )
+    encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
+    child_environment = {key: value for key, value in os.environ.items() if key.upper() != "PSMODULEPATH"}
+    diagnostics = {"powershell": str(powershell), "file": str(path), "timeout_seconds": 15,
+                   "module_path_policy": "remove inherited PSModulePath in child only; absolute built-in module imports",
+                   "signature_requirement": "Valid and Microsoft Corporation", "exit_code": None}
+
+    def keep_output(stdout, stderr):
+        for key, raw in (("stdout", stdout), ("stderr", stderr)):
+            decoded = raw.decode("utf-8-sig", errors="replace") if isinstance(raw, bytes) else (raw or "")
+            diagnostics[key] = decoded[:4096]
+            diagnostics[key + "_truncated"] = len(decoded) > 4096
+
+    try:
+        completed = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded],
+                                   capture_output=True, timeout=15, check=False, env=child_environment,
+                                   creationflags=subprocess.CREATE_NO_WINDOW)
+    except subprocess.TimeoutExpired as error:
+        keep_output(error.stdout, error.stderr)
+        diagnostics["timed_out"] = True
+        raise SignatureProbeError("Windows PowerShell Authenticode probe timed out", diagnostics) from error
+    except OSError as error:
+        diagnostics["launch_error"] = str(error)[:4096]
+        raise SignatureProbeError("Unable to launch Windows PowerShell Authenticode probe", diagnostics) from error
+    diagnostics["exit_code"] = completed.returncode
+    keep_output(completed.stdout, completed.stderr)
+    if completed.returncode != 0:
+        raise SignatureProbeError("Windows PowerShell Authenticode probe failed with exit " + str(completed.returncode), diagnostics)
+    try:
+        signature = json.loads(completed.stdout.decode("utf-8-sig"))
+        if not isinstance(signature, dict):
+            raise ValueError("Expected an Authenticode result object")
+    except (UnicodeError, ValueError) as error:
+        raise SignatureProbeError("Windows PowerShell returned invalid Authenticode JSON", diagnostics) from error
+    signature["probe"] = diagnostics
+    return signature
+
+
 def microsoft_dbghelp(args):
     cdb = Path(args.debugger or os.environ["LAB_CDB_EXE"]).resolve(strict=True)
     sdk = Path(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")) / "Windows Kits" / "10" / "Debuggers" / "x64"
     if cdb.parent != sdk.resolve(strict=True) or cdb.name.casefold() != "cdb.exe":
         raise ValueError("Expected the installed Windows SDK AMD64 CDB directory")
     dll = (cdb.parent / "dbghelp.dll").resolve(strict=True)
-    powershell = Path(os.environ["SystemRoot"]) / "System32" / "WindowsPowerShell" / "v1.0" / "powershell.exe"
-    quoted = str(dll).replace("'", "''")
-    script = "$ErrorActionPreference='Stop';$s=Get-AuthenticodeSignature -LiteralPath '" + quoted + "';@{status=$s.Status.ToString();subject=$s.SignerCertificate.Subject}|ConvertTo-Json -Compress"
-    encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
-    completed = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded],
-                               capture_output=True, text=True, timeout=15, check=False,
-                               creationflags=subprocess.CREATE_NO_WINDOW)
-    if completed.returncode != 0:
-        raise ValueError("Unable to verify SDK DbgHelp signature")
-    signature = json.loads(completed.stdout.lstrip("\ufeff"))
+    signature = signature_probe(dll)
     if signature.get("status") != "Valid" or "Microsoft Corporation" not in signature.get("subject", ""):
-        raise ValueError("SDK DbgHelp signature is not valid Microsoft")
+        raise SignatureProbeError("SDK DbgHelp signature is not valid Microsoft", signature["probe"])
     return dll, signature
 
 
@@ -311,9 +364,13 @@ class OfflineSymbols:
             guid = str(uuid.UUID(bytes_le=C.string_at(C.addressof(info.PdbSig70), 16)))
             loaded_pdb = bytes(info.LoadedPdbName).decode("mbcs", errors="strict")
             if info.SymType != 3 or info.PdbUnmatched or info.DbgUnmatched:
-                raise ValueError("DbgHelp did not confirm matched SymPdb symbols")
+                raise ValueError("DbgHelp did not confirm matched SymPdb symbols: "
+                                 f"SymType={info.SymType}, PdbUnmatched={bool(info.PdbUnmatched)}, "
+                                 f"DbgUnmatched={bool(info.DbgUnmatched)}")
             if guid != self.inputs["expected"]["guid"] or info.PdbAge != self.inputs["expected"]["age"]:
-                raise ValueError("DbgHelp PDB GUID/age disagrees with the verified binding")
+                raise ValueError("DbgHelp PDB GUID/age disagrees with the verified binding: "
+                                 f"GUID={guid}, PdbAge={info.PdbAge}, "
+                                 f"image_age={self.inputs['expected']['age']}")
             if info.BaseOfImage != self.base or info.ImageSize != self.inputs["image_size"]:
                 raise ValueError("DbgHelp module range differs from the exact PE image")
             if Path(loaded_pdb).resolve(strict=True) != self.inputs["pdb"]:
@@ -397,8 +454,10 @@ def main():
     exit_code = 2
     try:
         inputs = verified_inputs(args, deadline)
-        dll, signature = microsoft_dbghelp(args)
         result["inputs"] = {key: str(value) if isinstance(value, Path) else value for key, value in inputs.items()}
+        result["stage"] = "verify_dbghelp_signature"
+        save_result()
+        dll, signature = microsoft_dbghelp(args)
         result["dbghelp"] = {"path": str(dll), "signature": signature, "sha256": hash_file(dll, deadline)}
         result["stage"] = "parse_recorded_stacks"
         save_result()
@@ -451,6 +510,8 @@ def main():
         exit_code = 0 if count else 2
     except (OSError, ValueError, KeyError, TypeError, struct.error, subprocess.SubprocessError) as error:
         result.update(status="error", error_type=type(error).__name__, error=str(error)[:3000])
+        if isinstance(error, SignatureProbeError):
+            result["signature_probe"] = error.diagnostics
     finally:
         save_result()
     print(json.dumps({"report": str(args.output), "status": result["status"],
