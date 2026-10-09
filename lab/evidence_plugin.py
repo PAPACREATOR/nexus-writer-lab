@@ -42,10 +42,16 @@ def record_existing_launch(monkeypatch, request):
     launches = []
 
     def observed(command, **kwargs):
+        requested_sal_log = os.environ.get('LAB_WRITER_SAL_LOG')
+        if requested_sal_log:
+            child_env = dict(kwargs.get('env') or {})
+            child_env['SAL_LOG'] = requested_sal_log
+            kwargs['env'] = child_env
         record = {'command': command, 'cwd': str(kwargs['cwd']),
                   'read_roots': [str(p) for p in kwargs.get('read_roots', ())],
                   'deny_roots': [str(p) for p in kwargs.get('deny_roots', ())],
-                  'writer_timeout_seconds': 45, 'launch_seconds': time.monotonic()}
+                  'writer_timeout_seconds': 45, 'launch_seconds': time.monotonic(),
+                  'lab_sal_log': requested_sal_log}
         launches.append(record)
         try:
             worker = original(command, **kwargs)
