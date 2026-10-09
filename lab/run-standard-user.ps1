@@ -1,4 +1,4 @@
-param([string]$Suite='routes',[int]$Shard=0)
+param([string]$Suite='routes',[int]$Shard=0,[ValidateSet('separate','python-read-root')][string]$OfficeLayout='separate')
 $ErrorActionPreference='Stop'
 if (-not $env:GITHUB_ACTIONS) { throw 'Disposable GitHub runner only; never create this account on the user PC' }
 $source=(Get-Location).Path
@@ -13,7 +13,7 @@ Add-LocalGroupMember -Group $users -Member $name
 $credential=New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$name",$secure)
 $output=Join-Path $source 'lab-evidence/standard-user-launch'
 $null=New-Item -ItemType Directory -Path $output -Force
-$arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard)
+$arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard,'-OfficeLayout',$OfficeLayout)
 try {
     $waitObserver=$null
     $stackObserver=$null
@@ -31,7 +31,7 @@ try {
         $evidence=Join-Path $labProfile.LocalPath 'NexusWriterLab/repo/lab-evidence'
         if (Test-Path -LiteralPath $evidence) { Copy-Item -LiteralPath $evidence -Destination (Join-Path $source 'lab-evidence/standard-user') -Recurse }
     }
-    @{suite=$Suite;shard=$Shard;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
+    @{suite=$Suite;shard=$Shard;office_layout=$OfficeLayout;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
     if ($process.ExitCode -ne 0) { Get-Content (Join-Path $output 'stderr.txt'); throw 'Standard-user validation failed; preserve evidence' }
 } finally {
     if ($stackObserver) {
