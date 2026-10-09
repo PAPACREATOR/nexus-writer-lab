@@ -16,4 +16,16 @@ if(-not $finished) { $helper.Kill(); $helper.WaitForExit() }
 $helper.Refresh()
 @{finished=$finished;exit_code=$(if($finished){$helper.ExitCode}else{$null});duration_seconds=([DateTime]::UtcNow-$start).TotalSeconds;timeout_seconds=120;writer_execution=$false;process_attach=$false;memory_dump=$false;inputs='Installed PE, public PDB and persisted stack text only'} | ConvertTo-Json | Set-Content (Join-Path $output 'resolved-writer-frames-reader.json')
 if(-not $finished) { throw 'Offline symbols reader timed out; preserve diagnostic evidence' }
-if($helper.ExitCode -ne 0) { throw 'Offline symbol binding or resolution failed; preserve diagnostic evidence' }
+if($helper.ExitCode -ne 0) {
+    $stdout=Join-Path $output 'resolved-writer-frames.stdout.txt'
+    $stderr=Join-Path $output 'resolved-writer-frames.stderr.txt'
+    if(Test-Path -LiteralPath $stdout) {
+        Write-Host '=== offline resolver stdout (tail) ==='
+        Get-Content -LiteralPath $stdout -Tail 80
+    }
+    if(Test-Path -LiteralPath $stderr) {
+        Write-Host '=== offline resolver stderr (tail) ==='
+        Get-Content -LiteralPath $stderr -Tail 80
+    }
+    throw 'Offline symbol binding or resolution failed; preserve diagnostic evidence'
+}
