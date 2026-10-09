@@ -1,4 +1,4 @@
-name: Writer on-disk debug metadata, no Writer execution
+name: Writer offline symbols and prior stacks, no Writer execution
 on:
   workflow_dispatch:
 permissions:
@@ -18,11 +18,19 @@ jobs:
           python-version: '3.12'
       - name: Independent LPAC reader controls, no Writer
         run: python -m lab.check_lpac_evidence --output lab-evidence/lpac-accesscheck-control.json
+      - name: Official SDK file reader, signed Microsoft binaries
+        shell: pwsh
+        run: ./lab/install-stack-tools.ps1
       - name: Official pinned archival fixture
         shell: pwsh
         run: ./lab/install-writer.ps1
       - name: Read on-disk CodeView identifiers
         run: python lab/pe_debug_info.py
+      - name: Official PDB for the previously captured exact build
+        run: python lab/fetch_writer_symbols.py --module mergedlo.dll --metadata lab-evidence/exact-msaa/pe-debug-info.json
+      - name: Resolve existing stack text only, no new Writer process
+        shell: pwsh
+        run: ./lab/resolve-writer-frames.ps1 -Metadata lab-evidence/exact-msaa/pe-debug-info.json -Stacks lab-evidence/exact-msaa/standard-user-launch/stacks
       - if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -32,4 +40,7 @@ jobs:
             lab-evidence/lpac-accesscheck-control.json
             lab-evidence/libreoffice-version.txt
             lab-evidence/writer-binary-hash.json
+            lab-evidence/writer-symbols.json
+            lab-evidence/resolved-writer-frames*
+            lab-evidence/stack-tools/*.json*
           if-no-files-found: error

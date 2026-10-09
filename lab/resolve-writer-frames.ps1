@@ -1,3 +1,4 @@
+param([string]$Metadata,[string]$Stacks)
 $ErrorActionPreference='Stop'
 if ($env:GITHUB_ACTIONS -ne 'true') { throw 'Disposable GitHub runner only' }
 $output=Join-Path $PWD 'lab-evidence'
@@ -5,7 +6,10 @@ $null=New-Item -ItemType Directory -Path $output -Force
 $python=(Get-Command python).Source
 $start=[DateTime]::UtcNow
 # Only an offline file reader: no PID, process attach, memory dump or Writer.
-$helper=Start-Process -FilePath $python -ArgumentList @('-m','lab.resolve_writer_frames') -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $output 'resolved-writer-frames.stdout.txt') -RedirectStandardError (Join-Path $output 'resolved-writer-frames.stderr.txt')
+$arguments=@('-m','lab.resolve_writer_frames')
+if($Metadata) { $arguments+=@('--metadata',('"'+$Metadata+'"')) }
+if($Stacks) { $arguments+=@('--stacks',('"'+$Stacks+'"')) }
+$helper=Start-Process -FilePath $python -ArgumentList $arguments -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $output 'resolved-writer-frames.stdout.txt') -RedirectStandardError (Join-Path $output 'resolved-writer-frames.stderr.txt')
 $handle=$helper.Handle
 $finished=$helper.WaitForExit(120000)
 if(-not $finished) { $helper.Kill(); $helper.WaitForExit() }
