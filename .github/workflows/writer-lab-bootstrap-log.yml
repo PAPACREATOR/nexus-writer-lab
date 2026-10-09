@@ -52,6 +52,67 @@ jobs:
             }
           }
           if(-not $found) { Write-Host 'NO_BOOTSTRAP_LOG_MATCH' }
+
+      # These are classifiers, not product gates. Each step succeeds only when
+      # the exact upstream BootstrapError enum value is present in Writer stderr.
+      # continue-on-error keeps all classifications observable in one run.
+      - name: CLASSIFY bootstrap BE_PATHINFO_MISSING 3
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*3\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY bootstrap BE_USERINSTALL_FAILED 4
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*4\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY bootstrap BE_LANGUAGE_MISSING 5
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*5\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY bootstrap BE_USERINSTALL_DISK 6
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*6\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY bootstrap BE_USERINSTALL_NOWRITEACCESS 7
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*7\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY bootstrap BE_OFFICECONFIG_BROKEN 8
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*8\b' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY any SetBootstrapError
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:' -Quiet
+          if(-not $hit){exit 1}
+      - name: CLASSIFY desktop.app log present
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'desktop\.app' -Quiet
+          if(-not $hit){exit 1}
+
       - if: always()
         uses: actions/upload-artifact@v4
         with:
