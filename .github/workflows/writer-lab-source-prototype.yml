@@ -25,6 +25,19 @@ jobs:
         run: python -m pip install pytest==9.1.1
       - name: Validate fail-closed source prototype (NOT an executable Writer patch)
         run: python -m pytest lab/test_pipe_source_patch.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Verify the prototype applies to exact upstream LibreOffice 26.2.6.2 source
+        shell: pwsh
+        run: |
+          $original = Join-Path $env:RUNNER_TEMP 'libreoffice-original-pipe.cxx'
+          $patched = Join-Path $env:RUNNER_TEMP 'libreoffice-lpac-prototype-pipe.cxx'
+          Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/LibreOffice/core/libreoffice-26.2.6.2/sal/osl/w32/pipe.cxx' -OutFile $original -TimeoutSec 60
+          if (-not (Test-Path -LiteralPath $original)) { throw 'UPSTREAM_SOURCE_MISSING' }
+          python -m lab.patch_lpac_pipe_source --source $original --output $patched
+          if ($LASTEXITCODE -ne 0) { throw 'UPSTREAM_SOURCE_PROTOTYPE_FAILED' }
+          if (-not (Test-Path -LiteralPath $patched)) { throw 'UPSTREAM_PATCHED_OUTPUT_MISSING' }
+          Write-Output ('ORIGINAL_SHA256=' + (Get-FileHash $original -Algorithm SHA256).Hash)
+          Write-Output ('PROTOTYPE_SHA256=' + (Get-FileHash $patched -Algorithm SHA256).Hash)
+          Write-Output 'No LibreOffice binary compiled or executed; conditional source patch only.'
       - name: Declare bounded result
         shell: pwsh
         run: |
