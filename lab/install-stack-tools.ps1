@@ -4,7 +4,7 @@ $output=Join-Path $PWD 'lab-evidence/stack-tools'
 $null=New-Item -ItemType Directory -Path $output -Force
 function Confirm-MicrosoftBinary([string]$Path) {
  $signature=Get-AuthenticodeSignature -LiteralPath $Path
- @{path=$Path;status=$signature.Status.ToString();subject=$signature.SignerCertificate.Subject;sha256=(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash} | ConvertTo-Json | Add-Content (Join-Path $output 'signatures.jsonl')
+ @{path=$Path;status=$signature.Status.ToString();subject=$signature.SignerCertificate.Subject;sha256=(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash} | ConvertTo-Json -Compress | Add-Content (Join-Path $output 'signatures.jsonl')
  if ($signature.Status -ne 'Valid' -or $signature.SignerCertificate.Subject -notlike '*Microsoft Corporation*') { throw 'Non-Microsoft or invalid signature refused' }
 }
 $cdb='C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe'
