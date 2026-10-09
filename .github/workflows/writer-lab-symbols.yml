@@ -6,6 +6,7 @@ on:
     paths:
       - 'lab/resolve_writer_frames.py'
       - 'lab/resolve-writer-frames.ps1'
+      - 'lab/install-stack-tools.ps1'
       - '.github/workflows/writer-lab-symbols.yml'
 permissions:
   contents: read
