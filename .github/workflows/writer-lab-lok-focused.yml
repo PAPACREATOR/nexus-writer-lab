@@ -29,16 +29,69 @@ jobs:
         shell: pwsh
         continue-on-error: true
         run: ./lab/run-standard-user.ps1 -Suite probe
-      - name: Print bounded LOK stage reports
+
+      - name: Parse LibreOfficeKit terminal stages
+        id: lok
         if: always()
         shell: pwsh
         run: |
-          $reports=Get-ChildItem -LiteralPath lab-evidence -Recurse -Filter 'probe.json' -ErrorAction SilentlyContinue
-          if(-not $reports) { Write-Host 'NO_LOK_PROBE_REPORT'; exit 0 }
-          foreach($report in $reports) {
-            Write-Host ('=== ' + $report.FullName + ' ===')
-            Get-Content -LiteralPath $report.FullName -Raw
-          }
+          @'
+          import json, os, pathlib
+          reports=list(pathlib.Path("lab-evidence").rglob("probe.json"))
+          terminal=[]
+          for path in reports:
+              try:
+                  obj=json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              stages=obj.get("stages") or []
+              last=stages[-1].get("stage") if stages and isinstance(stages[-1],dict) else "no_stage"
+              terminal.append(last)
+              print(json.dumps({"file":str(path),"last_stage":last,
+                                "exit_code":obj.get("exit_code"),
+                                "render_pass":obj.get("render_pass"),
+                                "seconds":obj.get("seconds"),
+                                "error":obj.get("error")}, ensure_ascii=False))
+          unique=sorted(set(terminal))
+          with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
+              f.write("terminal=" + ",".join(unique) + "\n")
+              f.write("reports=" + str(len(reports)) + "\n")
+          '@ | python -
+
+      - name: LOK OBSERVED no reports
+        if: always() && steps.lok.outputs.reports == '0'
+        run: echo "No probe reports"
+      - name: LOK OBSERVED network_denied terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',network_denied,')
+        run: echo "Stopped after network denial stage"
+      - name: LOK OBSERVED loading_library terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',loading_library,')
+        run: echo "Stopped while loading mergedlo.dll"
+      - name: LOK OBSERVED initializing_lok terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',initializing_lok,')
+        run: echo "Blocked inside libreofficekit_hook_2 initialization"
+      - name: LOK OBSERVED init_failed terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',init_failed,')
+        run: echo "libreofficekit_hook_2 returned null"
+      - name: LOK OBSERVED lok_initialized terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',lok_initialized,')
+        run: echo "Initialization completed; block follows it"
+      - name: LOK OBSERVED document_load_failed terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',document_load_failed,')
+        run: echo "Document load returned null"
+      - name: LOK OBSERVED document_loaded terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',document_loaded,')
+        run: echo "Document loaded; block follows it"
+      - name: LOK OBSERVED pdf_export terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',pdf_export,')
+        run: echo "PDF export returned; cleanup follows"
+      - name: LOK OBSERVED office_destroyed terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',office_destroyed,')
+        run: echo "Full LibreOfficeKit lifecycle completed"
+      - name: LOK OBSERVED exception terminal
+        if: always() && contains(format(',{0},', steps.lok.outputs.terminal), ',exception,')
+        run: echo "Probe raised an exception"
+
       - if: always()
         uses: actions/upload-artifact@v4
         with:
