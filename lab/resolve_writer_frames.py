@@ -244,25 +244,64 @@ class IMAGEHLP_LINE64(C.Structure):
                 ("FileName", C.c_char_p), ("Address", DWORD64)]
 
 
-def microsoft_dbghelp(args):
+def microsoft_dbghelp(args, deadline):
+    """Use the Microsoft-signed SDK DbgHelp already verified by the lab setup.
+
+    install-stack-tools.ps1 verifies Authenticode and records path/hash/status in
+    lab-evidence/stack-tools/signatures.jsonl. Reuse that evidence here instead
+    of launching a second nested PowerShell verifier with different quoting/
+    execution semantics.
+    """
     cdb = Path(args.debugger or os.environ["LAB_CDB_EXE"]).resolve(strict=True)
-    sdk = Path(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")) / "Windows Kits" / "10" / "Debuggers" / "x64"
+    sdk = Path(os.environ.get("ProgramFiles(x86)", r"C:\\Program Files (x86)")) / "Windows Kits" / "10" / "Debuggers" / "x64"
     if cdb.parent != sdk.resolve(strict=True) or cdb.name.casefold() != "cdb.exe":
         raise ValueError("Expected the installed Windows SDK AMD64 CDB directory")
     dll = (cdb.parent / "dbghelp.dll").resolve(strict=True)
-    powershell = Path(os.environ["SystemRoot"]) / "System32" / "WindowsPowerShell" / "v1.0" / "powershell.exe"
-    quoted = str(dll).replace("'", "''")
-    script = "$ErrorActionPreference='Stop';$s=Get-AuthenticodeSignature -LiteralPath '" + quoted + "';@{status=$s.Status.ToString();subject=$s.SignerCertificate.Subject}|ConvertTo-Json -Compress"
-    encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
-    completed = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded],
-                               capture_output=True, text=True, timeout=15, check=False,
-                               creationflags=subprocess.CREATE_NO_WINDOW)
-    if completed.returncode != 0:
-        raise ValueError("Unable to verify SDK DbgHelp signature")
-    signature = json.loads(completed.stdout.lstrip("\ufeff"))
-    if signature.get("status") != "Valid" or "Microsoft Corporation" not in signature.get("subject", ""):
+
+    evidence_path = Path("lab-evidence/stack-tools/signatures.jsonl")
+    if not evidence_path.is_file():
+        raise ValueError("Missing prior Authenticode evidence for SDK DbgHelp")
+    if evidence_path.stat().st_size > 1024 * 1024:
+        raise ValueError("Excessive Authenticode evidence file")
+
+    rows = []
+    for raw in evidence_path.read_text(encoding="utf-8-sig").splitlines():
+        raw = raw.strip()
+        if not raw:
+            continue
+        row = json.loads(raw)
+        if not isinstance(row, dict):
+            raise ValueError("Invalid Authenticode evidence record")
+        rows.append(row)
+
+    matches = []
+    for row in rows:
+        try:
+            recorded = Path(str(row.get("path", ""))).resolve(strict=True)
+        except (OSError, RuntimeError, ValueError):
+            continue
+        if recorded == dll:
+            matches.append(row)
+    if len(matches) != 1:
+        raise ValueError("Expected exactly one Authenticode record for SDK DbgHelp")
+
+    signature = matches[0]
+    if signature.get("status") != "Valid" or "Microsoft Corporation" not in str(signature.get("subject", "")):
         raise ValueError("SDK DbgHelp signature is not valid Microsoft")
-    return dll, signature
+    expected_hash = str(signature.get("sha256", "")).lower()
+    if not re.fullmatch(r"[0-9a-f]{64}", expected_hash):
+        raise ValueError("Invalid recorded SDK DbgHelp SHA-256")
+    actual_hash = hash_file(dll, deadline)
+    if actual_hash.lower() != expected_hash:
+        raise ValueError("SDK DbgHelp bytes changed after Authenticode verification")
+
+    return dll, {
+        "status": signature["status"],
+        "subject": signature["subject"],
+        "sha256": expected_hash,
+        "evidence": str(evidence_path),
+        "reused_preverified_authenticode": True,
+    }
 
 
 class OfflineSymbols:
@@ -397,7 +436,7 @@ def main():
     exit_code = 2
     try:
         inputs = verified_inputs(args, deadline)
-        dll, signature = microsoft_dbghelp(args)
+        dll, signature = microsoft_dbghelp(args, deadline)
         result["inputs"] = {key: str(value) if isinstance(value, Path) else value for key, value in inputs.items()}
         result["dbghelp"] = {"path": str(dll), "signature": signature, "sha256": hash_file(dll, deadline)}
         result["stage"] = "parse_recorded_stacks"
