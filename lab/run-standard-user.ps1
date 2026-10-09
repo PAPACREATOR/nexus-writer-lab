@@ -14,15 +14,18 @@ $credential=New-Object System.Management.Automation.PSCredential("$env:COMPUTERN
 $output=Join-Path $source 'lab-evidence/standard-user-launch'
 $null=New-Item -ItemType Directory -Path $output -Force
 $arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-Suite',$Suite,'-Shard',$Shard,'-OfficeLayout',$OfficeLayout)
+$traceWriterRoot='C:\Users\'+$name+'\NexusWriterLab\office'
+if ($OfficeLayout -eq 'python-read-root') { $traceWriterRoot='C:\Users\'+$name+'\NexusWriterLab\python\Lib\NexusWriterLabOffice' }
+$suiteStarted=[DateTime]::UtcNow
 try {
     $waitObserver=$null
     $stackObserver=$null
     if ($env:LAB_TRACE_STACKS -eq '1') {
-        $stackArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-stacks.ps1')+'"'),'-Output',('"'+(Join-Path $output 'stacks')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-stacks')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'),'-Debugger',('"'+$env:LAB_CDB_EXE+'"'))
+        $stackArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-stacks.ps1')+'"'),'-Output',('"'+(Join-Path $output 'stacks')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-stacks')+'"'),'-WriterRoot',('"'+$traceWriterRoot+'"'),'-Debugger',('"'+$env:LAB_CDB_EXE+'"'))
         $stackObserver=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList $stackArgs -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $output 'stack-observer-error.txt')
     }
     if ($env:LAB_TRACE_WAITS -eq '1') {
-        $waitArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-waits.ps1')+'"'),'-Output',('"'+(Join-Path $output 'waits.jsonl')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-waits')+'"'),'-WriterRoot',('"C:\Users\'+$name+'\NexusWriterLab\office"'))
+        $waitArgs=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/trace-waits.ps1')+'"'),'-Output',('"'+(Join-Path $output 'waits.jsonl')+'"'),'-StopFile',('"'+(Join-Path $output 'stop-waits')+'"'),'-WriterRoot',('"'+$traceWriterRoot+'"'))
         $waitObserver=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList $waitArgs -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $output 'wait-observer-error.txt')
     }
     $process=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -Credential $credential -LoadUserProfile -WindowStyle Hidden -ArgumentList $arguments -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt') -Wait -PassThru
@@ -34,6 +37,8 @@ try {
     @{suite=$Suite;shard=$Shard;office_layout=$OfficeLayout;exit_code=$process.ExitCode;new_admin_membership=$false;production_changes=@()} | ConvertTo-Json | Set-Content (Join-Path $output 'result.json')
     if ($process.ExitCode -ne 0) { Get-Content (Join-Path $output 'stderr.txt'); throw 'Standard-user validation failed; preserve evidence' }
 } finally {
+    try { ./lab/collect-crash-events.ps1 -Since $suiteStarted -Output (Join-Path $output 'crash-events.json') }
+    catch { @{status='reader_error';error=$_.Exception.Message;memory_dump=$false} | ConvertTo-Json | Set-Content (Join-Path $output 'crash-events.json') }
     if ($stackObserver) {
         $null=New-Item -ItemType File -Path (Join-Path $output 'stop-stacks') -Force
         if (-not $stackObserver.WaitForExit(15000)) { $stackObserver.Kill() }
