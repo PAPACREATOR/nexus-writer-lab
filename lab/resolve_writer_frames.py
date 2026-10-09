@@ -36,6 +36,8 @@ MAX_STACK_BYTES = 4 * 1024**2
 MAX_STACK_FILES = 16
 MAX_FRAME_RECORDS = 1024
 MAX_UNIQUE_RVAS = 256
+MAX_RVA_EVENTS = 64
+MAX_RVA_INPUT_BYTES = 4 * 1024**2
 SYMOPT_UNDNAME = 0x00000002
 SYMOPT_LOAD_LINES = 0x00000010
 SYMOPT_FAIL_CRITICAL_ERRORS = 0x00000200
@@ -100,6 +102,52 @@ def parse_stack(text):
     return {"module_base": start, "module_end": end, "frames": rows}
 
 
+def parse_rva_event_document(document, exact_image_size):
+    """Validate persisted Procmon offsets without inventing a CDB capture."""
+    if not isinstance(document, dict) or document.get("schema") != "nexus.writer.persisted-procmon-rvas.v1":
+        raise ValueError("Expected a persisted Procmon RVA document")
+    for key in ("source", "filtered_source"):
+        reference = document.get(key)
+        if key == "filtered_source" and reference is None:
+            continue
+        if not isinstance(reference, dict) or not isinstance(reference.get("path"), str) or not reference["path"]:
+            raise ValueError("Expected a nonempty persisted source path")
+        if not isinstance(reference.get("sha256"), str) or not re.fullmatch(r"[0-9a-fA-F]{64}", reference["sha256"]):
+            raise ValueError("Expected a SHA256 for each persisted source reference")
+    records = document.get("records")
+    if not isinstance(records, list) or not 1 <= len(records) <= MAX_FRAME_RECORDS:
+        raise ValueError("Expected 1 to 1024 persisted Procmon frame records")
+    events, rvas = set(), set()
+    for record in records:
+        if not isinstance(record, dict) or record.get("module") != "mergedlo.dll":
+            raise ValueError("Only persisted mergedlo.dll offsets are supported")
+        rva = record.get("rva")
+        if type(rva) is not int or not 0 <= rva < exact_image_size:
+            raise ValueError("Persisted RVA is not an integer within the exact PE SizeOfImage")
+        provenance = record.get("provenance")
+        if not isinstance(provenance, dict) or type(provenance.get("pid")) is not int or provenance["pid"] <= 0:
+            raise ValueError("Expected persisted event PID provenance")
+        for key in ("event_time", "path", "result"):
+            if not isinstance(provenance.get(key), str) or not provenance[key]:
+                raise ValueError("Expected persisted event time/path/result provenance")
+        original = record.get("original_stack_text")
+        if not isinstance(original, str) or not original:
+            raise ValueError("Expected the original persisted stack text")
+        offset_pattern = r"\bmergedlo\.dll\s*\+\s*0x0*" + format(rva, "x") + r"\b"
+        if not re.search(offset_pattern, original, re.I):
+            raise ValueError("Persisted RVA does not occur in its original mergedlo stack text")
+        events.add((provenance["pid"], provenance["event_time"], provenance["path"],
+                    provenance.get("operation", ""), provenance["result"]))
+        rvas.add(rva)
+    if len(events) > MAX_RVA_EVENTS or len(rvas) > MAX_UNIQUE_RVAS:
+        raise ValueError("Persisted Procmon input exceeds 64 events or 256 unique RVAs")
+    return {"referenced_source": document["source"],
+            "referenced_filtered_source": document.get("filtered_source"),
+            "reference_verification": "Persisted extraction references preserved; input JSON independently hashed; original XML not reopened",
+            "address_semantics": "Procmon recorded module RVA itself; no RetAddr or preceding-instruction inference",
+            "event_count": len(events), "records": records}, rvas
+
+
 def parsing_controls():
     sample = """.  0  Id: 1234.5678 Suspend: 0
 Child-SP          RetAddr               Call Site
@@ -125,9 +173,31 @@ Child-SP          RetAddr               Call Site
     assert C.sizeof(IMAGEHLP_MODULE64) == 1680
     assert C.sizeof(SYMBOL_INFO) == 88 and SYMBOL_INFO.Name.offset == 84
     assert C.sizeof(IMAGEHLP_LINE64) == 40
+    document = {"schema": "nexus.writer.persisted-procmon-rvas.v1",
+                "source": {"path": "synthetic.xml", "sha256": "a" * 64},
+                "records": [{"module": "mergedlo.dll", "rva": 42,
+                             "provenance": {"pid": 123, "event_time": "synthetic", "path": "synthetic", "result": "ACCESS DENIED"},
+                             "original_stack_text": "0: mergedlo.dll + 0x2a"}]}
+    direct, rvas = parse_rva_event_document(document, 4096)
+    assert rvas == {42} and direct["records"][0]["rva"] == 42
+    document["records"][0]["rva"] = 4096
+    try:
+        parse_rva_event_document(document, 4096)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("An RVA outside the exact image was accepted")
+    document["records"][0]["rva"] = True
+    try:
+        parse_rva_event_document(document, 4096)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("A boolean RVA was accepted as an integer")
     return {"return_address_rva": "PASS", "row_label_not_reinterpreted": "PASS",
             "conflicting_module_bases_refused": "PASS", "nearest_symbol_quality": "PASS",
-            "amd64_native_structure_layouts": "PASS", "native_calls": False}
+            "amd64_native_structure_layouts": "PASS", "persisted_rva_input_validation": "PASS",
+            "persisted_rva_not_adjusted": "PASS", "native_calls": False}
 
 
 def read_json(path, maximum=1024**2):
@@ -427,6 +497,7 @@ def main():
     parser.add_argument("--metadata", type=Path, default=Path("lab-evidence/pe-debug-info.json"))
     parser.add_argument("--symbols-report", type=Path, default=Path("lab-evidence/writer-symbols.json"))
     parser.add_argument("--stacks", type=Path, default=Path("lab-evidence/standard-user-launch/stacks"))
+    parser.add_argument("--rva-events", type=Path, help="Use bounded persisted Procmon module-RVA JSON instead of CDB stack input")
     parser.add_argument("--output", type=Path, default=Path("lab-evidence/resolved-writer-frames.json"))
     parser.add_argument("--image", type=Path)
     parser.add_argument("--debugger", type=Path)
@@ -459,25 +530,37 @@ def main():
         save_result()
         dll, signature = microsoft_dbghelp(args)
         result["dbghelp"] = {"path": str(dll), "signature": signature, "sha256": hash_file(dll, deadline)}
-        result["stage"] = "parse_recorded_stacks"
-        save_result()
-        stack_files = sorted(args.stacks.glob("*.stacks.txt")) if args.stacks.is_dir() else [args.stacks]
-        if not 1 <= len(stack_files) <= MAX_STACK_FILES:
-            raise ValueError("Expected 1 to 16 recorded stack text files")
-        rvas = set()
-        for path in stack_files:
-            raw = path.read_bytes()
-            if len(raw) > MAX_STACK_BYTES:
-                raise ValueError("Excessive stack text file")
-            try:
-                capture = parse_stack(raw.decode("utf-8-sig", errors="strict"))
-                if capture["module_end"] - capture["module_base"] != inputs["image_size"]:
-                    raise ValueError("Recorded lm range differs from the exact PE SizeOfImage")
-                rvas.update(row["rva"] for row in capture["frames"])
-                capture.update(file=str(path), sha256=hashlib.sha256(raw).hexdigest())
-                result["captures"].append(capture)
-            except ValueError as error:
-                result["captures"].append({"file": str(path), "sha256": hashlib.sha256(raw).hexdigest(), "error": str(error)})
+        if args.rva_events:
+            result["stage"] = "parse_persisted_procmon_rvas"
+            result["input_mode"] = "persisted_procmon_module_rvas"
+            save_result()
+            document, input_hash = read_json(args.rva_events, MAX_RVA_INPUT_BYTES)
+            direct, rvas = parse_rva_event_document(document, inputs["image_size"])
+            direct.update(input_file=str(args.rva_events), input_sha256=input_hash)
+            result["rva_events"] = direct
+            location_key = "recorded_stack_location"
+        else:
+            result["stage"] = "parse_recorded_stacks"
+            result["input_mode"] = "cdb_return_addresses"
+            save_result()
+            stack_files = sorted(args.stacks.glob("*.stacks.txt")) if args.stacks.is_dir() else [args.stacks]
+            if not 1 <= len(stack_files) <= MAX_STACK_FILES:
+                raise ValueError("Expected 1 to 16 recorded stack text files")
+            rvas = set()
+            for path in stack_files:
+                raw = path.read_bytes()
+                if len(raw) > MAX_STACK_BYTES:
+                    raise ValueError("Excessive stack text file")
+                try:
+                    capture = parse_stack(raw.decode("utf-8-sig", errors="strict"))
+                    if capture["module_end"] - capture["module_base"] != inputs["image_size"]:
+                        raise ValueError("Recorded lm range differs from the exact PE SizeOfImage")
+                    rvas.update(row["rva"] for row in capture["frames"])
+                    capture.update(file=str(path), sha256=hashlib.sha256(raw).hexdigest())
+                    result["captures"].append(capture)
+                except ValueError as error:
+                    result["captures"].append({"file": str(path), "sha256": hashlib.sha256(raw).hexdigest(), "error": str(error)})
+            location_key = "return_address_location"
         if not rvas or len(rvas) > MAX_UNIQUE_RVAS:
             raise ValueError("Expected 1 to 256 unique mergedlo return-address RVAs")
         resolved = {}
@@ -485,24 +568,27 @@ def main():
         save_result()
         with OfflineSymbols(dll, inputs) as symbols:
             result["matched_module"] = symbols.module
-            result["stage"] = "resolve_return_addresses"
+            result["stage"] = "resolve_recorded_addresses"
             result["partial_resolutions"] = {}
             save_result()
             for rva in sorted(rvas):
                 if time.monotonic() > deadline:
                     raise TimeoutError("Offline symbol lookup deadline reached")
-                resolved[rva] = {"return_address_location": symbols.resolve(rva),
-                                 "preceding_instruction_location": symbols.resolve(rva - 1) if rva else None}
+                resolved[rva] = {location_key: symbols.resolve(rva)}
+                if not args.rva_events:
+                    resolved[rva]["preceding_instruction_location"] = symbols.resolve(rva - 1) if rva else None
                 result["partial_resolutions"][f"0x{rva:x}"] = resolved[rva]
                 save_result()
         for capture in result["captures"]:
             for row in capture.get("frames", []):
                 row["offline_resolution"] = resolved[row["rva"]]
-        count = sum(value["return_address_location"]["status"] == "resolved" for value in resolved.values())
+        for row in result.get("rva_events", {}).get("records", []):
+            row["offline_resolution"] = resolved[row["rva"]]
+        count = sum(value[location_key]["status"] == "resolved" for value in resolved.values())
         result["unique_rvas"] = len(rvas)
         result["resolved_unique_rvas"] = count
         result["symbol_extent_contains_unique_rvas"] = sum(
-            value["return_address_location"].get("within_reported_symbol_size") is True
+            value[location_key].get("within_reported_symbol_size") is True
             for value in resolved.values())
         result["status"] = "resolved" if count else "unresolved"
         result["stage"] = "finished"

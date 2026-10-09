@@ -1,0 +1,1553 @@
+{
+  "schema": "nexus.writer.persisted-procmon-rvas.v1",
+  "source": {
+    "path": "procmon/writer.xml",
+    "sha256": "ff327eefa204b22e4e63efda81b5702f755939768cfee6c885d4be1b5773aede"
+  },
+  "filtered_source": {
+    "path": "work\\nexus-writer-lab\\lab-evidence\\procmon\\writer-stacks.xml",
+    "sha256": "c5f937ee1f1815b4a5578ec50e33cc9175542ae34d155f6182529e27106db5a4"
+  },
+  "records": [
+    {
+      "module": "mergedlo.dll",
+      "rva": 44410949,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 15,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "15",
+          "address": "0x7ffeb376a845",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5a845"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 44415782,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 16,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "16",
+          "address": "0x7ffeb376bb26",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5bb26"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 44408970,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 17,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "17",
+          "address": "0x7ffeb376a08a",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5a08a"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 10465663,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 18,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "18",
+          "address": "0x7ffeb170b17f",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x9fb17f"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29733692,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 19,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "19",
+          "address": "0x7ffeb296b33c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c5b33c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29733452,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 20,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "20",
+          "address": "0x7ffeb296b24c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c5b24c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29604691,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 21,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "21",
+          "address": "0x7ffeb294bb53",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c3bb53"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 50958723,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 22,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "22",
+          "address": "0x7ffeb3da9183",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x3099183"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 50958370,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 23,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "23",
+          "address": "0x7ffeb3da9022",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x3099022"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29759580,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:16:15.3850381 PM",
+        "pid": 4580,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 187
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 24,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "24",
+          "address": "0x7ffeb297185c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c6185c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 44410949,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 15,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "15",
+          "address": "0x7ffeb376a845",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5a845"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 44415782,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 16,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "16",
+          "address": "0x7ffeb376bb26",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5bb26"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 44408970,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 17,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "17",
+          "address": "0x7ffeb376a08a",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x2a5a08a"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 10465663,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 18,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "18",
+          "address": "0x7ffeb170b17f",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x9fb17f"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29733692,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 19,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "19",
+          "address": "0x7ffeb296b33c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c5b33c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29733452,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 20,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "20",
+          "address": "0x7ffeb296b24c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c5b24c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29604691,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 21,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "21",
+          "address": "0x7ffeb294bb53",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c3bb53"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 50958723,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 22,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "22",
+          "address": "0x7ffeb3da9183",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x3099183"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 50958370,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 23,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "23",
+          "address": "0x7ffeb3da9022",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x3099022"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    },
+    {
+      "module": "mergedlo.dll",
+      "rva": 29759580,
+      "provenance": {
+        "run": 37822420842,
+        "event_time": "6:17:18.3816975 PM",
+        "pid": 7960,
+        "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+        "operation": "CreateFile",
+        "result": "ACCESS DENIED",
+        "detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+        "process_index": 202
+      },
+      "original_stack_text": "0: 0xfffff801113abaaf C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xbaaf\n1: 0xfffff801113ab1a0 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0xb1a0\n2: 0xfffff80111417a10 C:\\Windows\\System32\\drivers\\FLTMGR.SYS FLTMGR.SYS + 0x77a10\n3: 0xfffff8017f7aa0bb C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa0bb\n4: 0xfffff8017f7aa033 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x3aa033\n5: 0xfffff8017fca022b C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x8a022b\n6: 0xfffff8017fc9e2ca C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89e2ca\n7: 0xfffff8017fc9bfd3 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x89bfd3\n8: 0xfffff8017fc57648 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x857648\n9: 0xfffff8017fc56568 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x856568\n10: 0xfffff8017fab5c55 C:\\Windows\\system32\\ntoskrnl.exe ntoskrnl.exe + 0x6b5c55\n11: 0x7fff05be2e54 C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x162e54\n12: 0x7fff02fdc5a5 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c5a5\n13: 0x7fff02fdc358 C:\\Windows\\System32\\KernelBase.dll KernelBase.dll + 0x5c358\n14: 0x7ffed45af4ae C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll sal3.dll + 0x4f4ae\n15: 0x7ffeb376a845 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a845\n16: 0x7ffeb376bb26 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5bb26\n17: 0x7ffeb376a08a C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x2a5a08a\n18: 0x7ffeb170b17f C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x9fb17f\n19: 0x7ffeb296b33c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b33c\n20: 0x7ffeb296b24c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c5b24c\n21: 0x7ffeb294bb53 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c3bb53\n22: 0x7ffeb3da9183 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099183\n23: 0x7ffeb3da9022 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x3099022\n24: 0x7ffeb297185c C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll mergedlo.dll + 0x1c6185c\n25: 0x7ff7045c101b C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x101b\n26: 0x7ff7045c12d4 C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin soffice.bin + 0x12d4\n27: 0x7fff0447e987 C:\\Windows\\System32\\kernel32.dll kernel32.dll + 0x2e987\n28: 0x7fff05b0c53c C:\\Windows\\System32\\ntdll.dll ntdll.dll + 0x8c53c",
+      "frame_index": 24,
+      "rawframe": {
+        "attributes": {},
+        "fields": {
+          "depth": "24",
+          "address": "0x7ffeb297185c",
+          "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+          "location": "mergedlo.dll + 0x1c6185c"
+        },
+        "field_attributes": {
+          "depth": {},
+          "address": {},
+          "path": {},
+          "location": {}
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "ProcessIndex": "187",
+      "Time_of_Day": "6:16:15.3850381 PM",
+      "Process_Name": "soffice.bin",
+      "PID": "4580",
+      "Operation": "CreateFile",
+      "Path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+      "Result": "ACCESS DENIED",
+      "Detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+      "event_attributes": {},
+      "event_field_attributes": {
+        "ProcessIndex": {},
+        "Time_of_Day": {},
+        "Process_Name": {},
+        "PID": {},
+        "Operation": {},
+        "Path": {},
+        "Result": {},
+        "Detail": {}
+      },
+      "stack_attributes": {},
+      "frames": [
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "0",
+            "address": "0xfffff801113abaaf",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0xbaaf"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "1",
+            "address": "0xfffff801113ab1a0",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0xb1a0"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "2",
+            "address": "0xfffff80111417a10",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0x77a10"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "3",
+            "address": "0xfffff8017f7aa0bb",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x3aa0bb"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "4",
+            "address": "0xfffff8017f7aa033",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x3aa033"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "5",
+            "address": "0xfffff8017fca022b",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x8a022b"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "6",
+            "address": "0xfffff8017fc9e2ca",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x89e2ca"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "7",
+            "address": "0xfffff8017fc9bfd3",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x89bfd3"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "8",
+            "address": "0xfffff8017fc57648",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x857648"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "9",
+            "address": "0xfffff8017fc56568",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x856568"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "10",
+            "address": "0xfffff8017fab5c55",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x6b5c55"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "11",
+            "address": "0x7fff05be2e54",
+            "path": "C:\\Windows\\System32\\ntdll.dll",
+            "location": "ntdll.dll + 0x162e54"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "12",
+            "address": "0x7fff02fdc5a5",
+            "path": "C:\\Windows\\System32\\KernelBase.dll",
+            "location": "KernelBase.dll + 0x5c5a5"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "13",
+            "address": "0x7fff02fdc358",
+            "path": "C:\\Windows\\System32\\KernelBase.dll",
+            "location": "KernelBase.dll + 0x5c358"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "14",
+            "address": "0x7ffed45af4ae",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll",
+            "location": "sal3.dll + 0x4f4ae"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "15",
+            "address": "0x7ffeb376a845",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5a845"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "16",
+            "address": "0x7ffeb376bb26",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5bb26"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "17",
+            "address": "0x7ffeb376a08a",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5a08a"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "18",
+            "address": "0x7ffeb170b17f",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x9fb17f"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "19",
+            "address": "0x7ffeb296b33c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c5b33c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "20",
+            "address": "0x7ffeb296b24c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c5b24c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "21",
+            "address": "0x7ffeb294bb53",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c3bb53"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "22",
+            "address": "0x7ffeb3da9183",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x3099183"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "23",
+            "address": "0x7ffeb3da9022",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x3099022"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "24",
+            "address": "0x7ffeb297185c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c6185c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "25",
+            "address": "0x7ff7045c101b",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin",
+            "location": "soffice.bin + 0x101b"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "26",
+            "address": "0x7ff7045c12d4",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin",
+            "location": "soffice.bin + 0x12d4"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "27",
+            "address": "0x7fff0447e987",
+            "path": "C:\\Windows\\System32\\kernel32.dll",
+            "location": "kernel32.dll + 0x2e987"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "28",
+            "address": "0x7fff05b0c53c",
+            "path": "C:\\Windows\\System32\\ntdll.dll",
+            "location": "ntdll.dll + 0x8c53c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        }
+      ]
+    },
+    {
+      "ProcessIndex": "202",
+      "Time_of_Day": "6:17:18.3816975 PM",
+      "Process_Name": "soffice.bin",
+      "PID": "7960",
+      "Operation": "CreateFile",
+      "Path": "C:\\Users\\NexusWriterLab\\NexusWriterLab",
+      "Result": "ACCESS DENIED",
+      "Detail": "Desired Access: Read Data/List Directory, Synchronize, Disposition: Open, Options: Directory, Synchronous IO Non-Alert, Attributes: n/a, ShareMode: Read, Write, Delete, AllocationSize: n/a",
+      "event_attributes": {},
+      "event_field_attributes": {
+        "ProcessIndex": {},
+        "Time_of_Day": {},
+        "Process_Name": {},
+        "PID": {},
+        "Operation": {},
+        "Path": {},
+        "Result": {},
+        "Detail": {}
+      },
+      "stack_attributes": {},
+      "frames": [
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "0",
+            "address": "0xfffff801113abaaf",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0xbaaf"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "1",
+            "address": "0xfffff801113ab1a0",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0xb1a0"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "2",
+            "address": "0xfffff80111417a10",
+            "path": "C:\\Windows\\System32\\drivers\\FLTMGR.SYS",
+            "location": "FLTMGR.SYS + 0x77a10"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "3",
+            "address": "0xfffff8017f7aa0bb",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x3aa0bb"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "4",
+            "address": "0xfffff8017f7aa033",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x3aa033"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "5",
+            "address": "0xfffff8017fca022b",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x8a022b"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "6",
+            "address": "0xfffff8017fc9e2ca",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x89e2ca"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "7",
+            "address": "0xfffff8017fc9bfd3",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x89bfd3"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "8",
+            "address": "0xfffff8017fc57648",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x857648"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "9",
+            "address": "0xfffff8017fc56568",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x856568"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "10",
+            "address": "0xfffff8017fab5c55",
+            "path": "C:\\Windows\\system32\\ntoskrnl.exe",
+            "location": "ntoskrnl.exe + 0x6b5c55"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "11",
+            "address": "0x7fff05be2e54",
+            "path": "C:\\Windows\\System32\\ntdll.dll",
+            "location": "ntdll.dll + 0x162e54"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "12",
+            "address": "0x7fff02fdc5a5",
+            "path": "C:\\Windows\\System32\\KernelBase.dll",
+            "location": "KernelBase.dll + 0x5c5a5"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "13",
+            "address": "0x7fff02fdc358",
+            "path": "C:\\Windows\\System32\\KernelBase.dll",
+            "location": "KernelBase.dll + 0x5c358"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "14",
+            "address": "0x7ffed45af4ae",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\sal3.dll",
+            "location": "sal3.dll + 0x4f4ae"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "15",
+            "address": "0x7ffeb376a845",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5a845"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "16",
+            "address": "0x7ffeb376bb26",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5bb26"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "17",
+            "address": "0x7ffeb376a08a",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x2a5a08a"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "18",
+            "address": "0x7ffeb170b17f",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x9fb17f"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "19",
+            "address": "0x7ffeb296b33c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c5b33c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "20",
+            "address": "0x7ffeb296b24c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c5b24c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "21",
+            "address": "0x7ffeb294bb53",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c3bb53"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "22",
+            "address": "0x7ffeb3da9183",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x3099183"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "23",
+            "address": "0x7ffeb3da9022",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x3099022"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "24",
+            "address": "0x7ffeb297185c",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\mergedlo.dll",
+            "location": "mergedlo.dll + 0x1c6185c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "25",
+            "address": "0x7ff7045c101b",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin",
+            "location": "soffice.bin + 0x101b"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "26",
+            "address": "0x7ff7045c12d4",
+            "path": "C:\\Users\\NexusWriterLab\\NexusWriterLab\\office\\program\\soffice.bin",
+            "location": "soffice.bin + 0x12d4"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "27",
+            "address": "0x7fff0447e987",
+            "path": "C:\\Windows\\System32\\kernel32.dll",
+            "location": "kernel32.dll + 0x2e987"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        },
+        {
+          "attributes": {},
+          "fields": {
+            "depth": "28",
+            "address": "0x7fff05b0c53c",
+            "path": "C:\\Windows\\System32\\ntdll.dll",
+            "location": "ntdll.dll + 0x8c53c"
+          },
+          "field_attributes": {
+            "depth": {},
+            "address": {},
+            "path": {},
+            "location": {}
+          }
+        }
+      ]
+    }
+  ]
+}
