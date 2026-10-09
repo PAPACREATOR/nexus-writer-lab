@@ -31,87 +31,72 @@ jobs:
         shell: pwsh
         continue-on-error: true
         run: ./lab/run-standard-user.ps1 -Suite baseline
-      - name: Extract bounded bootstrap log evidence
-        if: always()
-        shell: pwsh
-        run: |
-          $files=Get-ChildItem -LiteralPath lab-evidence -Recurse -Filter '*launches.json' -ErrorAction SilentlyContinue
-          $found=$false
-          foreach($file in $files) {
-            $rows=Get-Content -LiteralPath $file.FullName -Raw | ConvertFrom-Json
-            foreach($row in @($rows)) {
-              $text=$row.files.'office/stderr.txt'.text
-              if($text) {
-                $selected=($text -split "`r?`n") | Where-Object { $_ -match 'SetBootstrapError|IPC_STATUS|desktop\.app|Bootstrap' }
-                if($selected) {
-                  $found=$true
-                  Write-Host ('=== ' + $file.FullName + ' ===')
-                  $selected | Select-Object -First 120 | ForEach-Object { Write-Host $_ }
-                }
-              }
-            }
-          }
-          if(-not $found) { Write-Host 'NO_BOOTSTRAP_LOG_MATCH' }
 
-      # These are classifiers, not product gates. Each step succeeds only when
-      # the exact upstream BootstrapError enum value is present in Writer stderr.
-      # continue-on-error keeps all classifications observable in one run.
-      - name: CLASSIFY bootstrap BE_PATHINFO_MISSING 3
+      - name: Parse bounded bootstrap evidence
+        id: classify
         if: always()
-        continue-on-error: true
         shell: pwsh
         run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*3\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY bootstrap BE_USERINSTALL_FAILED 4
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*4\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY bootstrap BE_LANGUAGE_MISSING 5
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*5\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY bootstrap BE_USERINSTALL_DISK 6
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*6\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY bootstrap BE_USERINSTALL_NOWRITEACCESS 7
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*7\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY bootstrap BE_OFFICECONFIG_BROKEN 8
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:\s*8\b' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY any SetBootstrapError
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'SetBootstrapError:' -Quiet
-          if(-not $hit){exit 1}
-      - name: CLASSIFY desktop.app log present
-        if: always()
-        continue-on-error: true
-        shell: pwsh
-        run: |
-          $hit=Get-ChildItem lab-evidence -Recurse -Filter '*launches.json' | Select-String -Pattern 'desktop\.app' -Quiet
-          if(-not $hit){exit 1}
+          @'
+          import json, os, pathlib, re
+          root=pathlib.Path("lab-evidence")
+          texts=[]
+          for path in root.rglob("*launches.json"):
+              try:
+                  rows=json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              if isinstance(rows, dict):
+                  rows=[rows]
+              for row in rows:
+                  if not isinstance(row, dict):
+                      continue
+                  files=row.get("files") or {}
+                  stderr=(files.get("office/stderr.txt") or {}).get("text")
+                  if isinstance(stderr, str):
+                      texts.append(stderr)
+          joined="\n".join(texts)
+          codes=sorted(set(re.findall(r"SetBootstrapError:\s*(\d+)\b", joined)))
+          has_set=bool(codes)
+          has_desktop="desktop.app" in joined
+          selected=[line for line in joined.splitlines()
+                    if re.search(r"SetBootstrapError|IPC_STATUS|desktop\.app|Bootstrap", line)]
+          print(json.dumps({"codes":codes,"has_setbootstrap":has_set,"has_desktop_app":has_desktop,
+                            "selected":selected[:120]}, ensure_ascii=False))
+          output=os.environ["GITHUB_OUTPUT"]
+          with open(output,"a",encoding="utf-8") as f:
+              f.write("codes=" + ",".join(codes) + "\n")
+              f.write("has_setbootstrap=" + ("true" if has_set else "false") + "\n")
+              f.write("has_desktop=" + ("true" if has_desktop else "false") + "\n")
+          '@ | python -
+
+      - name: OBSERVED no SetBootstrapError
+        if: always() && steps.classify.outputs.has_setbootstrap == 'false'
+        run: echo "No SetBootstrapError line was emitted by the bounded desktop.app log."
+      - name: OBSERVED BE_PATHINFO_MISSING 3
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',3,')
+        run: echo "BE_PATHINFO_MISSING observed"
+      - name: OBSERVED BE_USERINSTALL_FAILED 4
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',4,')
+        run: echo "BE_USERINSTALL_FAILED observed"
+      - name: OBSERVED BE_LANGUAGE_MISSING 5
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',5,')
+        run: echo "BE_LANGUAGE_MISSING observed"
+      - name: OBSERVED BE_USERINSTALL_DISK 6
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',6,')
+        run: echo "BE_USERINSTALL_NOTENOUGHDISKSPACE observed"
+      - name: OBSERVED BE_USERINSTALL_NOWRITEACCESS 7
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',7,')
+        run: echo "BE_USERINSTALL_NOWRITEACCESS observed"
+      - name: OBSERVED BE_OFFICECONFIG_BROKEN 8
+        if: always() && contains(format(',{0},', steps.classify.outputs.codes), ',8,')
+        run: echo "BE_OFFICECONFIG_BROKEN observed"
+      - name: OBSERVED desktop.app logging
+        if: always() && steps.classify.outputs.has_desktop == 'true'
+        run: echo "desktop.app category reached stderr evidence"
+      - name: OBSERVED no desktop.app logging
+        if: always() && steps.classify.outputs.has_desktop == 'false'
+        run: echo "No desktop.app category line reached stderr evidence"
 
       - if: always()
         uses: actions/upload-artifact@v4
