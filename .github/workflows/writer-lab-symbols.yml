@@ -1,6 +1,12 @@
 name: Writer offline symbols and prior stacks, no Writer execution
 on:
   workflow_dispatch:
+  push:
+    branches: ['work/writer-offline-symbol-reader-20261009']
+    paths:
+      - 'lab/resolve_writer_frames.py'
+      - 'lab/resolve-writer-frames.ps1'
+      - '.github/workflows/writer-lab-symbols.yml'
 permissions:
   contents: read
 jobs:
