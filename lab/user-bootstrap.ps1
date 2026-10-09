@@ -26,6 +26,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Standard-user token verification failed' }
 & $python -c "import hashlib,json,os,pathlib; p=pathlib.Path(os.environ['LIBREOFFICE_EXE']).with_name('soffice.bin'); print(json.dumps({'binary':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}))" > lab-evidence/standard-user-writer-hash.json
 if ($Suite -eq 'routes') { & $python -m lab.run_case I }
 elseif ($Suite -eq 'baseline') { & $python -m lab.run_case A }
+elseif ($Suite -eq 'sal_paths') { & $python -m lab.run_sal_path_probe }
 elseif ($Suite -eq 'probe') {
     $failed=0
     foreach ($case in @('baseline','sal_log','long_path')) {
