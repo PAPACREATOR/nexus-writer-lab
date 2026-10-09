@@ -5,6 +5,7 @@ on:
     branches: ['work/writer-offline-symbol-reader-20261009']
     paths:
       - '.github/workflows/writer-lab-bootstrap-log.yml'
+      - 'lab/evidence_plugin.py'
 permissions:
   contents: read
 jobs:
@@ -13,7 +14,7 @@ jobs:
     timeout-minutes: 15
     env:
       PYTHONUTF8: '1'
-      SAL_LOG: '+INFO.desktop.app'
+      LAB_WRITER_SAL_LOG: '+INFO.desktop.app'
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
