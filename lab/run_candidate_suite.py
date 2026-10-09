@@ -16,6 +16,25 @@ def summarize_results(report, metadata, pytest_exit_code):
                                 'reason':skip.get('message','') or (skip.text or '')})
         metadata['collected_testcases']=len(testcases)
         metadata['checks_not_run']=skipped
+        if metadata.get('suite')=='stress':
+            expected={f'test_real_route_repetition[{index}-{process}]'
+                      for index in range(25) for process in ('book','convert_pdf')}
+            names=[case.get('name','') for case in testcases]
+            duplicates=sorted({name for name in names if names.count(name)>1})
+            wrong_modules=[case.get('name','') for case in testcases
+                           if case.get('classname','').replace('.','/')!='lab/test_writer_regression']
+            not_passed=[case.get('name','') for case in testcases
+                        if any(case.find(tag) is not None for tag in ('failure','error','skipped'))]
+            coverage={'expected':50,'observed':len(names),
+                      'missing':sorted(expected-set(names)),
+                      'unexpected':sorted(set(names)-expected),
+                      'duplicates':duplicates,'wrong_modules':wrong_modules,
+                      'not_passed':not_passed}
+            coverage['status']='PASS' if (len(names)==50 and not any(
+                coverage[key] for key in ('missing','unexpected','duplicates','wrong_modules','not_passed'))) else 'FAIL'
+            metadata['required_stress_coverage']=coverage
+            if coverage['status']!='PASS':
+                effective_code=effective_code or 1
         security_skips=[row for row in skipped if row['classname'].replace('.','/').startswith('nexus/security_tests/')]
         metadata['required_security_checks_not_run']=security_skips
         classes={case.get('classname','').replace('.','/') for case in testcases}

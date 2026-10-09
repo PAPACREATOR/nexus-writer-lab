@@ -1,0 +1,2111 @@
+{
+  "schema": "nexus.writer.offline-symbol-frames.v1",
+  "utc": "2026-10-09T13:08:24.481358+00:00",
+  "status": "resolved",
+  "stage": "finished",
+  "memory_dump": false,
+  "process_attach": false,
+  "writer_executed": false,
+  "process_memory_read": false,
+  "runtime_changes": [],
+  "caller_timeout_seconds": 120,
+  "controls": {
+    "return_address_rva": "PASS",
+    "row_label_not_reinterpreted": "PASS",
+    "conflicting_module_bases_refused": "PASS",
+    "nearest_symbol_quality": "PASS",
+    "amd64_native_structure_layouts": "PASS",
+    "native_calls": false
+  },
+  "captures": [
+    {
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\5852-10.stacks.txt",
+      "sha256": "d9892e9862e4dd88c265fdd3dedc88e3c3fece3953dccf1545d00ec2f91dc825",
+      "error": "Expected one unambiguous mergedlo lm address range"
+    },
+    {
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\5852-25.stacks.txt",
+      "sha256": "a982bbfb41b2d63f85349cc2bfe6b94e90d4f8252e6c69fa875f7da9aee6223f",
+      "error": "Expected one unambiguous mergedlo lm address range"
+    },
+    {
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9260-10.stacks.txt",
+      "sha256": "3480475b59816018bd8c3bb8cc82b2d7c7acfb8d250e76718fa34cf02e824146",
+      "error": "Expected one unambiguous mergedlo lm address range"
+    },
+    {
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9260-25.stacks.txt",
+      "sha256": "dd6086d27dbff67f91bc3ca0d5e67ce525cb4892dbb59c5a363f8b5d0b1738a4",
+      "error": "Expected one unambiguous mergedlo lm address range"
+    },
+    {
+      "module_base": 140720332406784,
+      "module_end": 140720480677888,
+      "frames": [
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc0475564b",
+          "rva": 50878027,
+          "original_frame_callsite_label": "vclplug_winlo!create_SalInstance+0xb4d",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50878027,
+              "offline_address": "0x1308564b",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 91,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 392,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50878026,
+              "offline_address": "0x1308564a",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 90,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 389,
+                "displacement": 45
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 4,
+          "return_address": "0x7ffc043186df",
+          "rva": 46434015,
+          "original_frame_callsite_label": "mergedlo!Application::Execute+0x15b",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 46434015,
+              "offline_address": "0x12c486df",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 143,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1094,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 46434014,
+              "offline_address": "0x12c486de",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 142,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1095,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 5,
+          "return_address": "0x7ffc046fabb6",
+          "rva": 50506678,
+          "original_frame_callsite_label": "mergedlo!Dialog::Execute+0x8f",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50506678,
+              "offline_address": "0x1302abb6",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 54,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 12
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50506677,
+              "offline_address": "0x1302abb5",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 53,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 11
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 6,
+          "return_address": "0x7ffc0330c0d2",
+          "rva": 29606098,
+          "original_frame_callsite_label": "mergedlo!SalInstanceWidget::draw+0x2686",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29606098,
+              "offline_address": "0x11c3c0d2",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 466,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 21
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29606097,
+              "offline_address": "0x11c3c0d1",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 465,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 20
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 7,
+          "return_address": "0x7ffc0330c994",
+          "rva": 29608340,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29608340,
+              "offline_address": "0x11c3c994",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1572,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 37
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29608339,
+              "offline_address": "0x11c3c993",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1571,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 36
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 8,
+          "return_address": "0x7ffc0330ded4",
+          "rva": 29613780,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29613780,
+              "offline_address": "0x11c3ded4",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 292,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 9
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29613779,
+              "offline_address": "0x11c3ded3",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 291,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 8
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 9,
+          "return_address": "0x7ffc04768f52",
+          "rva": 50958162,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50958162,
+              "offline_address": "0x13098f52",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 98,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 10
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50958161,
+              "offline_address": "0x13098f51",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 97,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 9
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 10,
+          "return_address": "0x7ffc0333185c",
+          "rva": 29759580,
+          "original_frame_callsite_label": "mergedlo!ImplSVMain+0x62",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29759580,
+              "offline_address": "0x11c6185c",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 716,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 5
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29759579,
+              "offline_address": "0x11c6185b",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 715,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 5,
+            "id": "26c4.1ba0"
+          },
+          "frame_index": 1,
+          "return_address": "0x7ffc05fc5493",
+          "rva": 76502163,
+          "original_frame_callsite_label": "KERNELBASE!WaitForSingleObjectEx+0xaf",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 76502163,
+              "offline_address": "0x148f5493",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 51,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 18
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 76502162,
+              "offline_address": "0x148f5492",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 50,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 17
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 7,
+            "id": "26c4.20c4"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc01eda061",
+          "rva": 8429665,
+          "original_frame_callsite_label": "MSVCP140!Cnd_wait+0x2a",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 8429665,
+              "offline_address": "0x1080a061",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 145,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 198,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 8429664,
+              "offline_address": "0x1080a060",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 144,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 199,
+                "displacement": 16
+              }
+            }
+          }
+        }
+      ],
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9924-10.stacks.txt",
+      "sha256": "3a1f31f60225fb9f51175fafb74a50205984b5dd8e4279ae4fb600f7c08ac91f"
+    },
+    {
+      "module_base": 140720332406784,
+      "module_end": 140720480677888,
+      "frames": [
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc0475564b",
+          "rva": 50878027,
+          "original_frame_callsite_label": "vclplug_winlo!create_SalInstance+0xb4d",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50878027,
+              "offline_address": "0x1308564b",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 91,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 392,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50878026,
+              "offline_address": "0x1308564a",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 90,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 389,
+                "displacement": 45
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 4,
+          "return_address": "0x7ffc043186df",
+          "rva": 46434015,
+          "original_frame_callsite_label": "mergedlo!Application::Execute+0x15b",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 46434015,
+              "offline_address": "0x12c486df",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 143,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1094,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 46434014,
+              "offline_address": "0x12c486de",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 142,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1095,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 5,
+          "return_address": "0x7ffc046fabb6",
+          "rva": 50506678,
+          "original_frame_callsite_label": "mergedlo!Dialog::Execute+0x8f",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50506678,
+              "offline_address": "0x1302abb6",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 54,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 12
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50506677,
+              "offline_address": "0x1302abb5",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 53,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 11
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 6,
+          "return_address": "0x7ffc0330c0d2",
+          "rva": 29606098,
+          "original_frame_callsite_label": "mergedlo!SalInstanceWidget::draw+0x2686",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29606098,
+              "offline_address": "0x11c3c0d2",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 466,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 21
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29606097,
+              "offline_address": "0x11c3c0d1",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 465,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 20
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 7,
+          "return_address": "0x7ffc0330c994",
+          "rva": 29608340,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29608340,
+              "offline_address": "0x11c3c994",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1572,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 37
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29608339,
+              "offline_address": "0x11c3c993",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1571,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 36
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 8,
+          "return_address": "0x7ffc0330ded4",
+          "rva": 29613780,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29613780,
+              "offline_address": "0x11c3ded4",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 292,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 9
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29613779,
+              "offline_address": "0x11c3ded3",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 291,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 8
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 9,
+          "return_address": "0x7ffc04768f52",
+          "rva": 50958162,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50958162,
+              "offline_address": "0x13098f52",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 98,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 10
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50958161,
+              "offline_address": "0x13098f51",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 97,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 9
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26c4.20b4"
+          },
+          "frame_index": 10,
+          "return_address": "0x7ffc0333185c",
+          "rva": 29759580,
+          "original_frame_callsite_label": "mergedlo!ImplSVMain+0x62",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29759580,
+              "offline_address": "0x11c6185c",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 716,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 5
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29759579,
+              "offline_address": "0x11c6185b",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 715,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 5,
+            "id": "26c4.1ba0"
+          },
+          "frame_index": 1,
+          "return_address": "0x7ffc05fc5493",
+          "rva": 76502163,
+          "original_frame_callsite_label": "KERNELBASE!WaitForSingleObjectEx+0xaf",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 76502163,
+              "offline_address": "0x148f5493",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 51,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 18
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 76502162,
+              "offline_address": "0x148f5492",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 50,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 17
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 7,
+            "id": "26c4.20c4"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc01eda061",
+          "rva": 8429665,
+          "original_frame_callsite_label": "MSVCP140!Cnd_wait+0x2a",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 8429665,
+              "offline_address": "0x1080a061",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 145,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 198,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 8429664,
+              "offline_address": "0x1080a060",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 144,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 199,
+                "displacement": 16
+              }
+            }
+          }
+        }
+      ],
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9924-25.stacks.txt",
+      "sha256": "172249a93e4df71c043c949f57a82cf90687952437909cc620fc5f67d00dd5a7"
+    },
+    {
+      "module_base": 140720332406784,
+      "module_end": 140720480677888,
+      "frames": [
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc0475564b",
+          "rva": 50878027,
+          "original_frame_callsite_label": "vclplug_winlo!create_SalInstance+0xb4d",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50878027,
+              "offline_address": "0x1308564b",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 91,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 392,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50878026,
+              "offline_address": "0x1308564a",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 90,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 389,
+                "displacement": 45
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 4,
+          "return_address": "0x7ffc043186df",
+          "rva": 46434015,
+          "original_frame_callsite_label": "mergedlo!Application::Execute+0x15b",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 46434015,
+              "offline_address": "0x12c486df",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 143,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1094,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 46434014,
+              "offline_address": "0x12c486de",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 142,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1095,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 5,
+          "return_address": "0x7ffc046fabb6",
+          "rva": 50506678,
+          "original_frame_callsite_label": "mergedlo!Dialog::Execute+0x8f",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50506678,
+              "offline_address": "0x1302abb6",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 54,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 12
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50506677,
+              "offline_address": "0x1302abb5",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 53,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 11
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 6,
+          "return_address": "0x7ffc0330c0d2",
+          "rva": 29606098,
+          "original_frame_callsite_label": "mergedlo!SalInstanceWidget::draw+0x2686",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29606098,
+              "offline_address": "0x11c3c0d2",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 466,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 21
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29606097,
+              "offline_address": "0x11c3c0d1",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 465,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 20
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 7,
+          "return_address": "0x7ffc0330c994",
+          "rva": 29608340,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29608340,
+              "offline_address": "0x11c3c994",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1572,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 37
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29608339,
+              "offline_address": "0x11c3c993",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1571,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 36
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 8,
+          "return_address": "0x7ffc0330ded4",
+          "rva": 29613780,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29613780,
+              "offline_address": "0x11c3ded4",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 292,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 9
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29613779,
+              "offline_address": "0x11c3ded3",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 291,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 8
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 9,
+          "return_address": "0x7ffc04768f52",
+          "rva": 50958162,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50958162,
+              "offline_address": "0x13098f52",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 98,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 10
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50958161,
+              "offline_address": "0x13098f51",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 97,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 9
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 10,
+          "return_address": "0x7ffc0333185c",
+          "rva": 29759580,
+          "original_frame_callsite_label": "mergedlo!ImplSVMain+0x62",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29759580,
+              "offline_address": "0x11c6185c",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 716,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 5
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29759579,
+              "offline_address": "0x11c6185b",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 715,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 5,
+            "id": "26e0.24b4"
+          },
+          "frame_index": 1,
+          "return_address": "0x7ffc05fc5493",
+          "rva": 76502163,
+          "original_frame_callsite_label": "KERNELBASE!WaitForSingleObjectEx+0xaf",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 76502163,
+              "offline_address": "0x148f5493",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 51,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 18
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 76502162,
+              "offline_address": "0x148f5492",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 50,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 17
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 7,
+            "id": "26e0.2570"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc01eda061",
+          "rva": 8429665,
+          "original_frame_callsite_label": "MSVCP140!Cnd_wait+0x2a",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 8429665,
+              "offline_address": "0x1080a061",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 145,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 198,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 8429664,
+              "offline_address": "0x1080a060",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 144,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 199,
+                "displacement": 16
+              }
+            }
+          }
+        }
+      ],
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9952-10.stacks.txt",
+      "sha256": "884b08704a1498d2570c5b1310934dafc27e5700333631aee228b0526a127897"
+    },
+    {
+      "module_base": 140720332406784,
+      "module_end": 140720480677888,
+      "frames": [
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc0475564b",
+          "rva": 50878027,
+          "original_frame_callsite_label": "vclplug_winlo!create_SalInstance+0xb4d",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50878027,
+              "offline_address": "0x1308564b",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 91,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 392,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50878026,
+              "offline_address": "0x1308564a",
+              "status": "resolved",
+              "actual_symbol": "ImplYield",
+              "symbol_rva": 50877936,
+              "displacement": 90,
+              "symbol_tag": 5,
+              "symbol_size": 119,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svapp.cxx",
+                "line": 389,
+                "displacement": 45
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 4,
+          "return_address": "0x7ffc043186df",
+          "rva": 46434015,
+          "original_frame_callsite_label": "mergedlo!Application::Execute+0x15b",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 46434015,
+              "offline_address": "0x12c486df",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 143,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1094,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 46434014,
+              "offline_address": "0x12c486de",
+              "status": "resolved",
+              "actual_symbol": "Dialog::Execute",
+              "symbol_rva": 46433872,
+              "displacement": 142,
+              "symbol_tag": 5,
+              "symbol_size": 317,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\window\\dialog.cxx",
+                "line": 1095,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 5,
+          "return_address": "0x7ffc046fabb6",
+          "rva": 50506678,
+          "original_frame_callsite_label": "mergedlo!Dialog::Execute+0x8f",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50506678,
+              "offline_address": "0x1302abb6",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 54,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 12
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50506677,
+              "offline_address": "0x1302abb5",
+              "status": "resolved",
+              "actual_symbol": "SalInstanceDialog::run",
+              "symbol_rva": 50506624,
+              "displacement": 53,
+              "symbol_tag": 5,
+              "symbol_size": 61,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\salvtables.cxx",
+                "line": 1856,
+                "displacement": 11
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 6,
+          "return_address": "0x7ffc0330c0d2",
+          "rva": 29606098,
+          "original_frame_callsite_label": "mergedlo!SalInstanceWidget::draw+0x2686",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29606098,
+              "offline_address": "0x11c3c0d2",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 466,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 21
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29606097,
+              "offline_address": "0x11c3c0d1",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapPathErrors",
+              "symbol_rva": 29605632,
+              "displacement": 465,
+              "symbol_tag": 5,
+              "symbol_size": 548,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 698,
+                "displacement": 20
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 7,
+          "return_address": "0x7ffc0330c994",
+          "rva": 29608340,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5622",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29608340,
+              "offline_address": "0x11c3c994",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1572,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 37
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29608339,
+              "offline_address": "0x11c3c993",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::HandleBootstrapErrors",
+              "symbol_rva": 29606768,
+              "displacement": 1571,
+              "symbol_tag": 5,
+              "symbol_size": 2776,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 855,
+                "displacement": 36
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 8,
+          "return_address": "0x7ffc0330ded4",
+          "rva": 29613780,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x5ee4",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29613780,
+              "offline_address": "0x11c3ded4",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 292,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 9
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29613779,
+              "offline_address": "0x11c3ded3",
+              "status": "resolved",
+              "actual_symbol": "desktop::Desktop::Main",
+              "symbol_rva": 29613488,
+              "displacement": 291,
+              "symbol_tag": 5,
+              "symbol_size": 7006,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\app.cxx",
+                "line": 1331,
+                "displacement": 8
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 9,
+          "return_address": "0x7ffc04768f52",
+          "rva": 50958162,
+          "original_frame_callsite_label": "mergedlo!cppu::WeakImplHelper<com::sun::star::container::XChild,com::sun::star::document::XDocumentPropertiesSupplier,com::sun::star::document::XCmisDocument,com::sun::star::rdf::XDocumentMetadataAccess,com::sun::star::document::XDocumentRecovery2,com::sun::star::document::XUndoManagerSupplier,com::sun::star::document::XShapeEventBroadcaster,com::sun::star::document::XDocumentEventBroadcaster,com::sun::star::lang::XEventListener,com::sun::star::document::XEventsSupplier,com::sun::star::document::XEmbeddedScripts,com::sun::star::document::XScriptInvocationContext,com::sun::star::frame::XModel3,com::sun::star::util::XModifiable2,com::sun::star::view::XPrintable,com::sun::star::view::XPrintJobBroadcaster,com::sun::star::frame::XStorable2,com::sun::star::frame::XLoadable,com::sun::star::script::XStarBasicAccess,com::sun::star::document::XViewDataSupplier,com::sun::star::util::XCloseable,com::sun::star::datatransfer::XTransferable,com::sun::star::document::XDocumentSubStorageSupplier,com::sun::star::document::XStorageBasedDocument,com::sun::star::script::provider::XScriptProviderSupplier,com::sun::star::ui::XUIConfigurationManagerSupplier,com::sun::star::embed::XVisualObject,com::sun::star::lang::XUnoTunnel,com::sun::star::frame::XModule,com::sun::star::frame::XTitle,com::sun::star::frame::XTitleChangeBroadcaster,com::sun::star::frame::XUntitledNumbers>::acquire+0x7424",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 50958162,
+              "offline_address": "0x13098f52",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 98,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 10
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 50958161,
+              "offline_address": "0x13098f51",
+              "status": "resolved",
+              "actual_symbol": "ImplSVMain",
+              "symbol_rva": 50958064,
+              "displacement": 97,
+              "symbol_tag": 5,
+              "symbol_size": 361,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\vcl\\source\\app\\svmain.cxx",
+                "line": 230,
+                "displacement": 9
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 0,
+            "id": "26e0.1d24"
+          },
+          "frame_index": 10,
+          "return_address": "0x7ffc0333185c",
+          "rva": 29759580,
+          "original_frame_callsite_label": "mergedlo!ImplSVMain+0x62",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 29759580,
+              "offline_address": "0x11c6185c",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 716,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 5
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 29759579,
+              "offline_address": "0x11c6185b",
+              "status": "resolved",
+              "actual_symbol": "soffice_main",
+              "symbol_rva": 29758864,
+              "displacement": 715,
+              "symbol_tag": 5,
+              "symbol_size": 901,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\desktop\\source\\app\\sofficemain.cxx",
+                "line": 122,
+                "displacement": 4
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 5,
+            "id": "26e0.24b4"
+          },
+          "frame_index": 1,
+          "return_address": "0x7ffc05fc5493",
+          "rva": 76502163,
+          "original_frame_callsite_label": "KERNELBASE!WaitForSingleObjectEx+0xaf",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 76502163,
+              "offline_address": "0x148f5493",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 51,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 18
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 76502162,
+              "offline_address": "0x148f5492",
+              "status": "resolved",
+              "actual_symbol": "google_breakpad::ExceptionHandler::ExceptionHandlerThreadMain",
+              "symbol_rva": 76502112,
+              "displacement": 50,
+              "symbol_tag": 5,
+              "symbol_size": 265,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\build\\workdir\\UnpackedTarball\\breakpad\\src\\client\\windows\\handler\\exception_handler.cc",
+                "line": 392,
+                "displacement": 17
+              }
+            }
+          }
+        },
+        {
+          "thread": {
+            "index": 7,
+            "id": "26e0.2570"
+          },
+          "frame_index": 3,
+          "return_address": "0x7ffc01eda061",
+          "rva": 8429665,
+          "original_frame_callsite_label": "MSVCP140!Cnd_wait+0x2a",
+          "label_note": "Original label describes this row's current frame; RetAddr belongs to its caller.",
+          "offline_resolution": {
+            "return_address_location": {
+              "rva": 8429665,
+              "offline_address": "0x1080a061",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 145,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 198,
+                "displacement": 0
+              }
+            },
+            "preceding_instruction_location": {
+              "rva": 8429664,
+              "offline_address": "0x1080a060",
+              "status": "resolved",
+              "actual_symbol": "configmgr::Components::WriteThread::execute",
+              "symbol_rva": 8429520,
+              "displacement": 144,
+              "symbol_tag": 5,
+              "symbol_size": 298,
+              "within_reported_symbol_size": true,
+              "symbol_location_quality": "within_reported_symbol_extent",
+              "function_identity_claimed": false,
+              "source": {
+                "file": "E:\\lo\\libo-core\\configmgr\\source\\components.cxx",
+                "line": 199,
+                "displacement": 16
+              }
+            }
+          }
+        }
+      ],
+      "file": "lab-evidence\\exact-msaa\\standard-user-launch\\stacks\\9952-25.stacks.txt",
+      "sha256": "3875d102655f7c7688cf653e309daf845dda7afa6698e33c5fd0f005cd4e1300"
+    }
+  ],
+  "duration_seconds": 6.25,
+  "inputs": {
+    "image": "C:\\Program Files\\LibreOffice\\program\\mergedlo.dll",
+    "image_sha256": "bd61f2f06549720a1880a85b8c49d5b7fdffc2ff2c1e3e50d305e15ae4f5ed18",
+    "image_size": 148271104,
+    "pdb": "D:\\a\\_temp\\nexus-writer-symbols-nbtzg031\\mergedlo.dll\\mergedlo.pdb",
+    "pdb_sha256": "05efcd7594575c851a9f125dafe2295686bbcd73f72054763e22a5b01ea1d7f8",
+    "expected": {
+      "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+      "age": 2,
+      "key": "4B71BC20183E451AB4B56AEDB5DE74132",
+      "pdb_name": "mergedlo.pdb"
+    },
+    "pdb_identity": {
+      "format": "MSF7 info stream 1 and modern DBI stream 3",
+      "version": 20000404,
+      "signature": 1788269753,
+      "guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+      "age": 3,
+      "key": "4B71BC20183E451AB4B56AEDB5DE74133",
+      "dbi": {
+        "version_signature": -1,
+        "version": 19990903,
+        "age": 2,
+        "flags": 0,
+        "private_symbols_stripped": false,
+        "machine": 34404
+      }
+    },
+    "pdb_binding": {
+      "rule": "Microsoft OpenValidate4: exact GUID, info age >= image age, nonzero DBI age == image age",
+      "guid_exact": true,
+      "image_age": 2,
+      "pdb_info_age": 3,
+      "pdb_dbi_age": 2,
+      "legacy_zero_age_allowed": false,
+      "ignore_mismatch": false
+    }
+  },
+  "dbghelp": {
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbghelp.dll",
+    "signature": {
+      "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+      "status": "Valid",
+      "powershell_version": "5.1.26100.33438",
+      "probe": {
+        "powershell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "file": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbghelp.dll",
+        "timeout_seconds": 15,
+        "module_path_policy": "remove inherited PSModulePath in child only; absolute built-in module imports",
+        "signature_requirement": "Valid and Microsoft Corporation",
+        "exit_code": 0,
+        "stdout": "{\"subject\":\"CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US\",\"status\":\"Valid\",\"powershell_version\":\"5.1.26100.33438\"}\r\n",
+        "stdout_truncated": false,
+        "stderr": "",
+        "stderr_truncated": false
+      }
+    },
+    "sha256": "140adb286a11fbdfb63b6d8dff30039c50ff9c88b6909be9ce8292680d5be2af"
+  },
+  "matched_module": {
+    "sym_type": 3,
+    "pdb_unmatched": false,
+    "dbg_unmatched": false,
+    "pdb_guid": "4b71bc20-183e-451a-b4b5-6aedb5de7413",
+    "pdb_age": 2,
+    "loaded_pdb": "D:\\a\\_temp\\nexus-writer-symbols-nbtzg031\\mergedlo.dll\\mergedlo.pdb",
+    "module_base": "0x10000000",
+    "image_size": 148271104,
+    "line_numbers": true,
+    "options": "0x2281612",
+    "exact_symbols": true,
+    "invade_process": false
+  },
+  "unique_rvas": 10,
+  "resolved_unique_rvas": 10,
+  "symbol_extent_contains_unique_rvas": 10
+}

@@ -10,9 +10,13 @@ por AccessCheck num descritor em memória; conta não elevada, mesmo Job/capabil
 COM inicializado no leitor externo retornou S_FALSE; MSAA continuou
 CO_E_NOTINITIALIZED, sem texto do diálogo. Atribuição original só ao leitor
 não foi confirmada. PDB oficial agora validado pelo contrato Microsoft:
-GUID exato, PDBI age 3 >= PE age 2, DBI age 2 == PE. Leitura offline dos runs
-37903488590 e 37904071891 falhou na verificação auxiliar da assinatura digital,
-antes de resolver endereços. Próximo passo: corrigir só essa leitura offline.
+GUID exato, PDBI age 3 >= PE age 2, DBI age 2 == PE. Leitura offline 37934454652
+SUCCESS após corrigir a herança de módulos do PowerShell apenas no leitor.
+PDB exato resolveu dez RVAs: Main :1331 → HandleBootstrapErrors :855 →
+HandleBootstrapPathErrors :698 → Dialog::Execute. Espera no aviso de caminhos
+de arranque demonstrada. FailureCode e caminho concretos NOT PROVEN; próximo
+passo: identificar essa condição sem memória bruta, permissões alargadas ou
+alterações ao runtime principal.
 Resultado B abaixo é história da fase anterior, não encerramento deste loop.
 
 Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.

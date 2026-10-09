@@ -170,3 +170,41 @@ da resolução. Provas completas em lab-evidence/com-offline/ e prior-offline/,
 com ZIPs integrais preservados. Próximo passo: corrigir e repetir apenas a
 leitura offline. Causa Writer NOT PROVEN; proposta vazia e regressão de
 solução NOT RUN. Loop ativo, principal intacto.
+
+## Espera localizada com PDB correspondente — 09-10-2026
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37934454652,
+SHA cd0c574, somente leitura offline: SUCCESS. DbgHelp assinado confirmou
+SymPdb, GUID exato, PdbAge DBI=2, PdbUnmatched=false, DbgUnmatched=false,
+SizeOfImage=148271104; nenhum ignore-match/LOAD_ANYTHING. Dez RVAs resolvidos
+em 6,250 s. Não houve novo Writer, attach, dump ou leitura de memória.
+Provas integrais: lab-evidence/frames-resolved/ e frames-resolved-raw.zip.
+
+Nas quatro capturas anteriores dos dois PIDs bin, os call sites de retorno
+menos um byte situam-se dentro dos limites dos símbolos Tag5 e têm linhas
+correspondentes do build: Desktop::Main app.cxx:1331 →
+Desktop::HandleBootstrapErrors :855 → Desktop::HandleBootstrapPathErrors
+:698 → SalInstanceDialog::run → Dialog::Execute. Os endereços/labels originais
+ficam preservados, distintos da resolução offline. Observação não atómica.
+
+O ramo do código exato mostra BE_PATHINFO_MISSING e checkBootstrapStatus
+diferente de DATA_OK antes de RegisterServices ativar cancelamento headless.
+A espera nesse aviso de arranque está demonstrada. O FailureCode concreto,
+o caminho/configuração que o provoca e uma correção continuam NOT PROVEN.
+Não se atribui a causa a um ACCESS DENIED isolado nem se fecha o aviso para
+obter PASS. Fonte:
+https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/app.cxx
+
+A falha auxiliar de assinatura foi reproduzida localmente: Windows PowerShell
+herdava módulos incompatíveis de pwsh através de Python. Removido PSModulePath
+somente no ambiente do filho e importados módulos integrados por caminho
+absoluto. Ficheiro de sistema assinado Valid PASS, ficheiro inexistente recusado
+com stderr preservado, ambiente pai intacto. A execução offline confirmou a
+correção; isso não altera nem valida Writer. Fonte:
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath#starting-windows-powershell-from-powershell-7
+
+Regressão preparada reforçada: cada shard de stress exige exatamente os
+50 IDs previstos (25 book + 25 convert_pdf), sem duplicados/skips/IDs de outro
+módulo. Cinco controlos sintéticos PASS. As conversões reais dessa bateria,
+a agregação 100+100 e os restantes gates da solução continuam NOT RUN.
+Loop ativo; MINIMAL_PATCH_PROPOSAL.md vazio; Nexus principal intacto.
