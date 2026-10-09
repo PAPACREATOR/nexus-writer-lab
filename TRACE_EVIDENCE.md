@@ -257,3 +257,23 @@ restart sem replay. Controlos de classificação PASS; 17 contratos de
 segurança documentais PASS. Conversões desta regressão NOT RUN até existir
 solução. O gate LPAC exige a leitura independente positiva; conflitos ou
 evidência inconclusiva continuam a falhar. Não é PASS global.
+
+## Próximo diagnóstico: correspondência Microsoft e resolução offline
+
+O primeiro leitor comparou apenas a idade PDBI com o PE. O código Microsoft
+OpenValidate4 exige GUID exato, idade PDBI maior ou igual à do PE e idade DBI
+igual à do PE. O leitor passa a verificar os três valores, preservando a idade
+PDBI real e recusando a exceção legada DBI=0. Onze controlos sintéticos PASS,
+incluindo GUID/DBI errados, INFO anterior, DBI ausente/zero e truncamento.
+O age DBI do PDB oficial ainda não foi observado: o FAIL anterior mantém-se.
+Fonte: https://github.com/microsoft/microsoft-pdb/blob/master/PDB/dbi/pdb.cpp#L808-L889
+DbgHelp documenta PdbAge como a idade DBI:
+https://learn.microsoft.com/en-us/windows/win32/api/dbghelp/ns-dbghelp-imagehlp_module64
+
+As pilhas vivas continuam com símbolos locais vazios e leitor limitado a 8 s.
+A resolução exata decorre depois da conclusão do Writer/Job, limitada a 120 s,
+usando apenas PE/PDB em disco e endereços do texto já recolhido. DbgHelp do SDK
+assinado deve confirmar a correspondência sem LOAD_ANYTHING ou ignore-match.
+Nenhum processo Writer adicional, attach, leitura de memória ou dump offline.
+Essa etapa identifica funções/call sites; não valida a conversão nem prova a
+causa por si só. Timeout original de 45 s e fronteira mantidos.

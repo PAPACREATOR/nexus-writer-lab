@@ -19,4 +19,5 @@ if (-not (Test-Path -LiteralPath $cdb)) {
 }
 if (-not (Test-Path -LiteralPath $cdb)) { throw 'Offline debugger unavailable' }
 Confirm-MicrosoftBinary $cdb
+Confirm-MicrosoftBinary (Join-Path (Split-Path $cdb -Parent) 'dbghelp.dll')
 'LAB_CDB_EXE='+$cdb | Out-File $env:GITHUB_ENV -Append -Encoding utf8

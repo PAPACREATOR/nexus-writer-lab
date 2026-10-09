@@ -72,7 +72,7 @@ def cabinet_payload(path, expected_name):
 
 
 def pdb_identity(path):
-    """Independently read the MSF7 PDB info stream (stream 1), no debugger."""
+    """Independently read MSF7 info/DBI identities, without loading symbols."""
     path = Path(path)
     length = path.stat().st_size
     if length > MAX_FILE_BYTES:
@@ -115,35 +115,80 @@ def pdb_identity(path):
             read_at(number * block_size, block_size) for number in block_numbers
         )[:directory_size]
         stream_count = struct.unpack_from("<I", directory)[0]
-        if not 2 <= stream_count <= 1_000_000 or 4 + stream_count * 4 > len(directory):
+        if not 4 <= stream_count <= 1_000_000 or 4 + stream_count * 4 > len(directory):
             raise ValueError("Invalid MSF stream table")
         sizes = struct.unpack_from("<" + "I" * stream_count, directory, 4)
         cursor = 4 + stream_count * 4
-        info_blocks = None
+        identities = {}
         for index, size in enumerate(sizes):
             count = 0 if size == 0xFFFFFFFF else math.ceil(size / block_size)
             if cursor + count * 4 > len(directory):
                 raise ValueError("Truncated MSF stream block list")
-            if index == 1:
-                if not 28 <= size <= MAX_FILE_BYTES:
-                    raise ValueError("Invalid PDB info stream")
-                info_blocks = struct.unpack_from("<" + "I" * count, directory, cursor)
-                if not info_blocks or any(number >= block_count for number in info_blocks):
-                    raise ValueError("Invalid PDB info stream blocks")
-                # The fixed 28-byte identity header fits in the first block.
-                info = read_at(info_blocks[0] * block_size, 28)
+            if index in (1, 3):
+                header_size = 28 if index == 1 else 64
+                if not header_size <= size <= MAX_FILE_BYTES:
+                    raise ValueError("Missing or invalid PDB identity stream " + str(index))
+                blocks = struct.unpack_from("<" + "I" * count, directory, cursor)
+                if not blocks or any(number >= block_count for number in blocks):
+                    raise ValueError("Invalid PDB identity stream blocks")
+                # Both fixed headers fit in the first block (minimum 512 bytes).
+                identities[index] = read_at(blocks[0] * block_size, header_size)
+            cursor += count * 4
+            if index == 3:
+                info = identities[1]
                 version, signature, age = struct.unpack_from("<III", info)
                 guid = uuid.UUID(bytes_le=info[12:28])
+                dbi_signature, dbi_version, dbi_age = struct.unpack_from("<iII", identities[3])
+                # Modern DBI layouts only. Do not apply Microsoft's legacy
+                # zero-age exception to this current Writer build.
+                if dbi_signature != -1 or dbi_version not in (19990903, 20091201):
+                    raise ValueError("Unsupported modern DBI stream header")
+                flags, machine = struct.unpack_from("<HH", identities[3], 56)
                 return {
-                    "format": "MSF7 info stream 1",
+                    "format": "MSF7 info stream 1 and modern DBI stream 3",
                     "version": version,
                     "signature": signature,
                     "guid": str(guid),
                     "age": age,
                     "key": guid.hex.upper() + format(age, "X"),
+                    "dbi": {
+                        "version_signature": dbi_signature,
+                        "version": dbi_version,
+                        "age": dbi_age,
+                        "flags": flags,
+                        "private_symbols_stripped": bool(flags & 2),
+                        "machine": machine,
+                    },
                 }
-            cursor += count * 4
-        raise ValueError("PDB info stream missing")
+        raise ValueError("PDB info or DBI stream missing")
+
+
+def validate_identity(actual, expected):
+    """Apply Microsoft's modern native-image OpenValidate4 binding contract.
+
+    microsoft/microsoft-pdb PDB/dbi/pdb.cpp:808-889 requires the exact GUID,
+    PDB info age >= image age, and DBI age == image age. We additionally refuse
+    its legacy DBI-age-zero exception. No PDB mutation or ignored-match option.
+    https://github.com/microsoft/microsoft-pdb/blob/master/PDB/dbi/pdb.cpp#L808-L889
+    IMAGEHLP_MODULE64.PdbAge is also documented as the DBI age:
+    https://learn.microsoft.com/en-us/windows/win32/api/dbghelp/ns-dbghelp-imagehlp_module64
+    """
+    if actual["guid"] != expected["guid"]:
+        raise ValueError("PDB GUID mismatch; refused symbol file")
+    if actual["age"] < expected["age"]:
+        raise ValueError("PDB info age predates the image; refused symbol file")
+    dbi_age = actual["dbi"]["age"]
+    if not dbi_age or dbi_age != expected["age"]:
+        raise ValueError("PDB DBI age does not match image age; refused symbol file")
+    return {
+        "rule": "Microsoft OpenValidate4: exact GUID, info age >= image age, nonzero DBI age == image age",
+        "guid_exact": True,
+        "image_age": expected["age"],
+        "pdb_info_age": actual["age"],
+        "pdb_dbi_age": dbi_age,
+        "legacy_zero_age_allowed": False,
+        "ignore_mismatch": False,
+    }
 
 
 def allowed_url(url):
@@ -290,13 +335,13 @@ def fetch_module(module, output_directory, deadline):
                     raise ValueError("Expanded PDB size disagrees with its cabinet")
             actual = pdb_identity(verified)
             attempt["pdb_identity"] = actual
-            if actual["guid"] != expected["guid"] or actual["age"] != expected["age"]:
-                raise ValueError("PDB GUID/age mismatch; refused symbol file")
+            binding = validate_identity(actual, expected)
+            attempt["binding_verification"] = binding
             attempt["status"] = "verified"
             result.update(
                 status="verified", verified_file=str(verified),
                 pdb_identity=actual, pdb_bytes=verified.stat().st_size,
-                pdb_sha256=sha256_file(verified),
+                pdb_sha256=sha256_file(verified), binding_verification=binding,
             )
             return result
         except (OSError, ValueError, TimeoutError, urllib.error.URLError, subprocess.SubprocessError) as error:

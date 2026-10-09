@@ -1,0 +1,21 @@
+{
+  "tag": "libreoffice-26.2.6.2",
+  "cause_status": "NOT_PROVEN",
+  "line_number_basis": "Raw exact-tag source; web text extraction may collapse blank lines",
+  "app_source": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/app.cxx",
+  "app_raw_sha256": "339b2e5fe2ff2ada29d165a3894d39d6d8c8acd03b884b049c512c3239639a14",
+  "app_raw_lines": 2699,
+  "mapping": [
+    {"function": "HandleBootstrapPathErrors", "line": 676, "dialog_create_line": 695, "product_only_title_line": 697, "modal_run_line": 698, "condition": "Bootstrap validation non-DATA_OK"},
+    {"function": "HandleBootstrapErrors", "line": 788, "condition": "BE_PATHINFO_MISSING only calls the warning when bootstrap validation also fails; a pipe failure alone with valid bootstrap does not show this warning"},
+    {"function": "Desktop::Main", "line": 1302, "stored_bootstrap_error_line": 1329, "handle_error_call_line": 1331, "register_services_line": 1387},
+    {"function": "FatalError", "line": 391, "dialog": "Native error box, Fatal Error title suffix, stderr message"},
+    {"function": "InitializeConfiguration", "line": 1800, "condition": "Missing or invalid bootstrap data and incomplete installation can call product-title warning"}
+  ],
+  "headless_source": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/desktop/source/app/appinit.cxx",
+  "headless_cancellation_lines": [102, 103],
+  "silent_mode_source": "https://github.com/LibreOffice/core/blob/libreoffice-26.2.6.2/vcl/source/app/svapp.cxx",
+  "silent_mode_lines": [1598, 1605],
+  "interpretation": "An earlier stored bootstrap error can open a modal before RegisterServices enables headless cancellation; source inspection does not identify the actual observed caller or failing path",
+  "runtime_changes": []
+}

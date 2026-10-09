@@ -29,11 +29,8 @@ public class NexusWindowCaption {
 $null=New-Item -ItemType Directory -Path $Output -Force
 $symbols=Join-Path $env:RUNNER_TEMP 'nexus-empty-symbols'
 $null=New-Item -ItemType Directory -Path $symbols -Force
-if($env:LAB_SYMBOL_PATH) {
- $verifiedPath=(Resolve-Path -LiteralPath $env:LAB_SYMBOL_PATH).Path
- if(-not $verifiedPath.StartsWith((Resolve-Path $env:RUNNER_TEMP).Path+'\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Symbols outside disposable verified directory' }
- $symbols=$verifiedPath
-}
+# Keep live capture bounded and unchanged. Resolve recorded addresses with
+# verified symbols offline after Writer and its native Job have exited.
 $commands=Join-Path $Output 'commands.txt'
 @('~* k','lm','q') | Set-Content -LiteralPath $commands -Encoding ascii
 $seen=@{}
