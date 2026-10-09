@@ -9,6 +9,30 @@ import pytest
 from lab.observe import Observer
 
 
+def verified_lpac_observation(event):
+    """Require positive independent LPAC behavior, retaining query conflicts.
+
+    Class 46 is unsupported on the tested runner. The synthetic AccessCheck
+    reader has ordinary-token negative controls and actual Writer mask-2
+    observations. A successful class-46 query reporting False still conflicts
+    with LPAC and must fail rather than being replaced by the other evidence.
+    """
+    if 'lpac' in event and event['lpac'] is not True:
+        return False
+    evidence=event.get('lpac_accesscheck')
+    return isinstance(evidence,dict) and all((
+        evidence.get('method')=='synthetic_descriptor_accesscheck',
+        evidence.get('api_ok') is True,
+        evidence.get('appcontainer') is True,
+        evidence.get('access_status') is True,
+        evidence.get('desired_access')==0x02000000,
+        evidence.get('expected_lpac_granted_access')==2,
+        evidence.get('granted_access')==2,
+        evidence.get('classification')=='lpac',
+        evidence.get('lpac') is True,
+    ))
+
+
 @pytest.fixture(autouse=True)
 def record_existing_launch(monkeypatch, request):
     from nexus import host
@@ -110,4 +134,4 @@ def record_existing_launch(monkeypatch, request):
         assert all(row.get('job_after_communication') == {'query_ok': True, 'active_processes': 0} for row in launches), 'Native Job retained processes or could not be queried'
         tools=[event for row in launches for event in row['process_observation']['events'] if event['name'].lower() in ('python.exe','soffice.com','soffice.bin')]
         assert tools, 'No actual tool token observed'
-        assert all(event.get('appcontainer') is True and event.get('lpac') is True and event.get('elevated') is False and event.get('same_job') is True and event.get('capabilities_match_existing_boundary') is True for event in tools), 'Tool token/LPAC/Job/non-elevation gate failed'
+        assert all(event.get('appcontainer') is True and verified_lpac_observation(event) and event.get('elevated') is False and event.get('same_job') is True and event.get('capabilities_match_existing_boundary') is True for event in tools), 'Tool token/LPAC/Job/non-elevation gate failed'

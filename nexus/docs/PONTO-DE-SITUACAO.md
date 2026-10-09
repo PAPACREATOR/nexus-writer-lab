@@ -4,18 +4,22 @@
 
 Loop de resolução retomado por instrução humana em 09-10-2026. Goal ativo:
 procurar solução reproduzível e validar integralmente antes de preencher proposta.
-Próximo ensaio: metadados PE/CodeView para símbolos exatos; UIA/MSAA a partir
-do HWND validado com inventário/contagens; evidência LPAC independente por
-AccessCheck num descritor sintético em memória, sem mudar ACLs/token do Writer.
+Último ensaio Writer 37900791913: duas rotas FAIL aos 45 s, canary IPC PASS,
+Jobs finais zero. LPAC confirmado independentemente nos dez eventos observados
+por AccessCheck num descritor em memória; conta não elevada, mesmo Job/capabilities.
+O leitor MSAA teve CO_E_NOTINITIALIZED; COM corrigido apenas no leitor externo,
+execução real dessa correção ainda NOT RUN. Run 37901277588 parou antes de
+Writer: PDB oficial tem GUID correto, mas age PDBI 3 versus PE 2. Correspondência
+recusada; a semântica do validador Microsoft está em investigação.
 Resultado B abaixo é história da fase anterior, não encerramento deste loop.
 
 Retoma humana confirmada: não houve reposição; este chat é do laboratório Writer.
-Retoma concluída como diagnóstico sem solução (B): último run 37840879467,
+Fase histórica concluída como diagnóstico sem solução (B): run 37840879467,
 2 FAIL/45 s e canary PASS. Conta normal, runtime original, Jobs finais zero.
 O leitor CDB foi corrigido e validado num helper; pilhas reais indicam espera
 em diálogo/message loop (LIKELY). SALFRAME LibreOffice 26.2 visível; consulta
 de etiquetas sem texto disponível. Causa exata NOT PROVEN; não declarar Nexus resolvido.
-Proposta mínima vazia, Folha e regressão de solução NOT RUN; nenhum ensaio pendente.
+Proposta mínima vazia, Folha e regressão de solução NOT RUN; loop atual ativo.
 ProcDump rejeitado por auto-review por possível exposição de dados sensíveis:
 NOT RUN. Usados somente rastreios/texto/captions, sem memória bruta.
 Provas e tentativas do leitor persistidas em lab-evidence; principal intacto.

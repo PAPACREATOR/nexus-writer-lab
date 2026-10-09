@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "ordinary_process_non_lpac": true,
+    "invalid_handle_remains_unknown": true
+  },
+  "ordinary_process": {
+    "method": "synthetic_descriptor_accesscheck",
+    "descriptor_sddl": "O:SYG:SYD:(A;;0x3;;;WD)(A;;0x1;;;S-1-15-2-1)(A;;0x2;;;S-1-15-2-2)",
+    "desired_access": 33554432,
+    "expected_lpac_granted_access": 2,
+    "api_ok": true,
+    "lpac": false,
+    "classification": "non_lpac",
+    "appcontainer": false,
+    "access_status": true,
+    "granted_access": 3,
+    "privilege_set_length": 256
+  },
+  "invalid_handle": {
+    "method": "synthetic_descriptor_accesscheck",
+    "descriptor_sddl": "O:SYG:SYD:(A;;0x3;;;WD)(A;;0x1;;;S-1-15-2-1)(A;;0x2;;;S-1-15-2-2)",
+    "desired_access": 33554432,
+    "expected_lpac_granted_access": 2,
+    "api_ok": false,
+    "lpac": null,
+    "classification": "api_error",
+    "stage": "OpenProcessToken(TOKEN_DUPLICATE)",
+    "winerror": 6
+  },
+  "passed": true,
+  "writer_executed": false,
+  "os_acl_changes": false,
+  "token_privilege_changes": false
+}

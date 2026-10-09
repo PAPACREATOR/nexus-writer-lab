@@ -103,5 +103,40 @@ SHA 74e570c: controlos LPAC AccessCheck ordinary/invalid PASS, sem iniciar Write
 mergedlo.pdb CodeView GUID 4b71bc20-183e-451a-b4b5-6aedb5de7413, age2,
 key 4B71BC20183E451AB4B56AEDB5DE74132. Identificadores dos quatro binários e
 hashes preservados em lab-evidence/debug-metadata/ e raw ZIP. Isso não valida
-um símbolo ainda não obtido nem a conversão. A leitura real de LPAC/diálogo
-em curso no run37900791913, SHA31fa784; resultado ainda NOT RUN/PENDING.
+um símbolo ainda não obtido nem a conversão. A leitura real de LPAC/diálogo terminou no run 37900791913; resultado abaixo.
+
+## Fronteira confirmada; leitor em correção — 09-10-2026
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37900791913,
+SHA 31fa784: duas rotas FAIL aos 45 s e canary IPC PASS; Jobs finais com zero
+processos. Todos os dez eventos observados de Python/conhost/soffice.com/
+soffice.bin tiveram AccessCheck api_ok=true, AppContainer=true,
+AccessStatus=true, granted_access=2, lpac=true; conta não elevada e mesmo
+Job/capabilities. LPAC verificado independentemente. O erro 87 da consulta
+classe 46 fica preservado; não é tratado como false. O inventário a cada
+0,1 s não prova a ausência de processos com duração inferior ao intervalo.
+Provas integrais: lab-evidence/exact-msaa/ e exact-msaa-raw.zip.
+
+MSAA pelo HWND exato encontrou o SALFRAME correto, mas retornou HRESULT
+0x800401F0 (CO_E_NOTINITIALIZED): falha do leitor, não ausência do provider.
+CoInitializeEx foi acrescentado ao helper externo, sem mudar Writer.
+S_OK/S_FALSE são balanceados; RPC_E_CHANGED_MODE preserva o apartamento
+existente. Parser e compilação C# PASS; execução real da correção NOT RUN.
+Fonte: https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37901277588,
+SHA a19d2d6: preparação de símbolos FAIL; Writer NOT RUN. O CAB oficial foi
+descarregado e expandido corretamente. SHA-256 do CAB:
+e70b64c6844a809dd42f1b4ea9a06a843d3cc17d2ffd48742f391e4aa268dd17.
+mergedlo.pdb tem GUID 4b71bc20-183e-451a-b4b5-6aedb5de7413 correspondente,
+mas age=3 no stream PDBI, enquanto o PE exige age=2. O leitor recusou o
+ficheiro; não se forçou correspondência nem se atribuiu uma causa ao Writer.
+Provas: lab-evidence/symbol-age-mismatch/ e symbol-age-mismatch-raw.zip.
+
+Regressão preparada: oito módulos nexus/security_tests incluídos, skips ou
+módulos obrigatórios ausentes causam falha; adversos exigem Job/token e uma
+sequência real de quatro pedidos no mesmo Host/store, com aprovação e
+restart sem replay. Controlos de classificação PASS; 17 contratos de
+segurança documentais PASS. Conversões desta regressão NOT RUN até existir
+solução. O gate LPAC exige a leitura independente positiva; conflitos ou
+evidência inconclusiva continuam a falhar. Não é PASS global.

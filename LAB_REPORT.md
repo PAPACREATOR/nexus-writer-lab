@@ -161,3 +161,39 @@ Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37840879467, SH
 Oito consultas de etiquetas retornaram listas vazias. Não permitem inferir que o diálogo não tem mensagem; não registam contagem de janelas/descendentes acessíveis. Limitação explícita do método. Pilhas reais e janela SALFRAME LibreOffice 26.2 foram persistidas: espera em diálogo/message loop **LIKELY**, causa exata **NOT PROVEN**. Nenhuma correção válida emergiu das hipóteses examinadas nesta retoma. Resultado B permanece: relatório/evidência completos para estes ensaios, sem declarar Nexus resolvido.
 
 As provas integrais estão em lab-evidence/dialog-labels/ e dialog-labels-raw.zip, além das tentativas anteriores identificadas. As tentativas falhadas do leitor não são PASS do Writer. ProcDump foi rejeitado e nunca executado; a alternativa textual não carrega memória bruta. MINIMAL_PATCH_PROPOSAL.md permanece vazio. Folha e regressão de solução 100+100 permanecem **NOT RUN**, pois não existe solução comprovada. Principal intacto. Sem execução adicional pendente.
+
+## Fronteira confirmada; leitor em correção — 09-10-2026
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37900791913,
+SHA 31fa784: duas rotas FAIL aos 45 s e canary IPC PASS; Jobs finais com zero
+processos. Todos os dez eventos observados de Python/conhost/soffice.com/
+soffice.bin tiveram AccessCheck api_ok=true, AppContainer=true,
+AccessStatus=true, granted_access=2, lpac=true; conta não elevada e mesmo
+Job/capabilities. LPAC verificado independentemente. O erro 87 da consulta
+classe 46 fica preservado; não é tratado como false. O inventário a cada
+0,1 s não prova a ausência de processos com duração inferior ao intervalo.
+Provas integrais: lab-evidence/exact-msaa/ e exact-msaa-raw.zip.
+
+MSAA pelo HWND exato encontrou o SALFRAME correto, mas retornou HRESULT
+0x800401F0 (CO_E_NOTINITIALIZED): falha do leitor, não ausência do provider.
+CoInitializeEx foi acrescentado ao helper externo, sem mudar Writer.
+S_OK/S_FALSE são balanceados; RPC_E_CHANGED_MODE preserva o apartamento
+existente. Parser e compilação C# PASS; execução real da correção NOT RUN.
+Fonte: https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex
+
+Run https://github.com/PAPACREATOR/nexus-writer-lab/actions/runs/37901277588,
+SHA a19d2d6: preparação de símbolos FAIL; Writer NOT RUN. O CAB oficial foi
+descarregado e expandido corretamente. SHA-256 do CAB:
+e70b64c6844a809dd42f1b4ea9a06a843d3cc17d2ffd48742f391e4aa268dd17.
+mergedlo.pdb tem GUID 4b71bc20-183e-451a-b4b5-6aedb5de7413 correspondente,
+mas age=3 no stream PDBI, enquanto o PE exige age=2. O leitor recusou o
+ficheiro; não se forçou correspondência nem se atribuiu uma causa ao Writer.
+Provas: lab-evidence/symbol-age-mismatch/ e symbol-age-mismatch-raw.zip.
+
+Regressão preparada: oito módulos nexus/security_tests incluídos, skips ou
+módulos obrigatórios ausentes causam falha; adversos exigem Job/token e uma
+sequência real de quatro pedidos no mesmo Host/store, com aprovação e
+restart sem replay. Controlos de classificação PASS; 17 contratos de
+segurança documentais PASS. Conversões desta regressão NOT RUN até existir
+solução. O gate LPAC exige a leitura independente positiva; conflitos ou
+evidência inconclusiva continuam a falhar. Não é PASS global.

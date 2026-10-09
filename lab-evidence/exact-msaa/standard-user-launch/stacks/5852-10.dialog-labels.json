@@ -1,0 +1,6 @@
+{
+    "memory_dump":  false,
+    "pid":  5852,
+    "interaction":  false,
+    "reason":  "No matching SALFRAME in EnumWindows"
+}

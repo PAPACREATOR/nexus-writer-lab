@@ -107,7 +107,9 @@ using System.Runtime.InteropServices;
 using Accessibility;
 public static class NexusDialogMsaa {
  public sealed class Node { public string path; public string role; public string name; public int? child_count; public bool payload_skipped; public List<string> errors=new List<string>(); }
- public sealed class Result { public string status="in_progress"; public int hresult; public bool truncated; public List<Node> nodes=new List<Node>(); public List<string> errors=new List<string>(); }
+ public sealed class Result { public string status="in_progress"; public int? hresult; public int com_initialization_hresult; public string com_initialization_hresult_hex; public string com_apartment; public bool com_uninitialize_called; public bool truncated; public List<Node> nodes=new List<Node>(); public List<string> errors=new List<string>(); }
+ [DllImport("ole32.dll")] static extern int CoInitializeEx(IntPtr reserved,uint model);
+ [DllImport("ole32.dll")] static extern void CoUninitialize();
  [DllImport("oleacc.dll")] static extern int AccessibleObjectFromWindow(IntPtr h,uint id,ref Guid iid,[MarshalAs(UnmanagedType.Interface)] out IAccessible value);
  [DllImport("oleacc.dll")] static extern int AccessibleChildren(IAccessible parent,int first,int count,[Out,MarshalAs(UnmanagedType.LPArray,ArraySubType=UnmanagedType.Struct,SizeParamIndex=2)] object[] children,out int obtained);
  static Node Read(IAccessible acc,object child,string path) {
@@ -143,14 +145,26 @@ public static class NexusDialogMsaa {
   }
  }
  public static Result Query(IntPtr h) {
-  var result=new Result(); IAccessible root=null;
+  var result=new Result(); IAccessible root=null; bool balanceCom=false;
   try {
+   // Initialize only this external reader thread. An existing apartment stays
+   // in its current mode; S_OK and S_FALSE each require one balanced release.
+   int comHr=CoInitializeEx(IntPtr.Zero,2); // COINIT_APARTMENTTHREADED
+   result.com_initialization_hresult=comHr;
+   result.com_initialization_hresult_hex="0x"+comHr.ToString("x8");
+   balanceCom=comHr==0 || comHr==1;
+   if(balanceCom) result.com_apartment="STA";
+   else if(comHr==unchecked((int)0x80010106)) result.com_apartment="existing_apartment_kept"; // RPC_E_CHANGED_MODE
+   else { result.status="com_initialization_error"; return result; }
    Guid iid=new Guid("618736e0-3c3d-11cf-810c-00aa00389b71");
    result.hresult=AccessibleObjectFromWindow(h,unchecked((uint)-4),ref iid,out root);
    if(result.hresult<0 || root==null) { result.status="unavailable"; return result; }
    Walk(root,"root",0,result); result.status="completed";
   } catch(Exception e) { result.status="error"; result.errors.Add(e.Message); }
-  finally { if(root!=null && Marshal.IsComObject(root)) Marshal.ReleaseComObject(root); }
+  finally {
+   try { if(root!=null && Marshal.IsComObject(root)) Marshal.ReleaseComObject(root); }
+   finally { if(balanceCom) { CoUninitialize(); result.com_uninitialize_called=true; } }
+  }
   return result;
  }
 }
