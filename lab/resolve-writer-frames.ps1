@@ -34,3 +34,8 @@ if($helper.ExitCode -ne 0) {
     }
     throw 'Offline symbol binding or resolution failed; preserve diagnostic evidence'
 }
+$successReport=Join-Path $output 'resolved-writer-frames.json'
+if(Test-Path -LiteralPath $successReport) {
+    Write-Host '=== offline resolver success report ==='
+    Get-Content -LiteralPath $successReport -Raw
+}
