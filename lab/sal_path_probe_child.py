@@ -20,10 +20,12 @@ def emit(stage, **values):
     print(json.dumps({'stage': stage, **values}), flush=True)
 
 
-def load_boundary_check():
+def load_boundary_check(package_root):
     # Match the existing isolated helper's direct package loading. No parent
     # directory enumeration or extra read root is needed for Python imports.
-    package_root = Path(__file__).absolute().parents[1] / 'nexus'
+    package_root = Path(package_root)
+    if not package_root.is_absolute() or package_root.name != 'nexus':
+        raise ValueError('Expected the absolute original Nexus package root')
     spec = importlib.util.spec_from_file_location(
         'nexus', package_root / '__init__.py',
         submodule_search_locations=[str(package_root)])
@@ -88,9 +90,9 @@ def attributes(kernel, path):
 def main():
     if os.name != 'nt' or C.sizeof(C.c_void_p) != 8:
         raise RuntimeError('This diagnostic requires 64-bit Windows')
-    if len(sys.argv) != 4:
-        raise ValueError('Expected Office root, synthetic profile, and listener port')
-    load_boundary_check()
+    if len(sys.argv) != 5:
+        raise ValueError('Expected Office root, synthetic profile, listener port and Nexus package root')
+    load_boundary_check(sys.argv[4])
     emit('native_boundary_verified', writer_executed=False, acl_changes=False,
          process_memory_read=False)
     office, profile = Path(sys.argv[1]), Path(sys.argv[2])

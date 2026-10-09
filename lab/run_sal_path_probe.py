@@ -116,7 +116,10 @@ def main():
         'writer_executed': False, 'product_routes_validated': False,
         'human_gate_validated': False, 'process_memory_read': False,
     }
-    child = root / 'lab/sal_path_probe_child.py'
+    # Stage only this synthetic diagnostic in the already assigned workspace;
+    # repository lab/ is deliberately outside the native tool read roots.
+    child = work / 'sal_path_probe_child.py'
+    child.write_bytes((root / 'lab/sal_path_probe_child.py').read_bytes())
     result['sal_binary'] = str(executable.parent / 'sal3.dll')
     result['sal_sha256'] = hashlib.sha256(
         (executable.parent / 'sal3.dll').read_bytes()).hexdigest()
@@ -127,7 +130,7 @@ def main():
         listener.listen(1)
         command = [sys.executable, '-I', str(child),
                    str(executable.parent.parent), str(profile),
-                   str(listener.getsockname()[1])]
+                   str(listener.getsockname()[1]), str(root / 'nexus')]
         result['command'] = command
         try:
             with launch_confined(command, cwd=work, env=task_environment(work),
