@@ -22,12 +22,21 @@ jobs:
       - name: Official external stack reader
         shell: pwsh
         run: ./lab/install-stack-tools.ps1
+      - name: Independent LPAC reader controls, no Writer
+        run: python -m lab.check_lpac_evidence --output lab-evidence/lpac-accesscheck-control.json
       - name: Check stack reader on a synthetic sleeping helper
         shell: pwsh
         run: ./lab/check-stack-reader.ps1
       - name: Archival Writer
         shell: pwsh
         run: ./lab/install-writer.ps1
+      - name: On-disk Writer debug identifiers
+        run: python lab/pe_debug_info.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: writer-binary-debug-metadata
+          path: lab-evidence/pe-debug-info.json
+          if-no-files-found: error
       - run: python -m pip install jsonschema==4.26.0 pytest==9.1.1
       - name: Original standard-user routes, non-invasive non-suspending stack text
         shell: pwsh
@@ -38,6 +47,7 @@ jobs:
           name: writer-stack-text-only
           path: |
             lab-evidence/stack-tools/*.json*
+            lab-evidence/lpac-accesscheck-control.json
             lab-evidence/stack-reader-check/*.txt
             lab-evidence/stack-reader-check/*.json
             lab-evidence/standard-user/A/*.json
@@ -50,4 +60,5 @@ jobs:
             lab-evidence/standard-user-launch/stacks/*.json*
             lab-evidence/libreoffice-version.txt
             lab-evidence/writer-binary-hash.json
+            lab-evidence/pe-debug-info.json
           if-no-files-found: error

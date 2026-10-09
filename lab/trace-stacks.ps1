@@ -8,7 +8,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 public class NexusWindowCaption {
- public class Entry { public uint pid; public string title; public string windowClass; public bool visible; public bool child; }
+ public class Entry { public uint pid; public long hwnd; public string title; public string windowClass; public bool visible; public bool child; }
  delegate bool EnumProc(IntPtr h, IntPtr p);
  [DllImport("user32.dll")] static extern bool EnumWindows(EnumProc cb,IntPtr p);
  [DllImport("user32.dll")] static extern bool EnumChildWindows(IntPtr h,EnumProc cb,IntPtr p);
@@ -20,7 +20,7 @@ public class NexusWindowCaption {
   var entries=new List<Entry>();
   Action<IntPtr,bool> read=(h,child)=>{uint pid;GetWindowThreadProcessId(h,out pid);if(pid!=target)return;
    var title=new StringBuilder(4096);var cls=new StringBuilder(256);GetWindowTextW(h,title,title.Capacity);GetClassNameW(h,cls,cls.Capacity);
-   entries.Add(new Entry{pid=pid,title=title.ToString(),windowClass=cls.ToString(),visible=IsWindowVisible(h),child=child});};
+   entries.Add(new Entry{pid=pid,hwnd=h.ToInt64(),title=title.ToString(),windowClass=cls.ToString(),visible=IsWindowVisible(h),child=child});};
   EnumWindows((h,p)=>{uint pid;GetWindowThreadProcessId(h,out pid);if(pid==target){read(h,false);EnumChildWindows(h,(c,x)=>{read(c,true);return true;},IntPtr.Zero);}return true;},IntPtr.Zero);
   return entries;
  }
@@ -43,11 +43,19 @@ while (-not (Test-Path -LiteralPath $StopFile) -and [DateTime]::UtcNow -lt $dead
     $key=([string]$p.Id)+'-'+$threshold
     if ($age -lt $threshold -or $seen.ContainsKey($key)) { continue }
     $seen[$key]=$true
+    $windows=@([NexusWindowCaption]::Query([uint32]$p.Id))
+    $dialog=$windows | Where-Object {$_.windowClass -eq 'SALFRAME' -and $_.title -eq 'LibreOffice 26.2'} | Select-Object -First 1
     # Bound the external accessibility reader; only stop the reader on timeout.
     $labelLog=Join-Path $Output ($key+'.dialog-labels.json')
-    $reader=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList @('-NoProfile','-File',('"'+(Join-Path $PSScriptRoot 'read-dialog-labels.ps1')+'"'),'-TargetPid',([string]$p.Id),'-Output',('"'+$labelLog+'"')) -WindowStyle Hidden -PassThru -RedirectStandardError ($labelLog+'.stderr.txt')
-    if (-not $reader.WaitForExit(3000)) { $reader.Kill(); @{pid=$p.Id;reader_timeout=$true;interaction=$false;memory_dump=$false} | ConvertTo-Json | Set-Content $labelLog }
-    @{utc=[DateTime]::UtcNow.ToString('o');pid=$p.Id;threshold_seconds=$threshold;image=$path;windows=@([NexusWindowCaption]::Query([uint32]$p.Id));payload='window captions/classes only';interaction=$false;memory_dump=$false} | ConvertTo-Json -Depth 5 -Compress | Add-Content (Join-Path $Output 'windows.jsonl')
+    if($dialog) {
+     $reader=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -ArgumentList @('-NoProfile','-File',('"'+(Join-Path $PSScriptRoot 'read-dialog-labels.ps1')+'"'),'-TargetPid',([string]$p.Id),'-TargetHwnd',([string]$dialog.hwnd),'-Reader','MSAA','-Output',('"'+$labelLog+'"')) -WindowStyle Hidden -PassThru -RedirectStandardError ($labelLog+'.stderr.txt')
+     $readerHandle=$reader.Handle
+     $readerFinished=$reader.WaitForExit(3000)
+     if (-not $readerFinished) { $reader.Kill() }
+     $reader.Refresh()
+     @{pid=$p.Id;reader_timeout=(-not $readerFinished);exit_code=$(if($readerFinished){$reader.ExitCode}else{$null});partial_result_present=(Test-Path $labelLog);interaction=$false;memory_dump=$false} | ConvertTo-Json | Set-Content ($labelLog+'.reader.json')
+    } else { @{pid=$p.Id;reason='No matching SALFRAME in EnumWindows';interaction=$false;memory_dump=$false} | ConvertTo-Json | Set-Content $labelLog }
+    @{utc=[DateTime]::UtcNow.ToString('o');pid=$p.Id;threshold_seconds=$threshold;image=$path;windows=$windows;payload='window captions/classes only';interaction=$false;memory_dump=$false} | ConvertTo-Json -Depth 5 -Compress | Add-Content (Join-Path $Output 'windows.jsonl')
     $log=Join-Path $Output ($key+'.stacks.txt')
     $start=[DateTime]::UtcNow
     # Non-invasive, non-suspending read. Stack-only text; no .dump or memory display.
@@ -56,7 +64,7 @@ while (-not (Test-Path -LiteralPath $StopFile) -and [DateTime]::UtcNow -lt $dead
     $finished=$helper.WaitForExit(8000)
     if (-not $finished) { $helper.Kill() }
     $helper.Refresh()
-    @{utc=$start.ToString('o');pid=$p.Id;image=$path;age_seconds=$age;threshold_seconds=$threshold;finished=$finished;duration_seconds=([DateTime]::UtcNow-$start).TotalSeconds;exit_code=$(if ($finished) {$helper.ExitCode} else {$null});mode='non-invasive non-suspending -pvr';payload='stack frames and module list text only';memory_dump=$false;clone=$false;runtime_changes=@();non_atomic_observation=$true} | ConvertTo-Json -Compress | Add-Content (Join-Path $Output 'capture.jsonl')
+    @{utc=$start.ToString('o');pid=$p.Id;image=$path;age_seconds=($start.ToLocalTime()-$p.StartTime).TotalSeconds;age_seconds_at_threshold_check=$age;threshold_seconds=$threshold;finished=$finished;duration_seconds=([DateTime]::UtcNow-$start).TotalSeconds;exit_code=$(if ($finished) {$helper.ExitCode} else {$null});mode='non-invasive non-suspending -pvr';payload='stack frames and module list text only';memory_dump=$false;clone=$false;runtime_changes=@();non_atomic_observation=$true} | ConvertTo-Json -Compress | Add-Content (Join-Path $Output 'capture.jsonl')
    }
   } catch { @{utc=[DateTime]::UtcNow.ToString('o');pid=$p.Id;error=$_.Exception.Message} | ConvertTo-Json -Compress | Add-Content (Join-Path $Output 'errors.jsonl') }
  }
