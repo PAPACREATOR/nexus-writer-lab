@@ -28,6 +28,9 @@ jobs:
           ref: aefeeee631518cd2d7197300a6e1a67f0c63eb63
           path: lab/sandy-local-pipes/upstream
           persist-credentials: false
+      - name: Unit regression - DACL control marker and fail-closed paths
+        shell: pwsh
+        run: python -m unittest discover -s lab/sandy-local-pipes -p test_dacl_preflight.py -v
       - name: Install exact official archival Writer
         shell: pwsh
         run: ./lab/install-writer.ps1
