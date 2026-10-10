@@ -216,7 +216,7 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
            'execution_budget_seconds': 43, 'termination_reserve_seconds': 2, 'config_sha256': sha(config_path),
            'pipe_source': source, 'pipe_destination': destination, 'conversion': 'NOT RUN',
            'token': None, 'pipe_observed': False, 'errors': [],
-           'baseline_dacls': {str(p): before[str(p)] for p in (app, profile, work, temp)}
+           'baseline_dacls': {str(p): before[str(p)] for p in (app, profile, work, temp)}}
     state = {'runtime': str(app), 'scratch': str(scratch), 'work': str(work), 'outside': str(scratch.parent / 'host-canary.txt'), 'config': str(config_path)}
     handles = {}
     p = None
