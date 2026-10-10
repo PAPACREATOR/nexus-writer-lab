@@ -211,9 +211,10 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
             row['timed_out'] = p.poll() is None
             if row['timed_out']: p.terminate()  # Sandy job closes; only our launcher.
             row['exit_code'] = p.wait(timeout=max(0.05, 45 - (time.monotonic() - started)))
-            row['seconds_including_termination'] = time.monotonic() - started
             wait = native.api(native.kernel, 'WaitForSingleObject', native.D, native.P, native.D)
-            row['writers_terminated'] = bool(handles) and all(wait(h, 0) == 0 for h in handles.values())
+            row['writer_wait_results'] = {str(pid): int(wait(handle, max(0, int((started + 45 - time.monotonic()) * 1000)))) for pid, handle in handles.items()}
+            row['writers_terminated'] = bool(handles) and all(value == 0 for value in row['writer_wait_results'].values())
+            row['seconds_including_termination'] = time.monotonic() - started
         log = (evidence / 'sandy.log').read_text(encoding='utf-8-sig', errors='replace') if (evidence / 'sandy.log').exists() else ''
         row['hook_paths'] = re.findall(r'PIPEHOOK: extracted hook DLL -> (.*?) \(\d+ bytes\)', log)
         recovery = subprocess.run([str(args.sandy), '--cleanup'], capture_output=True, timeout=15)
@@ -221,7 +222,10 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
         row['recovery_exit'] = recovery.returncode
         row['hook_removed'] = all(not Path(p).exists() for p in row['hook_paths'])
         row['hook_injected'] = mapped and bool(row['hook_paths']) and 'PIPEHOOK: hook DLL injected and imports patched' in log
-        row['dacls_unchanged'] = all(native.dacl(Path(p)) == old for p, old in before.items())
+        after = {p: native.dacl(Path(p)) for p in before}
+        write(evidence / 'dacls.json', {'before': before, 'after': after})
+        row['dacl_changes'] = {p: {'before': old, 'after': after[p]} for p, old in before.items() if old != after[p]}
+        row['dacls_unchanged'] = not row['dacl_changes']
         status = subprocess.run([str(args.sandy), '--status'], capture_output=True, timeout=10)
         (evidence / 'status.txt').write_bytes(status.stdout + status.stderr)
         row['container_deregistered'] = status.returncode == 0 and row['token'] is not None and row['token']['sid'] not in status.stdout.decode('utf-8', errors='replace')
