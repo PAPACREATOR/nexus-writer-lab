@@ -1,0 +1,56 @@
+name: Writer mail solution - Sandy LOCAL pipes
+on:
+  push:
+    branches: [lab/writer-mail-pipe-rename-20261010]
+    paths:
+      - lab/sandy-local-pipes/**
+      - .github/workflows/writer-mail-local-pipes.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ahrvoje/sandy_cli
+          ref: aefeeee631518cd2d7197300a6e1a67f0c63eb63
+          path: lab/sandy-local-pipes/upstream
+          persist-credentials: false
+      - name: Install exact official archival Writer
+        shell: pwsh
+        run: ./lab/install-writer.ps1
+      - name: Verify official Sandy release bytes
+        shell: pwsh
+        run: |
+          $path=Join-Path $env:RUNNER_TEMP 'sandy-v0.9994.exe'
+          Invoke-WebRequest 'https://github.com/ahrvoje/sandy_cli/releases/download/v0.9994/sandy.exe' -OutFile $path
+          if ((Get-Item $path).Length -ne 1159680) { throw 'Sandy release length mismatch' }
+          if ((Get-FileHash $path -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'cbfc30709f80e63b201f1944c34692fc430d8aa42d6cd2823fcc670675307eac') { throw 'Sandy release SHA256 mismatch' }
+          "SANDY_EXE=$path" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append
+      - run: python -m pip install pypdf==6.1.3
+      - name: A/B inside a disposable standard account
+        shell: pwsh
+        run: ./lab/sandy-local-pipes/run-standard-user.ps1 -SandyExe $env:SANDY_EXE
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: writer-mail-local-pipes-${{ github.sha }}
+          path: |
+            lab-evidence/standard-user/
+            lab-evidence/sandy-standard-user-launch/
+            lab-evidence/libreoffice-version.txt
+            lab-evidence/windows-version.json
+            lab-evidence/writer-binary-hash.json
+          if-no-files-found: error
