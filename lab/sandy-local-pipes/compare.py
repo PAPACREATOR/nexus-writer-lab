@@ -220,13 +220,14 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
         (evidence / 'recovery.txt').write_bytes(recovery.stdout + recovery.stderr)
         row['recovery_exit'] = recovery.returncode
         row['hook_removed'] = all(not Path(p).exists() for p in row['hook_paths'])
-        row['hook_injected'] = mapped and bool(row['hook_paths']) and 'PIPEHOOK:' in log
+        row['hook_injected'] = mapped and bool(row['hook_paths']) and 'PIPEHOOK: hook DLL injected and imports patched' in log
         row['dacls_unchanged'] = all(native.dacl(Path(p)) == old for p, old in before.items())
         status = subprocess.run([str(args.sandy), '--status'], capture_output=True, timeout=10)
         (evidence / 'status.txt').write_bytes(status.stdout + status.stderr)
         row['container_deregistered'] = status.returncode == 0 and row['token'] is not None and row['token']['sid'] not in status.stdout.decode('utf-8', errors='replace')
         pdf_path = work / 'out/original.pdf'
-        if not row['timed_out'] and row['exit_code'] == 0:
+        row['within_deadline'] = row['seconds_including_termination'] <= 45
+        if not row['timed_out'] and row['within_deadline'] and row['exit_code'] == 0:
             validate = existing_function(ROOT / 'nexus/adapters/office.py', 'pdf_bytes')
             raw = validate(pdf_path)
             from pypdf import PdfReader
@@ -308,14 +309,26 @@ def main():
         report['phases']['synthetic_unrestricted_preparation'] = 'PASS'
         shutil.copyfile(UPSTREAM / 'LICENSE', args.evidence / 'SANDY-LICENSE.txt')
         template = (UPSTREAM / 'docs/libreoffice.toml').read_text(encoding='utf-8')
+        snapshots = {'profile': snapshot}
+        for name in ('work', 'temp'):
+            snapshots[name] = scratch / (name + '-before')
+            shutil.copytree(scratch / name, snapshots[name])
+            if manifest(scratch / name) != manifest(snapshots[name]):
+                raise RuntimeError('Synthetic data snapshot mismatch: ' + name)
         results = []
         for label, mapped in (('A-no-mapping', False), ('B-LOCAL-mapping', True)):
             if label.startswith('B'):
-                (scratch / 'profile').rename(scratch / 'profile-after-A')
-                shutil.copytree(snapshot, scratch / 'profile')
-                if manifest(scratch / 'profile') != manifest(snapshot): raise RuntimeError('Profile restore mismatch')
-                (scratch / 'work/out').rename(scratch / 'work/out-after-A')
-                (scratch / 'work/out').mkdir()
+                a = results[0]
+                report['cases'] = results
+                if not (a.get('writers_terminated') and a.get('dacls_unchanged')
+                        and a.get('container_deregistered') and a.get('hook_removed')
+                        and a.get('recovery_exit') == 0):
+                    raise RuntimeError('A cleanup/termination not proved; B refused before profile restoration')
+                for name, saved in snapshots.items():
+                    (scratch / name).rename(scratch / (name + '-after-A'))
+                    shutil.copytree(saved, scratch / name)
+                    if manifest(scratch / name) != manifest(saved):
+                        raise RuntimeError('Synthetic data restore mismatch: ' + name)
             if sha(original) != report['input_sha256'] or sha(outside) != canary_hash:
                 raise RuntimeError('Input/canary changed before next variant')
             results.append(convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck, env, template))
@@ -327,7 +340,9 @@ def main():
         report['cases'] = results
         pass_b = b['conversion'] == 'PASS' and b.get('observed_boundary_pass') and b['pipe_observed'] and b.get('hook_injected')
         report['overall'] = 'PASS' if pass_b and report['only_mapping_differs'] and report['originals_unchanged'] else 'FAIL'
-        report['causal_comparison'] = 'A failed / B passed' if report['overall'] == 'PASS' and a['conversion'] == 'FAIL' else 'INCONCLUSIVE'
+        report['causal_comparison'] = 'A failed / B passed' if (report['overall'] == 'PASS'
+            and a['conversion'] == 'FAIL' and a.get('observed_boundary_pass')
+            and a.get('writer_pid') and not a.get('errors')) else 'INCONCLUSIVE'
         report['phases']['A_B_windows_execution'] = report['overall']
         return 0 if report['overall'] == 'PASS' else 1
     except Exception as error:

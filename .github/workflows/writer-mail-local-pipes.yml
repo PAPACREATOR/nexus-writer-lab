@@ -1,7 +1,6 @@
 name: Writer mail solution - Sandy LOCAL pipes
 on:
-  push:
-    branches: [lab/writer-mail-pipe-rename-20261010]
+  pull_request:
     paths:
       - lab/sandy-local-pipes/**
       - .github/workflows/writer-mail-local-pipes.yml
@@ -14,10 +13,11 @@ jobs:
     timeout-minutes: 20
     env:
       PYTHONUTF8: '1'
+      LAB_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          ref: ${{ github.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
@@ -46,7 +46,7 @@ jobs:
       - if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: writer-mail-local-pipes-${{ github.sha }}
+          name: writer-mail-local-pipes-${{ env.LAB_SOURCE_SHA }}
           path: |
             lab-evidence/standard-user/
             lab-evidence/sandy-standard-user-launch/

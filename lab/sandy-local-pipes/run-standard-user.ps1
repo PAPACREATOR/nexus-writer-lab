@@ -14,7 +14,7 @@ Add-LocalGroupMember -Group $users -Member $name
 $credential=New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$name",$secure)
 $output=Join-Path $source 'lab-evidence/sandy-standard-user-launch'
 $null=New-Item -ItemType Directory -Path $output -Force
-$arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/sandy-local-pipes/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-SandyExe',('"'+$SandyExe+'"'),'-SourceCommit',$env:GITHUB_SHA)
+$arguments=@('-NoProfile','-File',('"'+(Join-Path $source 'lab/sandy-local-pipes/user-bootstrap.ps1')+'"'),'-SourceRoot',('"'+$source+'"'),'-PythonRoot',('"'+$pythonRoot+'"'),'-OfficeRoot',('"'+$officeRoot+'"'),'-SandyExe',('"'+$SandyExe+'"'),'-SourceCommit',$env:LAB_SOURCE_SHA)
 try {
     $process=Start-Process -FilePath (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -Credential $credential -LoadUserProfile -WindowStyle Hidden -ArgumentList $arguments -RedirectStandardOutput (Join-Path $output 'stdout.txt') -RedirectStandardError (Join-Path $output 'stderr.txt') -Wait -PassThru
     $labProfile=Get-CimInstance Win32_UserProfile | Where-Object {$_.SID -eq (Get-LocalUser -Name $name).SID.Value} | Select-Object -First 1
