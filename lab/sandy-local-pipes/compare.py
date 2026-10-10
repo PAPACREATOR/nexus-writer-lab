@@ -150,47 +150,48 @@ def file_access(pid, state, native):
 
 
 def expected_auto_inherited_dacl(before, after):
-    """Allow only Windows' AI bookkeeping bit, never a change to any ACE."""
+    """Return True only when the new DACL differs by the Windows AI marker."""
     return before.startswith('D:(') and after == 'D:AI' + before[2:]
 
 
-def normalize_lab_dacl_before_measurement(path, roots, native):
-    """Materialize Windows auto-inheritance BEFORE the A/B baseline.
+def restore_exact_lab_dacls(original, after_sandy, roots, native):
+    """Restore only the metadata-only AI change on disposable, owned lab paths.
 
-    This operation is allowed only on fresh user-owned experimental copies.
-    It does not grant a new ACE or relax LPAC; unexpected security changes FAIL.
-    We deliberately do not normalize/ignore changes after Sandy has run.
+    The original DACL is reapplied unchanged with DACL_SECURITY_INFORMATION.
+    SetFileSecurityW is the legacy DACL-only API; unlike SetNamedSecurityInfoW,
+    it does not run auto-inheritance propagation on child objects. This is a
+    lab-specific *post-process* repair, never a sandbox permission grant.
+    Every unexpected flag/ACE change refuses repair and remains a hard FAIL.
     """
-    path = path.resolve()
-    if not any(path == root or root in path.parents for root in roots):
-        raise RuntimeError('DACL preparation refused outside isolated lab: ' + str(path))
-    old = native.dacl(path)
-    if old.startswith('D:AI('):
-        return {'path': str(path), 'before': old, 'after': old, 'action': 'already_auto_inherited'}
-    if not old.startswith('D:('):
-        raise RuntimeError('Unrecognized or protected DACL: ' + str(path) + ': ' + old)
-    descriptor, acl = native.P(), native.P()
-    error = native.GetSecurity(str(path), 1, 4, None, None,
-                               C.byref(acl), None, C.byref(descriptor))
-    if error:
-        raise RuntimeError('Cannot read DACL for lab preparation: ' + str(path) + ': ' + str(error))
-    try:
-        change = native.api(native.advapi, 'SetNamedSecurityInfoW', native.D,
-                            native.W.LPWSTR, native.D, native.D,
-                            native.P, native.P, native.P, native.P)
-        # DACL_SECURITY_INFORMATION | UNPROTECTED_DACL_SECURITY_INFORMATION:
-        # use the original ACL pointer, with inheritance enabled by Windows.
-        error = change(str(path), 1, 0x80000004, None, None, acl, None)
-        if error:
-            raise RuntimeError('Lab auto-inheritance preparation failed: ' + str(path) + ': ' + str(error))
-    finally:
-        native.LocalFree(descriptor)
-    after = native.dacl(path)
-    if not expected_auto_inherited_dacl(old, after):
-        raise RuntimeError('Lab DACL preparation changed ACEs or other flags: ' + str(path)
-                           + ' before=' + old + ' after=' + after)
-    return {'path': str(path), 'before': old, 'after': after,
-            'action': 'materialized_auto_inheritance_only'}
+    repairable = []
+    for name, prior in original.items():
+        observed = after_sandy[name]
+        if observed == prior:
+            continue
+        path = Path(name).resolve()
+        if not any(path == root or root in path.parents for root in roots):
+            raise RuntimeError('DACL restore refused outside experimental copies: ' + name)
+        if not expected_auto_inherited_dacl(prior, observed):
+            raise RuntimeError('DACL changed beyond AI marker; refusing repair: '
+                               + name + ' before=' + prior + ' after=' + observed)
+        repairable.append((path, prior, observed))
+    results = []
+    for path, prior, observed in repairable:
+        descriptor = native.P()
+        native.check(native.ConvertSDDL(prior, 1, C.byref(descriptor), None))
+        try:
+            restore = native.api(native.advapi, 'SetFileSecurityW',
+                                 native.W.BOOL, native.W.LPCWSTR, native.D, native.P)
+            native.check(restore(str(path), 4, descriptor))  # DACL only.
+        finally:
+            native.LocalFree(descriptor)
+        verified = native.dacl(path)
+        results.append({'path': str(path), 'original': prior, 'after_sandy': observed,
+                        'after_exact_restore': verified, 'only_ai_changed': True})
+        if verified != prior:
+            raise RuntimeError('DACL exact post-restore mismatch: ' + str(path)
+                               + ' expected=' + prior + ' observed=' + verified)
+    return results
 
 
 def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck, env, template):
@@ -205,13 +206,6 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
     for key, value in values.items(): config = config.replace(key, json.dumps(value, ensure_ascii=False))
     config_path = evidence / 'libreoffice.toml'
     config_path.write_text(config, encoding='utf-8')
-    # Normalize only the owned experimental copies BEFORE taking the security
-    # baseline. Sandy may set the AI metadata bit after its ACL changes; the
-    # post-run comparison remains byte-for-byte strict, without masking it.
-    roots = (app.resolve(), scratch.resolve())
-    preflight = [normalize_lab_dacl_before_measurement(p, roots, native)
-                 for p in (app, profile, work, temp)]
-    write(evidence / 'dacl-preflight.json', preflight)
     paths = [app, scratch, profile, work, temp, *map(Path, values['@ANCESTORS@'])]
     before = {str(p): native.dacl(p) for p in dict.fromkeys(paths)}
     command = [str(args.sandy), '-c', str(config_path), '-l', str(evidence / 'sandy.log'), '-x',
@@ -222,9 +216,7 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
            'execution_budget_seconds': 43, 'termination_reserve_seconds': 2, 'config_sha256': sha(config_path),
            'pipe_source': source, 'pipe_destination': destination, 'conversion': 'NOT RUN',
            'token': None, 'pipe_observed': False, 'errors': [],
-           'preflight_dacls': {entry['path']: entry['after'] for entry in preflight},
-           'preflight_acl_changes': [entry for entry in preflight
-                                     if entry['action'] != 'already_auto_inherited']}
+           'baseline_dacls': {str(p): before[str(p)] for p in (app, profile, work, temp)}
     state = {'runtime': str(app), 'scratch': str(scratch), 'work': str(work), 'outside': str(scratch.parent / 'host-canary.txt'), 'config': str(config_path)}
     handles = {}
     p = None
@@ -276,13 +268,31 @@ def convert(label, mapped, args, demo, native, capability_sid, lpac_accesscheck,
         row['recovery_exit'] = recovery.returncode
         row['hook_removed'] = all(not Path(p).exists() for p in row['hook_paths'])
         row['hook_injected'] = mapped and bool(row['hook_paths']) and 'PIPEHOOK: hook DLL injected and imports patched' in log
-        after = {p: native.dacl(Path(p)) for p in before}
-        write(evidence / 'dacls.json', {'before': before, 'after': after})
-        row['dacl_changes'] = {p: {'before': old, 'after': after[p]} for p, old in before.items() if old != after[p]}
-        row['dacls_unchanged'] = not row['dacl_changes']
         status = subprocess.run([str(args.sandy), '--status'], capture_output=True, timeout=10)
         (evidence / 'status.txt').write_bytes(status.stdout + status.stderr)
         row['container_deregistered'] = status.returncode == 0 and row['token'] is not None and row['token']['sid'] not in status.stdout.decode('utf-8', errors='replace')
+        after_sandy = {p: native.dacl(Path(p)) for p in before}
+        row['dacl_changes_before_restore'] = {
+            p: {'before': old, 'after_sandy': after_sandy[p]}
+            for p, old in before.items() if old != after_sandy[p]}
+        row['dacl_recovery'] = []
+        # Do not change ACLs while the Writer is still running or Sandbox
+        # cleanup is unverified. Never mask unknown changes to gain PASS.
+        if (row['writers_terminated'] and row['hook_removed']
+                and row['recovery_exit'] == 0 and row['container_deregistered']):
+            try:
+                row['dacl_recovery'] = restore_exact_lab_dacls(
+                    before, after_sandy, (app.resolve(), scratch.resolve()), native)
+            except Exception as error:
+                row['errors'].append({'dacl_recovery': str(error)})
+        else:
+            row['errors'].append({'dacl_recovery': 'not attempted: child/cleanup not verified'})
+        after = {p: native.dacl(Path(p)) for p in before}
+        write(evidence / 'dacls.json', {'before': before, 'after_sandy': after_sandy,
+                                      'after_exact_restore': after})
+        row['dacl_changes'] = {p: {'before': old, 'after': after[p]}
+                               for p, old in before.items() if old != after[p]}
+        row['dacls_unchanged'] = not row['dacl_changes']
         pdf_path = work / 'out/original.pdf'
         row['within_deadline'] = row['seconds_including_termination'] <= 45
         if not row['timed_out'] and row['within_deadline'] and row['exit_code'] == 0:
@@ -394,12 +404,12 @@ def main():
         policies = [tomllib.loads((args.evidence / x / 'libreoffice.toml').read_text()) for x in ('A-no-mapping', 'B-LOCAL-mapping')]
         pipe_map = policies[1].pop('pipes')
         report['only_mapping_differs'] = policies[0] == policies[1] and pipe_map == {b['pipe_source']: b['pipe_destination']}
-        report['same_preflight_security'] = a.get('preflight_dacls') == b.get('preflight_dacls')
+        report['same_initial_security'] = a.get('baseline_dacls') == b.get('baseline_dacls')
         report['originals_unchanged'] = sha(original) == report['input_sha256'] and sha(outside) == canary_hash and all(sha(Path(p)) == old for p, old in binaries.items())
         report['cases'] = results
         pass_b = b['conversion'] == 'PASS' and b.get('observed_boundary_pass') and b['pipe_observed'] and b.get('hook_injected')
         report['overall'] = 'PASS' if (pass_b and report['only_mapping_differs']
-            and report['same_preflight_security'] and report['originals_unchanged']) else 'FAIL'
+            and report['same_initial_security'] and report['originals_unchanged']) else 'FAIL'
         report['causal_comparison'] = 'A failed / B passed' if (report['overall'] == 'PASS'
             and a['conversion'] == 'FAIL' and a.get('observed_boundary_pass')
             and a.get('writer_pid') and not a.get('errors')) else 'INCONCLUSIVE'
